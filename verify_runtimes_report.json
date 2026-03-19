@@ -1,0 +1,100 @@
+{
+  "timestamp": "2026-03-18 20:50:06",
+  "runtimes": [
+    {
+      "name": "GCC",
+      "passed": false,
+      "version": null,
+      "error": "NOT FOUND \u2014 check PATH"
+    },
+    {
+      "name": "Rust",
+      "passed": true,
+      "version": "rustc 1.94.0 (4a4ef493e 2026-03-02)",
+      "error": null
+    },
+    {
+      "name": "Go",
+      "passed": false,
+      "version": null,
+      "error": "NOT FOUND \u2014 check PATH"
+    },
+    {
+      "name": "Java",
+      "passed": false,
+      "version": null,
+      "error": "NOT FOUND \u2014 check PATH"
+    },
+    {
+      "name": "Node.js",
+      "passed": true,
+      "version": "v24.14.0",
+      "error": null
+    },
+    {
+      "name": "Python",
+      "passed": false,
+      "version": "Python 3.13.3",
+      "error": null
+    }
+  ],
+  "packages": [
+    {
+      "name": "codecarbon",
+      "passed": false,
+      "version": null,
+      "error": "NOT INSTALLED"
+    },
+    {
+      "name": "pyRAPL",
+      "passed": false,
+      "version": null,
+      "error": "NOT INSTALLED"
+    },
+    {
+      "name": "psutil",
+      "passed": false,
+      "version": null,
+      "error": "NOT INSTALLED"
+    },
+    {
+      "name": "scipy",
+      "passed": false,
+      "version": null,
+      "error": "NOT INSTALLED"
+    },
+    {
+      "name": "pandas",
+      "passed": true,
+      "version": "2.2.3",
+      "error": null
+    },
+    {
+      "name": "numpy",
+      "passed": true,
+      "version": "2.2.5",
+      "error": null
+    },
+    {
+      "name": "matplotlib",
+      "passed": true,
+      "version": "3.10.7",
+      "error": null
+    },
+    {
+      "name": "seaborn",
+      "passed": false,
+      "version": null,
+      "error": "NOT INSTALLED"
+    },
+    {
+      "name": "jupyter",
+      "passed": false,
+      "version": null,
+      "error": "NOT INSTALLED"
+    }
+  ],
+  "all_passed": false,
+  "runtime_summary": "2/6",
+  "package_summary": "3/9"
+}
