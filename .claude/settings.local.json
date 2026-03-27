@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(wc -l /c/Users/AKhadka2/Desktop/carbon_footprint/implementations/python/*.py /c/Users/AKhadka2/Desktop/carbon_footprint/implementations/javascript/*.js /c/Users/AKhadka2/Desktop/carbon_footprint/implementations/java/*.java)",
+      "Bash(ls -lh /c/Users/AKhadka2/Desktop/carbon_footprint/analysis/*.py)",
+      "Bash(ls -lh /c/Users/AKhadka2/Desktop/carbon_footprint/paper/*.tex /c/Users/AKhadka2/Desktop/carbon_footprint/paper/sections/*.tex)",
+      "Bash(xargs wc:*)",
+      "Bash(wc -l /c/Users/AKhadka2/Desktop/carbon_footprint/implementations/go/*.go)"
+    ]
+  }
+}

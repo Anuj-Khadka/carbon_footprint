@@ -1,0 +1,11 @@
+const N = 10_000_000;
+
+function summation(arr) {
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) sum += arr[i];
+    return sum;
+}
+
+const arr = new Array(N);
+for (let i = 0; i < N; i++) arr[i] = i + 1;
+console.log(summation(arr));

@@ -1,1 +1,60 @@
+# Virtual environment
 .venv/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Compiled binaries
+implementations/c/bin/
+implementations/rust/*/target/
+implementations/go/bin/
+implementations/java/bin/
+implementations/javascript/node_modules/
+
+# Haskell artifacts (keeping just in case)
+*.o
+*.hi
+
+# Java class files
+*.class
+
+# Raw experiment data — too large for git
+experiments/main/raw/
+experiments/pilot/pilot_runs/
+
+# Generated input data — reproducible from generate_inputs.py
+implementations/inputs/
+
+# Analysis outputs — regeneratable from scripts
+analysis/cleaned/
+analysis/figures/
+analysis/tables/
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# VS Code settings
+.vscode/
+
+# CodeCarbon output files
+emissions.csv
+codecarbon.log
+
+# Environment files with secrets
+.venv
+*.venv
+
+# Windows system files
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
+
+# LibreHardwareMonitor / OpenHardwareMonitor
+*.ohl
+
+# Verification report (generated)
+verify_runtimes_report.json
