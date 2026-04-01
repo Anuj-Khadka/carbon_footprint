@@ -48,6 +48,8 @@ emissions.csv
 codecarbon.log
 
 # Environment files with secrets
+.env
+.env.*
 .venv
 *.venv
 
