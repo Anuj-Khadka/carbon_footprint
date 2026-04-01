@@ -14,10 +14,10 @@ import argparse
 import urllib.request
 import urllib.error
 import xml.etree.ElementTree as ET
+import ssl
 
 
-
-LHM_URL = "http://localhost:8085/data.json"
+LHM_URL = "http://172.22.1.29:8085/data.json"
 EM_ZONE = "US-NY-NYIS"
 EMAP_API_KEY = "zyjqZja8pJXqecWbs6d2"
 EM_URL = f"https://api.electricitymaps.com/v3/carbon-intensity/latest?zone={EM_ZONE}"
@@ -41,9 +41,11 @@ def yellow(s):return f"\033[93m{s}\033[0m"
  
 def fetch_json(url, headers=None, timeout=8):
     try:
-        req = urllib.request.Request(url, headers=headers or {})
-        with urllib.request.urlopen(req, timeout=timeout) as r:
-            return json.loads(r.read().decode())
+        r = requests.get(url, headers=headers or {}, timeout=timeout, verify=False)
+        r.raise_for_status()
+        return r.json()
+    except requests.exceptions.HTTPError as e:
+        raise OSError(f"HTTP {e.response.status_code} {e.response.reason}: {e.response.text[:200]}") from e
     except Exception as e:
         raise OSError(f"Failed to fetch {url}: {e}") from e
 
@@ -87,7 +89,7 @@ def test_lhm_connect():
     except OSError as e:
         print(red(f"✗ Could not connect to {LHM_URL}"))
         print(yellow(f"  Ensure LibreHardwareMonitor is running with Web Server enabled"))
-        print(yellow(f"  Error: {str(e)[:100]}"))
+        print(yellow(f"  Error: {str(e)}"))
         return None
  
 # LMH power reading
@@ -152,14 +154,14 @@ def test_electricity_maps(token, lhm_result):
     print(bold("\n[3/3] Electricity Maps API — carbon intensity"))
  
     if not token:
-        print(yellow("  ⚠ No token provided. Skipping live API call.\n\n  → Run with: python validate_tools.py --em-token YOUR_TOKEN \n\n"))
+        print(yellow("  ⚠ No token provided. Skipping live API call.\n\n  → Run with: python workflow.py --em-token YOUR_TOKEN \n\n"))
         return
  
     headers = {"auth-token": token}
     try:
         data = fetch_json(EM_URL, headers=headers)
     except OSError as e:
-        print(red(f"  ✗ Connection error: {str(e)[:100]}"))
+        print(red(f"  ✗ Connection error: {str(e)}"))
         return
  
     ci = data.get("carbonIntensity")
