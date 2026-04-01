@@ -1,6 +1,5 @@
 """
-test_harness.py
-===============
+
 Benchmark orchestration harness for the carbon footprint research project.
 
 Responsibilities

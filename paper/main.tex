@@ -1,2 +1,60 @@
-made sure no comments in any code.
-malloc and free in c for memory management.
+% !TEX TS-program = xelatex
+\documentclass[10.8pt,letterpaper]{article}
+
+% ---------- Engine detection & fonts ----------
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage{newpxtext}
+  \usepackage{microtype}
+\else
+  \usepackage{fontspec}
+  \setmainfont{Amiri}
+  \usepackage{microtype}
+\fi
+
+% ---------- Layout & utilities ----------
+\usepackage[letterpaper,margin=0.35in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage{enumitem}
+\usepackage{tabularx,array}
+\usepackage{ragged2e}
+\usepackage{parskip}
+\usepackage{xcolor}
+\usepackage{needspace}
+\usepackage{relsize} % for \smaller
+
+% ---------- Global tweaks ----------
+\setlength{\parskip}{2pt}
+\setlist[itemize]{leftmargin=1.2em,itemsep=2pt,topsep=2pt,parsep=0pt}
+\newcolumntype{L}{>{\RaggedRight\arraybackslash}X}
+\renewcommand{\labelitemi}{\textbullet}
+
+% body text lighter; bold stays deep black
+\color{gray!50!black}
+\renewcommand{\bfseries}{\color{black}\fontseries{b}\selectfont}
+
+% avoid widows/orphans
+\clubpenalty=10000
+\widowpenalty=10000
+
+
+
+
+\begin{document}
+\title{Carbon footprint of algorithms}
+
+\input{sections/abstract}
+\input{sections/introduction}
+\input{sections/methodology}
+\input{sections/results}
+\input{sections/discussion}
+\input{sections/conclusion}
+
+
+
+\printbibliography
+
+\end{document}
+
+
+
