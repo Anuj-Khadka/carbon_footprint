@@ -17,9 +17,9 @@ import xml.etree.ElementTree as ET
 
 
 
-LHM_URL = os.getenv("LHM_URL", "http://localhost:8085/data.json")
-EM_ZONE = os.getenv("EM_ZONE", "US-NY-NYIS")
-EMAP_API_KEY = os.getenv("EMAP_API_KEY", "")
+LHM_URL = "http://localhost:8085/data.json"
+EM_ZONE = "US-NY-NYIS"
+EMAP_API_KEY = "zyjqZja8pJXqecWbs6d2"
 EM_URL = f"https://api.electricitymaps.com/v3/carbon-intensity/latest?zone={EM_ZONE}"
 SAMPLE_SECS   = 5      # how long to sample LHM wattage
 SAMPLE_HZ     = 4      # polls per second
@@ -40,9 +40,12 @@ def red(s):   return f"\033[91m{s}\033[0m"
 def yellow(s):return f"\033[93m{s}\033[0m"
  
 def fetch_json(url, headers=None, timeout=8):
-    req = urllib.request.Request(url, headers=headers or {})
-    with urllib.request.urlopen(req, timeout=timeout) as r:
-        return json.loads(r.read().decode())
+    try:
+        req = urllib.request.Request(url, headers=headers or {})
+        with urllib.request.urlopen(req, timeout=timeout) as r:
+            return json.loads(r.read().decode())
+    except Exception as e:
+        raise OSError(f"Failed to fetch {url}: {e}") from e
 
 
 def find_cpu_power(node, results=None):
@@ -76,13 +79,15 @@ def parse_watts(value_str):
  
 # ─── Test 1: LHM connectivity ─────────────────────────────────────────────────
 def test_lhm_connect():
-    print(bold("\n[1/3] LHM COnnect"))
+    print(bold("\n[1/3] LHM Connect"))
     try:
         data = fetch_json(LHM_URL)
-        print(green("LHM 8085"))
+        print(green(f"✓ Connected to {LHM_URL}"))
         return data
-    except urllib.error.URLError as e:
-        print(red(f" Could not connect: {e}"))
+    except OSError as e:
+        print(red(f"✗ Could not connect to {LHM_URL}"))
+        print(yellow(f"  Ensure LibreHardwareMonitor is running with Web Server enabled"))
+        print(yellow(f"  Error: {str(e)[:100]}"))
         return None
  
 # LMH power reading
@@ -153,13 +158,8 @@ def test_electricity_maps(token, lhm_result):
     headers = {"auth-token": token}
     try:
         data = fetch_json(EM_URL, headers=headers)
-    except urllib.error.HTTPError as e:
-        print(red(f"  ✗ HTTP {e.code}: {e.reason}"))
-        if e.code == 401:
-            print(yellow("    → Token invalid or expired"))
-        return
-    except urllib.error.URLError as e:
-        print(red(f"  ✗ Connection error: {e}"))
+    except OSError as e:
+        print(red(f"  ✗ Connection error: {str(e)[:100]}"))
         return
  
     ci = data.get("carbonIntensity")
@@ -184,7 +184,7 @@ def test_electricity_maps(token, lhm_result):
         print(f"  gCO2e       : {gco2e:.8f} gCO2e")
         print(green("  ✓ Full pipeline (LHM → kWh → gCO2e) validated"))
  
-# ─── Main ─────────────────────────────────────────────────────────────────────
+
 def main():
     parser = argparse.ArgumentParser(description="Validate measurement tools for carbon footprint research")
     parser.add_argument("--em-token", default="", help="Electricity Maps API token")
