@@ -110,3 +110,5 @@
 17:15:14  INFO       [40/108]  go            binary_search   small   (warmup×5 + runs×30)
 17:15:48  INFO         → wall: min=0.7131s  mean=0.8213s  max=1.0651s  output_errors=0
 17:15:48  INFO       [41/108]  go            binary_search   medium  (warmup×5 + runs×30)
+17:16:22  INFO         → wall: min=0.7257s  mean=0.8594s  max=1.2204s  output_errors=0
+17:16:22  INFO       [42/108]  go            binary_search   large   (warmup×5 + runs×30)
