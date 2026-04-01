@@ -1,24 +1,30 @@
 const N: usize = 300;
 
-fn main() {
-    let mut a = vec![0.0f64; N * N];
-    let mut b = vec![0.0f64; N * N];
-    let mut c = vec![0.0f64; N * N];
-
+fn matrix_multiply(a: &Vec<Vec<i64>>, b: &Vec<Vec<i64>>, c: &mut Vec<Vec<i64>>) {
     for i in 0..N {
         for j in 0..N {
-            a[i * N + j] = (i + j) as f64;
-            b[i * N + j] = (i as i64 - j as i64) as f64;
-        }
-    }
-
-    for i in 0..N {
-        for j in 0..N {
+            let mut acc = 0i64;
             for k in 0..N {
-                c[i * N + j] += a[i * N + k] * b[k * N + j];
+                acc += a[i][k] * b[k][j];
             }
+            c[i][j] = acc;
+        }
+    }
+}
+
+fn main() {
+    let mut a = vec![vec![0i64; N]; N];
+    let mut b = vec![vec![0i64; N]; N];
+    let mut c = vec![vec![0i64; N]; N];
+
+    for i in 0..N {
+        for j in 0..N {
+            a[i][j] = (i + j) as i64;
+            b[i][j] = i as i64 - j as i64;
         }
     }
 
-    println!("{:.2}", c[N / 2 * N + N / 2]);
+    matrix_multiply(&a, &b, &mut c);
+
+    println!("{}", c[N / 2][N / 2]);
 }

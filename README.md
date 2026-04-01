@@ -17,6 +17,7 @@ C, Rust, Go, Java, JavaScript, Python
 ## Algorithms studied
 Summation, Binary Search, Merge Sort, BFS, Hash Table, 
 Matrix Multiplication
+why? because they represent different types of computational work, cpu-bound, memory-bound, branching-heavy etc.
 
 ## Hardware
 Intel Core i7-14700K · 32GB RAM · Windows 11
@@ -38,7 +39,8 @@ Intel Core i7-14700K · 32GB RAM · Windows 11
 - creates an array of 1million elements and adds them up.
 
 ### Merge Sort
-- creates an array of 1 to 1million in reverse order and sorts it.  * - Uses one auxiliary buffer allocated once instead of per-merge allocations. no malloc/free on every merge call.
+- creates an array of 1 to 1million in reverse order and sorts it.  *
+- Uses one auxiliary buffer allocated once instead of per-merge allocations. no malloc/free on every merge call.
 - Allocation happens once, so less allocator overhead and less measurement noise.
 - Time is still O(n log n), extra memory is O(n), but with cleaner runtime behavior.
 
@@ -48,8 +50,19 @@ Intel Core i7-14700K · 32GB RAM · Windows 11
 
 
 ### Matrix
-- use basic formula, no algorithms.
-```
+- use basic formula, no algorithms. n^3.
+
+
+### BFS
+- adjacency matrix of size V x V.
+- A chain connects all vertices: 0-...-999 (undirected).
+- Extra deterministic jump edges are added every 10th vertex using j = (i*7 + 3) % V.
+    - i = 0, j = 3, edge 0-3
+    - i = 10, gives j = 73, edge 10-73
+    - i = 20, gives j = 143, edge 20-143
+- traversal is iterative BFS from node 0 using a fixed-size queue and visited array.
+- gives number of reachable vertices from node 0 (current graph prints 1000 because it is connected).
+
 
 A = 
 [ 0  1  2  3 ]

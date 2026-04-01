@@ -1,10 +1,15 @@
 N = 10_000_000
 
-def summation(arr):
-    sum = 0
-    for x in arr:
-        sum += x
-    return sum
 
-arr = list(range(1, N + 1))
-print(summation(arr))
+def summation(arr, n):
+    total = 0
+    for i in range(n):
+        total += arr[i]
+    return total
+
+
+arr = [0] * N
+for i in range(N):
+    arr[i] = i + 1
+
+print(summation(arr, N))

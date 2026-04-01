@@ -2,33 +2,51 @@ package main
 
 import "fmt"
 
-const V = 10_000
+const V = 1000
 
-func bfs(adj [V][2]int, start int) int {
+func bfs(adj *[V][V]bool, start int) int {
+	if start < 0 || start >= V {
+		return 0
+	}
+
 	var visited [V]bool
-	queue := make([]int, 0, V)
-	visited[start] = true
-	queue = append(queue, start)
+	var queue [V]int
+	head, tail := 0, 0
 	count := 0
-	for len(queue) > 0 {
-		cur := queue[0]
-		queue = queue[1:]
+
+	visited[start] = true
+	queue[tail] = start
+	tail++
+
+	for head < tail {
+		cur := queue[head]
+		head++
 		count++
-		for _, nb := range adj[cur] {
-			if !visited[nb] {
+		for nb := 0; nb < V; nb++ {
+			if adj[cur][nb] && !visited[nb] {
 				visited[nb] = true
-				queue = append(queue, nb)
+				if tail < V {
+					queue[tail] = nb
+					tail++
+				}
 			}
 		}
 	}
+
 	return count
 }
 
 func main() {
-	var adj [V][2]int
-	for i := 0; i < V; i++ {
-		adj[i][0] = (i + 1) % V
-		adj[i][1] = (i*7 + 3) % V
+	var adj [V][V]bool
+	for i := 0; i < V-1; i++ {
+		adj[i][i+1] = true
+		adj[i+1][i] = true
 	}
-	fmt.Println(bfs(adj, 0))
+	for i := 0; i < V; i += 10 {
+		j := (i*7 + 3) % V
+		adj[i][j] = true
+		adj[j][i] = true
+	}
+
+	fmt.Println(bfs(&adj, 0))
 }

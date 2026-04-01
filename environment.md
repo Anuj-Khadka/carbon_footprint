@@ -19,7 +19,7 @@
 ### Verified on 2026-03-18
 ```
 gcc.exe (MinGW-W64 x86_64-ucrt-posix-seh, built by Brecht Sanders) 14.3.0
-rustc 1.94.0 (4a4ef493e 2026-03-02)
+rustc 1.94.1 (4a4ef493e 2026-03-02)
 cargo 1.94.0 (85eff7c80 2026-01-15)
 go version go1.26.1 windows/amd64
 openjdk 21.0.10 2026-01-20 LTS

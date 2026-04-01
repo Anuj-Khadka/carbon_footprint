@@ -1,28 +1,46 @@
 public class MergeSort {
-    static void merge(long[] arr, int l, int m, int r) {
-        int ln = m - l + 1, rn = r - m;
-        long[] L = new long[ln], R = new long[rn];
-        for (int i = 0; i < ln; i++) L[i] = arr[l + i];
-        for (int j = 0; j < rn; j++) R[j] = arr[m + 1 + j];
-        int i = 0, j = 0, k = l;
-        while (i < ln && j < rn) arr[k++] = (L[i] <= R[j]) ? L[i++] : R[j++];
-        while (i < ln) arr[k++] = L[i++];
-        while (j < rn) arr[k++] = R[j++];
+    static final int N = 1_000_000;
+    static long[] temp = new long[N];
+
+    static void mergeOnceBuffer(long[] arr, int left, int mid, int right) {
+        for (int i = left; i <= right; i++) {
+            temp[i] = arr[i];
+        }
+
+        int i = left, j = mid + 1, k = left;
+
+        while (i <= mid && j <= right) {
+            arr[k++] = (temp[i] <= temp[j]) ? temp[i++] : temp[j++];
+        }
+
+        while (i <= mid) {
+            arr[k++] = temp[i++];
+        }
+
+        while (j <= right) {
+            arr[k++] = temp[j++];
+        }
     }
 
-    static void mergeSort(long[] arr, int l, int r) {
-        if (l >= r) return;
-        int m = l + (r - l) / 2;
-        mergeSort(arr, l, m);
-        mergeSort(arr, m + 1, r);
-        merge(arr, l, m, r);
+    static void mergeSortImpl(long[] arr, int left, int right) {
+        if (left >= right) return;
+        int mid = left + (right - left) / 2;
+        mergeSortImpl(arr, left, mid);
+        mergeSortImpl(arr, mid + 1, right);
+        mergeOnceBuffer(arr, left, mid, right);
+    }
+
+    static void mergeSort(long[] arr, int n) {
+        if (arr == null || n < 2) return;
+        mergeSortImpl(arr, 0, n - 1);
     }
 
     public static void main(String[] args) {
-        int N = 1_000_000;
         long[] arr = new long[N];
-        for (int i = 0; i < N; i++) arr[i] = N - i;
-        mergeSort(arr, 0, N - 1);
+        for (int i = 0; i < N; i++) {
+            arr[i] = N - i;
+        }
+        mergeSort(arr, N);
         System.out.println(arr[N - 1]);
     }
 }

@@ -33,6 +33,9 @@ implementations/inputs/
 analysis/cleaned/
 analysis/figures/
 analysis/tables/
+/analysis
+
+
 
 # Jupyter checkpoints
 .ipynb_checkpoints/

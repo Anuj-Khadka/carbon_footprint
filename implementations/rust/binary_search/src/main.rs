@@ -1,5 +1,4 @@
 const N: usize    = 1_000_000;
-const REPS: usize = 1_000;
 
 fn binary_search(arr: &[i64], target: i64) -> i64 {
     let (mut lo, mut hi) = (0i64, arr.len() as i64 - 1);
@@ -19,9 +18,6 @@ fn binary_search(arr: &[i64], target: i64) -> i64 {
 fn main() {
     let arr: Vec<i64> = (0..N as i64).map(|i| i * 2).collect();
     let target = (N as i64 - 1) * 2;
-    let mut result = -1;
-    for _ in 0..REPS {
-        result = binary_search(&arr, target);
-    }
+    let result = binary_search(&arr, target);
     println!("{}", result);
 }

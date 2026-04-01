@@ -1,5 +1,4 @@
 const N    = 1_000_000;
-const REPS = 1_000;
 
 function binarySearch(arr, target) {
     let lo = 0, hi = arr.length - 1;
@@ -15,6 +14,5 @@ function binarySearch(arr, target) {
 const arr = new Array(N);
 for (let i = 0; i < N; i++) arr[i] = i * 2;
 const target = (N - 1) * 2;
-let result = -1;
-for (let r = 0; r < REPS; r++) result = binarySearch(arr, target);
+const result = binarySearch(arr, target);
 console.log(result);

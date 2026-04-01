@@ -11,12 +11,11 @@ public class BinarySearch {
     }
 
     public static void main(String[] args) {
-        int N = 1_000_000, REPS = 1_000;
+        int N = 1_000_000;
         long[] arr = new long[N];
         for (int i = 0; i < N; i++) arr[i] = (long) i * 2;
         long target = (long)(N - 1) * 2;
-        int result = -1;
-        for (int r = 0; r < REPS; r++) result = binarySearch(arr, target);
+        int result = binarySearch(arr, target);
         System.out.println(result);
     }
 }

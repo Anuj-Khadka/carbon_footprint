@@ -1,0 +1,108 @@
+17:12:55  INFO     Session ID      : 20260401T211255
+17:12:55  INFO     Implementation  : C:\Users\AKhadka2\Desktop\carbon_footprint\implementations
+17:12:55  INFO     Log directory   : C:\Users\AKhadka2\Desktop\carbon_footprint\logs
+17:12:55  INFO     Runs / combo    : 30
+17:12:55  INFO     Warm-up / combo : 5
+17:12:55  INFO     LHM URL         : http://localhost:8085
+17:12:55  INFO     Electricity Maps: NO KEY — carbon will be null
+17:12:55  INFO     Platform        : Windows-11-10.0.26200-SP0
+17:12:55  INFO     Run log → c:\Users\AKhadka2\Desktop\carbon_footprint\logs\runs_20260401T211255.jsonl
+17:12:55  INFO     ── Build phase ──────────────────────────────────────
+17:12:56  INFO       build c             summation       [OK]
+17:12:56  INFO       build c             binary_search   [OK]
+17:12:57  INFO       build c             merge_sort      [OK]
+17:12:57  INFO       build c             bfs             [OK]
+17:12:57  INFO       build c             hash_table      [OK]
+17:12:57  INFO       build c             matrix_mul      [FAIL]
+17:12:57  WARNING      Source missing: c:\Users\AKhadka2\Desktop\carbon_footprint\implementations/c/...
+17:12:57  INFO       build rust          summation       [FAIL]
+17:12:57  WARNING      Source missing: c:\Users\AKhadka2\Desktop\carbon_footprint\implementations/rust/...
+17:12:57  INFO       build rust          binary_search   [FAIL]
+17:12:57  WARNING      Source missing: c:\Users\AKhadka2\Desktop\carbon_footprint\implementations/rust/...
+17:12:57  INFO       build rust          merge_sort      [FAIL]
+17:12:57  WARNING      Source missing: c:\Users\AKhadka2\Desktop\carbon_footprint\implementations/rust/...
+17:12:57  INFO       build rust          bfs             [FAIL]
+17:12:57  WARNING      Source missing: c:\Users\AKhadka2\Desktop\carbon_footprint\implementations/rust/...
+17:12:57  INFO       build rust          hash_table      [FAIL]
+17:12:57  WARNING      Source missing: c:\Users\AKhadka2\Desktop\carbon_footprint\implementations/rust/...
+17:12:57  INFO       build rust          matrix_mul      [FAIL]
+17:12:57  WARNING      Source missing: c:\Users\AKhadka2\Desktop\carbon_footprint\implementations/rust/...
+17:12:57  INFO       build go            summation       [OK]
+17:12:57  INFO       build go            binary_search   [OK]
+17:12:57  INFO       build go            merge_sort      [OK]
+17:12:57  INFO       build go            bfs             [OK]
+17:12:57  INFO       build go            hash_table      [OK]
+17:12:57  INFO       build go            matrix_mul      [FAIL]
+17:12:57  WARNING      Source missing: c:\Users\AKhadka2\Desktop\carbon_footprint\implementations/go/...
+17:12:57  INFO       build java          summation       [FAIL]
+17:12:57  WARNING      javac not found
+17:12:57  INFO       build java          binary_search   [FAIL]
+17:12:57  WARNING      javac not found
+17:12:57  INFO       build java          merge_sort      [FAIL]
+17:12:57  WARNING      javac not found
+17:12:57  INFO       build java          bfs             [FAIL]
+17:12:57  WARNING      javac not found
+17:12:57  INFO       build java          hash_table      [FAIL]
+17:12:57  WARNING      javac not found
+17:12:57  INFO       build java          matrix_mul      [FAIL]
+17:12:57  WARNING      Source missing: c:\Users\AKhadka2\Desktop\carbon_footprint\implementations/java/...
+17:12:57  INFO       build javascript    summation       [OK]
+17:12:57  INFO       build javascript    binary_search   [OK]
+17:12:57  INFO       build javascript    merge_sort      [OK]
+17:12:57  INFO       build javascript    bfs             [OK]
+17:12:57  INFO       build javascript    hash_table      [OK]
+17:12:57  INFO       build javascript    matrix_mul      [FAIL]
+17:12:57  WARNING      Source missing: c:\Users\AKhadka2\Desktop\carbon_footprint\implementations/javascript/...
+17:12:57  INFO       build python        summation       [OK]
+17:12:57  INFO       build python        binary_search   [OK]
+17:12:57  INFO       build python        merge_sort      [OK]
+17:12:57  INFO       build python        bfs             [OK]
+17:12:57  INFO       build python        hash_table      [OK]
+17:12:57  INFO       build python        matrix_mul      [FAIL]
+17:12:57  WARNING      Source missing: c:\Users\AKhadka2\Desktop\carbon_footprint\implementations/python/...
+17:12:57  INFO     ── Reference outputs (C) ────────────────────────────
+17:13:01  WARNING    C/matrix_mul: no binary — skipping reference
+17:13:01  INFO     ── Benchmark runs ───────────────────────────────────
+17:13:01  INFO       [1/108]  c             summation       small   (warmup×5 + runs×30)
+17:13:02  WARNING  LibreHardwareMonitor not reachable — energy will be NULL. Start LHM and enable its Web Server (Options → Web Server).
+17:13:03  INFO         → wall: min=0.0351s  mean=0.0402s  max=0.0488s  output_errors=0
+17:13:03  INFO       [2/108]  c             summation       medium  (warmup×5 + runs×30)
+17:13:05  INFO         → wall: min=0.0358s  mean=0.0400s  max=0.0494s  output_errors=0
+17:13:05  INFO       [3/108]  c             summation       large   (warmup×5 + runs×30)
+17:13:06  INFO         → wall: min=0.0349s  mean=0.0398s  max=0.0486s  output_errors=0
+17:13:06  INFO       [4/108]  c             binary_search   small   (warmup×5 + runs×30)
+17:13:07  INFO         → wall: min=0.0179s  mean=0.0216s  max=0.0356s  output_errors=0
+17:13:07  INFO       [5/108]  c             binary_search   medium  (warmup×5 + runs×30)
+17:13:08  INFO         → wall: min=0.0178s  mean=0.0218s  max=0.0371s  output_errors=0
+17:13:08  INFO       [6/108]  c             binary_search   large   (warmup×5 + runs×30)
+17:13:09  INFO         → wall: min=0.0178s  mean=0.0198s  max=0.0267s  output_errors=0
+17:13:09  INFO       [7/108]  c             merge_sort      small   (warmup×5 + runs×30)
+17:13:11  INFO         → wall: min=0.0329s  mean=0.0374s  max=0.0511s  output_errors=0
+17:13:11  INFO       [8/108]  c             merge_sort      medium  (warmup×5 + runs×30)
+17:13:12  INFO         → wall: min=0.0332s  mean=0.0358s  max=0.0418s  output_errors=0
+17:13:12  INFO       [9/108]  c             merge_sort      large   (warmup×5 + runs×30)
+17:13:14  INFO         → wall: min=0.0329s  mean=0.0364s  max=0.0514s  output_errors=0
+17:13:14  INFO       [10/108]  c             bfs             small   (warmup×5 + runs×30)
+17:13:14  INFO         → wall: min=0.0174s  mean=0.0203s  max=0.0285s  output_errors=0
+17:13:14  INFO       [11/108]  c             bfs             medium  (warmup×5 + runs×30)
+17:13:15  INFO         → wall: min=0.0173s  mean=0.0208s  max=0.0300s  output_errors=0
+17:13:15  INFO       [12/108]  c             bfs             large   (warmup×5 + runs×30)
+17:13:16  INFO         → wall: min=0.0176s  mean=0.0205s  max=0.0289s  output_errors=0
+17:13:16  INFO       [13/108]  c             hash_table      small   (warmup×5 + runs×30)
+17:13:17  INFO         → wall: min=0.0214s  mean=0.0248s  max=0.0338s  output_errors=0
+17:13:17  INFO       [14/108]  c             hash_table      medium  (warmup×5 + runs×30)
+17:13:18  INFO         → wall: min=0.0214s  mean=0.0260s  max=0.0404s  output_errors=0
+17:13:18  INFO       [15/108]  c             hash_table      large   (warmup×5 + runs×30)
+17:13:19  INFO         → wall: min=0.0223s  mean=0.0256s  max=0.0350s  output_errors=0
+17:13:19  WARNING    Skipping c/matrix_mul: binary unavailable
+17:13:19  WARNING    Skipping rust/summation: binary unavailable
+17:13:19  WARNING    Skipping rust/binary_search: binary unavailable
+17:13:19  WARNING    Skipping rust/merge_sort: binary unavailable
+17:13:19  WARNING    Skipping rust/bfs: binary unavailable
+17:13:19  WARNING    Skipping rust/hash_table: binary unavailable
+17:13:19  WARNING    Skipping rust/matrix_mul: binary unavailable
+17:13:19  INFO       [37/108]  go            summation       small   (warmup×5 + runs×30)
+17:13:55  INFO         → wall: min=0.7518s  mean=0.8941s  max=2.1748s  output_errors=0
+17:13:55  INFO       [38/108]  go            summation       medium  (warmup×5 + runs×30)
+17:14:28  INFO         → wall: min=0.7229s  mean=0.8276s  max=1.4319s  output_errors=0
+17:14:28  INFO       [39/108]  go            summation       large   (warmup×5 + runs×30)

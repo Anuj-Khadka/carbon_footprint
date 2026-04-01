@@ -1,21 +1,32 @@
 public class MatrixMultiplication {
-    public static void main(String[] args) {
-        int N = 300;
-        double[][] A = new double[N][N];
-        double[][] B = new double[N][N];
-        double[][] C = new double[N][N];
+    static final int N = 300;
 
-        for (int i = 0; i < N; i++)
+    static long[][] a = new long[N][N];
+    static long[][] b = new long[N][N];
+    static long[][] c = new long[N][N];
+
+    static void matrixMultiply() {
+        for (int i = 0; i < N; i++) {
             for (int j = 0; j < N; j++) {
-                A[i][j] = i + j;
-                B[i][j] = i - j;
+                long acc = 0;
+                for (int k = 0; k < N; k++) {
+                    acc += a[i][k] * b[k][j];
+                }
+                c[i][j] = acc;
             }
+        }
+    }
 
-        for (int i = 0; i < N; i++)
-            for (int j = 0; j < N; j++)
-                for (int k = 0; k < N; k++)
-                    C[i][j] += A[i][k] * B[k][j];
+    public static void main(String[] args) {
+        for (int i = 0; i < N; i++) {
+            for (int j = 0; j < N; j++) {
+                a[i][j] = i + j;
+                b[i][j] = i - j;
+            }
+        }
 
-        System.out.printf("%.2f%n", C[N / 2][N / 2]);
+        matrixMultiply();
+
+        System.out.println(c[N / 2][N / 2]);
     }
 }

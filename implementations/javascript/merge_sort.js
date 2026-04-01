@@ -1,22 +1,44 @@
 const N = 1_000_000;
 
-function mergeSort(arr) {
-    if (arr.length <= 1) return arr;
-    const mid = arr.length >> 1;
-    const L = mergeSort(arr.slice(0, mid));
-    const R = mergeSort(arr.slice(mid));
-    const result = [];
-    let i = 0, j = 0;
-    while (i < L.length && j < R.length) {
-        if (L[i] <= R[j]) result.push(L[i++]);
-        else               result.push(R[j++]);
+function mergeOnceBuffer(arr, temp, left, mid, right) {
+    for (let i = left; i <= right; i++) {
+        temp[i] = arr[i];
     }
-    while (i < L.length) result.push(L[i++]);
-    while (j < R.length) result.push(R[j++]);
-    return result;
+
+    let i = left;
+    let j = mid + 1;
+    let k = left;
+
+    while (i <= mid && j <= right) {
+        arr[k++] = temp[i] <= temp[j] ? temp[i++] : temp[j++];
+    }
+
+    while (i <= mid) {
+        arr[k++] = temp[i++];
+    }
+
+    while (j <= right) {
+        arr[k++] = temp[j++];
+    }
 }
 
-const arr = [];
-for (let i = N; i > 0; i--) arr.push(i);
-const sorted = mergeSort(arr);
-console.log(sorted[sorted.length - 1]);
+function mergeSortImpl(arr, temp, left, right) {
+    if (left >= right) return;
+    const mid = left + Math.floor((right - left) / 2);
+    mergeSortImpl(arr, temp, left, mid);
+    mergeSortImpl(arr, temp, mid + 1, right);
+    mergeOnceBuffer(arr, temp, left, mid, right);
+}
+
+function mergeSort(arr, n) {
+    if (arr === null || n < 2) return;
+    const temp = new Array(n);
+    mergeSortImpl(arr, temp, 0, n - 1);
+}
+
+const arr = new Array(N);
+for (let i = 0; i < N; i++) {
+    arr[i] = N - i;
+}
+mergeSort(arr, N);
+console.log(arr[N - 1]);
