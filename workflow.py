@@ -41,7 +41,7 @@ def yellow(s):return f"\033[93m{s}\033[0m"
  
 def fetch_json(url, headers=None, timeout=8):
     try:
-        r = requests.get(url, headers=headers or {}, timeout=timeout, verify=False)
+        r = requests.get(url, headers=headers or {}, timeout=timeout, verify=True)
         r.raise_for_status()
         return r.json()
     except requests.exceptions.HTTPError as e:
