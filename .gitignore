@@ -66,3 +66,14 @@ $RECYCLE.BIN/
 
 # Verification report (generated)
 verify_runtimes_report.json
+
+# LaTeX build artifacts
+main.aux
+main.log
+main.out
+main.synctex.gz
+main.bbl
+main.bcf
+main.blg
+main.run.xml
+main.pdf

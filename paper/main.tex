@@ -1,4 +1,3 @@
-% !TEX TS-program = xelatex
 \documentclass[10.8pt,letterpaper]{article}
 
 % ---------- Engine detection & fonts ----------
@@ -22,6 +21,7 @@
 \usepackage{xcolor}
 \usepackage{needspace}
 \usepackage{relsize} % for \smaller
+\usepackage{biblatex}
 
 % ---------- Global tweaks ----------
 \setlength{\parskip}{2pt}
@@ -37,12 +37,23 @@
 \clubpenalty=10000
 \widowpenalty=10000
 
+\AtBeginBibliography{
+  \fontsize{8}{8.5}\selectfont
+}
 
+\addbibresource{main.bib}
+
+
+
+
+\title{Carbon footprint of algorithms}
+\author{Anuj Khadka}
 
 
 \begin{document}
-\title{Carbon footprint of algorithms}
+\maketitle  
 
+this is great
 \input{sections/abstract}
 \input{sections/introduction}
 \input{sections/methodology}
@@ -50,7 +61,10 @@
 \input{sections/discussion}
 \input{sections/conclusion}
 
+real time update of power draw and carbon emissions.
 
+nice worked\cite{codecarbon}
+okay i see\cite{POY2025112303}
 
 \printbibliography
 
