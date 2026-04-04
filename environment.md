@@ -71,3 +71,9 @@ go run summation.go
 ```
 cargo run --release
 ```
+
+### Run Jave file
+```
+javac summation.java
+java summation
+```
