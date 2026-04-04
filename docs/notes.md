@@ -74,3 +74,7 @@ fflush after every print is critical on Windows — without it stdout may buffer
 
 
 using checksum for all this things. gives me a single output value. so that we can test the algo is running and producing right output.
+
+
+
+set up
