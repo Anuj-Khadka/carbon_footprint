@@ -91,23 +91,97 @@ class LangC:
         return [exe, size]
 
 
-# class LangPython:
-#     name = "python"
-#
-#     @staticmethod
-#     def source(algo):
-#         return os.path.join(IMPL_DIR, "python", f"{algo}.py")
-#
-#     @staticmethod
-#     def compile(algo):
-#         return None  # interpreted
-#
-#     @staticmethod
-#     def run(algo, size):
-#         return ["python", LangPython.source(algo), size]
+class LangRust:
+    name = "rust"
+
+    @staticmethod
+    def source(algo):
+        return os.path.join(IMPL_DIR, "rust", f"{algo}.rs")
+
+    @staticmethod
+    def compile(algo):
+        src = LangRust.source(algo)
+        exe = os.path.join(BIN_DIR, f"{algo}_rust.exe")
+        return ["rustc", "-O", "-o", exe, src], exe
+
+    @staticmethod
+    def run(algo, size):
+        exe = os.path.join(BIN_DIR, f"{algo}_rust.exe")
+        return [exe, size]
 
 
-LANGUAGES = [LangC]
+class LangGo:
+    name = "go"
+
+    @staticmethod
+    def source(algo):
+        return os.path.join(IMPL_DIR, "go", f"{algo}.go")
+
+    @staticmethod
+    def compile(algo):
+        src = LangGo.source(algo)
+        exe = os.path.join(BIN_DIR, f"{algo}_go.exe")
+        return ["go", "build", "-o", exe, src], exe
+
+    @staticmethod
+    def run(algo, size):
+        exe = os.path.join(BIN_DIR, f"{algo}_go.exe")
+        return [exe, size]
+
+
+class LangJava:
+    name = "java"
+
+    @staticmethod
+    def source(algo):
+        return os.path.join(IMPL_DIR, "java", f"{JAVA_CLASS[algo]}.java")
+
+    @staticmethod
+    def compile(algo):
+        src = LangJava.source(algo)
+        out = os.path.join(BIN_DIR, "java")
+        os.makedirs(out, exist_ok=True)
+        return ["javac", "-d", out, src], out
+
+    @staticmethod
+    def run(algo, size):
+        cp = os.path.join(BIN_DIR, "java")
+        return ["java", "-cp", cp, JAVA_CLASS[algo], size]
+
+
+class LangJavaScript:
+    name = "javascript"
+
+    @staticmethod
+    def source(algo):
+        return os.path.join(IMPL_DIR, "javascript", f"{algo}.js")
+
+    @staticmethod
+    def compile(algo):
+        return None  # interpreted
+
+    @staticmethod
+    def run(algo, size):
+        return ["node", LangJavaScript.source(algo), size]
+
+
+class LangPython:
+    name = "python"
+
+    @staticmethod
+    def source(algo):
+        return os.path.join(IMPL_DIR, "python", f"{algo}.py")
+
+    @staticmethod
+    def compile(algo):
+        return None  # interpreted
+
+    @staticmethod
+    def run(algo, size):
+        return ["python", LangPython.source(algo), size]
+
+
+LANGUAGES = [LangC, LangRust, LangGo, LangJava, LangJavaScript, LangPython]
 
 
 # ---------------------------------------------------------------------------
