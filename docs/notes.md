@@ -8,3 +8,8 @@ not the thing is matrix multiplication uses the naive O(n³) algorithm without c
 
 
 dfs over bfs because it is interesting for energy, the fifo pattern stresses the memory differently than a stack.
+
+
+
+
+tried arguments but ut might not yet work, because need to run the file in each size and that startup costs.
