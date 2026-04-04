@@ -1,94 +1,58 @@
-# Virtual environment
+# Python environments
 venv/
-venv
-/venv
-
+.venv/
 
 # Python cache
 __pycache__/
-*.pyc
-*.pyo
-*.pyd
+*.py[cod]
 .Python
 
-# Compiled binaries
+# Notebook artifacts
+.ipynb_checkpoints/
+
+# Secrets
+.env
+.env.*
+
+# Build artifacts
+*.class
+*.o
+*.hi
+
+# Implementation build outputs
 implementations/c/bin/
+implementations/c/*.exe
 implementations/rust/*/target/
 implementations/go/bin/
 implementations/java/bin/
 implementations/javascript/node_modules/
+implementations/build/
 
-# Haskell artifacts (keeping just in case)
-*.o
-*.hi
-
-# Java class files
-*.class
-
-# Raw experiment data — too large for git
+# Generated experiment outputs
+logs/
+pilot_output/
+implementations/pilot_output/
 experiments/main/raw/
 experiments/pilot/pilot_runs/
 
-# Generated input data — reproducible from generate_inputs.py
-implementations/inputs/
+# Generated reports
+verify_runtimes_report.json
+verify_outputs_report.json
 
-# Analysis outputs — regeneratable from scripts
-analysis/cleaned/
-analysis/figures/
-analysis/tables/
-/analysis
+# LaTeX build artifacts
+paper/main.aux
+paper/main.log
+paper/main.out
+paper/main.synctex.gz
+paper/main.bbl
+paper/main.bcf
+paper/main.blg
+paper/main.run.xml
 
-
-
-# Jupyter checkpoints
-.ipynb_checkpoints/
-
-# VS Code settings
-.vscode/
-
-# CodeCarbon output files
-emissions.csv
-codecarbon.log
-
-# Environment files with secrets
-.env
-.env.*
-.venv
-*.venv
-
-# Windows system files
+# OS files
 Thumbs.db
 desktop.ini
 $RECYCLE.BIN/
 
-# LibreHardwareMonitor / OpenHardwareMonitor
+# Hardware monitor snapshots
 *.ohl
-
-# Verification report (generated)
-verify_runtimes_report.json
-
-# LaTeX build artifacts
-main.aux
-main.log
-main.out
-main.synctex.gz
-main.bbl
-main.bcf
-main.blg
-main.run.xml
-# main.pdf
-
-
-
-
-
-
-
-
-pilot_study.py
-ben_runner.py
-power_analysis.py
-
-
-claude.md
-rough_test_harness.py

@@ -1,0 +1,32 @@
+{
+    "gitdoc.enabled": true,
+    "gitdoc.commitValidationLevel": "none",
+    "gitdoc.autoCommitDelay": 30000,
+    "latex-workshop.latex.autoBuild.run": "onSave",
+    "latex-workshop.view.pdf.viewer": "tab",
+    "latex-workshop.synctex.afterBuild.enabled": true,
+    "latex-workshop.latex.recipe.default": "first",
+    "terminal.integrated.env.windows": {
+        "PATH": "C:\\texlive\\2026\\bin\\windows;${env:PATH}"
+    },
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "XeLaTeX (full path)",
+            "tools": [
+                "xelatex-fullpath"
+            ]
+        }
+    ],
+    "latex-workshop.latex.tools": [
+        {
+            "name": "xelatex-fullpath",
+            "command": "C:/texlive/2026/bin/windows/xelatex.exe",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOC%"
+            ]
+        }
+    ]
+}
