@@ -1,15 +1,4 @@
-\documentclass[10.8pt,letterpaper,twocolumn]{article}
-
-% ---------- Engine detection & fonts ----------
-\usepackage{iftex}
-\ifPDFTeX
-  \usepackage{newpxtext}
-  \usepackage{microtype}
-\else
-  \usepackage{fontspec}
-  \setmainfont{Amiri}
-  \usepackage{microtype}
-\fi
+\documentclass[letterpaper,twocolumn]{article}
 
 % ---------- Layout & utilities ----------
 \usepackage[letterpaper,margin=0.35in]{geometry}
@@ -51,10 +40,8 @@
 \title{Carbon footprint of algorithms}
 \author{
   \begin{tabular}{ccc}
-  \textbf{Anuj Khadka} &
-  \textbf{Vladislav D. Veksler} &
-  \textbf{Darryl Aucoin} \\
-  \affaddr{Computer Science \& Business Analytics} &
+  \textbf{Anuj Khadka} &   \textbf{Vladislav D. Veksler} &   \textbf{Darryl Aucoin} \\
+  % \affaddr{Computer Science \& Business Analytics} & \affaddr{Faculty Advisor} & \affaddr{Second Advisor} \\
   \end{tabular}
 }
 \date{}
@@ -62,11 +49,14 @@
 \begin{document}
 \maketitle  
 
+
 listen, just work on the writing for now, and fix the formatting later dude.
 \section*{Abstract}
 \input{sections/abstract}
 \section{Introduction}
 \input{sections/introduction}
+\section{Background}
+\input{sections/background}
 \section{Methodology}
 \input{sections/methodology}
 \section{Results}
