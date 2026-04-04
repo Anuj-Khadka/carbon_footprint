@@ -13,19 +13,10 @@
 \usepackage{relsize} % for \smaller
 \usepackage{biblatex}
 
-% ---------- Global tweaks ----------
-\setlength{\parskip}{2pt}
-\setlist[itemize]{leftmargin=1.2em,itemsep=2pt,topsep=2pt,parsep=0pt}
-\newcolumntype{L}{>{\RaggedRight\arraybackslash}X}
-\renewcommand{\labelitemi}{\textbullet}
 
 % body text lighter; bold stays deep black
 \color{gray!50!black}
 \renewcommand{\bfseries}{\color{black}\fontseries{b}\selectfont}
-
-% avoid widows/orphans
-\clubpenalty=10000
-\widowpenalty=10000
 
 \AtBeginBibliography{
   \fontsize{8}{8.5}\selectfont
@@ -33,9 +24,9 @@
 
 \addbibresource{main.bib}
 
-% --------------------------- --------------------------- --------------------------- --------------------------- --------------------------- 
+% --------------------------- --------------------------- --------------------------- --------------------------- ---------------------------
 % clean above this later
-% --------------------------- --------------------------- --------------------------- --------------------------- --------------------------- 
+% --------------------------- --------------------------- --------------------------- --------------------------- ---------------------------
 
 
 \title{Carbon footprint of algorithms}
