@@ -1,11 +1,11 @@
 """
-test_harness.py
+verify_output.py
 ---------------
 Compiles and runs algorithm implementations across languages.
 Verifies output correctness against C reference values and reports timing.
 
 Usage:
-    python test_harness.py
+    python verify_output.py
 """
 
 import subprocess
