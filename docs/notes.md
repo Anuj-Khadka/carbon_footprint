@@ -78,3 +78,7 @@ using checksum for all this things. gives me a single output value. so that we c
 
 
 set up is basically for setting the arr or whatever we are working with.
+
+
+
+# for the merge sort the setup is intentionally empty because the reset happens per run
