@@ -2,14 +2,13 @@
 #include <string.h>
 #include <stdbool.h>
 
-#define SMALL   100
-#define MEDIUM  1000
-#define LARGE   5000
-#define V_MAX   LARGE
+#define SMALL  100
+#define MEDIUM 1000
+#define LARGE  5000
 
-static bool adj[V_MAX][V_MAX];
-static bool visited[V_MAX];
-static int  queue[V_MAX];
+static bool adj[LARGE][LARGE];
+static bool visited[LARGE];
+static int  queue[LARGE];
 
 static int bfs(int start, int v) {
     memset(visited, false, (size_t)v * sizeof(bool));
@@ -44,22 +43,15 @@ static void build_graph(int v) {
     }
 }
 
-int main(int argc, char *argv[]) {
-    if (argc != 2) {
-        fprintf(stderr, "Usage: bfs <small|medium|large>\n");
-        return 1;
-    }
+int main(void) {
+    build_graph(SMALL);
+    printf("small:  %d\n", bfs(0, SMALL));
 
-    int v;
-    if      (strcmp(argv[1], "small")  == 0) v = SMALL;
-    else if (strcmp(argv[1], "medium") == 0) v = MEDIUM;
-    else if (strcmp(argv[1], "large")  == 0) v = LARGE;
-    else {
-        fprintf(stderr, "Unknown size: %s\n", argv[1]);
-        return 1;
-    }
+    build_graph(MEDIUM);
+    printf("medium: %d\n", bfs(0, MEDIUM));
 
-    build_graph(v);
-    printf("%d\n", bfs(0, v));
+    build_graph(LARGE);
+    printf("large:  %d\n", bfs(0, LARGE));
+
     return 0;
 }
