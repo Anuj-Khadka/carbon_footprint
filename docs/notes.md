@@ -82,3 +82,6 @@ set up is basically for setting the arr or whatever we are working with.
 
 
 # for the merge sort the setup is intentionally empty because the reset happens per run
+
+
+for hash table open addressing with linear probing is cache-friendly because everything lives in one contiguous array — no pointer chasing like a chained hash table would require. This is actually relevant to your energy measurements since cache-friendly memory access patterns consume less energy. Worth one sentence in your methods section when you describe the hash table implementation.
