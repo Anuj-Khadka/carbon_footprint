@@ -62,3 +62,12 @@ int main(int argc, char *argv[]) {
 ```
 
 This is not a good approach. I am going to have a seperate file for each size. will explain this later.
+
+new file:
+```
+setup() runs once before the loop — array fill is completely outside all measurements
+printf("ready\n") tells the harness the program is initialized and waiting
+fgets blocks until the harness sends a newline — that's the trigger
+checksum prints immediately after the algorithm returns, then loops back to wait
+fflush after every print is critical on Windows — without it stdout may buffer and the harness hangs waiting
+```
