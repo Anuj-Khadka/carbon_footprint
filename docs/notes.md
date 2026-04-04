@@ -77,4 +77,4 @@ using checksum for all this things. gives me a single output value. so that we c
 
 
 
-set up
+set up is basically for setting the arr or whatever we are working with.
