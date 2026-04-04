@@ -1,19 +1,20 @@
-N = 300
+import sys
 
-A = [[i + j for j in range(N)] for i in range(N)]
-B = [[i - j for j in range(N)] for i in range(N)]
-C = [[0] * N for _ in range(N)]
+SMALL  = 50
+MEDIUM = 200
+LARGE  = 500
 
+SIZES = {"small": SMALL, "medium": MEDIUM, "large": LARGE}
 
-def matrix_multiply():
-    for i in range(N):
-        for j in range(N):
+if __name__ == "__main__":
+    n = SIZES[sys.argv[1]]
+    a = [[i + j for j in range(n)] for i in range(n)]
+    b = [[i - j for j in range(n)] for i in range(n)]
+    c = [[0] * n for _ in range(n)]
+    for i in range(n):
+        for j in range(n):
             acc = 0
-            for k in range(N):
-                acc += A[i][k] * B[k][j]
-            C[i][j] = acc
-
-
-matrix_multiply()
-
-print(C[N // 2][N // 2])
+            for k in range(n):
+                acc += a[i][k] * b[k][j]
+            c[i][j] = acc
+    print(c[n // 2][n // 2])

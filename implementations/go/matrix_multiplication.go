@@ -1,34 +1,40 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"os"
+)
 
-const N = 300
+const (
+	SMALL  = 50
+	MEDIUM = 200
+	LARGE  = 500
+)
 
-var a [N][N]int64
-var b [N][N]int64
-var c [N][N]int64
+func main() {
+	sizes := map[string]int{"small": SMALL, "medium": MEDIUM, "large": LARGE}
+	n := sizes[os.Args[1]]
 
-func matrixMultiply() {
-	for i := 0; i < N; i++ {
-		for j := 0; j < N; j++ {
-			var acc int64 = 0
-			for k := 0; k < N; k++ {
+	a := make([][]int64, n)
+	b := make([][]int64, n)
+	c := make([][]int64, n)
+	for i := 0; i < n; i++ {
+		a[i] = make([]int64, n)
+		b[i] = make([]int64, n)
+		c[i] = make([]int64, n)
+		for j := 0; j < n; j++ {
+			a[i][j] = int64(i + j)
+			b[i][j] = int64(i - j)
+		}
+	}
+	for i := 0; i < n; i++ {
+		for j := 0; j < n; j++ {
+			var acc int64
+			for k := 0; k < n; k++ {
 				acc += a[i][k] * b[k][j]
 			}
 			c[i][j] = acc
 		}
 	}
-}
-
-func main() {
-	for i := 0; i < N; i++ {
-		for j := 0; j < N; j++ {
-			a[i][j] = int64(i + j)
-			b[i][j] = int64(i - j)
-		}
-	}
-
-	matrixMultiply()
-
-	fmt.Println(c[N/2][N/2])
+	fmt.Println(c[n/2][n/2])
 }

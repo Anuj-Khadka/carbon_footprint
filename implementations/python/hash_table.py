@@ -1,27 +1,48 @@
-TABLE_SIZE = 10007
-N          = 100_000
+import sys
 
-table = [[] for _ in range(TABLE_SIZE)]
+SMALL      = 100
+MEDIUM     = 10000
+LARGE      = 100000
+TABLE_SIZE = 150001
+
+SIZES = {"small": SMALL, "medium": MEDIUM, "large": LARGE}
+
+keys     = [0] * TABLE_SIZE
+vals     = [0] * TABLE_SIZE
+occupied = [False] * TABLE_SIZE
+
+def table_clear():
+    for i in range(TABLE_SIZE):
+        occupied[i] = False
 
 def hash_fn(key):
-    return (key * 2654435761) % TABLE_SIZE
+    return ((key * 2654435761) & 0xFFFFFFFFFFFFFFFF) % TABLE_SIZE
 
-def insert(key, value):
-    idx = hash_fn(key)
-    for pair in table[idx]:
-        if pair[0] == key:
-            pair[1] = value
+def insert(key, val):
+    i = hash_fn(key)
+    while occupied[i]:
+        if keys[i] == key:
+            vals[i] = val
             return
-    table[idx].append([key, value])
+        i = (i + 1) % TABLE_SIZE
+    keys[i] = key
+    vals[i] = val
+    occupied[i] = True
 
-def delete(key):
-    idx = hash_fn(key)
-    table[idx] = [p for p in table[idx] if p[0] != key]
+def lookup(key):
+    i = hash_fn(key)
+    while occupied[i]:
+        if keys[i] == key:
+            return vals[i]
+        i = (i + 1) % TABLE_SIZE
+    return -1
 
-for i in range(N):
-    insert(i, i * 2)
-for i in range(0, N, 3):
-    delete(i)
-
-count = sum(len(bucket) for bucket in table)
-print(count)
+if __name__ == "__main__":
+    n = SIZES[sys.argv[1]]
+    table_clear()
+    for i in range(n):
+        insert(i * 7 + 3, i * 13 + 5)
+    checksum = 0
+    for i in range(n):
+        checksum += lookup(i * 7 + 3)
+    print(checksum)

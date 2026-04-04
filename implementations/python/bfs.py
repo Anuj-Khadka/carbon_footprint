@@ -1,44 +1,41 @@
-V = 1000
+import sys
 
-adj = [[False] * V for _ in range(V)]
+SMALL  = 100
+MEDIUM = 1000
+LARGE  = 5000
 
+SIZES = {"small": SMALL, "medium": MEDIUM, "large": LARGE}
 
-def bfs(start):
-    if start < 0 or start >= V:
-        return 0
-
-    visited = [False] * V
-    queue = [0] * V
-    head = 0
-    tail = 0
-    count = 0
-
+def bfs(adj, start, v):
+    visited = [False] * v
+    queue = [0] * v
+    head, tail, count = 0, 0, 0
     visited[start] = True
     queue[tail] = start
     tail += 1
-
     while head < tail:
         cur = queue[head]
         head += 1
         count += 1
-
-        for nb in range(V):
+        for nb in range(v):
             if adj[cur][nb] and not visited[nb]:
                 visited[nb] = True
-                if tail < V:
-                    queue[tail] = nb
-                    tail += 1
-
+                queue[tail] = nb
+                tail += 1
     return count
 
+def build_graph(v):
+    adj = [[False] * v for _ in range(v)]
+    for i in range(v - 1):
+        adj[i][i + 1] = True
+        adj[i + 1][i] = True
+    for i in range(0, v, 10):
+        j = (i * 7 + 3) % v
+        adj[i][j] = True
+        adj[j][i] = True
+    return adj
 
-for i in range(V - 1):
-    adj[i][i + 1] = True
-    adj[i + 1][i] = True
-
-for i in range(0, V, 10):
-    j = (i * 7 + 3) % V
-    adj[i][j] = True
-    adj[j][i] = True
-
-print(bfs(0))
+if __name__ == "__main__":
+    v = SIZES[sys.argv[1]]
+    adj = build_graph(v)
+    print(bfs(adj, 0, v))

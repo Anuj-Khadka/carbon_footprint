@@ -1,14 +1,15 @@
-N = 1_000_000
+import sys
 
+SMALL  = 100
+MEDIUM = 10000
+LARGE  = 1000000
 
-def merge_once_buffer(arr, temp, left, mid, right):
+SIZES = {"small": SMALL, "medium": MEDIUM, "large": LARGE}
+
+def merge(arr, temp, left, mid, right):
     for i in range(left, right + 1):
         temp[i] = arr[i]
-
-    i = left
-    j = mid + 1
-    k = left
-
+    i, j, k = left, mid + 1, left
     while i <= mid and j <= right:
         if temp[i] <= temp[j]:
             arr[k] = temp[i]
@@ -17,17 +18,14 @@ def merge_once_buffer(arr, temp, left, mid, right):
             arr[k] = temp[j]
             j += 1
         k += 1
-
     while i <= mid:
         arr[k] = temp[i]
         i += 1
         k += 1
-
     while j <= right:
         arr[k] = temp[j]
         j += 1
         k += 1
-
 
 def merge_sort_impl(arr, temp, left, right):
     if left >= right:
@@ -35,16 +33,12 @@ def merge_sort_impl(arr, temp, left, right):
     mid = left + (right - left) // 2
     merge_sort_impl(arr, temp, left, mid)
     merge_sort_impl(arr, temp, mid + 1, right)
-    merge_once_buffer(arr, temp, left, mid, right)
+    merge(arr, temp, left, mid, right)
 
-
-def merge_sort(arr, n):
-    if arr is None or n < 2:
-        return
+if __name__ == "__main__":
+    n = SIZES[sys.argv[1]]
+    arr = [n - i for i in range(n)]
     temp = [0] * n
-    merge_sort_impl(arr, temp, 0, n - 1)
-
-
-arr = [N - i for i in range(N)]
-merge_sort(arr, N)
-print(arr[N - 1])
+    if n > 1:
+        merge_sort_impl(arr, temp, 0, n - 1)
+    print(arr[n - 1])

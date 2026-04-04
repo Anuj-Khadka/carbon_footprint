@@ -1,44 +1,53 @@
 public class HashTable {
-    static final int TABLE_SIZE = 10007;
-    static final int N          = 100_000;
+    static final int SMALL      = 100;
+    static final int MEDIUM     = 10000;
+    static final int LARGE      = 100000;
+    static final int TABLE_SIZE = 150001;
 
-    static class Node {
-        long key, value;
-        Node next;
-        Node(long k, long v, Node n) { key = k; value = v; next = n; }
+    static long[] keys     = new long[TABLE_SIZE];
+    static long[] vals     = new long[TABLE_SIZE];
+    static boolean[] occupied = new boolean[TABLE_SIZE];
+
+    static void tableClear() {
+        java.util.Arrays.fill(occupied, false);
     }
-
-    static Node[] table = new Node[TABLE_SIZE];
 
     static int hash(long key) {
-        return (int)(Math.abs(key * 2654435761L) % TABLE_SIZE);
+        return (int)(((key * 2654435761L) & 0xFFFFFFFFFFFFFFFFL) % TABLE_SIZE);
     }
 
-    static void insert(long key, long value) {
-        int idx = hash(key);
-        for (Node n = table[idx]; n != null; n = n.next)
-            if (n.key == key) { n.value = value; return; }
-        table[idx] = new Node(key, value, table[idx]);
-    }
-
-    static void delete(long key) {
-        int idx = hash(key);
-        Node n = table[idx], prev = null;
-        while (n != null) {
-            if (n.key == key) {
-                if (prev != null) prev.next = n.next;
-                else table[idx] = n.next;
-                return;
-            }
-            prev = n; n = n.next;
+    static void insert(long key, long val) {
+        int i = hash(key);
+        while (occupied[i]) {
+            if (keys[i] == key) { vals[i] = val; return; }
+            i = (i + 1) % TABLE_SIZE;
         }
+        keys[i] = key;
+        vals[i] = val;
+        occupied[i] = true;
+    }
+
+    static long lookup(long key) {
+        int i = hash(key);
+        while (occupied[i]) {
+            if (keys[i] == key) return vals[i];
+            i = (i + 1) % TABLE_SIZE;
+        }
+        return -1;
     }
 
     public static void main(String[] args) {
-        for (int i = 0; i < N; i++) insert(i, i * 2);
-        for (int i = 0; i < N; i += 3) delete(i);
-        int count = 0;
-        for (Node n : table) while (n != null) { count++; n = n.next; }
-        System.out.println(count);
+        int n;
+        switch (args[0]) {
+            case "small":  n = SMALL;  break;
+            case "medium": n = MEDIUM; break;
+            case "large":  n = LARGE;  break;
+            default: System.err.println("Unknown size: " + args[0]); return;
+        }
+        tableClear();
+        for (int i = 0; i < n; i++) insert((long)i * 7 + 3, (long)i * 13 + 5);
+        long checksum = 0;
+        for (int i = 0; i < n; i++) checksum += lookup((long)i * 7 + 3);
+        System.out.println(checksum);
     }
 }

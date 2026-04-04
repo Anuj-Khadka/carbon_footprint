@@ -1,29 +1,36 @@
-const TABLE_SIZE = 10007;
-const N          = 100_000;
+const SIZES = { small: 100, medium: 10000, large: 100000 };
+const TABLE_SIZE = 150001;
+const n = SIZES[process.argv[2]];
 
-const table = Array.from({ length: TABLE_SIZE }, () => []);
+const keys     = new Float64Array(TABLE_SIZE);
+const vals     = new Float64Array(TABLE_SIZE);
+const occupied = new Uint8Array(TABLE_SIZE);
 
-function hashFn(key) { return (key * 2654435761) % TABLE_SIZE; }
-
-function insert(key, value) {
-    const idx = hashFn(key);
-    for (const pair of table[idx]) {
-        if (pair[0] === key) { pair[1] = value; return; }
-    }
-    table[idx].push([key, value]);
+function hashFn(key) {
+    return Number(BigInt(key) * 2654435761n % BigInt(TABLE_SIZE));
 }
 
-function del(key) {
-    const idx = hashFn(key);
-    const b = table[idx];
-    for (let i = 0; i < b.length; i++) {
-        if (b[i][0] === key) { b.splice(i, 1); return; }
+function insert(key, val) {
+    let i = hashFn(key);
+    while (occupied[i]) {
+        if (keys[i] === key) { vals[i] = val; return; }
+        i = (i + 1) % TABLE_SIZE;
     }
+    keys[i] = key;
+    vals[i] = val;
+    occupied[i] = 1;
 }
 
-for (let i = 0; i < N; i++) insert(i, i * 2);
-for (let i = 0; i < N; i += 3) del(i);
+function lookup(key) {
+    let i = hashFn(key);
+    while (occupied[i]) {
+        if (keys[i] === key) return vals[i];
+        i = (i + 1) % TABLE_SIZE;
+    }
+    return -1;
+}
 
-let count = 0;
-for (const bucket of table) count += bucket.length;
-console.log(count);
+for (let i = 0; i < n; i++) insert(i * 7 + 3, i * 13 + 5);
+let checksum = 0;
+for (let i = 0; i < n; i++) checksum += lookup(i * 7 + 3);
+console.log(checksum);

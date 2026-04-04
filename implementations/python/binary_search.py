@@ -1,15 +1,25 @@
-N    = 1_000_000
+import sys
 
-def binary_search(arr, target):
-    lo, hi = 0, len(arr) - 1
+SMALL  = 100
+MEDIUM = 10000
+LARGE  = 1000000
+
+SIZES = {"small": SMALL, "medium": MEDIUM, "large": LARGE}
+
+def binary_search(arr, n, target):
+    lo, hi = 0, n - 1
     while lo <= hi:
-        mid = (lo + hi) // 2
-        if   arr[mid] == target: return mid
-        elif arr[mid] <  target: lo = mid + 1
-        else:                    hi = mid - 1
+        mid = lo + (hi - lo) // 2
+        if arr[mid] == target:
+            return mid
+        elif arr[mid] < target:
+            lo = mid + 1
+        else:
+            hi = mid - 1
     return -1
 
-arr    = [i * 2 for i in range(N)]
-target = (N - 1) * 2
-result = binary_search(arr, target)
-print(result)
+if __name__ == "__main__":
+    n = SIZES[sys.argv[1]]
+    arr = [i * 2 for i in range(n)]
+    target = (n - 1) * 2
+    print(binary_search(arr, n, target))

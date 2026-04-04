@@ -1,47 +1,68 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"os"
+)
 
-const TABLE_SIZE = 10007
-const N          = 100_000
+const (
+	SMALL      = 100
+	MEDIUM     = 10000
+	LARGE      = 100000
+	TABLE_SIZE = 150001
+)
 
-type Node struct {
-	key, value int64
-	next       *Node
-}
+var (
+	keys     [TABLE_SIZE]int64
+	vals     [TABLE_SIZE]int64
+	occupied [TABLE_SIZE]bool
+)
 
-var table [TABLE_SIZE]*Node
-
-func hashFn(key int64) int {
-	return int(uint64(key)*2654435761) % TABLE_SIZE
-}
-
-func insert(key, value int64) {
-	idx := hashFn(key)
-	for n := table[idx]; n != nil; n = n.next {
-		if n.key == key { n.value = value; return }
+func tableClear() {
+	for i := range occupied {
+		occupied[i] = false
 	}
-	table[idx] = &Node{key, value, table[idx]}
 }
 
-func delete(key int64) {
-	idx := hashFn(key)
-	n, prev := table[idx], (*Node)(nil)
-	for n != nil {
-		if n.key == key {
-			if prev != nil { prev.next = n.next } else { table[idx] = n.next }
+func hash(key int64) int {
+	return int(uint64(key) * 2654435761 % TABLE_SIZE)
+}
+
+func insert(key, val int64) {
+	i := hash(key)
+	for occupied[i] {
+		if keys[i] == key {
+			vals[i] = val
 			return
 		}
-		prev, n = n, n.next
+		i = (i + 1) % TABLE_SIZE
 	}
+	keys[i] = key
+	vals[i] = val
+	occupied[i] = true
+}
+
+func lookup(key int64) int64 {
+	i := hash(key)
+	for occupied[i] {
+		if keys[i] == key {
+			return vals[i]
+		}
+		i = (i + 1) % TABLE_SIZE
+	}
+	return -1
 }
 
 func main() {
-	for i := 0; i < N; i++ { insert(int64(i), int64(i)*2) }
-	for i := 0; i < N; i += 3 { delete(int64(i)) }
-	count := 0
-	for _, n := range table {
-		for ; n != nil; n = n.next { count++ }
+	sizes := map[string]int{"small": SMALL, "medium": MEDIUM, "large": LARGE}
+	n := sizes[os.Args[1]]
+	tableClear()
+	for i := 0; i < n; i++ {
+		insert(int64(i)*7+3, int64(i)*13+5)
 	}
-	fmt.Println(count)
+	var checksum int64
+	for i := 0; i < n; i++ {
+		checksum += lookup(int64(i)*7 + 3)
+	}
+	fmt.Println(checksum)
 }

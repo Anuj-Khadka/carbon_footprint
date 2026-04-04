@@ -1,18 +1,21 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"os"
+)
 
-const N = 1_000_000
+const (
+	SMALL  = 100
+	MEDIUM = 10000
+	LARGE  = 1000000
+)
 
-var temp [N]int64
-
-func mergeOnceBuffer(arr *[N]int64, left, mid, right int) {
+func merge(arr, temp []int64, left, mid, right int) {
 	for i := left; i <= right; i++ {
 		temp[i] = arr[i]
 	}
-
 	i, j, k := left, mid+1, left
-
 	for i <= mid && j <= right {
 		if temp[i] <= temp[j] {
 			arr[k] = temp[i]
@@ -23,13 +26,11 @@ func mergeOnceBuffer(arr *[N]int64, left, mid, right int) {
 		}
 		k++
 	}
-
 	for i <= mid {
 		arr[k] = temp[i]
 		i++
 		k++
 	}
-
 	for j <= right {
 		arr[k] = temp[j]
 		j++
@@ -37,28 +38,26 @@ func mergeOnceBuffer(arr *[N]int64, left, mid, right int) {
 	}
 }
 
-func mergeSortImpl(arr *[N]int64, left, right int) {
+func mergeSortImpl(arr, temp []int64, left, right int) {
 	if left >= right {
 		return
 	}
 	mid := left + (right-left)/2
-	mergeSortImpl(arr, left, mid)
-	mergeSortImpl(arr, mid+1, right)
-	mergeOnceBuffer(arr, left, mid, right)
-}
-
-func mergeSort(arr *[N]int64, n int) {
-	if arr == nil || n < 2 {
-		return
-	}
-	mergeSortImpl(arr, 0, n-1)
+	mergeSortImpl(arr, temp, left, mid)
+	mergeSortImpl(arr, temp, mid+1, right)
+	merge(arr, temp, left, mid, right)
 }
 
 func main() {
-	var arr [N]int64
-	for i := 0; i < N; i++ {
-		arr[i] = int64(N - i)
+	sizes := map[string]int{"small": SMALL, "medium": MEDIUM, "large": LARGE}
+	n := sizes[os.Args[1]]
+	arr := make([]int64, n)
+	for i := 0; i < n; i++ {
+		arr[i] = int64(n - i)
 	}
-	mergeSort(&arr, N)
-	fmt.Println(arr[N-1])
+	temp := make([]int64, n)
+	if n > 1 {
+		mergeSortImpl(arr, temp, 0, n-1)
+	}
+	fmt.Println(arr[n-1])
 }
