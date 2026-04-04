@@ -1,4 +1,4 @@
-In the following we describe the basic energy consumption, carbon intensity, programming languages and the implementations of the six algorithms.
+In the following sections, we describe the energy consumption model, carbon intensity assumptions, programming languages, and the implementations of the six algorithms used in this study.
 
 \subsection{Energy Consumption}
 
@@ -35,15 +35,13 @@ In the following we describe the basic energy consumption, carbon intensity, pro
 
 
 
-Summation, Binary Search, Merge Sort, BFS, Hash Table, 
-Matrix Multiplication
-why? because they represent different types of computational work, cpu-bound, memory-bound, branching-heavy etc.
+These algorithms were selected because they represent different forms of computational work, including CPU-bound, memory-bound, and branching-heavy behavior.
 
 
 
 \subsection{Algorithms}
 
-Algorithms were choosen to span a range of time complexities and computational patterns, as well as CPU-bound, memory-bound, and branching-heavy workloads. The six algorithms we chose are summarized in the Table \ref{tab:algorithms}.
+The algorithms were chosen to span a range of time complexities and computational patterns, including CPU-bound, memory-bound, and branching-heavy workloads. The six algorithms used in this study are summarized in Table~\ref{tab:algorithms}.
 
 
 \begin{table}[h]
@@ -60,8 +58,8 @@ Algorithms were choosen to span a range of time complexities and computational p
         Binary Search                  & $O(\log n)$       & Logarithmic \\
         Merge Sort                     & $O(n \log n)$     & Divide \& Conquer \\
         Breadth-First Search (BFS)     & $O(V + E)$        & Graph Traversal \\
-        Hash Table                     & xxxxxx            &  xxxxxx \\
-        Matrix Multiplication          & $O(n^3)$          & Dense Arithemetic \\
+        Hash Table                     & $O(1)$ average    & Constant-time lookup \\
+        Matrix Multiplication          & $O(n^3)$          & Dense arithmetic \\
         \hline
     \end{tabular}
     
@@ -69,7 +67,7 @@ Algorithms were choosen to span a range of time complexities and computational p
 \end{table}
 
 
-\textbf{o1 or on for hash table fix later.}
+
 
 
 
