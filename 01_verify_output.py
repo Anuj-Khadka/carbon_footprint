@@ -50,243 +50,137 @@ EXPECTED = {
     ("matrix_multiplication",   "large"):           "10291750",
 }
 
-# Java class names (PascalCase)
-JAVA_CLASS = {
-    "summation":             "Summation",
-    "binary_search":         "BinarySearch",
-    "merge_sort":            "MergeSort",
-    "bfs":                   "BFS",
-    "hash_table":            "HashTable",
-    "matrix_multiplication": "MatrixMultiplication",
-}
 
 
-# ---------------------------------------------------------------------------
-# Language definitions
-# ---------------------------------------------------------------------------
-# To add a new language, create a class with:
-#   name          — display name
-#   source(algo)  — path to source file
-#   compile(algo) — return (cmd_list, exe_path), or None if interpreted
-#   run(algo, size) — command list to execute
-# Then append it to the LANGUAGES list at the bottom.
-# ---------------------------------------------------------------------------
-
-class LangC:
-    name = "c"
-
-    @staticmethod
-    def source(algo):
-        return os.path.join(IMPL_DIR, "c", f"{algo}.c")
-
-    @staticmethod
-    def compile(algo):
-        src = LangC.source(algo)
-        exe = os.path.join(BIN_DIR, f"{algo}_c.exe")
-        return ["gcc", "-O2", "-o", exe, src], exe
-
-    @staticmethod
-    def run(algo, size):
-        exe = os.path.join(BIN_DIR, f"{algo}_c.exe")
-        return [exe, size]
-
-
-class LangRust:
-    name = "rust"
-
-    @staticmethod
-    def source(algo):
-        return os.path.join(IMPL_DIR, "rust", f"{algo}.rs")
-
-    @staticmethod
-    def compile(algo):
-        src = LangRust.source(algo)
-        exe = os.path.join(BIN_DIR, f"{algo}_rust.exe")
-        return ["rustc", "-O", "-o", exe, src], exe
-
-    @staticmethod
-    def run(algo, size):
-        exe = os.path.join(BIN_DIR, f"{algo}_rust.exe")
-        return [exe, size]
-
-
-class LangGo:
-    name = "go"
-
-    @staticmethod
-    def source(algo):
-        return os.path.join(IMPL_DIR, "go", f"{algo}.go")
-
-    @staticmethod
-    def compile(algo):
-        src = LangGo.source(algo)
-        exe = os.path.join(BIN_DIR, f"{algo}_go.exe")
-        return ["go", "build", "-o", exe, src], exe
-
-    @staticmethod
-    def run(algo, size):
-        exe = os.path.join(BIN_DIR, f"{algo}_go.exe")
-        return [exe, size]
-
-
-class LangJava:
-    name = "java"
-
-    @staticmethod
-    def source(algo):
-        return os.path.join(IMPL_DIR, "java", f"{JAVA_CLASS[algo]}.java")
-
-    @staticmethod
-    def compile(algo):
-        src = LangJava.source(algo)
-        out = os.path.join(BIN_DIR, "java")
-        os.makedirs(out, exist_ok=True)
-        return ["javac", "-d", out, src], out
-
-    @staticmethod
-    def run(algo, size):
-        cp = os.path.join(BIN_DIR, "java")
-        return ["java", "-cp", cp, JAVA_CLASS[algo], size]
-
-
-class LangJavaScript:
-    name = "javascript"
-
-    @staticmethod
-    def source(algo):
-        return os.path.join(IMPL_DIR, "javascript", f"{algo}.js")
-
-    @staticmethod
-    def compile(algo):
-        return None  # interpreted
-
-    @staticmethod
-    def run(algo, size):
-        return ["node", LangJavaScript.source(algo), size]
-
-
-class LangPython:
-    name = "python"
-
-    @staticmethod
-    def source(algo):
-        return os.path.join(IMPL_DIR, "python", f"{algo}.py")
-
-    @staticmethod
-    def compile(algo):
-        return None  # interpreted
-
-    @staticmethod
-    def run(algo, size):
-        return ["python", LangPython.source(algo), size]
-
-
-LANGUAGES = [LangC, LangRust, LangGo, LangJava, LangJavaScript, LangPython]
-
-
-# ---------------------------------------------------------------------------
-# Helpers
-# ---------------------------------------------------------------------------
-
-def timed_run(cmd, timeout=120):
-    """Run a command, return (stdout, stderr, returncode, elapsed_s)."""
-    t0 = time.perf_counter()
+def compile_c(algo, size):
+    """Compile a single C file. Returns (success, error_message)."""
+    src = os.path.join(IMPL_DIR, "c", algo, f"{algo}_{size}.c")
+    exe = os.path.join(BIN_DIR,  f"{algo}_{size}_c.exe")
+ 
+    if not os.path.exists(src):
+        return False, exe, f"source not found: {src}"
+ 
+    cmd = ["gcc", "-O2", "-o", exe, src]
     try:
-        result = subprocess.run(cmd, capture_output=True, text=True, timeout=timeout)
-        elapsed = time.perf_counter() - t0
-        return result.stdout.strip(), result.stderr.strip(), result.returncode, elapsed
+        result = subprocess.run(cmd, capture_output=True, text=True, timeout=30)
+        if result.returncode != 0:
+            return False, exe, result.stderr.strip()
+        return True, exe, ""
     except FileNotFoundError:
-        return "", "binary not found", -1, time.perf_counter() - t0
+        return False, exe, "gcc not found"
     except subprocess.TimeoutExpired:
-        return "", f"timeout after {timeout}s", -1, time.perf_counter() - t0
-
-
-# ---------------------------------------------------------------------------
-# Main
-# ---------------------------------------------------------------------------
-
+        return False, exe, "compile timeout"
+ 
+ 
+def run_once(exe, timeout=10):
+    """
+    Launch exe, wait for 'ready', send one newline trigger,
+    read the checksum line. Returns (checksum, elapsed_s, error).
+    """
+    try:
+        proc = subprocess.Popen(
+            [exe],
+            stdin=subprocess.PIPE,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            text=True,
+        )
+ 
+        # Wait for ready
+        t0 = time.perf_counter()
+        ready_line = proc.stdout.readline()
+        if ready_line.strip() != "ready":
+            proc.kill()
+            return "", 0.0, f"expected 'ready', got: {ready_line.strip()!r}"
+ 
+        # Arm timer, send trigger
+        t1 = time.perf_counter()
+        proc.stdin.write("\n")
+        proc.stdin.flush()
+ 
+        # Read checksum
+        checksum_line = proc.stdout.readline()
+        elapsed = time.perf_counter() - t1
+ 
+        proc.kill()
+        proc.wait()
+ 
+        return checksum_line.strip(), elapsed, ""
+ 
+    except FileNotFoundError:
+        return "", 0.0, "binary not found"
+    except subprocess.TimeoutExpired:
+        return "", 0.0, f"timeout after {timeout}s"
+    except Exception as e:
+        return "", 0.0, str(e)
+ 
+ 
 def main():
     os.makedirs(BIN_DIR, exist_ok=True)
-    all_pass = True
-
-    for lang in LANGUAGES:
-        print("=" * 80)
-        print(f"  {lang.name.upper()}")
-        print("=" * 80)
-
-        # --- Compile phase ---
-        print("\n  Compiling...")
-        build_ok = set()
-        for algo in ALGORITHMS:
-            src = lang.source(algo)
-            if not os.path.exists(src):
-                print(f"    SKIP  {algo} — source not found")
-                continue
-
-            compile_info = lang.compile(algo)
-            if compile_info is None:
-                build_ok.add(algo)
-                continue
-
-            cmd, _ = compile_info
-            _, stderr, rc, elapsed = timed_run(cmd, timeout=30)
-            if rc != 0:
-                print(f"    FAIL  {algo} ({elapsed:.2f}s) — {stderr[:200]}")
+ 
+    passes = 0
+    fails  = 0
+ 
+    print("=" * 80)
+    print("  C — COMPILE")
+    print("=" * 80)
+ 
+    # Compile all files first
+    compiled = {}  # (algo, size) -> exe path
+    for algo in ALGORITHMS:
+        for size in SIZES:
+            ok, exe, err = compile_c(algo, size)
+            label = f"{algo}_{size}"
+            if ok:
+                compiled[(algo, size)] = exe
+                print(f"  OK    {label}")
             else:
-                print(f"    OK    {algo} ({elapsed:.2f}s)")
-                build_ok.add(algo)
-
-        print(f"  {len(build_ok)}/{len(ALGORITHMS)} compiled OK.\n")
-
-        # --- Run phase ---
-        passes = 0
-        fails = 0
-
-        print(f"  {'ALGORITHM':<23s} {'SIZE':<8s} {'OUTPUT':<20s} {'TIME':>10s}  STATUS")
-        print("  " + "-" * 75)
-
-        for algo in ALGORITHMS:
-            if algo not in build_ok:
-                for size in SIZES:
-                    fails += 1
-                    print(f"  {algo:<23s} {size:<8s} {'—':<20s} {'—':>10s}  FAIL (not compiled)")
+                print(f"  FAIL  {label} — {err}")
+ 
+    total_files = len(ALGORITHMS) * len(SIZES)
+    print(f"\n  {len(compiled)}/{total_files} compiled OK.\n")
+ 
+    # Run and verify
+    print("=" * 80)
+    print("  C — RUN & VERIFY")
+    print("=" * 80)
+    print(f"\n  {'ALGORITHM':<25s} {'SIZE':<8s} {'OUTPUT':<20s} {'TIME':>10s}  STATUS")
+    print("  " + "-" * 75)
+ 
+    for algo in ALGORITHMS:
+        for size in SIZES:
+            if (algo, size) not in compiled:
+                fails += 1
+                print(f"  {algo:<25s} {size:<8s} {'—':<20s} {'—':>10s}  FAIL (not compiled)")
                 continue
-
-            for size in SIZES:
-                cmd = lang.run(algo, size)
-                stdout, stderr, rc, elapsed = timed_run(cmd)
-                expected = EXPECTED.get((algo, size))
-                time_str = f"{elapsed:.4f}s"
-
-                if rc != 0:
-                    status = f"FAIL (exit {rc})"
-                    fails += 1
-                    display = "—"
-                elif expected is None:
-                    status = "SKIP (no expected value)"
-                    display = stdout
-                elif stdout == expected:
-                    status = "PASS"
-                    passes += 1
-                    display = stdout
-                else:
-                    status = f"FAIL (expected {expected})"
-                    fails += 1
-                    display = stdout
-
-                print(f"  {algo:<23s} {size:<8s} {display:<20s} {time_str:>10s}  {status}")
-
-        # --- Summary ---
-        total = passes + fails
-        print("  " + "-" * 75)
-        print(f"  {passes} passed, {fails} failed out of {total}")
-        print("=" * 80)
-
-        if fails > 0:
-            all_pass = False
-
-    sys.exit(0 if all_pass else 1)
-
-
+ 
+            exe = compiled[(algo, size)]
+            checksum, elapsed, err = run_once(exe)
+            expected = EXPECTED.get((algo, size))
+            time_str = f"{elapsed:.4f}s"
+ 
+            if err:
+                status = f"FAIL ({err})"
+                fails += 1
+                display = "—"
+            elif checksum == expected:
+                status = "PASS"
+                passes += 1
+                display = checksum
+            else:
+                status = f"FAIL (expected {expected}, got {checksum})"
+                fails += 1
+                display = checksum
+ 
+            print(f"  {algo:<25s} {size:<8s} {display:<20s} {time_str:>10s}  {status}")
+ 
+    total = passes + fails
+    print("  " + "-" * 75)
+    print(f"\n  {passes} passed, {fails} failed out of {total}")
+    print("=" * 80)
+ 
+    sys.exit(0 if fails == 0 else 1)
+ 
+ 
 if __name__ == "__main__":
     main()
