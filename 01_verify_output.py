@@ -26,7 +26,7 @@ ALGORITHMS = [
     "matrix_multiplication",
 ]
 
-SIZES = ["small", "med", "large"]
+SIZES = ["small", "mid", "large"]
 
 # C reference outputs — every language must match these
 EXPECTED = {
