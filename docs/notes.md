@@ -71,3 +71,6 @@ fgets blocks until the harness sends a newline — that's the trigger
 checksum prints immediately after the algorithm returns, then loops back to wait
 fflush after every print is critical on Windows — without it stdout may buffer and the harness hangs waiting
 ```
+
+
+using checksum for all this things. gives me a single output value. so that we can test the algo is running and producing right output.
