@@ -45,13 +45,14 @@ why? because they represent different types of computational work, cpu-bound, me
 
 The algorithms were chosen to span a range of time complexities and computational patterns, including CPU-bound, memory-bound, and branching-heavy workloads. The six algorithms used in this study are summarized in Table~\ref{tab:algorithms}.
 
-\begin{table}[t]
+\begin{table}[h]
     \centering
     \caption{Algorithms, their time complexities and computational patterns.}\label{tab:algorithms}
     \small
-    \renewcommand{\arraystretch}{1.08}
-    \begin{tabularx}{\columnwidth}{@{}l l X@{}}
+    \begin{tabular}{lll}
+        \hline
         \textbf{Algorithm} & \textbf{Time Complexity} & \textbf{Pattern} \\
+        \hline
         Summation                      & $O(n)$            & Linear \\
         Binary Search                  & $O(\log n)$       & Logarithmic \\
         Merge Sort                     & $O(n \log n)$     & Divide \& Conquer \\
