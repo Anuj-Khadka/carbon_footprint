@@ -2,7 +2,7 @@
 #include <string.h>
 #include <stdbool.h>
 
-#define N 100
+#define N 1000
 
 static bool adj[N][N];
 static bool visited[N];
