@@ -26,28 +26,28 @@ ALGORITHMS = [
     "matrix_multiplication",
 ]
 
-SIZES = ["small", "medium", "large"]
+SIZES = ["small", "med", "large"]
 
 # C reference outputs — every language must match these
 EXPECTED = {
-    ("summation", "small"):               "5050",
-    ("summation", "medium"):              "50005000",
-    ("summation", "large"):               "500000500000",
-    ("binary_search", "small"):           "99",
-    ("binary_search", "medium"):          "9999",
-    ("binary_search", "large"):           "999999",
-    ("merge_sort", "small"):              "100",
-    ("merge_sort", "medium"):             "10000",
-    ("merge_sort", "large"):              "1000000",
-    ("bfs", "small"):                     "100",
-    ("bfs", "medium"):                    "1000",
-    ("bfs", "large"):                     "5000",
-    ("hash_table", "small"):              "64850",
-    ("hash_table", "medium"):             "649985000",
-    ("hash_table", "large"):              "64999850000",
-    ("matrix_multiplication", "small"):   "9175",
-    ("matrix_multiplication", "medium"):  "646700",
-    ("matrix_multiplication", "large"):   "10291750",
+    ("summation",               "small"):           "5050",
+    ("summation",               "mid"):             "50005000",
+    ("summation",               "large"):           "500000500000",
+    ("binary_search",           "small"):           "99",
+    ("binary_search",           "mid"):             "9999",
+    ("binary_search",           "large"):           "999999",
+    ("merge_sort",              "small"):           "100",
+    ("merge_sort",              "mid"):             "10000",
+    ("merge_sort",              "large"):           "1000000",
+    ("bfs",                     "small"):           "100",
+    ("bfs",                     "mid"):             "1000",
+    ("bfs",                     "large"):           "5000",
+    ("hash_table",              "small"):           "64850",
+    ("hash_table",              "mid"):             "649985000",
+    ("hash_table",              "large"):           "64999850000",
+    ("matrix_multiplication",   "small"):           "9175",
+    ("matrix_multiplication",   "mid"):             "646700",
+    ("matrix_multiplication",   "large"):           "10291750",
 }
 
 # Java class names (PascalCase)
