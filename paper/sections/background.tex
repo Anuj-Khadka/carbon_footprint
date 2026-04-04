@@ -43,36 +43,18 @@ These algorithms were selected because they represent different forms of computa
 
 The algorithms were chosen to span a range of time complexities and computational patterns, including CPU-bound, memory-bound, and branching-heavy workloads. The six algorithms used in this study are summarized in Table~\ref{tab:algorithms}.
 
-
-\begin{table}[h]
-
+\begin{table}[t]
     \centering
-    \caption{Algorithms, their time complexities and computational patterns.}
-    \label{tab:algorithms}
-    \scriptsize
-    \begin{tabular}{lll}
-        \hline
+    \caption{Algorithms, their time complexities and computational patterns.}\label{tab:algorithms}
+    \small
+    \renewcommand{\arraystretch}{1.08}
+    \begin{tabularx}{\columnwidth}{@{}l l X@{}}
         \textbf{Algorithm} & \textbf{Time Complexity} & \textbf{Pattern} \\
-        \hline
-        Summation                      & $O(n)$            & Linear \\
-        Binary Search                  & $O(\log n)$       & Logarithmic \\
-        Merge Sort                     & $O(n \log n)$     & Divide \& Conquer \\
-        Breadth-First Search (BFS)     & $O(V + E)$        & Graph Traversal \\
-        Hash Table                     & $O(1)$ average    & Constant-time lookup \\
-        Matrix Multiplication          & $O(n^3)$          & Dense arithmetic \\
-        \hline
-    \end{tabular}
-    
-    
+        Summation & $O(n)$ & Linear \\
+        Binary Search & $O(\log n)$ & Logarithmic \\
+        Merge Sort & $O(n \log n)$ & Divide \& Conquer \\
+        Breadth-First Search (BFS) & $O(V + E)$ & Graph traversal \\
+        Hash Table & $O(1)$ average & Constant-time lookup \\
+        Matrix Multiplication & $O(n^3)$ & Dense arithmetic \\
+    \end{tabularx}
 \end{table}
-
-
-
-
-
-
-
-
-
-
-
