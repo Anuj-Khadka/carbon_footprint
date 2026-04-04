@@ -1,4 +1,5 @@
 import csv
+import shutil
 import subprocess
 import sys
 import time
@@ -102,9 +103,44 @@ def ensure_program_exists(command: list[str]) -> bool:
     """
     first = Path(command[0])
 
+    def try_build_missing_c_executable(exe_path: Path) -> bool:
+        """
+        If a C executable is missing, attempt to build it from a matching .c file.
+        """
+        gcc_path = shutil.which("gcc")
+        if not gcc_path:
+            return False
+
+        source_candidates = [
+            exe_path.with_suffix(".c"),
+            exe_path.parent.parent / f"{exe_path.stem}.c",
+            BASE_DIR / "c" / f"{exe_path.stem}.c",
+        ]
+
+        source_path = next((p for p in source_candidates if p.exists()), None)
+        if not source_path:
+            return False
+
+        exe_path.parent.mkdir(parents=True, exist_ok=True)
+
+        try:
+            subprocess.run(
+                [gcc_path, str(source_path), "-O2", "-o", str(exe_path)],
+                capture_output=True,
+                text=True,
+                check=True,
+            )
+        except subprocess.CalledProcessError:
+            return False
+
+        return exe_path.exists()
+
     # First token can be an absolute/relative executable path.
     if first.is_absolute() or any(sep in command[0] for sep in ("/", "\\")):
         if not first.exists():
+            if first.suffix in (".exe", "") and "c" in first.parts:
+                if try_build_missing_c_executable(first):
+                    return True
             return False
 
     # Script-based command where second token is a local script path.
