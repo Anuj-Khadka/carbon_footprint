@@ -4,26 +4,28 @@
 
 **Input sizes:** small = 100, medium = 10,000, large = 1,000,000
 
-### Data
+### Data (static globals)
 
 ```
-arr[LARGE]          — static global array of int64
+N = <100 | 10000 | 1000000>
+arr[N]                               // static array of int64
 ```
 
-### Setup
+### Setup (runs once at startup)
 
 ```
-for i = 0 to n-1:
-    arr[i] = i * 2           // sorted even numbers: 0, 2, 4, ...
-target = (n - 1) * 2         // last element
+function setup():
+    for i = 0 to N-1:
+        arr[i] = i * 2              // sorted even numbers: 0, 2, 4, ...
 ```
 
-### Algorithm
+### Algorithm (runs each time harness sends a trigger)
 
 ```
-function binary_search(n, target):
+function binary_search():
+    target = (N - 1) * 2            // last element
     lo = 0
-    hi = n - 1
+    hi = N - 1
     while lo <= hi:
         mid = lo + (hi - lo) / 2
         if arr[mid] == target:
@@ -35,12 +37,16 @@ function binary_search(n, target):
     return -1
 ```
 
-### Main
+### Main (interactive stdin/stdout protocol)
 
 ```
-n = parse_size(argv[1])
-setup arr and target
-print binary_search(n, target)
+setup()
+print "ready"
+flush stdout
+
+while read line from stdin:
+    print binary_search()
+    flush stdout
 ```
 
 ### Expected output

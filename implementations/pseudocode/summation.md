@@ -4,35 +4,41 @@
 
 **Input sizes:** small = 100, medium = 10,000, large = 1,000,000
 
-### Data
+### Data (static globals)
 
 ```
-arr[LARGE]          — static global array of int64
+N = <100 | 10000 | 1000000>        // compile-time constant per binary
+arr[N]                               // static array of int64
 ```
 
-### Setup
+### Setup (runs once at startup)
 
 ```
-for i = 0 to n-1:
-    arr[i] = i + 1
+function setup():
+    for i = 0 to N-1:
+        arr[i] = i + 1
 ```
 
-### Algorithm
+### Algorithm (runs each time harness sends a trigger)
 
 ```
-function summation(n):
+function summation():
     sum = 0
-    for i = 0 to n-1:
+    for i = 0 to N-1:
         sum = sum + arr[i]
     return sum
 ```
 
-### Main
+### Main (interactive stdin/stdout protocol)
 
 ```
-n = parse_size(argv[1])     // small → 100, medium → 10000, large → 1000000
-setup arr with n elements
-print summation(n)
+setup()
+print "ready"
+flush stdout
+
+while read line from stdin:
+    print summation()
+    flush stdout
 ```
 
 ### Expected output

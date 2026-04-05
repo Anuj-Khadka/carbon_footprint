@@ -2,26 +2,36 @@
 
 **Complexity:** O(n) amortized for n inserts + n lookups
 
-**Input sizes:** small = 100, medium = 10,000, large = 100,000
-**Table size:** 150,001
+**Input sizes and table sizes:**
 
-### Data
+| Size   | N       | TABLE_SIZE |
+|--------|---------|------------|
+| small  | 100     | 151        |
+| medium | 10,000  | 15,001     |
+| large  | 100,000 | 150,001    |
+
+TABLE_SIZE is approximately 1.5x N (prime) to keep load factor low.
+
+### Data (static globals)
 
 ```
-keys[TABLE_SIZE]      — static global array of int64
-vals[TABLE_SIZE]      — static global array of int64
-occupied[TABLE_SIZE]  — static global array of bool
+N = <100 | 10000 | 100000>
+TABLE_SIZE = <151 | 15001 | 150001>
+keys[TABLE_SIZE]                     // static array of int64
+vals[TABLE_SIZE]                     // static array of int64
+occupied[TABLE_SIZE]                 // static array of bool
 ```
 
-### Algorithm
+### Hash function
 
 ```
 function hash(key):
-    return (key * 2654435761) mod TABLE_SIZE
+    return (key * 2654435761) mod TABLE_SIZE    // unsigned 64-bit multiply
+```
 
-function table_clear():
-    set all occupied[] to false
+### Insert and Lookup (open addressing, linear probing)
 
+```
 function insert(key, val):
     i = hash(key)
     while occupied[i]:
@@ -42,20 +52,36 @@ function lookup(key):
     return -1
 ```
 
-### Main
+### Reset (runs before each measured run - clears table and re-inserts)
 
 ```
-n = parse_size(argv[1])
-table_clear()
+function reset():
+    for i = 0 to TABLE_SIZE-1:
+        occupied[i] = false
+    for i = 0 to N-1:
+        insert(i * 7 + 3, i * 13 + 5)
+```
 
-for i = 0 to n-1:
-    insert(i * 7 + 3, i * 13 + 5)
+### Algorithm (runs each time harness sends a trigger)
 
-checksum = 0
-for i = 0 to n-1:
-    checksum = checksum + lookup(i * 7 + 3)
+```
+function hash_table():
+    reset()
+    checksum = 0
+    for i = 0 to N-1:
+        checksum = checksum + lookup(i * 7 + 3)
+    return checksum
+```
 
-print checksum
+### Main (interactive stdin/stdout protocol)
+
+```
+print "ready"
+flush stdout
+
+while read line from stdin:
+    print hash_table()
+    flush stdout
 ```
 
 ### Expected output

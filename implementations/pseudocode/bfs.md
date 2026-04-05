@@ -4,43 +4,44 @@
 
 **Input sizes:** small = 100, medium = 1,000, large = 5,000
 
-### Data
+### Data (static globals)
 
 ```
-adj[V_MAX][V_MAX]   — static global adjacency matrix (bool)
-visited[V_MAX]      — static global visited array (bool)
-queue[V_MAX]        — static global BFS queue (int)
+N = <100 | 1000 | 5000>
+adj[N][N]                            // static adjacency matrix (bool)
+visited[N]                           // static visited array (bool)
+queue[N]                             // static BFS queue (int)
 ```
 
-### Graph construction
+### Setup (runs once - builds graph)
 
 ```
-function build_graph(v):
+function setup():
     clear adj to all false
 
-    // Chain: 0—1—2—...—(v-1)
-    for i = 0 to v-2:
+    // Chain: 0-1-2-...-(N-1)
+    for i = 0 to N-2:
         adj[i][i+1] = true
         adj[i+1][i] = true
 
     // Cross edges every 10 vertices
-    for i = 0 to v-1 step 10:
-        j = (i * 7 + 3) mod v
+    for i = 0 to N-1 step 10:
+        j = (i * 7 + 3) mod N
         adj[i][j] = true
         adj[j][i] = true
 ```
 
-### Algorithm
+### Algorithm (runs each time harness sends a trigger)
 
 ```
-function bfs(start, v):
-    clear visited[0..v-1] to false
+function bfs():
+    clear visited to all false
     head = 0
     tail = 0
     count = 0
 
-    visited[start] = true
-    queue[tail] = start
+    visited[0] = true
+    queue[tail] = 0
     tail = tail + 1
 
     while head < tail:
@@ -48,7 +49,7 @@ function bfs(start, v):
         head = head + 1
         count = count + 1
 
-        for nb = 0 to v-1:
+        for nb = 0 to N-1:
             if adj[cur][nb] AND NOT visited[nb]:
                 visited[nb] = true
                 queue[tail] = nb
@@ -57,12 +58,16 @@ function bfs(start, v):
     return count
 ```
 
-### Main
+### Main (interactive stdin/stdout protocol)
 
 ```
-v = parse_size(argv[1])     // small → 100, medium → 1000, large → 5000
-build_graph(v)
-print bfs(0, v)
+setup()
+print "ready"
+flush stdout
+
+while read line from stdin:
+    print bfs()
+    flush stdout
 ```
 
 ### Expected output
