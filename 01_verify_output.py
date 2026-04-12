@@ -157,7 +157,7 @@ def main():
             exe = compiled[(algo, size)]
             checksum, elapsed, err = run_once(exe)
             expected = EXPECTED.get((algo, size))
-            time_str = f"{elapsed:.4f}s"
+            time_str = f"{elapsed * 1000:.4f}ms"
  
             if err:
                 status = f"FAIL ({err})"
