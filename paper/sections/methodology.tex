@@ -13,11 +13,13 @@ recording variance to prove the difference is real not noice.
 
 \subsection{Experimental Setup}
 - 01\_verify output: 
-```
+bash```
 setup - not timed 
 print "ready" - not timed
-newline -
-'''
+harness newline - start timer
+run command - measurement
+print checksum - stop timer
+```
 
 baseline power draw - 40w 5s sample
 
