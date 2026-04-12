@@ -83,7 +83,7 @@ def run_once(exe, timeout=10):
             stdin=subprocess.PIPE,
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
-            text=True,
+            text=True,  
         )
  
         # Wait for ready
