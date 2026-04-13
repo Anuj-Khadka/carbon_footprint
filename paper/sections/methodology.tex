@@ -61,7 +61,7 @@ recording variance to prove the difference is real not noice.
     \end{tabular}
     
 
-fgets and sys.stdin both blocks waiting for input until there is something to read from stdin/fgets. then reeads one line and returns it. So the harness will print "ready" and then wait for the next line. The next line is the signal to start the timer and run the command. After the command is done, the harness will print the checksum and stop the timer. This way we can measure the time taken by the command to run and also v
+fgets and sys.stdin both blocks waiting for input until there is something to read from stdin/fgets. then reeads one line and returns it. So the harness will print "ready" and then wait for the next line. The next line is the signal to start the timer and run the command. After the command is done, the harness will print the checksum and stop the timer. This way we can measure the time taken by the command to run and also verify the output 
     
 \end{table}
 
