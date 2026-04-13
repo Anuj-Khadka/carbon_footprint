@@ -2,3 +2,17 @@
 name = "hash_table"
 version = "0.1.0"
 edition = "2021"
+
+[[bin]]
+name = "hash_table_small"
+path = "small/hash_table_small.rs"
+
+[[bin]]
+name = "hash_table_mid"
+path = "mid/hash_table_mid.rs"
+
+[[bin]]
+name = "hash_table_large"
+path = "large/hash_table_large.rs"
+
+[dependencies]

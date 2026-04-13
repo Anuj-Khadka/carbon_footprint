@@ -1,0 +1,18 @@
+[package]
+name = "merge_sort"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "merge_sort_small"
+path = "small/merge_sort_small.rs"
+
+[[bin]]
+name = "merge_sort_mid"
+path = "mid/merge_sort_mid.rs"
+
+[[bin]]
+name = "merge_sort_large"
+path = "large/merge_sort_large.rs"
+
+[dependencies]

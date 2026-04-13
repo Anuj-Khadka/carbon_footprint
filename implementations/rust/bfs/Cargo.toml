@@ -2,3 +2,17 @@
 name = "bfs"
 version = "0.1.0"
 edition = "2021"
+
+[[bin]]
+name = "bfs_small"
+path = "small/bfs_small.rs"
+
+[[bin]]
+name = "bfs_mid"
+path = "mid/bfs_mid.rs"
+
+[[bin]]
+name = "bfs_large"
+path = "large/bfs_large.rs"
+
+[dependencies]

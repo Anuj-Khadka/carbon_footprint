@@ -1,0 +1,18 @@
+[package]
+name = "binary_search"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "binary_search_small"
+path = "small/binary_search_small.rs"
+
+[[bin]]
+name = "binary_search_mid"
+path = "mid/binary_search_mid.rs"
+
+[[bin]]
+name = "binary_search_large"
+path = "large/binary_search_large.rs"
+
+[dependencies]

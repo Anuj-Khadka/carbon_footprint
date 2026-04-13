@@ -2,3 +2,17 @@
 name = "matrix_multiplication"
 version = "0.1.0"
 edition = "2021"
+
+[[bin]]
+name = "matrix_multiplication_small"
+path = "small/matrix_multiplication_small.rs"
+
+[[bin]]
+name = "matrix_multiplication_mid"
+path = "mid/matrix_multiplication_mid.rs"
+
+[[bin]]
+name = "matrix_multiplication_large"
+path = "large/matrix_multiplication_large.rs"
+
+[dependencies]

@@ -1,0 +1,18 @@
+[package]
+name = "summation"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "summation_small"
+path = "small/summation_small.rs"
+
+[[bin]]
+name = "summation_mid"
+path = "mid/summation_mid.rs"
+
+[[bin]]
+name = "summation_large"
+path = "large/summation_large.rs"
+
+[dependencies]
