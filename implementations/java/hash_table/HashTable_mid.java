@@ -57,6 +57,7 @@ public class HashTable_Mid {
         System.out.println("ready");
         System.out.flush();
 
+        @SuppressWarnings("unused")
         String line;
         while ((line = br.readLine()) != null) {
             System.out.println(hashTable());
