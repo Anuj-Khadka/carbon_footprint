@@ -71,6 +71,9 @@ The algorithms were chosen to span a range of time complexities and computationa
 \paragraph{Hash Table -}
     the "\& 0xFFFFFFFFFFFFFFFF"  is used to ensure that the hash result is always a 64bit integer, which is important for consistency across different platforms and languages. This way, we can compare the hash results from C and Python without worrying about differences in integer sizes or overflow behavior.
 
+\paragraph{Mat Mul}
+    Damn, this is slow. i should have used something more efficient. but maybe I will just leave this for now. I will
+
 
 \textbf{o1 or on for hash table fix later.}
 \textbf{does insertions and lookups. each o1 on average, but worst case o\(n\) if all keys collide.}
