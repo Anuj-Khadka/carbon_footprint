@@ -63,7 +63,7 @@ recording variance to prove the difference is real not noice.
 
 \begin{table}[h]
     \centering
-    \caption{Algorithms, their time complexities and computational patterns.}\label{tab:algorithms}
+    \caption{C — RUN & VERIFY}\label{tab:c_run_verify}
     \small
     \begin{tabular}{lll}
         \hline
@@ -75,6 +75,25 @@ recording variance to prove the difference is real not noice.
         Breadth-First Search (BFS)     & $O(V + E)$        & Graph Traversal \\
         Hash Table                     & $O(n) - avg $             &  xxxxxx \\
         Matrix Multiplication          & $O(n^3)$          & Dense Arithemetic \\
+
+summation                 small    5050                   0.0437ms  PASS
+  summation                 mid      50005000               0.0406ms  PASS
+  summation                 large    500000500000           0.4715ms  PASS
+  binary_search             small    99                     0.0448ms  PASS
+  binary_search             mid      9999                   0.0392ms  PASS
+  binary_search             large    999999                 0.0835ms  PASS
+  merge_sort                small    100                    0.0428ms  PASS
+  merge_sort                mid      10000                  0.2459ms  PASS
+  merge_sort                large    1000000               24.7405ms  PASS
+  bfs                       small    100                    0.0430ms  PASS
+  bfs                       mid      1000                   0.3039ms  PASS
+  bfs                       large    5000                   7.2774ms  PASS
+  hash_table                small    64850                  0.0433ms  PASS
+  hash_table                mid      649985000              0.2467ms  PASS
+  hash_table                large    64999850000            2.1579ms  PASS
+  matrix_multiplication     small    9175                   0.0744ms  PASS
+  matrix_multiplication     mid      646700                 2.5604ms  PASS
+  matrix_multiplication     large    10291750              47.1134ms  PASS
         \hline
     \end{tabular}
     
