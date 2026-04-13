@@ -1,3 +1,5 @@
+package summation;
+
 import java.io.*;
 
 public class Summation_Mid {
