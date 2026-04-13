@@ -23,9 +23,65 @@ recording variance to prove the difference is real not noice.
 
 \paragraph{Observation}
 \begin{verbatim}
-    I can verify the thing now. 
-    The output that I get from the baseline of C language can be used to verify the time complexity of the algorithms.
+    - I can verify the thing now. 
+    - The output that I get from the 
+    baseline of C language can be 
+    used to verify the time complexity 
+    of the algorithms.
+    - 
 \end{verbatim}
+================================================================================
+  C — RUN & VERIFY
+================================================================================
+
+  ALGORITHM                 SIZE     OUTPUT                     TIME  STATUS
+  ---------------------------------------------------------------------------
+  summation                 small    5050                   0.0437ms  PASS
+  summation                 mid      50005000               0.0406ms  PASS
+  summation                 large    500000500000           0.4715ms  PASS
+  binary_search             small    99                     0.0448ms  PASS
+  binary_search             mid      9999                   0.0392ms  PASS
+  binary_search             large    999999                 0.0835ms  PASS
+  merge_sort                small    100                    0.0428ms  PASS
+  merge_sort                mid      10000                  0.2459ms  PASS
+  merge_sort                large    1000000               24.7405ms  PASS
+  bfs                       small    100                    0.0430ms  PASS
+  bfs                       mid      1000                   0.3039ms  PASS
+  bfs                       large    5000                   7.2774ms  PASS
+  hash_table                small    64850                  0.0433ms  PASS
+  hash_table                mid      649985000              0.2467ms  PASS
+  hash_table                large    64999850000            2.1579ms  PASS
+  matrix_multiplication     small    9175                   0.0744ms  PASS
+  matrix_multiplication     mid      646700                 2.5604ms  PASS
+  matrix_multiplication     large    10291750              47.1134ms  PASS
+  ---------------------------------------------------------------------------
+
+  18 passed, 0 failed out of 18
+================================================================================
+
+
+
+\begin{table}[h]
+    \centering
+    \caption{Algorithms, their time complexities and computational patterns.}\label{tab:algorithms}
+    \small
+    \begin{tabular}{lll}
+        \hline
+        \textbf{Algorithm} & \textbf{Time Complexity} & \textbf{Pattern} \\
+        \hline
+        Summation                      & $O(n)$            & Linear \\
+        Binary Search                  & $O(\log n)$       & Logarithmic \\
+        Merge Sort                     & $O(n \log n)$     & Divide \& Conquer \\
+        Breadth-First Search (BFS)     & $O(V + E)$        & Graph Traversal \\
+        Hash Table                     & $O(n) - avg $             &  xxxxxx \\
+        Matrix Multiplication          & $O(n^3)$          & Dense Arithemetic \\
+        \hline
+    \end{tabular}
+    
+    
+\end{table}
+
+
 
 
 
