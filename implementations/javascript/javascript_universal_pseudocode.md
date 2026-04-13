@@ -1,3 +1,4 @@
+```
 const readline = require('readline');
 
 const N = 100;
@@ -22,3 +23,4 @@ process.stdout.write("ready\n");
 rl.on('line', () => {
     process.stdout.write(String(algorithm()) + "\n");
 });
+```
