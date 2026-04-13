@@ -1,18 +1,28 @@
 import sys
 
-SMALL  = 100
-MEDIUM = 10000
-LARGE  = 1000000
+N  = 100
 
-SIZES = {"small": SMALL, "medium": MEDIUM, "large": LARGE}
+arr = [0] * N
 
-def summation(arr, n):
+def setup():
+    for i in range(N):
+        arr[i] = i + 1
+
+def summation():
     total = 0
     for i in range(n):
         total += arr[i]
     return total
 
+def main():
+    setup()
+
+    sys.stdout.write("ready\n")
+    sys.stdout.flush()
+
+    for line in sys.stdin:
+        sys.stdout.write(str(summation()) + "\n")
+        sys.stdout.flush()
+
 if __name__ == "__main__":
-    n = SIZES[sys.argv[1]]
-    arr = [i + 1 for i in range(n)]
-    print(summation(arr, n))
+    main()
