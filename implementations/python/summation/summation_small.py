@@ -10,7 +10,7 @@ def setup():
 
 def summation():
     total = 0
-    for i in range(n):
+    for i in range(N):
         total += arr[i]
     return total
 
