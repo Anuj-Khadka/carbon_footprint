@@ -29,7 +29,7 @@ public class Summation_Mid {
 
         String line;
         while ((line = br.readLine()) != null) {
-            System.out.println(summation());
+            System.out.println(summation()); 
             System.out.flush();
         }
     }
