@@ -1,0 +1,519 @@
+﻿Folder PATH listing for volume Windows
+Volume serial number is DAD0-484D
+C:\USERS\AKHADKA2\DESKTOP\CARBON_FOOTPRINT\IMPLEMENTATIONS
+|   benchmark_results.csv
+|   benchmark_runner.py
+|   
++---build
+|       bfs_large_c.exe
+|       bfs_mid_c.exe
+|       bfs_small_c.exe
+|       binary_search_large_c.exe
+|       binary_search_mid_c.exe
+|       binary_search_small_c.exe
+|       hash_table_large_c.exe
+|       hash_table_mid_c.exe
+|       hash_table_small_c.exe
+|       matrix_multiplication_large_c.exe
+|       matrix_multiplication_mid_c.exe
+|       matrix_multiplication_small_c.exe
+|       merge_sort_large_c.exe
+|       merge_sort_mid_c.exe
+|       merge_sort_small_c.exe
+|       summation_large_c.exe
+|       summation_mid_c.exe
+|       summation_small_c.exe
+|       
++---c
+|   +---bfs
+|   |       bfs_large.c
+|   |       bfs_mid.c
+|   |       bfs_small.c
+|   |       
+|   +---binary_search
+|   |       binary_search_large.c
+|   |       binary_search_mid.c
+|   |       binary_search_small.c
+|   |       
+|   +---hash_table
+|   |       hash_table_large.c
+|   |       hash_table_mid.c
+|   |       hash_table_small.c
+|   |       
+|   +---matrix_multiplication
+|   |       matrix_multiplication_large.c
+|   |       matrix_multiplication_mid.c
+|   |       matrix_multiplication_small.c
+|   |       
+|   +---merge_sort
+|   |       merge_sort_large.c
+|   |       merge_sort_mid.c
+|   |       merge_sort_small.c
+|   |       
+|   \---summation
+|           summation_large.c
+|           summation_mid.c
+|           summation_small.c
+|           
++---go
+|   |   build_all.sh
+|   |   go.mod
+|   |   go_universal_pseudocode.md
+|   |   
+|   +---bfs
+|   |   +---large
+|   |   |       bfs_large.go
+|   |   |       
+|   |   +---mid
+|   |   |       bfs_mid.go
+|   |   |       
+|   |   \---small
+|   |           bfs_small.go
+|   |           
+|   +---binary_search
+|   |   +---large
+|   |   |       binary_search_large.go
+|   |   |       
+|   |   +---mid
+|   |   |       binary_search_mid.go
+|   |   |       
+|   |   \---small
+|   |           binary_search_small.go
+|   |           
+|   +---hash_table
+|   |   +---large
+|   |   |       hash_table_large.go
+|   |   |       
+|   |   +---mid
+|   |   |       hash_table_mid.go
+|   |   |       
+|   |   \---small
+|   |           hash_table_small.go
+|   |           
+|   +---matrix_multiplication
+|   |   +---large
+|   |   |       matrix_multiplication_large.go
+|   |   |       
+|   |   +---mid
+|   |   |       matrix_multiplication_mid.go
+|   |   |       
+|   |   \---small
+|   |           matrix_multiplication_small.go
+|   |           
+|   +---merge_sort
+|   |   +---large
+|   |   |       merge_sort_large.go
+|   |   |       
+|   |   +---mid
+|   |   |       merge_sort_mid.go
+|   |   |       
+|   |   \---small
+|   |           merge_sort_small.go
+|   |           
+|   \---summation
+|       +---large
+|       |       summation_large.go
+|       |       
+|       +---mid
+|       |       summation_mid.go
+|       |       
+|       \---small
+|               summation_small.go
+|               
++---java
+|   |   compile.sh
+|   |   java_universal_pseudocode.md
+|   |   
+|   +---bfs
+|   |       BFS_Large.class
+|   |       BFS_Large.java
+|   |       BFS_Mid.java
+|   |       BFS_Small.java
+|   |       
+|   +---binary_search
+|   |       BinarySearch_Large.java
+|   |       BinarySearch_Mid.java
+|   |       BinarySearch_Small.class
+|   |       BinarySearch_Small.java
+|   |       
+|   +---hash_table
+|   |       HashTable_Large.class
+|   |       HashTable_Large.java
+|   |       HashTable_Mid.java
+|   |       HashTable_Small.java
+|   |       
+|   +---matrix_multiplication
+|   |       MatrixMultiplication_Large.class
+|   |       MatrixMultiplication_Large.java
+|   |       MatrixMultiplication_Mid.java
+|   |       MatrixMultiplication_Small.java
+|   |       
+|   +---merge_sort
+|   |       MergeSort_Large.class
+|   |       MergeSort_Large.java
+|   |       MergeSort_Mid.java
+|   |       MergeSort_Small.java
+|   |       
+|   \---summation
+|           Summation_Large.java
+|           Summation_Mid.java
+|           Summation_Small.class
+|           Summation_Small.java
+|           
++---javascript
+|   |   javascript_universal_pseudocode.md
+|   |   
+|   +---bfs
+|   |       bfs_large.js
+|   |       bfs_mid.js
+|   |       bfs_small.js
+|   |       
+|   +---binary_search
+|   |       binary_search_large.js
+|   |       binary_search_mid.js
+|   |       binary_search_small.js
+|   |       
+|   +---hash_table
+|   |       hash_table_large.js
+|   |       hash_table_mid.js
+|   |       hash_table_small.js
+|   |       
+|   +---matrix_multiplication
+|   |       matrix_multiplication_large.js
+|   |       matrix_multiplication_mid.js
+|   |       matrix_multiplication_small.js
+|   |       
+|   +---merge_sort
+|   |       merge_sort_large.js
+|   |       merge_sort_mid.js
+|   |       merge_sort_small.js
+|   |       
+|   \---summation
+|           summation_large.js
+|           summation_mid.js
+|           summation_small.js
+|           
++---pseudocode
+|       bfs.md
+|       binary_search.md
+|       hash_table.md
+|       matrix_multiplication.md
+|       merge_sort.md
+|       summation.md
+|       
++---python
+|   |   python_universal_pseudocode.py
+|   |   
+|   +---bfs
+|   |       bfs_large.py
+|   |       bfs_mid.py
+|   |       bfs_small.py
+|   |       
+|   +---binary_search
+|   |       binary_search_large.py
+|   |       binary_search_mid.py
+|   |       binary_search_small.py
+|   |       
+|   +---hash_table
+|   |       hash_table_large.py
+|   |       hash_table_mid.py
+|   |       hash_table_small.py
+|   |       
+|   +---matrix_multiplication
+|   |       matrix_multiplication_large.py
+|   |       matrix_multiplication_mid.py
+|   |       matrix_multiplication_small.py
+|   |       
+|   +---merge_sort
+|   |       merge_sort_large.py
+|   |       merge_sort_mid.py
+|   |       merge_sort_small.py
+|   |       
+|   \---summation
+|           summation_large.py
+|           summation_mid.py
+|           summation_small.py
+|           
+\---rust
+    |   build_all.sh
+    |   universal_rust_pseudocode.md
+    |   
+    +---bfs
+    |   |   Cargo.lock
+    |   |   Cargo.toml
+    |   |   
+    |   +---large
+    |   |       bfs_large.rs
+    |   |       
+    |   +---mid
+    |   |       bfs_mid.rs
+    |   |       
+    |   +---small
+    |   |       bfs_small.rs
+    |   |       
+    |   +---src
+    |   |       main.rs
+    |   |       
+    |   \---target
+    |       |   .rustc_info.json
+    |       |   CACHEDIR.TAG
+    |       |   
+    |       \---release
+    |           |   .cargo-lock
+    |           |   bfs.d
+    |           |   bfs.exe
+    |           |   
+    |           +---.fingerprint
+    |           |   \---bfs-dfa283f4aac93c6f
+    |           |           bin-bfs
+    |           |           bin-bfs.json
+    |           |           dep-bin-bfs
+    |           |           invoked.timestamp
+    |           |           
+    |           +---build
+    |           +---deps
+    |           |       bfs-dfa283f4aac93c6f.d
+    |           |       bfs-dfa283f4aac93c6f.exe
+    |           |       
+    |           +---examples
+    |           \---incremental
+    +---binary_search
+    |   |   Cargo.toml
+    |   |   
+    |   +---large
+    |   |       binary_search_large.rs
+    |   |       
+    |   +---mid
+    |   |       binary_search_mid.rs
+    |   |       
+    |   \---small
+    |           binary_search_small.rs
+    |           
+    +---hash_table
+    |   |   Cargo.lock
+    |   |   Cargo.toml
+    |   |   
+    |   +---large
+    |   |       hash_table_large.rs
+    |   |       
+    |   +---mid
+    |   |       hash_table_mid.rs
+    |   |       
+    |   +---small
+    |   |       hash_table_small.rs
+    |   |       
+    |   +---src
+    |   |       main.rs
+    |   |       
+    |   \---target
+    |       |   .rustc_info.json
+    |       |   CACHEDIR.TAG
+    |       |   
+    |       \---release
+    |           |   .cargo-lock
+    |           |   hash_table.d
+    |           |   hash_table.exe
+    |           |   
+    |           +---.fingerprint
+    |           |   \---hash_table-7df1934a738aa295
+    |           |           bin-hash_table
+    |           |           bin-hash_table.json
+    |           |           dep-bin-hash_table
+    |           |           invoked.timestamp
+    |           |           
+    |           +---build
+    |           +---deps
+    |           |       hash_table-7df1934a738aa295.d
+    |           |       hash_table-7df1934a738aa295.exe
+    |           |       
+    |           +---examples
+    |           \---incremental
+    +---matrix_multiplication
+    |   |   Cargo.lock
+    |   |   Cargo.toml
+    |   |   
+    |   +---large
+    |   |       matrix_multiplication_large.rs
+    |   |       
+    |   +---mid
+    |   |       matrix_multiplication_mid.rs
+    |   |       
+    |   +---small
+    |   |       matrix_multiplication_small.rs
+    |   |       
+    |   +---src
+    |   |       main.rs
+    |   |       
+    |   \---target
+    |       |   .rustc_info.json
+    |       |   CACHEDIR.TAG
+    |       |   
+    |       \---release
+    |           |   .cargo-lock
+    |           |   matrix_multiplication.d
+    |           |   matrix_multiplication.exe
+    |           |   
+    |           +---.fingerprint
+    |           |   \---matrix_multiplication-2db33da5c035e968
+    |           |           bin-matrix_multiplication
+    |           |           bin-matrix_multiplication.json
+    |           |           dep-bin-matrix_multiplication
+    |           |           invoked.timestamp
+    |           |           
+    |           +---build
+    |           +---deps
+    |           |       matrix_multiplication-2db33da5c035e968.d
+    |           |       matrix_multiplication-2db33da5c035e968.exe
+    |           |       
+    |           +---examples
+    |           \---incremental
+    +---merge_sort
+    |   |   Cargo.lock
+    |   |   Cargo.toml
+    |   |   
+    |   +---large
+    |   |       merge_sort_large.rs
+    |   |       
+    |   +---mid
+    |   |       merge_sort_mid.rs
+    |   |       
+    |   +---small
+    |   |       merge_sort_small.rs
+    |   |       
+    |   \---target
+    |       |   .rustc_info.json
+    |       |   CACHEDIR.TAG
+    |       |   
+    |       \---debug
+    |           |   .cargo-lock
+    |           |   merge_sort_large.d
+    |           |   merge_sort_large.exe
+    |           |   
+    |           +---.fingerprint
+    |           |   \---merge_sort-ad9ca6853d54abfa
+    |           |           bin-merge_sort_large
+    |           |           bin-merge_sort_large.json
+    |           |           dep-bin-merge_sort_large
+    |           |           invoked.timestamp
+    |           |           
+    |           +---build
+    |           +---deps
+    |           |       merge_sort_large-ad9ca6853d54abfa.d
+    |           |       merge_sort_large-ad9ca6853d54abfa.exe
+    |           |       
+    |           +---examples
+    |           \---incremental
+    |               \---merge_sort_large-0tyjcna24q3g1
+    |                   |   s-hhk0levir2-0g52gb6.lock
+    |                   |   
+    |                   \---s-hhk0levir2-0g52gb6-bv7arjygf6xg4f02s6hdntwr7
+    |                           04kcgogg7n1u42hottz33u7l7.o
+    |                           1sslq4rk2pb2d4ijp07edmi3w.o
+    |                           3b54dzdkq6xb9p903i319lgzg.o
+    |                           3dlrddy9r5deepdyddc8nrv2r.o
+    |                           3lyn4ryk2wdqvobdb6il4l6mm.o
+    |                           3p07o63uxfro0wrrrxtnmouh9.o
+    |                           3shicvasjum5nbxcfx5pdcksp.o
+    |                           3wbdrwu522s76h5te5rt9q2f5.o
+    |                           5lagew84n1dvcuq48indotlw8.o
+    |                           61k5wwkokg39bpy57ctqe9scx.o
+    |                           6mo4uvtin57ad3rc09jygfbml.o
+    |                           7bzsqwkwcm3t6mfe1y2rsxb10.o
+    |                           7e1to7496e3is48gy0ys90vov.o
+    |                           7fv6y959kgp6i18z3jszbp3ae.o
+    |                           7je6qxvsy13iugvol3w21i791.o
+    |                           84gi8toowm3cf6loswowmj6fj.o
+    |                           8lzswd60bxigydgwxpii7prjs.o
+    |                           8tqsbp1urybxx5ws43675huu5.o
+    |                           9kwcsj6qr3kteq9bnylls36zt.o
+    |                           9lv4akes9r3d0mz6l1j0n532c.o
+    |                           9o3p91y810xdvrqle66gzrgv2.o
+    |                           a7pwmgg94lu614uxjsxve1a6s.o
+    |                           bk5bn5g17olwtsp0xb4yb0adi.o
+    |                           c8ypxw68ewrioo0bpm419c6mo.o
+    |                           cbbhnben17lj1l0jrz3vc2la6.o
+    |                           dep-graph.bin
+    |                           dj75a633vl7pyrgpw0hw63v9h.o
+    |                           dr45pz3od7lelt3lx0yrav5sm.o
+    |                           e84zpy6bv68dwt281kyze6eyk.o
+    |                           eqdumm3vbky7cexg7fagb4lex.o
+    |                           et0amv389wt2cm4fi2pec626s.o
+    |                           ey9jm4zewu9ubuqdjrunhz4ch.o
+    |                           query-cache.bin
+    |                           work-products.bin
+    |                           
+    \---summation
+        |   Cargo.lock
+        |   Cargo.toml
+        |   
+        +---large
+        |       summation_large.rs
+        |       
+        +---mid
+        |       summation_mid.rs
+        |       
+        +---small
+        |       summation_small.rs
+        |       
+        \---target
+            |   .rustc_info.json
+            |   CACHEDIR.TAG
+            |   
+            \---debug
+                |   .cargo-lock
+                |   summation_small.d
+                |   summation_small.exe
+                |   
+                +---.fingerprint
+                |   \---summation-bc04a90da7502712
+                |           bin-summation_small
+                |           bin-summation_small.json
+                |           dep-bin-summation_small
+                |           invoked.timestamp
+                |           
+                +---build
+                +---deps
+                |       summation_small-bc04a90da7502712.d
+                |       summation_small-bc04a90da7502712.exe
+                |       
+                +---examples
+                \---incremental
+                    \---summation_small-0vnz6h9cm5cn8
+                        |   s-hhk0mtau5k-16vzaeq.lock
+                        |   
+                        \---s-hhk0mtau5k-16vzaeq-5vumduussvd8efobd0rqlnu19
+                                01xwfycgbrv9zrtquzvl5ckw9.o
+                                20wpn4mftyg6resgvge5c7emp.o
+                                323pwojh9by41b0a13o88xoey.o
+                                34v1bn712feoyxxpynhfq3ur4.o
+                                3gej2osoxy6mm908wa7fj1yzt.o
+                                3ruai1n3q4x8hn97xavyuqkb8.o
+                                3xcm2ockgblmm1mqvctgsy33z.o
+                                4tlgxd4mad4hgmc0v0j6y5zk4.o
+                                5afkd77vu12oucmoochh5achb.o
+                                6d0f5vjdc46i4e10m4qii2wja.o
+                                6gc6abr1je4e5ogp4oko17ddt.o
+                                6i6owf0cro9qq7fg49apuaxu8.o
+                                73d4jc0ztzetlditltvys5w3u.o
+                                76xiwf8qx4arkfjgdrk2095aj.o
+                                7g63z04rzjh8ylj1jtxtwc5jp.o
+                                7m0ba7dq2uagfwzju5m0zcd7v.o
+                                7s1i9zaxlhj2b8g7qfm3m5o81.o
+                                8m27n6837p9s37piut08xrcot.o
+                                8w6mpbankh3e5zkmowaobuqjv.o
+                                afi2o0euuwwf8ygjmmn4hkgk8.o
+                                ahm1agb02hlqqshz4bea4mxhm.o
+                                asj0ygsa8ms26s8rdpfvz0uj2.o
+                                c53d2h49kpbslmi1z6pe0u2zf.o
+                                chbm4gcqrlwmb6rssey88zlyq.o
+                                clyxwib0pvjdgmbdxwwakxw79.o
+                                cnagitqeoptl2ypl3d0x44atr.o
+                                dep-graph.bin
+                                dmlb2eqn7b4vyxneuet9dmahh.o
+                                dy00225lq6m2k8u6ev6o1d43a.o
+                                e7em97657h8y2ir93sdp0d5ky.o
+                                evbxpakysnjws8h30c75oblew.o
+                                f4efh1owd3qkqrz0cv73kwy1u.o
+                                query-cache.bin
+                                work-products.bin
+                                
