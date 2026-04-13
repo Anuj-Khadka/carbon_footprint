@@ -1,4 +1,5 @@
 import sys
+sys.setrecursionlimit(10000000)
 
 N = 1_000_000
 
