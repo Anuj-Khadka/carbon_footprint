@@ -56,3 +56,10 @@ $RECYCLE.BIN/
 
 # Hardware monitor snapshots
 *.ohl
+
+
+/claude.md
+/pilot_study.py
+/power_analysis.py
+/rough_test_harness.py
+/workflow.py
