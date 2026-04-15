@@ -1,26 +1,19 @@
-\documentclass[letterpaper, twocolumn]{article}
+\documentclass{article}
 
-% ---------- Layout & utilities ----------
-\usepackage[letterpaper,margin=0.35in]{geometry}
+% ---------- Engine detection & fonts ----------
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage{newpxtext}
+  \usepackage{microtype}
+  \setmainfont{Amiri}
 \usepackage[hidelinks]{hyperref}
 \usepackage{enumitem}
 \usepackage{tabularx,array}
 \usepackage{ragged2e}
 \usepackage{parskip}
-\usepackage{xcolor}
-\usepackage{needspace}
+    	extbf{Anuj Khadka} & \textbf{Vladislav D. Veksler} & \textbf{Darryl Aucoin} \\
+    % \affaddr{Computer Science \& Business Analytics} & \affaddr{Faculty Advisor} & \affaddr{Second Advisor} \\
 \usepackage{relsize}
-\usepackage{listings}
-\lstset{
-  basicstyle=\ttfamily\footnotesize,
-  breaklines=true,
-  frame=single,
-  framerule=0.4pt,
-  xleftmargin=0.5em,
-  xrightmargin=0.5em,
-  captionpos=b,
-  numbers=none
-}
 \usepackage{listings}
 \lstset{
   basicstyle=\ttfamily\small,
@@ -29,7 +22,8 @@
   framerule=0.4pt,
   xleftmargin=0.5em,
   xrightmargin=0.5em,
-  captionpos=b
+  captionpos=b,
+  numbers=none
 }
 \usepackage{booktabs}
 \usepackage{graphicx}
@@ -58,6 +52,7 @@
   \fontsize{8}{8.5}\selectfont
 }
 
+
 \addbibresource{main.bib}
 
 % --------------------------- --------------------------- --------------------------- --------------------------- ---------------------------
@@ -79,8 +74,9 @@
 
 
 \begin{abstract}
-  This project investigates how programming language choice affects the carbon footprint produced during a program execution. Although software is often seen as intangible, every program consumes energy, ultimately contributing to carbon emissions. As the digital system continues to grow, understanding the environmental impact of software has become increasingly important. This experiment studies how identical algorithms behave when implemented in different programming languages running on the same hardware. By measuring and estimating the carbon emissions, the project tends to explore whether programming language designs play an important role in software sustainability, or if it is mostly driven by heavy algorithms. This research combines the aspects of computer science and environmental science to better understand the hidden environmental cost of everyday computational tasks and encourage more sustainable and responsible software development practices. 
-  Keywords: carbon footprint, software sustainability, energy consumption
+  This project investigates how programming language choice affects the carbon footprint produced during a program execution. Although software is often seen as intangible, every program consumes energy, ultimately contributing to carbon emissions. As the digital system continues to grow, understanding the environmental impact of software has become increasingly important. This experiment studies how identical algorithms behave when implemented in different programming languages running on the same hardware. By measuring and estimating the carbon emissions, the project tends to explore whether programming language designs play an important role in software sustainability, or if it is mostly driven by heavy algorithms. This research combines the aspects of computer science and environmental science to better understand the hidden environmental cost of everyday computational tasks and encourage more sustainable and responsible software development practices.
+
+  \noindent\textbf{Keywords:} carbon footprint, software sustainability, energy consumption
 \end{abstract}
 
 
