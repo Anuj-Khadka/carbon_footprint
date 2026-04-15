@@ -1,20 +1,58 @@
 \documentclass[letterpaper, twocolumn]{article}
 
-% \usepackage[letterpaper,margin=0.35in]{geometry}
-% \usepackage[hidelinks]{hyperref}
+% ---------- Layout & utilities ----------
+\usepackage[letterpaper,margin=0.35in]{geometry}
+\usepackage[hidelinks]{hyperref}
 \usepackage{enumitem}
 \usepackage{tabularx,array}
 \usepackage{ragged2e}
 \usepackage{parskip}
 \usepackage{xcolor}
 \usepackage{needspace}
-\usepackage{relsize} % for \smaller
-\usepackage{biblatex}
+\usepackage{relsize}
+\usepackage{listings}
+\lstset{
+  basicstyle=\ttfamily\footnotesize,
+  breaklines=true,
+  frame=single,
+  framerule=0.4pt,
+  xleftmargin=0.5em,
+  xrightmargin=0.5em,
+  captionpos=b,
+  numbers=none
+}
+\usepackage{listings}
+\lstset{
+  basicstyle=\ttfamily\small,
+  breaklines=true,
+  frame=single,
+  framerule=0.4pt,
+  xleftmargin=0.5em,
+  xrightmargin=0.5em,
+  captionpos=b
+}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage[style=ieee, backend=biber]{biblatex}
 
+% ---------- Two-column body ----------
+\usepackage{multicol}
+\setlength{\columnsep}{0.25in}
+
+% ---------- Global tweaks ----------
+\setlength{\parskip}{2pt}
+\setlist[itemize]{leftmargin=1.2em,itemsep=2pt,topsep=2pt,parsep=0pt}
+\newcolumntype{L}{>{\RaggedRight\arraybackslash}X}
+\renewcommand{\labelitemi}{\textbullet}
 
 % body text lighter; bold stays deep black
 \color{gray!50!black}
 \renewcommand{\bfseries}{\color{black}\fontseries{b}\selectfont}
+
+% avoid widows/orphans
+\clubpenalty=10000
+\widowpenalty=10000
 
 \AtBeginBibliography{
   \fontsize{8}{8.5}\selectfont
