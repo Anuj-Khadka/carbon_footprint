@@ -1,70 +1,30 @@
-\documentclass{article}
+\documentclass[twocolumn]{article}
 
 % ---------- Engine detection & fonts ----------
 \usepackage{iftex}
 \ifPDFTeX
   \usepackage{newpxtext}
   \usepackage{microtype}
+\else
+  \usepackage{fontspec}
   \setmainfont{Amiri}
-\usepackage[hidelinks]{hyperref}
-\usepackage{enumitem}
-\usepackage{tabularx,array}
-\usepackage{ragged2e}
-\usepackage{parskip}
-    	extbf{Anuj Khadka} & \textbf{Vladislav D. Veksler} & \textbf{Darryl Aucoin} \\
-    % \affaddr{Computer Science \& Business Analytics} & \affaddr{Faculty Advisor} & \affaddr{Second Advisor} \\
-\usepackage{relsize}
-\usepackage{listings}
-\lstset{
-  basicstyle=\ttfamily\small,
-  breaklines=true,
-  frame=single,
-  framerule=0.4pt,
-  xleftmargin=0.5em,
-  xrightmargin=0.5em,
-  captionpos=b,
-  numbers=none
-}
-\usepackage{booktabs}
-\usepackage{graphicx}
-\usepackage{amsmath}
+  \usepackage{microtype}
+\fi
+
 \usepackage[style=ieee, backend=biber]{biblatex}
 
-% ---------- Two-column body ----------
-\usepackage{multicol}
-\setlength{\columnsep}{0.25in}
-
-% ---------- Global tweaks ----------
-\setlength{\parskip}{2pt}
-\setlist[itemize]{leftmargin=1.2em,itemsep=2pt,topsep=2pt,parsep=0pt}
-\newcolumntype{L}{>{\RaggedRight\arraybackslash}X}
-\renewcommand{\labelitemi}{\textbullet}
-
-% body text lighter; bold stays deep black
-\color{gray!50!black}
-\renewcommand{\bfseries}{\color{black}\fontseries{b}\selectfont}
-
-% avoid widows/orphans
-\clubpenalty=10000
-\widowpenalty=10000
+\input{preamble.tex}
+\addbibresource{main.bib}
 
 \AtBeginBibliography{
   \fontsize{8}{8.5}\selectfont
 }
 
-
-\addbibresource{main.bib}
-
-% --------------------------- --------------------------- --------------------------- --------------------------- ---------------------------
-% clean above this later
-% --------------------------- --------------------------- --------------------------- --------------------------- ---------------------------
-
-
 \title{Carbon footprint of algorithms}
 \author{
   \begin{tabular}{ccc}
-  \textbf{Anuj Khadka} &   \textbf{Vladislav D. Veksler} &   \textbf{Darryl Aucoin} \\
-  % \affaddr{Computer Science \& Business Analytics} & \affaddr{Faculty Advisor} & \affaddr{Second Advisor} \\
+    \textbf{Anuj Khadka} & \textbf{Vladislav D. Veksler} & \textbf{Darryl Aucoin} \\
+    % \affaddr{Computer Science \& Business Analytics} & \affaddr{Faculty Advisor} & \affaddr{Second Advisor} \\
   \end{tabular}
 }
 \date{}
@@ -72,13 +32,11 @@
 \begin{document}
 \maketitle
 
-
 \begin{abstract}
   This project investigates how programming language choice affects the carbon footprint produced during a program execution. Although software is often seen as intangible, every program consumes energy, ultimately contributing to carbon emissions. As the digital system continues to grow, understanding the environmental impact of software has become increasingly important. This experiment studies how identical algorithms behave when implemented in different programming languages running on the same hardware. By measuring and estimating the carbon emissions, the project tends to explore whether programming language designs play an important role in software sustainability, or if it is mostly driven by heavy algorithms. This research combines the aspects of computer science and environmental science to better understand the hidden environmental cost of everyday computational tasks and encourage more sustainable and responsible software development practices.
 
   \noindent\textbf{Keywords:} carbon footprint, software sustainability, energy consumption
 \end{abstract}
-
 
 % \section{Abstract}
 % \input{sections/abstract}
@@ -99,6 +57,3 @@
 
 \printbibliography
 \end{document}
-
-
-
