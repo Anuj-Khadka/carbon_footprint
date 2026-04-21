@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1776748570.65575 "c:/Users/AKhadka2/Desktop/carbon_footprint/paper/main.tex" "main.pdf" "main" 1776748571.42034 2
+["pdflatex"] 1776748798.10733 "c:/Users/AKhadka2/Desktop/carbon_footprint/paper/main.tex" "main.pdf" "main" 1776748798.85593 2
   "c:/Users/AKhadka2/Desktop/carbon_footprint/paper/main.tex" 1776747588 3932 f07c3c273dac75e7906d658daf4c9c92 ""
   "c:/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1775080624 2971 def0b6c1f0b107b3b936def894055589 ""
   "c:/texlive/2026/texmf-dist/fonts/map/fontname/texfonts.map" 1775082038 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -114,7 +114,7 @@
   "sections/background.tex" 1776746950 4954 bb1a8328e1a958bb2ccd2cf39246c572 ""
   "sections/conclusion.tex" 1775092089 29 873d4349f888377749b821be1c2e589e ""
   "sections/discussion.tex" 1775092085 29 873d4349f888377749b821be1c2e589e ""
-  "sections/introduction.tex" 1776748570 1160 97c199b08e56ced18f3ddd899c8034f9 ""
+  "sections/introduction.tex" 1776748797 1446 6977d940af2b27dd49ad8dce9264a051 ""
   "sections/methodology.tex" 1776042503 3282 5733c8bb5cc43b95f0920b0b46951a73 ""
   "sections/results.tex" 1775241246 29 873d4349f888377749b821be1c2e589e ""
   (generated)
