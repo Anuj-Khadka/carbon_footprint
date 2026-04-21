@@ -1,67 +1,59 @@
+% ---------------------------------------------------------------------------
+% Page layout
+% ---------------------------------------------------------------------------
 \usepackage[
   paperheight=11in,
   paperwidth=8.5in,
-  left=10mm,
-  right=10mm,
+  left=15mm,
+  right=15mm,
   top=20mm,
-  bottom=20mm]{geometry}
+  bottom=20mm,
+  columnsep=6mm]{geometry}
+
+% ---------------------------------------------------------------------------
+% Encoding (pdfLaTeX)
+% ---------------------------------------------------------------------------
 \usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
 
+% ---------------------------------------------------------------------------
+% Graphics, tables, math
+% ---------------------------------------------------------------------------
 \usepackage{graphicx}
-\usepackage{wrapfig}
-\usepackage[bottom]{footmisc}
-\usepackage{listings}
-\usepackage{enumitem}
-
-\usepackage{wrapfig}
-\usepackage{ragged2e}
+\graphicspath{{figures/}}
 
 \usepackage{array}
-\usepackage[table]{xcolor}
-\usepackage{multirow}
 \usepackage{booktabs}
-\usepackage{hhline}
-\definecolor{palegreen}{rgb}{0.6,0.98,0.6}
 
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage{multicol}
-\usepackage{lipsum}
-\usepackage{hyphenat}
+
+% ---------------------------------------------------------------------------
+% URLs (hyphenate long URLs in the bibliography)
+% ---------------------------------------------------------------------------
 \PassOptionsToPackage{hyphens}{url}
 \usepackage{url}
 
-\usepackage{rotating}
+% ---------------------------------------------------------------------------
+% Footnotes pinned to bottom of column
+% ---------------------------------------------------------------------------
+\usepackage[bottom]{footmisc}
 
-%\usepackage{xeCJK}
-
-%% support use of straight quotes in code listings
-\usepackage[T1]{fontenc}
-\usepackage{textcomp}
-\usepackage{listings}
-\lstset{upquote=true}
-
-%% for shrinking space between lines
-\usepackage{setspace}
-
-\newcommand*{\affaddr}[1]{#1} % No op here. Customize it for different styles.
-\newcommand*{\affmark}[1][*]{\textsuperscript{#1}}
-\newcommand*{\email}[1]{\small{\texttt{#1}}}
-\newcommand{\tarot}{\textsc{Tarot}}
-\renewcommand*\contentsname{\centering Table of Contents}
-
-\renewcommand{\footnoterule}{%
-  \kern -3pt
-  \hrule width \textwidth height 0.5pt
-  \kern 2pt
-}
-
-% remove date
-\date{}
-
+% ---------------------------------------------------------------------------
+% Section title formatting
+% ---------------------------------------------------------------------------
 \usepackage{titlesec}
 \titleformat*{\section}{\large\bfseries}
 \titleformat*{\subsection}{\normalsize\bfseries}
 \titleformat*{\subsubsection}{\normalsize\bfseries}
 
-\usepackage{biblatex}
+% ---------------------------------------------------------------------------
+% Bibliography (biblatex + biber)
+% ---------------------------------------------------------------------------
+\usepackage[
+  backend=biber,
+  style=numeric,
+  sorting=none,
+  maxbibnames=99]{biblatex}
+\addbibresource{main.bib}
