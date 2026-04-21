@@ -1,27 +1,43 @@
 \documentclass[11pt,twocolumn]{article}
 
-\input{preamble.tex}
+\input{preamble}
 
-\title{Carbon footprint of algorithms}
-\author{
-  \begin{tabular}{ccc}
-    \textbf{Anuj Khadka} & \textbf{Vladislav D. Veksler} & \textbf{Darryl Aucoin} \\
-    % \affaddr{Computer Science \& Business Analytics} & \affaddr{Faculty Advisor} & \affaddr{Second Advisor} \\
-  \end{tabular}
+% ---------------------------------------------------------------------------
+% Title / authors / date
+% ---------------------------------------------------------------------------
+\title{%
+  \textbf{\LARGE Carbon Footprint of Algorithms}\\[0.4em]
+  {\large\mdseries How Does Programming Language Choice Affect Energy Consumption?}
+}
+
+\author{%
+  \textbf{Anuj Khadka} \and
+  \textbf{Vladislav D. Veksler} \and
+  \textbf{Darryl Aucoin}
 }
 \date{}
 
 \begin{document}
-\maketitle
 
-\begin{abstract}
-  This project investigates how programming language choice affects the carbon footprint produced during a program execution. Although software is often seen as intangible, every program consumes energy, ultimately contributing to carbon emissions. As the digital system continues to grow, understanding the environmental impact of software has become increasingly important. This experiment studies how identical algorithms behave when implemented in different programming languages running on the same hardware. By measuring and estimating the carbon emissions, the project tends to explore whether programming language designs play an important role in software sustainability, or if it is mostly driven by heavy algorithms. This research combines the aspects of computer science and environmental science to better understand the hidden environmental cost of everyday computational tasks and encourage more sustainable and responsible software development practices.
+% ---------------------------------------------------------------------------
+% Front matter: title + authors + abstract span the full page width.
+% The body below runs in two columns as set by the documentclass.
+% ---------------------------------------------------------------------------
+\twocolumn[{%
+  \maketitle
+  \begin{center}
+  \begin{minipage}{0.88\textwidth}
+    \small
+    \noindent\textbf{Abstract.}\enspace
+    This project investigates how programming language choice affects the carbon footprint produced during a program execution. Although software is often seen as intangible, every program consumes energy, ultimately contributing to carbon emissions. As the digital system continues to grow, understanding the environmental impact of software has become increasingly important. This experiment studies how identical algorithms behave when implemented in different programming languages running on the same hardware. By measuring and estimating the carbon emissions, the project tends to explore whether programming language designs play an important role in software sustainability, or if it is mostly driven by heavy algorithms. This research combines the aspects of computer science and environmental science to better understand the hidden environmental cost of everyday computational tasks and encourage more sustainable and responsible software development practices.
 
-  \noindent\textbf{Keywords:} carbon footprint, software sustainability, energy consumption
-\end{abstract}
+    \vspace{0.6em}
+    \noindent\textbf{Keywords:}\enspace carbon footprint, software sustainability, energy consumption
+  \end{minipage}
+  \end{center}
+  \vspace{1.5em}
+}]
 
-% \section{Abstract}
-% \input{sections/abstract}
 \section{Introduction}
 \input{sections/introduction}
 \section{Background}
@@ -34,7 +50,7 @@
 \input{sections/discussion}
 \section{Conclusion}
 \input{sections/conclusion}
-\section{Acknowledgement}
+\section*{Acknowledgements}
 \input{sections/acknowledgement}
 
 \printbibliography
