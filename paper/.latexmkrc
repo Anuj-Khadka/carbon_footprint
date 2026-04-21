@@ -10,7 +10,7 @@ $bibtex_use = 2; # always run biber when the .bcf says so
 $pdflatex = 'pdflatex -interaction=nonstopmode -halt-on-error -synctex=1 %O %S';
 
 # Force biber (biblatex backend) instead of bibtex
-$biber = 'biber --validate-datamodel %O %S';
+$biber = 'biber %O %S';
 
 # Files to also clean with `latexmk -c`
 $clean_ext = 'bbl run.xml synctex.gz';

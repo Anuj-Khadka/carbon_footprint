@@ -45,7 +45,6 @@
       \field{urlyear}{2026}
       \field{year}{2023}
       \field{urldateera}{ce}
-      \warn{\item Datamodel: online entry 'greenuk_footprint' (main.bib): Missing mandatory field - one of 'url, doi, eprint' must be defined}
     \endentry
     \entry{thoughtworks_carbon_intensity}{online}{}{}
       \name{author}{1}{}{%
@@ -71,7 +70,6 @@
       \field{urlyear}{2026}
       \field{year}{2023}
       \field{urldateera}{ce}
-      \warn{\item Datamodel: online entry 'thoughtworks_carbon_intensity' (main.bib): Missing mandatory field - one of 'url, doi, eprint' must be defined}
     \endentry
     \entry{ict_stat}{article}{}{}
       \name{author}{6}{}{%
@@ -161,8 +159,53 @@
       \field{urlmonth}{1}
       \field{urlyear}{2026}
       \field{urldateera}{ce}
-      \warn{\item Datamodel: online entry 'iea_energy_consumption' (main.bib): Missing mandatory field - one of 'date, year' must be defined}
-      \warn{\item Datamodel: online entry 'iea_energy_consumption' (main.bib): Missing mandatory field - one of 'url, doi, eprint' must be defined}
+    \endentry
+    \entry{masanet_energy_consumption}{online}{}{}
+      \name{author}{5}{}{%
+        {{hash=f60849884bee24169fdade67f4446732}{%
+           family={Masanet},
+           familyi={M\bibinitperiod},
+           given={Eric},
+           giveni={E\bibinitperiod}}}%
+        {{hash=8096724142e90c2bbd9770089f76969b}{%
+           family={Shehabi},
+           familyi={S\bibinitperiod},
+           given={Arman},
+           giveni={A\bibinitperiod}}}%
+        {{hash=43514fc3264df0756440cc8aa45b5556}{%
+           family={Lei},
+           familyi={L\bibinitperiod},
+           given={Nuoa},
+           giveni={N\bibinitperiod}}}%
+        {{hash=2912904f92df0eacbcb2f7fbeaedfaea}{%
+           family={Smith},
+           familyi={S\bibinitperiod},
+           given={Sarah},
+           giveni={S\bibinitperiod}}}%
+        {{hash=1120ab390aacef8b6273606f9224131f}{%
+           family={Koomey},
+           familyi={K\bibinitperiod},
+           given={Jonathan},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{6bf4e7bfb6687766914748c756d98ea2}
+      \strng{fullhash}{945efed2e485d54521243e9a7acb67c7}
+      \strng{fullhashraw}{945efed2e485d54521243e9a7acb67c7}
+      \strng{bibnamehash}{945efed2e485d54521243e9a7acb67c7}
+      \strng{authorbibnamehash}{945efed2e485d54521243e9a7acb67c7}
+      \strng{authornamehash}{6bf4e7bfb6687766914748c756d98ea2}
+      \strng{authorfullhash}{945efed2e485d54521243e9a7acb67c7}
+      \strng{authorfullhashraw}{945efed2e485d54521243e9a7acb67c7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{\url{https://datacenters.lbl.gov/sites/default/files/Masanet_et_al_Science_2020.full_.pdf}}
+      \field{title}{Recalibrating global data center energy-use estimates,}
+      \field{urlmonth}{1}
+      \field{urlyear}{2026}
+      \field{year}{2020}
+      \field{urldateera}{ce}
     \endentry
     \entry{10.1145/3136014.3136031}{inproceedings}{}{}
       \name{author}{7}{}{%
@@ -216,8 +259,8 @@
       \strng{authornamehash}{8766df7b8c845b5221b1d134295d970c}
       \strng{authorfullhash}{9636bd7f21f5641a06c0e3e238f9da45}
       \strng{authorfullhashraw}{9636bd7f21f5641a06c0e3e238f9da45}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{This paper presents a study of the runtime, memory usage and energy consumption of twenty seven well-known software languages. We monitor the performance of such languages using ten different programming problems, expressed in each of the languages. Our results show interesting findings, such as, slower/faster languages consuming less/more energy, and how memory usage influences energy consumption. Finally, we show how to use our results to provide software engineers support to decide which language to use when energy efficiency is a concern.}
@@ -238,8 +281,6 @@
       \verb https://doi.org/10.1145/3136014.3136031
       \endverb
       \keyw{Programming Languages,Language Benchmarking,Green Software,Energy Efficiency}
-      \warn{\item Datamodel: inproceedings entry '10.1145/3136014.3136031' (main.bib): Field 'address' invalid in data model - ignoring}
-      \warn{\item Datamodel: inproceedings entry '10.1145/3136014.3136031' (main.bib): Field 'numpages' invalid in data model - ignoring}
     \endentry
     \entry{clbg}{online}{}{}
       \name{author}{1}{}{%
@@ -257,8 +298,8 @@
       \strng{authornamehash}{a9f18dceffd122e28fdd8e914e1bf1bc}
       \strng{authorfullhash}{a9f18dceffd122e28fdd8e914e1bf1bc}
       \strng{authorfullhashraw}{a9f18dceffd122e28fdd8e914e1bf1bc}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{note}{\url{http://benchmarksgame.alioth.debian.org/}}
@@ -266,8 +307,6 @@
       \field{urlmonth}{1}
       \field{urlyear}{2026}
       \field{urldateera}{ce}
-      \warn{\item Datamodel: online entry 'clbg' (main.bib): Missing mandatory field - one of 'date, year' must be defined}
-      \warn{\item Datamodel: online entry 'clbg' (main.bib): Missing mandatory field - one of 'url, doi, eprint' must be defined}
     \endentry
     \entry{decisionmodels}{article}{}{}
       \name{author}{3}{}{%
@@ -295,8 +334,8 @@
       \strng{authornamehash}{15f32d88deefed83d2d4464c9c340a0d}
       \strng{authorfullhash}{15f32d88deefed83d2d4464c9c340a0d}
       \strng{authorfullhashraw}{15f32d88deefed83d2d4464c9c340a0d}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Context: Software development is a continuous decision-making process that mainly relies on the software engineer’s experience and intuition. One of the essential decisions in the early stages of the process is selecting the best fitting programming language ecosystem based on the project requirements. A significant number of criteria, such as developer availability and consistent documentation, in addition to the number of available options in the market, lead to a challenging decision-making process. As the selection of programming language ecosystems depends on the application to be developed and its environment, a decision model is required to analyze the selection problem using systematic identification and evaluation of potential alternatives for a development project. Method: Recently, we introduced a framework to build decision models for technology selection problems in software production. Furthermore, we designed and implemented a decision support system that uses such decision models to support software engineers with their decision-making problems. This study presents a decision model based on the framework for the programming language ecosystem selection problem. Results: The decision model has been evaluated through seven real-world case studies at seven software development companies. The case study participants declared that the approach provides significantly more insight into the programming language ecosystem selection process and decreases the decision-making process’s time and cost. Conclusion: With the decision model, software engineers can more rapidly evaluate and select programming language ecosystems. Having the knowledge in the decision model readily available supports software engineers in making more efficient and effective decisions that meet their requirements and priorities. Furthermore, such reusable knowledge can be employed by other researchers to develop new concepts and solutions for future challenges.}
