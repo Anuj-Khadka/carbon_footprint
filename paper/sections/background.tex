@@ -27,9 +27,27 @@ In the following sections, we describe the energy consumption model, carbon inte
 
 
 \subsection{Programming Language}
-The programming languages chosen for this study are C, Python, Javascript, Java, Go, and Rust. These languages were selected to represent a range of programming paradigms, performance characteristics, and popularity in the software development community. Each language has its own unique features and trade-offs that may influence the energy consumption and carbon footprint of the algorithms implemented in them \cite{decisionmodels}.
+The programming languages chosen for this study are C, Python, Javascript, Java, Go, and Rust. These languages were selected to represent a range of programming paradigms, performance characteristics, and popularity in the software development community. Each language has its own unique features and trade-offs that may influence the energy consumption and carbon footprint of the algorithms implemented in them \cite{decisionmodels}. 
 
-
+\begin{table}[h]
+    \centering
+    \caption{Programming languages, their performance characteristics, and popularity.}\label{tab:programming_languages}
+    \small
+    \begin{tabular}{lll}
+        \hline
+        \textbf{Language} & \textbf{Performance} & \textbf{Popularity} \\
+        \hline
+        Summation                      & $O(n)$            & Linear \\
+        Binary Search                  & $O(\log n)$       & Logarithmic \\
+        Merge Sort                     & $O(n \log n)$     & Divide \& Conquer \\
+        Breadth-First Search (BFS)     & $O(V + E)$        & Graph Traversal \\
+        Hash Table                     & $O(n) - avg $             &  xxxxxx \\
+        Matrix Multiplication          & $O(n^3)$          & Dense Arithemetic \\
+        \hline
+    \end{tabular}
+    
+    
+\end{table}
 
 \paragraph{C -}
     fgets
