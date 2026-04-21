@@ -1,7 +1,9 @@
 {
   "permissions": {
     "allow": [
-      "Bash(python 03_pilot_study.py)"
+      "Bash(python 03_pilot_study.py)",
+      "Bash(rm -f main.aux main.bbl main.bcf main.blg main.log main.out main.run.xml main.pdf)",
+      "Bash(\"C:/texlive/2026/bin/windows/latexmk.exe\" -pdf -synctex=1 -interaction=nonstopmode -file-line-error main.tex)"
     ]
   }
 }
