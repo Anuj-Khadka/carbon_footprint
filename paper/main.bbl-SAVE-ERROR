@@ -1,0 +1,324 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{greenuk_footprint}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=62ca9aafc8ffbafa7442a87eb7791d66}{%
+           family={UK},
+           familyi={U\bibinitperiod},
+           given={Green\bibnamedelima Compute},
+           giveni={G\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \strng{namehash}{62ca9aafc8ffbafa7442a87eb7791d66}
+      \strng{fullhash}{62ca9aafc8ffbafa7442a87eb7791d66}
+      \strng{fullhashraw}{62ca9aafc8ffbafa7442a87eb7791d66}
+      \strng{bibnamehash}{62ca9aafc8ffbafa7442a87eb7791d66}
+      \strng{authorbibnamehash}{62ca9aafc8ffbafa7442a87eb7791d66}
+      \strng{authornamehash}{62ca9aafc8ffbafa7442a87eb7791d66}
+      \strng{authorfullhash}{62ca9aafc8ffbafa7442a87eb7791d66}
+      \strng{authorfullhashraw}{62ca9aafc8ffbafa7442a87eb7791d66}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{\url{https://greencompute.uk/Measurement/Code}}
+      \field{title}{Measuring Environmental Footprint of Code}
+      \field{urlmonth}{1}
+      \field{urlyear}{2026}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \warn{\item Datamodel: online entry 'greenuk_footprint' (main.bib): Missing mandatory field - one of 'url, doi, eprint' must be defined}
+    \endentry
+    \entry{thoughtworks_carbon_intensity}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=3465f0b78542b2e9ae2cb635a1388616}{%
+           family={ThoughtWorks},
+           familyi={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{3465f0b78542b2e9ae2cb635a1388616}
+      \strng{fullhash}{3465f0b78542b2e9ae2cb635a1388616}
+      \strng{fullhashraw}{3465f0b78542b2e9ae2cb635a1388616}
+      \strng{bibnamehash}{3465f0b78542b2e9ae2cb635a1388616}
+      \strng{authorbibnamehash}{3465f0b78542b2e9ae2cb635a1388616}
+      \strng{authornamehash}{3465f0b78542b2e9ae2cb635a1388616}
+      \strng{authorfullhash}{3465f0b78542b2e9ae2cb635a1388616}
+      \strng{authorfullhashraw}{3465f0b78542b2e9ae2cb635a1388616}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{\url{https://www.thoughtworks.com/insights/blog/ethical-tech/calculating-software-carbon-intensity}}
+      \field{title}{Calculating software carbon intensity}
+      \field{urlmonth}{1}
+      \field{urlyear}{2026}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \warn{\item Datamodel: online entry 'thoughtworks_carbon_intensity' (main.bib): Missing mandatory field - one of 'url, doi, eprint' must be defined}
+    \endentry
+    \entry{ict_stat}{article}{}{}
+      \name{author}{6}{}{%
+        {{hash=2b67be5248246b72e3cbe5b2f9693ba4}{%
+           family={Freitag},
+           familyi={F\bibinitperiod},
+           given={Charlotte},
+           giveni={C\bibinitperiod}}}%
+        {{hash=f013b29010b450aa6e3ecae0184268af}{%
+           family={Berners-Lee},
+           familyi={B\bibinithyphendelim L\bibinitperiod},
+           given={Mike},
+           giveni={M\bibinitperiod}}}%
+        {{hash=5a6a753429c5e0140c6954d93a438628}{%
+           family={Widdicks},
+           familyi={W\bibinitperiod},
+           given={Kelly},
+           giveni={K\bibinitperiod}}}%
+        {{hash=d4737899908b1101024d65c7975d8cde}{%
+           family={Knowles},
+           familyi={K\bibinitperiod},
+           given={Bran},
+           giveni={B\bibinitperiod}}}%
+        {{hash=8389d593fd3dad041ae56433a442f410}{%
+           family={Blair},
+           familyi={B\bibinitperiod},
+           given={Gordon\bibnamedelima S.},
+           giveni={G\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=e3d56cfd681145da84baf0427c0db184}{%
+           family={Friday},
+           familyi={F\bibinitperiod},
+           given={Adrian},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{65cc9e9c6fab4e46f9127a114792dd94}
+      \strng{fullhash}{fde0a3d121aacf4300a94c2108721916}
+      \strng{fullhashraw}{fde0a3d121aacf4300a94c2108721916}
+      \strng{bibnamehash}{fde0a3d121aacf4300a94c2108721916}
+      \strng{authorbibnamehash}{fde0a3d121aacf4300a94c2108721916}
+      \strng{authornamehash}{65cc9e9c6fab4e46f9127a114792dd94}
+      \strng{authorfullhash}{fde0a3d121aacf4300a94c2108721916}
+      \strng{authorfullhashraw}{fde0a3d121aacf4300a94c2108721916}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Summary In this paper, we critique ICT's current and projected climate impacts. Peer-reviewed studies estimate ICT's current share of global greenhouse gas (GHG) emissions at 1.8\%--2.8\% of global GHG emissions; adjusting for truncation of supply chain pathways, we find that this share could actually be between 2.1\% and 3.9\%. For ICT's future emissions, we explore assumptions underlying analysts' projections to understand the reasons for their variability. All analysts agree that ICT emissions will not reduce without major concerted efforts involving broad political and industrial action. We provide three reasons to believe ICT emissions are going to increase barring intervention and find that not all carbon pledges in the ICT sector are ambitious enough to meet climate targets. We explore the underdevelopment of policy mechanisms for enforcing sector-wide compliance, and contend that, without a global carbon constraint, a new regulatory framework is required to keep the ICT sector's footprint aligned with the Paris Agreement.}
+      \field{issn}{2666-3899}
+      \field{journaltitle}{Patterns}
+      \field{number}{9}
+      \field{title}{The real climate and transformative impact of ICT: A critique of estimates, trends, and regulations}
+      \field{volume}{2}
+      \field{year}{2021}
+      \field{pages}{100340}
+      \range{pages}{1}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.patter.2021.100340
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S2666389921001884
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S2666389921001884
+      \endverb
+      \keyw{ICT,carbon footprint,trends,AI,big data,data science,IoT,blockchain,policy,regulations}
+    \endentry
+    \entry{iea_energy_consumption}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=18fdbec513c87989c7580f31bb7f03ab}{%
+           family={IEA},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{18fdbec513c87989c7580f31bb7f03ab}
+      \strng{fullhash}{18fdbec513c87989c7580f31bb7f03ab}
+      \strng{fullhashraw}{18fdbec513c87989c7580f31bb7f03ab}
+      \strng{bibnamehash}{18fdbec513c87989c7580f31bb7f03ab}
+      \strng{authorbibnamehash}{18fdbec513c87989c7580f31bb7f03ab}
+      \strng{authornamehash}{18fdbec513c87989c7580f31bb7f03ab}
+      \strng{authorfullhash}{18fdbec513c87989c7580f31bb7f03ab}
+      \strng{authorfullhashraw}{18fdbec513c87989c7580f31bb7f03ab}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{\url{https://www.iea.org/reports/energy-and-ai}}
+      \field{title}{Energy and AI}
+      \field{urlmonth}{1}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \warn{\item Datamodel: online entry 'iea_energy_consumption' (main.bib): Missing mandatory field - one of 'date, year' must be defined}
+      \warn{\item Datamodel: online entry 'iea_energy_consumption' (main.bib): Missing mandatory field - one of 'url, doi, eprint' must be defined}
+    \endentry
+    \entry{10.1145/3136014.3136031}{inproceedings}{}{}
+      \name{author}{7}{}{%
+        {{hash=9026f3b05f12685366186b37a76ab2f3}{%
+           family={Pereira},
+           familyi={P\bibinitperiod},
+           given={Rui},
+           giveni={R\bibinitperiod}}}%
+        {{hash=80cfb4d3c3387da146e1065d598d3348}{%
+           family={Couto},
+           familyi={C\bibinitperiod},
+           given={Marco},
+           giveni={M\bibinitperiod}}}%
+        {{hash=96db25ba8f44b351f684fec84f929330}{%
+           family={Ribeiro},
+           familyi={R\bibinitperiod},
+           given={Francisco},
+           giveni={F\bibinitperiod}}}%
+        {{hash=0d4d33b8a24aad3be2e315b27f164368}{%
+           family={Rua},
+           familyi={R\bibinitperiod},
+           given={Rui},
+           giveni={R\bibinitperiod}}}%
+        {{hash=e56f75a786e7477b6d47697702900967}{%
+           family={Cunha},
+           familyi={C\bibinitperiod},
+           given={Jácome},
+           giveni={J\bibinitperiod}}}%
+        {{hash=31abc07b903b8d308ce26b70a7a44af1}{%
+           family={Fernandes},
+           familyi={F\bibinitperiod},
+           given={João\bibnamedelima Paulo},
+           giveni={J\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=a772b5aa30aa09c26654983ee7fe0af7}{%
+           family={Saraiva},
+           familyi={S\bibinitperiod},
+           given={João},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Vancouver, BC, Canada}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{8766df7b8c845b5221b1d134295d970c}
+      \strng{fullhash}{9636bd7f21f5641a06c0e3e238f9da45}
+      \strng{fullhashraw}{9636bd7f21f5641a06c0e3e238f9da45}
+      \strng{bibnamehash}{9636bd7f21f5641a06c0e3e238f9da45}
+      \strng{authorbibnamehash}{9636bd7f21f5641a06c0e3e238f9da45}
+      \strng{authornamehash}{8766df7b8c845b5221b1d134295d970c}
+      \strng{authorfullhash}{9636bd7f21f5641a06c0e3e238f9da45}
+      \strng{authorfullhashraw}{9636bd7f21f5641a06c0e3e238f9da45}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This paper presents a study of the runtime, memory usage and energy consumption of twenty seven well-known software languages. We monitor the performance of such languages using ten different programming problems, expressed in each of the languages. Our results show interesting findings, such as, slower/faster languages consuming less/more energy, and how memory usage influences energy consumption. Finally, we show how to use our results to provide software engineers support to decide which language to use when energy efficiency is a concern.}
+      \field{booktitle}{Proceedings of the 10th ACM SIGPLAN International Conference on Software Language Engineering}
+      \field{isbn}{9781450355254}
+      \field{series}{SLE 2017}
+      \field{title}{Energy efficiency across programming languages: how do energy, time, and memory relate?}
+      \field{year}{2017}
+      \field{pages}{256\bibrangedash 267}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1145/3136014.3136031
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/3136014.3136031
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/3136014.3136031
+      \endverb
+      \keyw{Programming Languages,Language Benchmarking,Green Software,Energy Efficiency}
+      \warn{\item Datamodel: inproceedings entry '10.1145/3136014.3136031' (main.bib): Field 'address' invalid in data model - ignoring}
+      \warn{\item Datamodel: inproceedings entry '10.1145/3136014.3136031' (main.bib): Field 'numpages' invalid in data model - ignoring}
+    \endentry
+    \entry{clbg}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=a9f18dceffd122e28fdd8e914e1bf1bc}{%
+           family={Gouy},
+           familyi={G\bibinitperiod},
+           given={Isaac},
+           giveni={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{a9f18dceffd122e28fdd8e914e1bf1bc}
+      \strng{fullhash}{a9f18dceffd122e28fdd8e914e1bf1bc}
+      \strng{fullhashraw}{a9f18dceffd122e28fdd8e914e1bf1bc}
+      \strng{bibnamehash}{a9f18dceffd122e28fdd8e914e1bf1bc}
+      \strng{authorbibnamehash}{a9f18dceffd122e28fdd8e914e1bf1bc}
+      \strng{authornamehash}{a9f18dceffd122e28fdd8e914e1bf1bc}
+      \strng{authorfullhash}{a9f18dceffd122e28fdd8e914e1bf1bc}
+      \strng{authorfullhashraw}{a9f18dceffd122e28fdd8e914e1bf1bc}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{\url{http://benchmarksgame.alioth.debian.org/}}
+      \field{title}{The Computer Language Benchmarks Game}
+      \field{urlmonth}{1}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \warn{\item Datamodel: online entry 'clbg' (main.bib): Missing mandatory field - one of 'date, year' must be defined}
+      \warn{\item Datamodel: online entry 'clbg' (main.bib): Missing mandatory field - one of 'url, doi, eprint' must be defined}
+    \endentry
+    \entry{decisionmodels}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=2c0a5d913f7620127cb6cc3f11166c5e}{%
+           family={Farshidi},
+           familyi={F\bibinitperiod},
+           given={Siamak},
+           giveni={S\bibinitperiod}}}%
+        {{hash=76a3722495f91b0175b627e42e3af4e3}{%
+           family={Jansen},
+           familyi={J\bibinitperiod},
+           given={Slinger},
+           giveni={S\bibinitperiod}}}%
+        {{hash=6de0f965707160c5027bc655ba972e2a}{%
+           family={Deldar},
+           familyi={D\bibinitperiod},
+           given={Mahdi},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{15f32d88deefed83d2d4464c9c340a0d}
+      \strng{fullhash}{15f32d88deefed83d2d4464c9c340a0d}
+      \strng{fullhashraw}{15f32d88deefed83d2d4464c9c340a0d}
+      \strng{bibnamehash}{15f32d88deefed83d2d4464c9c340a0d}
+      \strng{authorbibnamehash}{15f32d88deefed83d2d4464c9c340a0d}
+      \strng{authornamehash}{15f32d88deefed83d2d4464c9c340a0d}
+      \strng{authorfullhash}{15f32d88deefed83d2d4464c9c340a0d}
+      \strng{authorfullhashraw}{15f32d88deefed83d2d4464c9c340a0d}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Context: Software development is a continuous decision-making process that mainly relies on the software engineer’s experience and intuition. One of the essential decisions in the early stages of the process is selecting the best fitting programming language ecosystem based on the project requirements. A significant number of criteria, such as developer availability and consistent documentation, in addition to the number of available options in the market, lead to a challenging decision-making process. As the selection of programming language ecosystems depends on the application to be developed and its environment, a decision model is required to analyze the selection problem using systematic identification and evaluation of potential alternatives for a development project. Method: Recently, we introduced a framework to build decision models for technology selection problems in software production. Furthermore, we designed and implemented a decision support system that uses such decision models to support software engineers with their decision-making problems. This study presents a decision model based on the framework for the programming language ecosystem selection problem. Results: The decision model has been evaluated through seven real-world case studies at seven software development companies. The case study participants declared that the approach provides significantly more insight into the programming language ecosystem selection process and decreases the decision-making process’s time and cost. Conclusion: With the decision model, software engineers can more rapidly evaluate and select programming language ecosystems. Having the knowledge in the decision model readily available supports software engineers in making more efficient and effective decisions that meet their requirements and priorities. Furthermore, such reusable knowledge can be employed by other researchers to develop new concepts and solutions for future challenges.}
+      \field{issn}{0950-5849}
+      \field{journaltitle}{Information and Software Technology}
+      \field{title}{A decision model for programming language ecosystem selection: Seven industry case studies}
+      \field{volume}{139}
+      \field{year}{2021}
+      \field{pages}{106640}
+      \range{pages}{1}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.infsof.2021.106640
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0950584921001051
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0950584921001051
+      \endverb
+      \keyw{Programming language ecosystem selection,Decision model,Industry case study,Software production,Multi-criteria decision-making,Decision support system}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
