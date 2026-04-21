@@ -2,31 +2,47 @@
     "gitdoc.enabled": true,
     "gitdoc.commitValidationLevel": "none",
     "gitdoc.autoCommitDelay": 30000,
+
     "latex-workshop.latex.autoBuild.run": "onSave",
     "latex-workshop.view.pdf.viewer": "tab",
     "latex-workshop.synctex.afterBuild.enabled": true,
     "latex-workshop.latex.recipe.default": "first",
+    "latex-workshop.latex.autoClean.run": "never",
+    "latex-workshop.message.badbox.show": false,
+
     "terminal.integrated.env.windows": {
         "PATH": "C:\\texlive\\2026\\bin\\windows;${env:PATH}"
     },
+
     "latex-workshop.latex.recipes": [
         {
-            "name": "XeLaTeX (full path)",
-            "tools": [
-                "xelatex-fullpath"
-            ]
+            "name": "latexmk (pdfLaTeX + biber)",
+            "tools": ["latexmk"]
+        },
+        {
+            "name": "latexmk clean",
+            "tools": ["latexmk-clean"]
         }
     ],
+
     "latex-workshop.latex.tools": [
         {
-            "name": "xelatex-fullpath",
-            "command": "C:/texlive/2026/bin/windows/xelatex.exe",
+            "name": "latexmk",
+            "command": "C:/texlive/2026/bin/windows/latexmk.exe",
             "args": [
+                "-pdf",
                 "-synctex=1",
                 "-interaction=nonstopmode",
                 "-file-line-error",
                 "%DOC%"
-            ]
+            ],
+            "env": {}
+        },
+        {
+            "name": "latexmk-clean",
+            "command": "C:/texlive/2026/bin/windows/latexmk.exe",
+            "args": ["-c", "%DOC%"],
+            "env": {}
         }
     ]
 }
