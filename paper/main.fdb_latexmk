@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber main"] 1776750376.57248 "main.bcf" "main.bbl" "main" 1776750499.90309 0
-  "main.bcf" 1776750499 108406 14dacc800dbef21812e3253889d0d1ff "pdflatex"
+["biber main"] 1776750376.57248 "main.bcf" "main.bbl" "main" 1776750508.55634 0
+  "main.bcf" 1776750508 108406 14dacc800dbef21812e3253889d0d1ff "pdflatex"
   "main.bib" 1776749720 8853 a6c171f4c77f6260591ac2e5df2076e7 ""
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1776750498.75217 "c:/Users/AKhadka2/Desktop/carbon_footprint/paper/main.tex" "main.pdf" "main" 1776750499.9046 0
+["pdflatex"] 1776750507.41797 "c:/Users/AKhadka2/Desktop/carbon_footprint/paper/main.tex" "main.pdf" "main" 1776750508.55802 0
   "c:/Users/AKhadka2/Desktop/carbon_footprint/paper/main.tex" 1776747588 3932 f07c3c273dac75e7906d658daf4c9c92 ""
   "c:/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1775080624 2971 def0b6c1f0b107b3b936def894055589 ""
   "c:/texlive/2026/texmf-dist/fonts/map/fontname/texfonts.map" 1775082038 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -116,16 +116,16 @@
   "c:/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1775087885 5619402 045890036aad9b52b154ef5568e59d3a ""
   "c:/texlive/2026/texmf-var/web2c/pdftex/pdflatex.fmt" 1775088023 3648464 8ff1b7e831b3ace6bf3bab0e3eb9f10e ""
   "c:/texlive/2026/texmf.cnf" 1775087857 713 e69b156964470283e0530f5060668171 ""
-  "main.aux" 1776750499 4400 75a38de6a5e6c3657dae8d2245a51d8f "pdflatex"
+  "main.aux" 1776750508 4400 75a38de6a5e6c3657dae8d2245a51d8f "pdflatex"
   "main.bbl" 1776750378 18760 9023c87f76106356735405d753ca5dbd "biber main"
-  "main.run.xml" 1776750499 2299 81988d3303a58f7ac525483192dfa2a1 "pdflatex"
+  "main.run.xml" 1776750508 2299 81988d3303a58f7ac525483192dfa2a1 "pdflatex"
   "main.tex" 1776747588 3932 f07c3c273dac75e7906d658daf4c9c92 ""
   "preamble.tex" 1776745983 2014 1673dd85d8bb21b4632801b2a21c44c7 ""
   "sections/acknowledgement.tex" 1775242039 182 21c34078480e04d82286cdc451b17280 ""
   "sections/background.tex" 1776746950 4954 bb1a8328e1a958bb2ccd2cf39246c572 ""
   "sections/conclusion.tex" 1775092089 29 873d4349f888377749b821be1c2e589e ""
   "sections/discussion.tex" 1775092085 29 873d4349f888377749b821be1c2e589e ""
-  "sections/introduction.tex" 1776750498 2787 776c787f93065233b66324d15d9efe17 ""
+  "sections/introduction.tex" 1776750508 2875 ff82f24728ec342c8612d4e067b673c0 ""
   "sections/methodology.tex" 1776042503 3282 5733c8bb5cc43b95f0920b0b46951a73 ""
   "sections/results.tex" 1775241246 29 873d4349f888377749b821be1c2e589e ""
   (generated)
