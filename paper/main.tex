@@ -1,23 +1,6 @@
 \documentclass[twocolumn]{article}
 
-% ---------- Engine detection & fonts ----------
-\usepackage{iftex}
-\ifPDFTeX
-  \usepackage{newpxtext}
-  \usepackage{microtype}
-\else
-  \usepackage{fontspec}
-  \setmainfont{Amiri}
-  \usepackage{microtype}
-\fi
-
 \input{preamble.tex}
-\usepackage[style=ieee, backend=biber]{biblatex}
-\addbibresource{main.bib}
-
-\AtBeginBibliography{
-  \fontsize{8}{8.5}\selectfont
-}
 
 \title{Carbon footprint of algorithms}
 \author{

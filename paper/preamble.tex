@@ -1,64 +1,95 @@
+
+% ── Page geometry ─────────────────────────────────────────────────────────────
 \usepackage[
-  paperheight=11in,
-  paperwidth=8.5in,
-  left=10mm,
-  right=10mm,
-  top=20mm,
-  bottom=20mm]{geometry}
-\usepackage[utf8]{inputenc}
-
-\usepackage{graphicx}
-\usepackage{wrapfig}
-\usepackage[bottom]{footmisc}
-\usepackage{listings}
-\usepackage{enumitem}
-
-\usepackage{wrapfig}
-\usepackage{ragged2e}
-
-\usepackage{array}
-\usepackage[table]{xcolor}
-\usepackage{multirow}
-\usepackage{booktabs}
-\usepackage{hhline}
-\definecolor{palegreen}{rgb}{0.6,0.98,0.6}
-
+  paperheight = 11in,
+  paperwidth  = 8.5in,
+  left        = 10mm,
+  right       = 10mm,
+  top         = 20mm,
+  bottom      = 20mm,
+  columnsep   = 5mm
+]{geometry}
+ 
+% ── Engine detection & fonts ──────────────────────────────────────────────────
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}       % safe with pdflatex only
+  \usepackage[utf8]{inputenc}
+  \usepackage{newpxtext}
+  \usepackage{microtype}
+\else
+  % XeLaTeX / LuaLaTeX: fontspec handles everything — drop fontenc & inputenc
+  \usepackage{fontspec}
+  \setmainfont{Amiri}
+  \usepackage{microtype}
+\fi
+ 
+% ── Math ──────────────────────────────────────────────────────────────────────
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage{lipsum}
+ 
+% ── Graphics & figures ────────────────────────────────────────────────────────
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{rotating}
+ 
+% ── Tables ────────────────────────────────────────────────────────────────────
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{hhline}
+\usepackage[table]{xcolor}
+\definecolor{palegreen}{rgb}{0.6, 0.98, 0.6}
+ 
+% ── Lists & spacing ───────────────────────────────────────────────────────────
+\usepackage{enumitem}
+\usepackage{setspace}
+\usepackage{ragged2e}
+ 
+% ── Code listings ─────────────────────────────────────────────────────────────
+\usepackage{listings}
+\usepackage{textcomp}           % straight quotes in listings
+\lstset{upquote=true}
+ 
+% ── Misc utilities ────────────────────────────────────────────────────────────
+\usepackage{lipsum}             % placeholder text — remove in final paper
 \usepackage{hyphenat}
+\usepackage[bottom]{footmisc}
 \PassOptionsToPackage{hyphens}{url}
 \usepackage{url}
+ 
+% ── Bibliography (biblatex + biber) ───────────────────────────────────────────
+\usepackage[style=ieee, backend=biber]{biblatex}
+\addbibresource{main.bib}
+\AtBeginBibliography{\fontsize{8}{8.5}\selectfont}
+ 
+% ── Hyperref (load last) ──────────────────────────────────────────────────────
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks = true,
+  linkcolor  = black,
+  citecolor  = blue,
+  urlcolor   = blue
+}
 
-\usepackage{rotating}
-
-%\usepackage{xeCJK}
-
-%% support use of straight quotes in code listings
-\usepackage[T1]{fontenc}
-\usepackage{textcomp}
-\usepackage{listings}
-\lstset{upquote=true}
-
-%% for shrinking space between lines
-\usepackage{setspace}
-
-\newcommand*{\affaddr}[1]{#1} % No op here. Customize it for different styles.
+ 
+% ── Section heading style ─────────────────────────────────────────────────────
+\usepackage{titlesec}
+\titleformat*{\section}      {\large\bfseries}
+\titleformat*{\subsection}   {\normalsize\bfseries}
+\titleformat*{\subsubsection}{\normalsize\bfseries}
+ 
+% ── Custom commands (from original preamble) ──────────────────────────────────
+\newcommand*{\affaddr}[1]{#1}
 \newcommand*{\affmark}[1][*]{\textsuperscript{#1}}
 \newcommand*{\email}[1]{\small{\texttt{#1}}}
 \newcommand{\tarot}{\textsc{Tarot}}
 \renewcommand*\contentsname{\centering Table of Contents}
-
 \renewcommand{\footnoterule}{%
   \kern -3pt
   \hrule width \textwidth height 0.5pt
   \kern 2pt
 }
-
-% remove date
-\date{}
-
-\usepackage{titlesec}
-\titleformat*{\section}{\large\bfseries}
-\titleformat*{\subsection}{\normalsize\bfseries}
-\titleformat*{\subsubsection}{\normalsize\bfseries}
+ 
