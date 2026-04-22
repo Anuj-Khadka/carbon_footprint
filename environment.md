@@ -9,7 +9,7 @@
 
 | Language   | Tool            | Version   | Compile / Run flags       |
 |------------|-----------------|-----------|---------------------------|
-| C          | GCC (MSYS2)   | 15.2.0    | gcc -O2                   |
+| C          | GCC (MinGW)   | 15.2.0    | gcc -O2                   |
 | Rust       | rustc           | 1.94.0    | cargo build --release     |
 | Go         | Go compiler     | 1.26.1    | go build                  |
 | Java       | OpenJDK         | 21.0.10    | javac / java -server      |
