@@ -19,7 +19,15 @@ The measurement sequence is shown in the Listing~\ref{lst:measurement_sequence}.
     flush output - not timed
 \end{lstlisting}
 
-The flush() call on line 7 is critical. Without it, the newline sits in a kernel pipe buffer and the program never unblocks, causing the measurement to hang indefinitely. On the program side, each language blocks on its respective stdin/stdout primitive until the trigger arrives, eecutes the algorithm, and writes the checksum. 
+The flush() call on line 7 is critical. Without it, the newline sits in a kernel pipe buffer and the program never unblocks, causing the measurement to hang indefinitely. On the program side, each language blocks on its respective stdin/stdout primitive until the trigger arrives, executes the algorithm, and writes the checksum. Listing~\ref{lst:blocking_call} shows the blocking call used in each language.
+\begin{lstlisting}[caption={Stdin primitives in each language implementation}, label={lst:blocking_call}, numbers=none]
+    // C
+    while (fgets(buf, sizeof(buf), stdin))  {run()}
+
+    
+
+\end{lstlisting}
+
 
 
 fgets and sys.stdin and readline all blocks waiting for input until there is something to read from stdin/fgets. then reeads one line and returns it. So the harness will print "ready" and then wait for the next line. The next line is the signal to start the timer and run the command. After the command is done, the harness will print the checksum and stop the timer. This way we can measure the time taken by the command to run and also verify the output using checksum. 
