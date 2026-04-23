@@ -45,7 +45,7 @@ The flush() call on line 7 is critical. Without it, the newline sits in a kernel
 C uses fgets rather than scanf because it reads exactly one line including the newline, giving unambiguous trigger semantics. Java uses BufferedReader.readLine() rather than Scanner to avoid locale-aware parsing overhead inside the measurement window. JavaScript uses Node.js's readline event listener. Python uses for line in sys.stdin: rather than repeated input() calls to avoid Python-level function call overhead per iteration.
 
 \subsection{Output Verification}
-Before energy measurement, all 36 implementations are verified for correctness. The verification script compiles and runs each implementation at all three input sizes, compares the checksum printed to s
+Before energy measurement, all 36 implementations are verified for correctness. The verification script compiles and runs each implementation at all three input sizes, compares the checksum printed to stdout against the reference checksum produced by the C implementation, and assigns each language-algortihm
 
 \paragraph{Observation}
 \begin{verbatim}
