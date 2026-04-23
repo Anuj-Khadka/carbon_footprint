@@ -106,7 +106,7 @@ if __name__ == "__main__":
 
     for i in range(5):
         joules, checksum = run_once(proc)
-        print(f"Run {i+1}: Energy = {joules:.2f} J, Checksum = {checksum}")
+        print(f"Run {i+1}: Energy = {joules:.7f} J, Checksum = {checksum}")
         
     proc.stdin.close()
     proc.wait()
