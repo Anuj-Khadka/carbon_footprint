@@ -7,7 +7,21 @@ The Intel's RAPL interface exposes hardware energy counters directly to software
 Baseline idle power draw - 
 
 \subsection{somehting...}
-The main challenge in cross-language energy measurement is to ensure that we are measuring the energy consumed by the algorithm itself, and not the overhead of the language runtime or other background process. To address this, we designed a custom measurement harness that follows a strict protocol to isolate the algorithm execution. The harness uses a stdin/stout handshake design in which the program initializes once and then loops, executing the algorithm on each trigger without restarting the process. the 
+The main challenge in cross-language energy measurement is to ensure that we are measuring the energy consumed by the algorithm itself, and not the overhead of the language runtime or other background process. To address this, we designed a custom measurement harness that follows a strict protocol to isolate the algorithm execution. The harness uses a stdin/stout handshake design in which the program initializes once and then loops, executing the algorithm on each trigger without restarting the process.
+
+The measurement sequence is as follows:
+\begin{figure}[h]
+    \centering
+    \begin{lstlisting}[style=measurement_sequence]
+        setup - not timed 
+        print "ready" - not timed
+        harness newline - start timer
+        run command - measurement
+        print checksum - stop timer
+    \end{lstlisting}
+    \caption{Measurement Sequence}
+    \label{fig:measurement_sequence}\
+\end{figure}
 
 
 
