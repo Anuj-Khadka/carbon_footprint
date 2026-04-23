@@ -25,9 +25,7 @@ PILOT_RUNS     = 50
 INTER_RUN_SLEEP = 0.05   # seconds between iterations (within a cell)
 
 
-
-LANGUAGES = ["c"]
-# LANGUAGES = ["c", "rust", "go", "java", "javascript", "python"]
+LANGUAGES = ["c", "rust", "go", "java", "javascript", "python"]
 ALGORITHMS = ["summation", "binary_search", "merge_sort", "bfs", "hash_table", "matrix_multiplication"]
 SIZES      = ["small", "mid", "large"]
 
@@ -40,11 +38,13 @@ JAVA_CLASS = {
     "matrix_multiplication": "MatrixMultiplication",
 }
 
+JAVA_SIZE = {"small": "Small", "mid": "Mid", "large": "Large"}
+
 COMMANDS = {
     "c":          lambda algo, size: [str(BUILD_DIR / f"{algo}_{size}_c.exe")],
     "rust":       lambda algo, size: [str(BUILD_DIR / f"{algo}_{size}_rust.exe")],
     "go":         lambda algo, size: [str(BUILD_DIR / f"{algo}_{size}_go.exe")],
-    "java":       lambda algo, size: ["java", "-Xss4m", "-cp", str(BASE_DIR / "java"), f"{algo}.{JAVA_CLASS[algo]}_{size.capitalize()}"],
+    "java":       lambda algo, size: ["java", "-Xss4m", "-cp", str(BASE_DIR / "java"), f"{algo}.{JAVA_CLASS[algo]}_{JAVA_SIZE[size]}"],
     "javascript": lambda algo, size: ["node", str(BASE_DIR / "javascript" / algo / f"{algo}_{size}.js")],
     "python":     lambda algo, size: [sys.executable, str(BASE_DIR / "python"   / algo / f"{algo}_{size}.py")],
 }
@@ -84,7 +84,7 @@ def preflight_build() -> None:
             if not ok:
                 build_errors.append(("go", algo, size, err))
 
-            java_src = BASE_DIR / "java" / algo / f"{JAVA_CLASS[algo]}_{size.capitalize()}.java"
+            java_src = BASE_DIR / "java" / algo / f"{JAVA_CLASS[algo]}_{JAVA_SIZE[size]}.java"
             ok, err = run_build(["javac", "-d", str(BASE_DIR / "java"), str(java_src)])
             if not ok:
                 build_errors.append(("java", algo, size, err))
@@ -138,8 +138,10 @@ def run_once(proc: subprocess.Popen):
     Returns (energy_joules, checksum_str).
     """
 
-    t_before = time.perf_counter()
     w_before = get_cpu_package_watts()
+
+
+    t_before = time.perf_counter()
 
     # Trigger the algorithm to run
     proc.stdin.write("\n")
@@ -148,8 +150,8 @@ def run_once(proc: subprocess.Popen):
     # Wait for the checksum line back
     checksum_line = proc.stdout.readline().strip()
 
-    w_after = get_cpu_package_watts()
     t_after = time.perf_counter()
+    w_after = get_cpu_package_watts()
 
     elapsed_time = t_after - t_before
     avg_watts = (w_before + w_after) / 2
