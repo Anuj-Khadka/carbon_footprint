@@ -85,3 +85,32 @@ COMMANDS = {
 
 _ci_value = None
 _ci_fetched_at = 0.0
+
+
+
+def get_carbon_intensity() -> float:
+    """
+    Return carbon intensity (gCO2/kWh) for US-NY-NYIS.
+    Refreshes from Electricity Maps API at most once every 30 minutes.
+    """
+    global _ci_value, _ci_fetched_at
+    now = time.time()
+    if _ci_value is None or (now - _ci_fetched_at) > CI_REFRESH_S:
+        try:
+            resp = requests.get(EM_URL, headers={"auth-token": EMAP_API_KEY}, timeout=10)
+            resp.raise_for_status()
+            _ci_value = float(resp.json()["carbonIntensity"])
+            _ci_fetched_at = now
+            print(f"  [Carbon intensity updated: {_ci_value:.1f} gCO2/kWh]")
+        except Exception as e:
+            if _ci_value is None:
+                raise RuntimeError(f"Could not fetch carbon intensity: {e}")
+            print(f"  [Carbon intensity refresh failed ({e}), reusing {_ci_value:.1f}]")
+    return _ci_value
+ 
+
+
+
+  
+if __name__ == "__main__":
+    ci = get_carbon_intensity()
