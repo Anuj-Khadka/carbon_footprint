@@ -40,6 +40,20 @@ def get_cpu_package_watts() -> float:
     return watts
 
 
+def run_once(proc: subprocess.Popen):
+    """
+    Run one algorithm iteration using the stdin handshake protocol.
+ 
+    Sequence:
+      1. Read watts before  (RAPL window open)
+      2. Send newline to trigger the algorithm
+      3. Wait for the checksum line back
+      4. Read watts after   (RAPL window close)
+ 
+    Returns (energy_joules, checksum_str).
+    """
+
+
 if __name__ == "__main__":
     print("Testing LHM sensor reading...")
     try:
