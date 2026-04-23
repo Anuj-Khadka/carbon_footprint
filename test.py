@@ -26,7 +26,8 @@ INTER_RUN_SLEEP = 0.05   # seconds between iterations (within a cell)
 
 
 
-LANGUAGES = ["c", "rust", "go", "java", "javascript", "python"]
+LANGUAGES = ["c"]
+# LANGUAGES = ["c", "rust", "go", "java", "javascript", "python"]
 ALGORITHMS = ["summation", "binary_search", "merge_sort", "bfs", "hash_table", "matrix_multiplication"]
 SIZES      = ["small", "mid", "large"]
 
@@ -40,7 +41,7 @@ JAVA_CLASS = {
 }
 
 COMMANDS = {
-    "c":          lambda algo, size: [str(BASE_DIR / "c"          / algo / f"{algo}_{size}.exe")],
+    "c":          lambda algo, size: [str(BUILD_DIR / f"{algo}_{size}_c.exe")],
     "rust":       lambda algo, size: [str(BUILD_DIR / f"{algo}_{size}_rust.exe")],
     "go":         lambda algo, size: [str(BUILD_DIR / f"{algo}_{size}_go.exe")],
     "java":       lambda algo, size: ["java", "-Xss4m", "-cp", str(BASE_DIR / "java"), f"{algo}.{JAVA_CLASS[algo]}_{size.capitalize()}"],
@@ -217,7 +218,7 @@ def run_cell(language: str, algorithm:str, size: str):
 def main():
     sys.stdout.reconfigure(line_buffering=True)
     RESULTS_DIR.mkdir(parents=True, exist_ok=True)
-    preflight_build()
+    # preflight_build()
     timestamp   = datetime.now().strftime("%Y%m%d_%H%M%S")
     output_file = RESULTS_DIR / f"pilot_{timestamp}.csv"
  
