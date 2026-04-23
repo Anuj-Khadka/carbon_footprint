@@ -10,10 +10,8 @@ import random
 from datetime import datetime
 from pathlib import Path
 import requests
-import time 
+import time
 import subprocess
-import sys
-import os
 
 
 LHM_URL        = "http://172.22.1.29:8085/data.json"
@@ -81,8 +79,8 @@ def run_once(proc: subprocess.Popen):
     Returns (energy_joules, checksum_str).
     """
 
-    w_before = get_cpu_package_watts()
     t_before = time.perf_counter()
+    w_before = get_cpu_package_watts()
 
     # Trigger the algorithm to run
     proc.stdin.write("\n")
@@ -91,8 +89,8 @@ def run_once(proc: subprocess.Popen):
     # Wait for the checksum line back
     checksum_line = proc.stdout.readline().strip()
 
-    t_after = time.perf_counter()
     w_after = get_cpu_package_watts()
+    t_after = time.perf_counter()
 
     elapsed_time = t_after - t_before
     avg_watts = (w_before + w_after) / 2
@@ -114,15 +112,20 @@ def run_cell(language: str, algorithm:str, size: str):
         cmd,
         stdin=subprocess.PIPE,
         stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
         text=True,
         bufsize=1,
     )
- 
+
     # Wait for ready signal
     ready = proc.stdout.readline().strip()
     if ready != "ready":
+        stderr_out = proc.stderr.read()
         proc.terminate()
-        raise RuntimeError(f"Expected 'ready', got '{ready!r}' for {language}/{algorithm}/{size}")
+        msg = f"Expected 'ready', got '{ready!r}' for {language}/{algorithm}/{size}"
+        if stderr_out.strip():
+            msg += f"\n    stderr: {stderr_out.strip()}"
+        raise RuntimeError(msg)
  
     # Warm-up runs (discarded)
     for _ in range(WARM_UP_RUNS):
@@ -144,7 +147,11 @@ def run_cell(language: str, algorithm:str, size: str):
         time.sleep(INTER_RUN_SLEEP)
  
     proc.stdin.close()
-    proc.wait()
+    try:
+        proc.wait(timeout=30)
+    except subprocess.TimeoutExpired:
+        proc.kill()
+        raise RuntimeError(f"Process did not exit within 30s: {language}/{algorithm}/{size}")
     return results
 
 
