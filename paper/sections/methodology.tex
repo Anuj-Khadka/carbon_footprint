@@ -21,7 +21,14 @@ recording variance to prove the difference is real not noice.
 \end{verbatim}
 
 
-
+\begin{lstlisting}
+    [caption={Measurement Sequence}, label={lst:measurement_sequence}]
+    setup - not timed 
+    print "ready" - not timed
+    harness newline - start timer
+    run command - measurement
+    print checksum - stop timer
+\end{lstlisting}
 
 
 
