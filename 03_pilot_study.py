@@ -25,14 +25,14 @@ import time
 import json
 import csv
 import math
-import urllib.request
+import requests
 
 # ---------------------------------------------------------------------------
 # Configuration
 # ---------------------------------------------------------------------------
 
-LHM_URL        = "http://172.22.1.29:8085/data.json"
-SENSOR_ID      = "/intelcpu/0/power/0"   # CPU Package power (Watts)
+LHM_URL        = os.environ.get("LHM_URL", "http://172.22.1.29:8085/data.json")
+SENSOR_ID      = os.environ.get("LHM_SENSOR_ID", "/intelcpu/0/power/0")  # CPU Package power (Watts)
 
 ROOT           = os.path.dirname(os.path.abspath(__file__))
 IMPL_DIR       = os.path.join(ROOT, "implementations")
@@ -65,13 +65,31 @@ SIZES = ["small", "mid", "large"]
 
 def read_watts():
     """Read CPU Package power (Watts) from LHM. Returns float or None."""
-    try:
-        with urllib.request.urlopen(LHM_URL, timeout=3) as resp:
-            data = json.loads(resp.read().decode())
-        return find_sensor(data, SENSOR_ID)
-    except Exception as e:
-        print(f"  [LHM ERROR] {e}")
-        return None
+    url = LHM_URL if LHM_URL.endswith("/data.json") else f"{LHM_URL.rstrip('/')}/data.json"
+
+    # LHM's web endpoint can occasionally reset sockets; retry a few times.
+    for attempt in range(1, 4):
+        try:
+            resp = requests.get(
+                url,
+                headers={
+                    "User-Agent": "pilot-study/1.0",
+                    "Accept": "application/json",
+                    "Connection": "close",
+                },
+                timeout=3,
+            )
+            resp.raise_for_status()
+            data = resp.json()
+            return find_sensor(data, SENSOR_ID)
+        except requests.RequestException as e:
+            if attempt == 3:
+                print(f"  [LHM ERROR] {type(e).__name__}: {e}")
+                return None
+            time.sleep(0.2)
+        except Exception as e:
+            print(f"  [LHM ERROR] {type(e).__name__}: {e}")
+            return None
 
 
 def find_sensor(node, target_id):
