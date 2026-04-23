@@ -53,7 +53,17 @@ The programming languages chosen for this study are C, Python, Javascript, Java,
        
 \end{table}
 
-\textbf{C} provides direct hardware access 
+\textbf{C} provides direct hardware access with no runtime overhead and serves as the energy baseline for all normalized comparisons.
+
+\textbf{Rust} 
+
+\textbf{Go} 
+
+\textbf{Java} 
+
+\textbf{JavaScript} 
+
+\textbf{Python} 
 
 \subsubsection{Implementation-specific design decisions}
 Each language's implementation follows the stdin/stdout handshake protocol. The program prints \texttt{"ready"} on startup, then blocks waiting for a newline trigger from the measurement harness before executing the algorithm. The specific I/O primitives used, and the rationale for each choice, are described below: 
