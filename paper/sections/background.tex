@@ -1,6 +1,6 @@
 In the following sections, we describe the energy consumption model, carbon intensity assumptions, programming languages, and the implementations of the six algorithms used in this study.
 
-\subsection{Energy Consumption}
+\subsection{Energy Consumption in Software}
 To quantify the energy consumed by a software program, we adopt the standard defination of energy as the capacity to do work. 
 
 \begin{equation}
@@ -8,7 +8,9 @@ To quantify the energy consumed by a software program, we adopt the standard def
     E_{\text{energy}} = P_{\text{power}} \times t_{\text{time}}
 \end{equation}
 
-where E is energy measured in Joules(J), Power is rate of energy consumption measured in Watts(W), and Time is the duration of execution measured in seconds(s)\cite{8323579}. In the context of software execution, the T refers to the wall time, the elapsed time from the first instruction of the measured code path to the last, including CPUI com
+where E is energy measured in Joules(J), Power is rate of energy consumption measured in Watts(W), and Time is the duration of execution measured in seconds(s)\cite{8323579}. In the context of software execution, the T refers to the wall time, the elapsed time from the first instruction of the measured code path to the last, including CPU computation, memory access, and all other processor activity during execution \cite{carter2024}. 
+
+The energy consumed by a CPU package during the program execution can therefore be decomposed as the inegral of instantaneos p
 
 
 
@@ -136,4 +138,5 @@ The algorithms were chosen to span a range of time complexities and computationa
 
 
 
-
+
+

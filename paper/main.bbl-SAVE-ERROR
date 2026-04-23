@@ -382,6 +382,46 @@
       \field{urlyear}{2026}
       \field{urldateera}{ce}
     \endentry
+    \entry{8323579}{inproceedings}{}{}
+      \name{author}{3}{}{%
+        {{hash=1430e2bb5896c498829bb07066c7e0d4}{%
+           family={Kumar},
+           familyi={K\bibinitperiod},
+           given={Mohit},
+           giveni={M\bibinitperiod}}}%
+        {{hash=3753f139bbd88a53924ae0bdf3bafb76}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Youhuizi},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=f41bbc46c4cca943fa2a0c3bf70c8a04}{%
+           family={Shi},
+           familyi={S\bibinitperiod},
+           given={Weisong},
+           giveni={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{6bc48535406cc35f8a909b4e520ec9ee}
+      \strng{fullhash}{6bc48535406cc35f8a909b4e520ec9ee}
+      \strng{fullhashraw}{6bc48535406cc35f8a909b4e520ec9ee}
+      \strng{bibnamehash}{6bc48535406cc35f8a909b4e520ec9ee}
+      \strng{authorbibnamehash}{6bc48535406cc35f8a909b4e520ec9ee}
+      \strng{authornamehash}{6bc48535406cc35f8a909b4e520ec9ee}
+      \strng{authorfullhash}{6bc48535406cc35f8a909b4e520ec9ee}
+      \strng{authorfullhashraw}{6bc48535406cc35f8a909b4e520ec9ee}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2017 Eighth International Green and Sustainable Computing Conference (IGSC)}
+      \field{title}{Energy consumption in Java: An early experience}
+      \field{year}{2017}
+      \field{pages}{1\bibrangedash 8}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1109/IGCC.2017.8323579
+      \endverb
+      \keyw{Energy efficiency;Energy consumption;Java;Software;Hardware;Energy measurement;Random access memory;ICT;RAPL;Java;Energy efficiency}
+    \endentry
     \entry{decisionmodels}{article}{}{}
       \name{author}{3}{}{%
         {{hash=2c0a5d913f7620127cb6cc3f11166c5e}{%
