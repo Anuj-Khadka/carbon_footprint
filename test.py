@@ -7,6 +7,7 @@ Step 1: LHM sensor reading
 import requests
 import time 
 import subprocess
+import sys
 
 
 LHM_URL = "http://172.22.1.29:8085/data.json"
@@ -60,7 +61,17 @@ def run_once(proc: subprocess.Popen):
     proc.stdin.write("\n")
     proc.stdin.flush()
 
-    
+    # Wait for the checksum line back
+    checksum_line = proc.stdout.readline().strip()
+
+    t_after = time.perf_counter()
+    w_after = get_cpu_package_watts()
+
+    elapsed_time = t_after - t_before
+    avg_watts = (w_before + w_after) / 2
+    energy_joules = avg_watts * elapsed_time
+
+    return energy_joules, checksum_line
 
 
 
