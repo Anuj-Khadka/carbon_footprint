@@ -49,3 +49,39 @@ def bold(s):  return f"\033[1m{s}\033[0m"
 def green(s): return f"\033[92m{s}\033[0m"
 def red(s):   return f"\033[91m{s}\033[0m"
 def yellow(s):return f"\033[93m{s}\033[0m"
+
+
+
+
+LANGUAGES  = ["c", "rust", "go", "java", "javascript", "python"]
+ALGORITHMS = ["summation", "binary_search", "merge_sort", "bfs", "hash_table", "matrix_multiplication"]
+SIZES      = ["small", "mid", "large"]
+ 
+JAVA_CLASS = {
+    "summation":             "Summation",
+    "binary_search":         "BinarySearch",
+    "merge_sort":            "MergeSort",
+    "bfs":                   "BFS",
+    "hash_table":            "HashTable",
+    "matrix_multiplication": "MatrixMultiplication",
+}
+JAVA_SIZE = {"small": "Small", "mid": "Mid", "large": "Large"}
+ 
+COMMANDS = {
+    "c":          lambda algo, size: [str(BUILD_DIR / f"{algo}_{size}_c.exe")],
+    "rust":       lambda algo, size: [str(BUILD_DIR / f"{algo}_{size}_rust.exe")],
+    "go":         lambda algo, size: [str(BUILD_DIR / f"{algo}_{size}_go.exe")],
+    "java":       lambda algo, size: [
+                      "java", "-Xss4m", "-cp", str(BASE_DIR / "java"),
+                      f"{algo}.{JAVA_CLASS[algo]}_{JAVA_SIZE[size]}"
+                  ],
+    "javascript": lambda algo, size: ["node", str(BASE_DIR / "javascript" / algo / f"{algo}_{size}.js")],
+    "python":     lambda algo, size: [sys.executable, str(BASE_DIR / "python" / algo / f"{algo}_{size}.py")],
+}
+ 
+
+###############################################################################################
+########################## Carbon Intensity #####################
+
+_ci_value = None
+_ci_fetched_at = 0.0
