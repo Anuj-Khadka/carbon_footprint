@@ -72,7 +72,7 @@ def run_once(proc: subprocess.Popen):
     avg_watts = (w_before + w_after) / 2
     energy_joules = avg_watts * elapsed_time
 
-    return energy_joules, checksum_line
+    return avg_watts, energy_joules, checksum_line
 
 
 
@@ -105,9 +105,9 @@ if __name__ == "__main__":
     print(f"process ready.")
 
     for i in range(5):
-        joules, checksum = run_once(proc)
-        print(f"Run {i+1}: Energy = {joules:.7f} J, Checksum = {checksum}")
-        
+        avg_watts, energy_joules, checksum = run_once(proc)
+        print(f"Run {i+1}: Avg Watts = {avg_watts:.7f}, Energy = {energy_joules:.7f} J, Checksum = {checksum}")
+
     proc.stdin.close()
     proc.wait()
     print("All runs completed. Process terminated.")
