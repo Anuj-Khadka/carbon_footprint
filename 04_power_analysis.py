@@ -50,7 +50,7 @@ def green(s): return f"\033[92m{s}\033[0m"
 def red(s):   return f"\033[91m{s}\033[0m"
 def yellow(s):return f"\033[93m{s}\033[0m"
 
-
+total_joule = 0.0
 
 
 LANGUAGES  = ["c", "rust", "go", "java", "javascript", "python"]
@@ -208,6 +208,7 @@ def run_cell(language: str, algorithm: str, size: str,
     results = []
     for run_idx in range(1, MAIN_RUNS + 1):        
         joules, checksum = run_once(proc)
+        total
         print(f"    Run {run_idx}/{MAIN_RUNS}... {joules:.12f} J")
         kwh    = joules / 3_600_000
         gco2e  = kwh * carbon_intensity
