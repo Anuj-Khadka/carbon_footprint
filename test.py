@@ -45,7 +45,6 @@ def get_cpu_package_watts() -> float:
     return watts
 
 
-# ── quick smoke-test ──────────────────────────────────────────────────────────
 if __name__ == "__main__":
     print("Testing LHM sensor reading...")
     try:
