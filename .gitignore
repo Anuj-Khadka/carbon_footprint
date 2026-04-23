@@ -63,3 +63,6 @@ $RECYCLE.BIN/
 /power_analysis.py
 /rough_test_harness.py
 /workflow.py
+
+/.claude
+/.vscode
