@@ -93,21 +93,23 @@ The pseudocode for each algorithm, as implemented indentically across all langua
 
 
 \paragraph{Summation -}
-    This algorithm performs a single sequential sum over an array of integers. It is a simple CPU-bound with no branching and minimal memory access, making it a baseliune workload that reflects the idle runtime cost of the language.
+    This algorithm performs a single sequential sum over an array of integers. It is a simple CPU-bound with no branching and minimal memory access, making it a baseliune workload that reflects the idle runtime cost of the language. 
 
 \paragraph{Binary Search -}
     This algorithm halves the search interval over a sorted array. Its time complexity is logarithmic, and it involves branching based on comparisons, which means very few operations are performed at any input size. So, the observed energy difference between languages may be more influenced by the runtime efficiency and overhead than the algorithmic complexity.
 
 \paragraph{Breadth-First Search -}
-    This algorithm traverses a graph level by level from a source node. It is memory-bound and involves a mix of CPU computation and mem
+    This algorithm traverses a graph level by level from a source node. It is memory-bound. The primary cost is queue operations and random memory access patterns that can lead to cache misses. The energy consumption may be more sensitive to how efficiently the language runtime manages memory and data structures.
 
 \paragraph{Merge Sort -}
-    Now, just o make sure that we don't get any RecursionError in Python, we will increase the recursion limit for merge sort. Also, 
+    This algorithm recursively divides the array into halves and merges them back in sorted order. Now, just to make sure that we don't get any RecursionError in Python, we will increase the recursion limit for merge sort. 
 
 \paragraph{Hash Table -}
+    This algorithm use open addressing with linear probing. Each operation is O(1) on average, but can be O(n) in the worst case if all keys collide. The energy consumption may be influenced by how well the language runtime optimizes for hash table operations and memory management.
     the "\& 0xFFFFFFFFFFFFFFFF"  is used to ensure that the hash result is always a 64bit integer, which is important for consistency across different platforms and languages. This way, we can compare the hash results from C and Python without worrying about differences in integer sizes or overflow behavior.
 
 \paragraph{Matrix Multiplication -}
+    This algorithm uses the naive triple loop method to multiply two
     Damn, this is slow. i should have used something more efficient. but maybe I will just leave this for now. I will change this if I really need to. but for now, I just want to go with the classic version.
 
 
