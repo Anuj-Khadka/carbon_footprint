@@ -23,28 +23,20 @@ def get_cpu_package_watts() -> float:
     print(data)
 
     def search(node: dict) -> float | None:
-        sensor_id = node.get("SensorId", "")
-        value_str = node.get("Value", "")
- 
-        if sensor_id == "/intelcpu/0/power/0":
+        if node.get("SensorId") == "/intelcpu/0/power/0":
             try:
-                return float(value_str.split()[0])  # strip " W"
+                return float(node["Value"].split()[0])
             except (ValueError, IndexError):
                 pass
- 
         for child in node.get("Children", []):
             result = search(child)
             if result is not None:
                 return result
- 
         return None
  
     watts = search(data)
     if watts is None:
-        raise RuntimeError(
-            "CPU Package power sensor not found in LHM response. "
-            "Make sure LibreHardwareMonitor is running."
-        )
+        raise RuntimeError("CPU Package power sensor not found in LHM response.")
     return watts
 
 
