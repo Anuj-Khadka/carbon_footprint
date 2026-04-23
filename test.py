@@ -97,7 +97,7 @@ if __name__ == "__main__":
     )
 
     ready = proc.stdout.readline().strip()
-    if ready != "READY":
+    if ready != "ready":
         print("Algorithm did not signal READY. Exiting.")
         proc.terminate()
         sys.exit(1)
