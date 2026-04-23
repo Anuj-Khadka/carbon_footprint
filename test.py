@@ -20,10 +20,10 @@ def get_rapl_energy_joules() -> float:
 
     Returns the float value, or raises RuntimeError if not found.
     """
-    data = requests.get(LHM_URL)
-    return data.status_code
+    response = requests.get(LHM_URL)
 
-    data = data.json()
+    data = response.json() 
+    return data
 
     # def search(node: dict) -> float | None:
     #     # Check if this node is the RAPL energy sensor we want
@@ -60,6 +60,6 @@ if __name__ == "__main__":
     print("Testing LHM sensor reading...")
     try:
         j = get_rapl_energy_joules()
-        print(f"  CPU Package RAPL energy: {j:.4f} J  ✓")
+        print(f"  CPU Package RAPL energy: {j} J  ✓")
     except Exception as e:
         print(f"  ERROR: {e}")
