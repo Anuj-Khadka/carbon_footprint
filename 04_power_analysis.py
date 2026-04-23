@@ -178,6 +178,7 @@ def run_once(proc: subprocess.Popen):
 
 def run_cell(language: str, algorithm: str, size: str,
              carbon_intensity: float) -> list[dict]:
+    global total_joule
     cmd = COMMANDS[language](algorithm, size)
     print(f"  Launching: {' '.join(cmd)}")
  
@@ -208,8 +209,12 @@ def run_cell(language: str, algorithm: str, size: str,
     results = []
     for run_idx in range(1, MAIN_RUNS + 1):        
         joules, checksum = run_once(proc)
-        total
-        print(f"    Run {run_idx}/{MAIN_RUNS}... {joules:.12f} J")
+
+
+        total_joule += joules
+        print(f"    Run {run_idx}/{MAIN_RUNS}... {joules:.12f} J, total so far: {total_joule:.4f} J")
+        
+        
         kwh    = joules / 3_600_000
         gco2e  = kwh * carbon_intensity
         results.append({
