@@ -23,7 +23,7 @@ def get_rapl_energy_joules() -> float:
     response = requests.get(LHM_URL)
 
     data = response.json() 
-    # return data
+    print(data)
 
     def search(node: dict) -> float | None:
         # Check if this node is the RAPL energy sensor we want
@@ -31,7 +31,7 @@ def get_rapl_energy_joules() -> float:
         sensor_type = node.get("SensorType", "")
         value_str = node.get("Value", "")
 
-        if "CPU Package" in name and sensor_type == "Energy":
+        if "CPU Package" in name and sensor_type == "Power":
             # Value comes back as e.g. "12.34 J" – strip the unit
             try:
                 return float(value_str.split()[0])
