@@ -26,6 +26,12 @@ PILOT_RUNS     = 50
 INTER_RUN_SLEEP = 0.05   # seconds between iterations (within a cell)
 
 
+
+LANGUAGES = ["c", "rust", "go", "java", "javascript", "python"]
+ALGORITHMS = ["summation", "binary_search", "merge_sort", "bfs", "hash_table", "matrix_mult"]
+SIZES      = ["small", "medium", "large"]
+
+
 COMMANDS = {
     "c":          lambda algo, size: [str(BASE_DIR / "c"          / algo / f"{algo}_{size}.exe")],
     "rust":       lambda algo, size: [str(BASE_DIR / "rust"       / algo / "target" / "release" / f"{algo}_{size}.exe")],
