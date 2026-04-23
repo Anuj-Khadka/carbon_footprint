@@ -2,7 +2,7 @@
 pilot_study.py  –  Carbon Footprint Benchmark  (build-up version)
 Step 1: LHM sensor reading
 Step 2: Program execution
-Step 3: Full pilot loop (50 runs per cell, 3 warm-ups discarded)
+Step 3: Full pilot loop (50 runs per cell, 5 warm-ups discarded)
 """
 
 import csv
@@ -104,15 +104,6 @@ def run_once(proc: subprocess.Popen):
 def run_cell(language: str, algorithm:str, size: str):
     """
     Returns a list of result dicts (one per measured run).
-    Each dict contains:
-      - timestamp
-      - language
-      - algorithm
-      - size
-      - run_type ("warmup" or "measured")
-      - avg_watts
-      - energy_joules
-      - checksum
        
     """
 
