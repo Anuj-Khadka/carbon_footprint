@@ -10,30 +10,13 @@ Baseline idle power draw -
 The main challenge in cross-language energy measurement is to ensure that we are measuring the energy consumed by the algorithm itself, and not the overhead of the language runtime or other background process. To address this, we designed a custom measurement harness that follows a strict protocol to isolate the algorithm execution. The harness uses a stdin/stout handshake design in which the program initializes once and then loops, executing the algorithm on each trigger without restarting the process.
 
 The measurement sequence is as follows:
-\begin{lstlisting}[caption={Measurement sequence}, label={lst:measurement_sequence}]
-setup - not timed
-print "ready" - not timed
-harness newline - start timer
-run command - measurement
-print checksum - stop timer
-
-    run command - measurement
-    print checksum - stop timer
-\end{verbatim}
-
-
-[caption={Measurement Sequenc e}, label={lst:measurement_sequence}]
-\begin{lstlisting}
-    setup - not timed 
+\begin{lstlisting}[caption={Measurement sequence}, label={lst:measurement_sequence}, numbers=none]
+    setup - not timed
     print "ready" - not timed
     harness newline - start timer
     run command - measurement
     print checksum - stop timer
 \end{lstlisting}
-
-
-
-
 
 
 fgets and sys.stdin and readline all blocks waiting for input until there is something to read from stdin/fgets. then reeads one line and returns it. So the harness will print "ready" and then wait for the next line. The next line is the signal to start the timer and run the command. After the command is done, the harness will print the checksum and stop the timer. This way we can measure the time taken by the command to run and also verify the output using checksum. 
