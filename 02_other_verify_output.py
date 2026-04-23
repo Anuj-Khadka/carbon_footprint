@@ -180,8 +180,8 @@ class LangRust:
         return [os.path.join(BIN_DIR, f"{algo}_{size}_rust.exe")]
 
 
-# LANGUAGES = [LangPython, LangJavaScript, LangJava, LangGo, LangRust]
-LANGUAGES = [LangRust]
+LANGUAGES = [LangPython, LangJavaScript, LangJava, LangGo, LangRust]
+# LANGUAGES = [LangRust]
 
 
 def compile_one(lang, algo, size, timeout=60):
