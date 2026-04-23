@@ -27,6 +27,12 @@ SAMPLE_SECS   = 5      # how long to sample LHM wattage
 SAMPLE_HZ     = 4      # polls per second
 
 
+
+BASE_DIR      = Path(r"C:\Users\Stemadmin\Desktop\Anuj Khadka\carbon_footprint\implementations")
+RESULTS_DIR   = Path(r"C:\Users\Stemadmin\Desktop\Anuj Khadka\carbon_footprint\results")
+BUILD_DIR     = BASE_DIR / "build"
+
+
 response = requests.get(
     # "https://api.electricitymaps.com/v3/carbon-intensity/latest",
     EM_URL,
