@@ -94,3 +94,28 @@ baseline power draw - 40w 5s sample
 
 
 50reps each sample
+
+
+
+
+\subsubsection{Implementation-specific design decisions}
+Each language's implementation follows the stdin/stdout handshake protocol. The program prints \texttt{"ready"} on startup, then blocks waiting for a newline trigger from the measurement harness before executing the algorithm. The specific I/O primitives used, and the rationale for each choice, are described below: 
+
+
+\paragraph{C -}
+    fgets
+
+\paragraph{Python -}
+    stdin/stdout
+
+\paragraph{JavaScript -}
+    readline
+\paragraph{Java -}
+    public static void main \\
+    buffered reader/writer
+
+\paragraph{Go -}
+    bufio
+
+\paragraph{Rust -}
+    \texttt{wrapping\_mul}\,2654435761
