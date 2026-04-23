@@ -28,8 +28,8 @@ INTER_RUN_SLEEP = 0.05   # seconds between iterations (within a cell)
 
 
 LANGUAGES = ["c", "rust", "go", "java", "javascript", "python"]
-ALGORITHMS = ["summation", "binary_search", "merge_sort", "bfs", "hash_table", "matrix_mult"]
-SIZES      = ["small", "medium", "large"]
+ALGORITHMS = ["summation", "binary_search", "merge_sort", "bfs", "hash_table", "matrix_multiplication"]
+SIZES      = ["small", "med", "large"]
 
 
 COMMANDS = {
@@ -98,7 +98,7 @@ def run_once(proc: subprocess.Popen):
     avg_watts = (w_before + w_after) / 2
     energy_joules = avg_watts * elapsed_time
 
-    return avg_watts, energy_joules, checksum_line
+    return energy_joules, checksum_line
 
 
 def run_cell(language: str, algorithm:str, size: str):
