@@ -25,14 +25,14 @@ SAMPLE_SECS   = 5      # how long to sample LHM wattage
 SAMPLE_HZ     = 4      # polls per second
 
 
-# response = requests.get(
-#     # "https://api.electricitymaps.com/v3/carbon-intensity/latest",
-#     EM_URL,
-#     headers={
-#         "auth-token": EMAP_API_KEY
-#     }
-# )
-# print(response.json())
+response = requests.get(
+    # "https://api.electricitymaps.com/v3/carbon-intensity/latest",
+    EM_URL,
+    headers={
+        "auth-token": EMAP_API_KEY
+    }
+)
+print(response.json())
 
 def bold(s):  return f"\033[1m{s}\033[0m"
 def green(s): return f"\033[92m{s}\033[0m"
