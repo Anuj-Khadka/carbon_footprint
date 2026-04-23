@@ -8,6 +8,7 @@ import requests
 import time 
 import subprocess
 import sys
+import os
 
 
 LHM_URL = "http://172.22.1.29:8085/data.json"
@@ -77,7 +78,13 @@ def run_once(proc: subprocess.Popen):
 
 
 if __name__ == "__main__":
-    exe = "C:\Users\Stemadmin\Desktop\Anuj Khadka\carbon_footprint\implementations\c\summation\summation_small.exe"
+    exe = os.path.join(
+        os.path.dirname(os.path.abspath(__file__)),
+        "implementations",
+        "c",
+        "summation",
+        "summation_small.exe",
+    )
 
     print(f"Launching: {exe}")
 
