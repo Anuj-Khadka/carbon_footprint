@@ -64,5 +64,9 @@ $RECYCLE.BIN/
 /rough_test_harness.py
 /workflow.py
 
-/.claude
-/.vscode
+
+# add .claude and .vscode
+.claude/
+.vscode/
+.claude
+.vscode
