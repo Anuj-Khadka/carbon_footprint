@@ -19,7 +19,7 @@ import os
 LHM_URL        = "http://172.22.1.29:8085/data.json"
 BASE_DIR       = Path(r"C:\Users\Stemadmin\Desktop\Anuj Khadka\carbon_footprint\implementations")
 RESULTS_DIR    = Path(r"C:\Users\Stemadmin\Desktop\Anuj Khadka\carbon_footprint\results")
-
+BUILD_DIR    = BASE_DIR / "build"
  
 WARM_UP_RUNS   = 5
 PILOT_RUNS     = 50
@@ -32,25 +32,54 @@ ALGORITHMS = ["summation", "binary_search", "merge_sort", "bfs", "hash_table", "
 SIZES      = ["small", "med", "large"]
 
 
-COMMANDS = {
-    "c":          lambda algo, size: [str(BASE_DIR / "c"          / algo / f"{algo}_{size}.exe")],
-    "rust":       lambda algo, size: [str(BASE_DIR / "rust"       / algo / "target" / "release" / f"{algo}_{size}.exe")],
-    "go":         lambda algo, size: [str(BASE_DIR / "go"         / algo / f"{algo}_{size}.exe")],
-    "java":       lambda algo, size: ["java", "-cp", str(BASE_DIR / "java" / algo), f"{algo}_{size}"],
-    "javascript": lambda algo, size: ["node", str(BASE_DIR / "javascript" / algo / f"{algo}_{size}.js")],
-    "python":     lambda algo, size: ["python", str(BASE_DIR / "python"   / algo / f"{algo}_{size}.py")],
+# Java class name mapping: algo -> class prefix (PascalCase)
+JAVA_CLASS = {
+    "summation":            "Summation",
+    "binary_search":        "BinarySearch",
+    "merge_sort":           "MergeSort",
+    "bfs":                  "BFS",
+    "hash_table":           "HashTable",
+    "matrix_multiplication":"MatrixMultiplication",
 }
-
-
-######################### LHM ###############################
-
+ 
+# Java size suffix mapping
+JAVA_SIZE = {"small": "Small", "mid": "Mid", "large": "Large"}
+ 
+def get_cmd(language: str, algorithm: str, size: str) -> list[str]:
+    if language == "c":
+        exe = BUILD_DIR / f"{algorithm}_{size}_c.exe"
+        return [str(exe)]
+ 
+    elif language == "rust":
+        exe = BUILD_DIR / f"{algorithm}_{size}_rust.exe"
+        return [str(exe)]
+ 
+    elif language == "go":
+        exe = BUILD_DIR / f"{algorithm}_{size}_go.exe"
+        return [str(exe)]
+ 
+    elif language == "java":
+        class_name = f"{JAVA_CLASS[algorithm]}_{JAVA_SIZE[size]}"
+        cp = str(BASE_DIR / "java" / algorithm)
+        return ["java", "-cp", cp, class_name]
+ 
+    elif language == "javascript":
+        js_file = BASE_DIR / "javascript" / algorithm / f"{algorithm}_{size}.js"
+        return ["node", str(js_file)]
+ 
+    elif language == "python":
+        py_file = BASE_DIR / "python" / algorithm / f"{algorithm}_{size}.py"
+        return ["python", str(py_file)]
+ 
+    raise ValueError(f"Unknown language: {language}")
+ 
+ 
+# ── LHM ───────────────────────────────────────────────────────────────────────
+ 
 def get_cpu_package_watts() -> float:
-    response = requests.get(LHM_URL)
-
-    data = response.json() 
-    # print(data)
-
-    def search(node: dict) -> float | None:
+    data = requests.get(LHM_URL).json()
+ 
+    def search(node):
         if node.get("SensorId") == "/intelcpu/0/power/0":
             try:
                 return float(node["Value"].split()[0])
@@ -64,84 +93,62 @@ def get_cpu_package_watts() -> float:
  
     watts = search(data)
     if watts is None:
-        raise RuntimeError("CPU Package power sensor not found in LHM response.")
+        raise RuntimeError("CPU Package power sensor not found.")
     return watts
-
-
-def run_once(proc: subprocess.Popen):
-    """
-    Run one algorithm iteration using the stdin handshake protocol.
  
-    Sequence:
-      1. Read watts before  (RAPL window open)
-      2. Send newline to trigger the algorithm
-      3. Wait for the checksum line back
-      4. Read watts after   (RAPL window close)
  
-    Returns (energy_joules, checksum_str).
-    """
-
+# ── Single iteration ──────────────────────────────────────────────────────────
+ 
+def run_one_iteration(proc: subprocess.Popen) -> tuple[float, str]:
     w_before = get_cpu_package_watts()
     t_before = time.perf_counter()
-
-    # Trigger the algorithm to run
+ 
     proc.stdin.write("\n")
     proc.stdin.flush()
-
-    # Wait for the checksum line back
-    checksum_line = proc.stdout.readline().strip()
-
-    t_after = time.perf_counter()
-    w_after = get_cpu_package_watts()
-
-    elapsed_time = t_after - t_before
-    avg_watts = (w_before + w_after) / 2
-    energy_joules = avg_watts * elapsed_time
-
-    return energy_joules, checksum_line
-
-
-def run_cell(language: str, algorithm:str, size: str):
-    """
-    Returns a list of result dicts (one per measured run).
-    Each dict contains:
-      - timestamp
-      - language
-      - algorithm
-      - size
-      - run_type ("warmup" or "measured")
-      - avg_watts
-      - energy_joules
-      - checksum
-       
-    """
-
-    cmd = COMMANDS[language](algorithm, size)
+ 
+    checksum = proc.stdout.readline().strip()
+ 
+    t_after  = time.perf_counter()
+    w_after  = get_cpu_package_watts()
+ 
+    elapsed       = t_after - t_before
+    energy_joules = ((w_before + w_after) / 2) * elapsed
+    return energy_joules, checksum
+ 
+ 
+# ── One cell ──────────────────────────────────────────────────────────────────
+ 
+def run_cell(language: str, algorithm: str, size: str) -> list[dict]:
+    cmd = get_cmd(language, algorithm, size)
     print(f"  Launching: {' '.join(cmd)}")
  
     proc = subprocess.Popen(
         cmd,
         stdin=subprocess.PIPE,
         stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
         text=True,
         bufsize=1,
     )
  
-    # Wait for ready signal
     ready = proc.stdout.readline().strip()
     if ready != "ready":
+        stderr_out = proc.stderr.read()
         proc.terminate()
-        raise RuntimeError(f"Expected 'ready', got '{ready!r}' for {language}/{algorithm}/{size}")
+        raise RuntimeError(
+            f"Expected 'ready', got '{ready!r}'"
+            + (f"\n    stderr: {stderr_out.strip()}" if stderr_out.strip() else "")
+        )
  
     # Warm-up runs (discarded)
     for _ in range(WARM_UP_RUNS):
-        run_once(proc)
+        run_one_iteration(proc)
         time.sleep(INTER_RUN_SLEEP)
  
     # Measured runs
     results = []
     for run_idx in range(1, PILOT_RUNS + 1):
-        joules, checksum = run_once(proc)
+        joules, checksum = run_one_iteration(proc)
         results.append({
             "language":  language,
             "algorithm": algorithm,
@@ -155,15 +162,15 @@ def run_cell(language: str, algorithm:str, size: str):
     proc.stdin.close()
     proc.wait()
     return results
-
-
-
+ 
+ 
+# ── Main pilot loop ───────────────────────────────────────────────────────────
+ 
 def main():
     RESULTS_DIR.mkdir(parents=True, exist_ok=True)
     timestamp   = datetime.now().strftime("%Y%m%d_%H%M%S")
     output_file = RESULTS_DIR / f"pilot_{timestamp}.csv"
  
-    # Build all cells and shuffle to randomise order
     cells = [
         (lang, algo, size)
         for lang  in LANGUAGES
@@ -185,7 +192,6 @@ def main():
             try:
                 rows = run_cell(lang, algo, size)
  
-                # Verify all checksums match
                 checksums = {r["checksum"] for r in rows}
                 if len(checksums) > 1:
                     print(f"  WARNING: inconsistent checksums: {checksums}")
