@@ -109,17 +109,6 @@ The pseudocode for each algorithm, as implemented indentically across all langua
     the "\& 0xFFFFFFFFFFFFFFFF"  is used to ensure that the hash result is always a 64bit integer, which is important for consistency across different platforms and languages. This way, we can compare the hash results from C and Python without worrying about differences in integer sizes or overflow behavior.
 
 \paragraph{Matrix Multiplication -}
-    This algorithm uses the naive triple loop method to multiply two
-    Damn, this is slow. i should have used something more efficient. but maybe I will just leave this for now. I will change this if I really need to. but for now, I just want to go with the classic version.
-
-
-\textbf{o1 or on for hash table fix later.}
-\textbf{does insertions and lookups. each o1 on average, but worst case o\(n\) if all keys collide.}
-
-
-
-
-
-
+    This algorithm uses the naive triple loop method to multiply two square matrices. It is a dense arithmetic workload with cubic time complexity, which means the number of operations grows rapidly with input size. At n=500 (our large input), it performs 125 million multiplications and additions, which is a significant computational load that can highlight differences in how languages handle CPU-bound tasks and memory access patterns.
 
 
