@@ -285,7 +285,7 @@ def main():
                 avg_mj    = sum(r["joules"] for r in rows) / len(rows) * 1000
                 avg_gco2e = sum(r["gco2e"]  for r in rows) / len(rows)
                 print(f"  Avg energy:  {avg_mj:.4f} mJ")
-                print(f"  Avg gCO2e:   {avg_gco2e:.6f} g  (CI={ci:.1f} gCO2/kWh)")
+                print(f"  Avg gCO2e:   {avg_gco2e:.10f} g  (CI={ci:.1f} gCO2/kWh)")
  
             except Exception as e:
                 print(f"  ERROR: {e}")
