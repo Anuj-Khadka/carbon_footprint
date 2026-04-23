@@ -20,36 +20,37 @@ def get_rapl_energy_joules() -> float:
 
     Returns the float value, or raises RuntimeError if not found.
     """
-    data = requests.get(LHM_URL, timeout=5).json()
+    data = requests.get(LHM_URL)
+    print(data.status_code)
 
-    def search(node: dict) -> float | None:
-        # Check if this node is the RAPL energy sensor we want
-        name = node.get("Text", "")
-        sensor_type = node.get("SensorType", "")
-        value_str = node.get("Value", "")
+    # def search(node: dict) -> float | None:
+    #     # Check if this node is the RAPL energy sensor we want
+    #     name = node.get("Text", "")
+    #     sensor_type = node.get("SensorType", "")
+    #     value_str = node.get("Value", "")
 
-        if "CPU Package" in name and sensor_type == "Energy":
-            # Value comes back as e.g. "12.34 J" – strip the unit
-            try:
-                return float(value_str.split()[0])
-            except (ValueError, IndexError):
-                pass
+    #     if "CPU Package" in name and sensor_type == "Energy":
+    #         # Value comes back as e.g. "12.34 J" – strip the unit
+    #         try:
+    #             return float(value_str.split()[0])
+    #         except (ValueError, IndexError):
+    #             pass
 
-        # Recurse into children
-        for child in node.get("Children", []):
-            result = search(child)
-            if result is not None:
-                return result
+    #     # Recurse into children
+    #     for child in node.get("Children", []):
+    #         result = search(child)
+    #         if result is not None:
+    #             return result
 
-        return None
+    #     return None
 
-    joules = search(data)
-    if joules is None:
-        raise RuntimeError(
-            "RAPL 'CPU Package' energy sensor not found in LHM response. "
-            "Make sure LibreHardwareMonitor is running and the sensor is enabled."
-        )
-    return joules
+    # joules = search(data)
+    # if joules is None:
+    #     raise RuntimeError(
+    #         "RAPL 'CPU Package' energy sensor not found in LHM response. "
+    #         "Make sure LibreHardwareMonitor is running and the sensor is enabled."
+    #     )
+    # return joules
 
 
 # ── quick smoke-test ──────────────────────────────────────────────────────────
