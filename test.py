@@ -50,7 +50,6 @@ def get_rapl_energy_joules() -> float:
     if joules is None:
         raise RuntimeError(
             "RAPL 'CPU Package' energy sensor not found in LHM response. "
-            "Make sure LibreHardwareMonitor is running and the sensor is enabled."
         )
     return joules
 
