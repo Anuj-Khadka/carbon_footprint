@@ -95,7 +95,116 @@ def run_once(proc: subprocess.Popen):
     return avg_watts, energy_joules, checksum_line
 
 
+def run_cell(language: str, algorithm:str, size: str):
+    """
+    Returns a list of result dicts (one per measured run).
+    Each dict contains:
+      - timestamp
+      - language
+      - algorithm
+      - size
+      - run_type ("warmup" or "measured")
+      - avg_watts
+      - energy_joules
+      - checksum
+       
+    """
 
+    cmd = COMMANDS[language](algorithm, size)
+    print(f"  Launching: {' '.join(cmd)}")
+ 
+    proc = subprocess.Popen(
+        cmd,
+        stdin=subprocess.PIPE,
+        stdout=subprocess.PIPE,
+        text=True,
+        bufsize=1,
+    )
+ 
+    # Wait for ready signal
+    ready = proc.stdout.readline().strip()
+    if ready != "ready":
+        proc.terminate()
+        raise RuntimeError(f"Expected 'ready', got '{ready!r}' for {language}/{algorithm}/{size}")
+ 
+    # Warm-up runs (discarded)
+    for _ in range(WARM_UP_RUNS):
+        run_once(proc)
+        time.sleep(INTER_RUN_SLEEP)
+ 
+    # Measured runs
+    results = []
+    for run_idx in range(1, PILOT_RUNS + 1):
+        joules, checksum = run_once(proc)
+        results.append({
+            "language":  language,
+            "algorithm": algorithm,
+            "size":      size,
+            "run":       run_idx,
+            "joules":    joules,
+            "checksum":  checksum,
+        })
+        time.sleep(INTER_RUN_SLEEP)
+ 
+    proc.stdin.close()
+    proc.wait()
+    return results
+
+
+
+def main():
+    RESULTS_DIR.mkdir(parents=True, exist_ok=True)
+    timestamp   = datetime.now().strftime("%Y%m%d_%H%M%S")
+    output_file = RESULTS_DIR / f"pilot_{timestamp}.csv"
+ 
+    # Build all cells and shuffle to randomise order
+    cells = [
+        (lang, algo, size)
+        for lang  in LANGUAGES
+        for algo  in ALGORITHMS
+        for size  in SIZES
+    ]
+    random.shuffle(cells)
+ 
+    fieldnames = ["language", "algorithm", "size", "run", "joules", "checksum"]
+    errors     = []
+ 
+    with open(output_file, "w", newline="") as f:
+        writer = csv.DictWriter(f, fieldnames=fieldnames)
+        writer.writeheader()
+ 
+        total = len(cells)
+        for idx, (lang, algo, size) in enumerate(cells, 1):
+            print(f"\n[{idx}/{total}] {lang} / {algo} / {size}")
+            try:
+                rows = run_cell(lang, algo, size)
+ 
+                # Verify all checksums match
+                checksums = {r["checksum"] for r in rows}
+                if len(checksums) > 1:
+                    print(f"  WARNING: inconsistent checksums: {checksums}")
+                else:
+                    print(f"  Checksum ✓  ({checksums.pop()})")
+ 
+                writer.writerows(rows)
+                f.flush()
+ 
+                avg_mj = sum(r["joules"] for r in rows) / len(rows) * 1000
+                print(f"  Avg energy: {avg_mj:.4f} mJ over {len(rows)} runs")
+ 
+            except Exception as e:
+                print(f"  ERROR: {e}")
+                errors.append((lang, algo, size, str(e)))
+ 
+    print(f"\n{'='*60}")
+    print(f"Pilot complete. Results saved to:\n  {output_file}")
+    if errors:
+        print(f"\nFailed cells ({len(errors)}):")
+        for lang, algo, size, msg in errors:
+            print(f"  {lang}/{algo}/{size}: {msg}")
+    else:
+        print("All cells completed successfully.")
+ 
 
 if __name__ == "__main__":
     exe = os.path.join(
@@ -131,3 +240,8 @@ if __name__ == "__main__":
     proc.stdin.close()
     proc.wait()
     print("All runs completed. Process terminated.")
+
+
+
+if __name__ == "__main__":
+    main()
