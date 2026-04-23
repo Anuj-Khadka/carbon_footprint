@@ -10,7 +10,9 @@ To quantify the energy consumed by a software program, we adopt the standard def
 
 where E is energy measured in Joules(J), Power is rate of energy consumption measured in Watts(W), and Time is the duration of execution measured in seconds(s)\cite{8323579}. In the context of software execution, the T refers to the wall time, the elapsed time from the first instruction of the measured code path to the last, including CPU computation, memory access, and all other processor activity during execution \cite{carter2024}. 
 
-The energy consumed by a CPU package during the program execution can therefore be decomposed as the inegral of instantaneos p
+The energy consumed by a CPU package during the program execution can therefore be decomposed as the inegral of instantaneos power draw over the execution window. Since power draw is not constant across languages or algorithms, a key finding of Pereira et al. \cite{10.1145/3136014.3136031} energy efficiency cannot be inferred from execution time alone. This motivates direct hardware-level energy measurement rather than relying on time-based proxies.
+
+
 
 
 

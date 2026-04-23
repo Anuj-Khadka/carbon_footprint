@@ -422,6 +422,56 @@
       \endverb
       \keyw{Energy efficiency;Energy consumption;Java;Software;Hardware;Energy measurement;Random access memory;ICT;RAPL;Java;Energy efficiency}
     \endentry
+    \entry{carter2024}{misc}{}{}
+      \name{author}{5}{}{%
+        {{hash=dfadbb3cfe2ec2a71ee861ea58993a48}{%
+           family={Carter},
+           familyi={C\bibinitperiod},
+           given={Kristina},
+           giveni={K\bibinitperiod}}}%
+        {{hash=b4f596a9550288e8c084a1d280ffb9b1}{%
+           family={Ho},
+           familyi={H\bibinitperiod},
+           given={Su\bibnamedelima Mei\bibnamedelima Gwen},
+           giveni={S\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=a42b587a713564a95cdec3fe0375a23f}{%
+           family={Larsen},
+           familyi={L\bibinitperiod},
+           given={Mathias\bibnamedelimb Marquar\bibnamedelima Arhipenko},
+           giveni={M\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=8ea3751f9627680b9291b8dc4248db88}{%
+           family={Sundman},
+           familyi={S\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+        {{hash=33a470b9d03bb9a94cdc4e78f0996d48}{%
+           family={Kirkeby},
+           familyi={K\bibinitperiod},
+           given={Maja\bibnamedelima H.},
+           giveni={M\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \strng{namehash}{1ffae2bd318c50b68ac03781920da31a}
+      \strng{fullhash}{cbfb2422aaf255e1db9b4af543165285}
+      \strng{fullhashraw}{cbfb2422aaf255e1db9b4af543165285}
+      \strng{bibnamehash}{cbfb2422aaf255e1db9b4af543165285}
+      \strng{authorbibnamehash}{cbfb2422aaf255e1db9b4af543165285}
+      \strng{authornamehash}{1ffae2bd318c50b68ac03781920da31a}
+      \strng{authorfullhash}{cbfb2422aaf255e1db9b4af543165285}
+      \strng{authorfullhashraw}{cbfb2422aaf255e1db9b4af543165285}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{arXiv:2311.07298v2}
+      \field{title}{Energy and Time Complexity for Sorting Algorithms in {Java}}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2311.07298
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2311.07298
+      \endverb
+    \endentry
     \entry{decisionmodels}{article}{}{}
       \name{author}{3}{}{%
         {{hash=2c0a5d913f7620127cb6cc3f11166c5e}{%
