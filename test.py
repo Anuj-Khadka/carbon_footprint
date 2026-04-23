@@ -22,7 +22,7 @@ def get_cpu_package_watts() -> float:
     response = requests.get(LHM_URL)
 
     data = response.json() 
-    print(data)
+    # print(data)
 
     def search(node: dict) -> float | None:
         if node.get("SensorId") == "/intelcpu/0/power/0":
