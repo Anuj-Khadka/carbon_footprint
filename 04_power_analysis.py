@@ -31,7 +31,7 @@ RESULTS_DIR   = Path(r"C:\Users\Stemadmin\Desktop\Anuj Khadka\carbon_footprint\r
 BUILD_DIR     = BASE_DIR / "build"
 
 WARM_UP_RUNS  = 5
-MAIN_RUNS     = 1
+MAIN_RUNS     = 115
 INTER_RUN_SLEEP = 0.05    # seconds between iterations within a cell
 INTER_CELL_SLEEP = 5      # seconds between cells
 
@@ -207,8 +207,8 @@ def run_cell(language: str, algorithm: str, size: str,
     # Measured runs
     results = []
     for run_idx in range(1, MAIN_RUNS + 1):        
-        print(f"    Run {run_idx}/1...")
         joules, checksum = run_once(proc)
+        print(f"    Run {run_idx}/{MAIN_RUNS}... {joules:.12f} J")
         kwh    = joules / 3_600_000
         gco2e  = kwh * carbon_intensity
         results.append({
