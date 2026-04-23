@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber main"] 1776778222.13134 "main.bcf" "main.bbl" "main" 1776917289.05417 0
-  "main.bcf" 1776917288 108406 14dacc800dbef21812e3253889d0d1ff "pdflatex"
-  "main.bib" 1776749720 8853 a6c171f4c77f6260591ac2e5df2076e7 ""
+["biber main"] 1776917493.8653 "main.bcf" "main.bbl" "main" 1776917499.26801 0
+  "main.bcf" 1776917499 108484 4f5cf2f2628f14a5738f2b3bea6a32f5 "pdflatex"
+  "main.bib" 1776917383 10289 f2440a07dee0210232446527352d96f1 ""
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1776917287.90421 "c:/Users/Stemadmin/Desktop/Anuj Khadka/carbon_footprint/paper/main.tex" "main.pdf" "main" 1776917289.05535 0
+["pdflatex"] 1776917498.06002 "c:/Users/Stemadmin/Desktop/Anuj Khadka/carbon_footprint/paper/main.tex" "main.pdf" "main" 1776917499.26915 0
   "c:/Users/Stemadmin/Desktop/Anuj Khadka/carbon_footprint/paper/main.tex" 1776750886 3872 f4a2b8257b8f813d9a4d53b2ecfbd1b4 ""
   "c:/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1775080624 2971 def0b6c1f0b107b3b936def894055589 ""
   "c:/texlive/2026/texmf-dist/fonts/map/fontname/texfonts.map" 1775082038 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -120,16 +120,16 @@
   "c:/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1775087885 5619402 045890036aad9b52b154ef5568e59d3a ""
   "c:/texlive/2026/texmf-var/web2c/pdftex/pdflatex.fmt" 1775088023 3648464 8ff1b7e831b3ace6bf3bab0e3eb9f10e ""
   "c:/texlive/2026/texmf.cnf" 1775087857 713 e69b156964470283e0530f5060668171 ""
-  "main.aux" 1776917288 4400 b0415dfce6b1f129ec27184a665d9a4a "pdflatex"
-  "main.bbl" 1776778223 18760 9023c87f76106356735405d753ca5dbd "biber main"
-  "main.run.xml" 1776917288 2299 81988d3303a58f7ac525483192dfa2a1 "pdflatex"
+  "main.aux" 1776917499 4577 2efe43d60e8cbbc65c8c6eab27b11cfd "pdflatex"
+  "main.bbl" 1776917495 21981 6b4ca46a9849fab71b1cd41c3af7babd "biber main"
+  "main.run.xml" 1776917499 2299 81988d3303a58f7ac525483192dfa2a1 "pdflatex"
   "main.tex" 1776750886 3872 f4a2b8257b8f813d9a4d53b2ecfbd1b4 ""
   "preamble.tex" 1776778223 2236 08ca204218be09ad2244557941274383 ""
   "sections/acknowledgement.tex" 1775242039 182 21c34078480e04d82286cdc451b17280 ""
   "sections/background.tex" 1776746950 4954 bb1a8328e1a958bb2ccd2cf39246c572 ""
   "sections/conclusion.tex" 1775092089 29 873d4349f888377749b821be1c2e589e ""
   "sections/discussion.tex" 1775092085 29 873d4349f888377749b821be1c2e589e ""
-  "sections/introduction.tex" 1776917287 3256 696f2492db57893796469a5726fead3d ""
+  "sections/introduction.tex" 1776917492 3391 7299abce812f7d26bba2fa44e091ab9b ""
   "sections/methodology.tex" 1776042503 3282 5733c8bb5cc43b95f0920b0b46951a73 ""
   "sections/results.tex" 1775241246 29 873d4349f888377749b821be1c2e589e ""
   (generated)
