@@ -77,9 +77,30 @@ def run_once(proc: subprocess.Popen):
 
 
 if __name__ == "__main__":
-    print("Testing LHM sensor reading...")
-    try:
-        w = get_cpu_package_watts()
-        print(f"  CPU Package power: {w} W  ✓")
-    except Exception as e:
-        print(f"  ERROR: {e}")
+    exe = "C:\Users\Stemadmin\Desktop\Anuj Khadka\carbon_footprint\implementations\c\summation\summation_small.exe"
+
+    print(f"Launching: {exe}")
+
+    proc = subprocess.Popen(
+        exe,
+        stdin=subprocess.PIPE,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+        text=True
+    )
+
+    ready = proc.stdout.readline().strip()
+    if ready != "READY":
+        print("Algorithm did not signal READY. Exiting.")
+        proc.terminate()
+        sys.exit(1)
+
+    print(f"process ready.")
+
+    for i in range(5):
+        joules, checksum = run_once(proc)
+        print(f"Run {i+1}: Energy = {joules:.2f} J, Checksum = {checksum}")
+        
+    proc.stdin.close()
+    proc.wait()
+    print("All runs completed. Process terminated.")
