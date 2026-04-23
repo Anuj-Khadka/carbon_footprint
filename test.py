@@ -7,6 +7,7 @@ Step 3: Full pilot loop (50 runs per cell, 5 warm-ups discarded)
 
 import csv
 import random
+import sys
 from datetime import datetime
 from pathlib import Path
 import requests
@@ -29,12 +30,20 @@ LANGUAGES = ["c", "rust", "go", "java", "javascript", "python"]
 ALGORITHMS = ["summation", "binary_search", "merge_sort", "bfs", "hash_table", "matrix_multiplication"]
 SIZES      = ["small", "mid", "large"]
 
+JAVA_CLASS = {
+    "summation":             "Summation",
+    "binary_search":         "BinarySearch",
+    "merge_sort":            "MergeSort",
+    "bfs":                   "BFS",
+    "hash_table":            "HashTable",
+    "matrix_multiplication": "MatrixMultiplication",
+}
 
 COMMANDS = {
     "c":          lambda algo, size: [str(BASE_DIR / "c"          / algo / f"{algo}_{size}.exe")],
     "rust":       lambda algo, size: [str(BASE_DIR / "rust"       / algo / "target" / "release" / f"{algo}_{size}.exe")],
     "go":         lambda algo, size: [str(BASE_DIR / "go"         / algo / f"{algo}_{size}.exe")],
-    "java":       lambda algo, size: ["java", "-cp", str(BASE_DIR / "java" / algo), f"{algo}_{size}"],
+    "java":       lambda algo, size: ["java", "-cp", str(BASE_DIR / "java" / algo), f"{algo}.{JAVA_CLASS[algo]}_{size.capitalize()}"],
     "javascript": lambda algo, size: ["node", str(BASE_DIR / "javascript" / algo / f"{algo}_{size}.js")],
     "python":     lambda algo, size: ["python", str(BASE_DIR / "python"   / algo / f"{algo}_{size}.py")],
 }
@@ -157,6 +166,7 @@ def run_cell(language: str, algorithm:str, size: str):
 
 
 def main():
+    sys.stdout.reconfigure(line_buffering=True)
     RESULTS_DIR.mkdir(parents=True, exist_ok=True)
     timestamp   = datetime.now().strftime("%Y%m%d_%H%M%S")
     output_file = RESULTS_DIR / f"pilot_{timestamp}.csv"
