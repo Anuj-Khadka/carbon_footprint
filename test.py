@@ -41,12 +41,61 @@ JAVA_CLASS = {
 
 COMMANDS = {
     "c":          lambda algo, size: [str(BASE_DIR / "c"          / algo / f"{algo}_{size}.exe")],
-    "rust":       lambda algo, size: [str(BASE_DIR / "rust"       / algo / "target" / "release" / f"{algo}_{size}.exe")],
-    "go":         lambda algo, size: [str(BASE_DIR / "go"         / algo / f"{algo}_{size}.exe")],
-    "java":       lambda algo, size: ["java", "-cp", str(BASE_DIR / "java" / algo), f"{algo}.{JAVA_CLASS[algo]}_{size.capitalize()}"],
+    "rust":       lambda algo, size: [str(BUILD_DIR / f"{algo}_{size}_rust.exe")],
+    "go":         lambda algo, size: [str(BUILD_DIR / f"{algo}_{size}_go.exe")],
+    "java":       lambda algo, size: ["java", "-Xss4m", "-cp", str(BASE_DIR / "java"), f"{algo}.{JAVA_CLASS[algo]}_{size.capitalize()}"],
     "javascript": lambda algo, size: ["node", str(BASE_DIR / "javascript" / algo / f"{algo}_{size}.js")],
-    "python":     lambda algo, size: ["python", str(BASE_DIR / "python"   / algo / f"{algo}_{size}.py")],
+    "python":     lambda algo, size: [sys.executable, str(BASE_DIR / "python"   / algo / f"{algo}_{size}.py")],
 }
+
+
+def run_build(cmd: list[str], timeout: int = 120) -> tuple[bool, str]:
+    try:
+        completed = subprocess.run(cmd, capture_output=True, text=True, timeout=timeout)
+    except FileNotFoundError:
+        return False, f"tool not found: {cmd[0]}"
+    except subprocess.TimeoutExpired:
+        return False, "build timed out"
+
+    if completed.returncode != 0:
+        msg = completed.stderr.strip() or completed.stdout.strip() or f"exit code {completed.returncode}"
+        return False, msg
+    return True, ""
+
+
+def preflight_build() -> None:
+    """Build Rust/Go/Java artifacts once before measurement runs."""
+    BUILD_DIR.mkdir(parents=True, exist_ok=True)
+    build_errors = []
+
+    print("\n=== Preflight build (Rust/Go/Java) ===")
+    for algo in ALGORITHMS:
+        for size in SIZES:
+            rust_src = BASE_DIR / "rust" / algo / size / f"{algo}_{size}.rs"
+            rust_exe = BUILD_DIR / f"{algo}_{size}_rust.exe"
+            ok, err = run_build(["rustc", "-O", "-o", str(rust_exe), str(rust_src)])
+            if not ok:
+                build_errors.append(("rust", algo, size, err))
+
+            go_src = BASE_DIR / "go" / algo / size / f"{algo}_{size}.go"
+            go_exe = BUILD_DIR / f"{algo}_{size}_go.exe"
+            ok, err = run_build(["go", "build", "-o", str(go_exe), str(go_src)])
+            if not ok:
+                build_errors.append(("go", algo, size, err))
+
+            java_src = BASE_DIR / "java" / algo / f"{JAVA_CLASS[algo]}_{size.capitalize()}.java"
+            ok, err = run_build(["javac", "-d", str(BASE_DIR / "java"), str(java_src)])
+            if not ok:
+                build_errors.append(("java", algo, size, err))
+
+    if build_errors:
+        summary_lines = [f"{lang}/{algo}/{size}: {msg}" for lang, algo, size, msg in build_errors[:8]]
+        if len(build_errors) > 8:
+            summary_lines.append(f"... and {len(build_errors) - 8} more build errors")
+        summary = "\n  ".join(summary_lines)
+        raise RuntimeError(f"Preflight build failed ({len(build_errors)} errors):\n  {summary}")
+
+    print("Preflight build complete.")
 
 
 ######################### LHM ###############################
@@ -168,6 +217,7 @@ def run_cell(language: str, algorithm:str, size: str):
 def main():
     sys.stdout.reconfigure(line_buffering=True)
     RESULTS_DIR.mkdir(parents=True, exist_ok=True)
+    preflight_build()
     timestamp   = datetime.now().strftime("%Y%m%d_%H%M%S")
     output_file = RESULTS_DIR / f"pilot_{timestamp}.csv"
  
