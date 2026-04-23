@@ -9,7 +9,7 @@ Baseline idle power draw -
 \subsection{somehting...}
 The main challenge in cross-language energy measurement is to ensure that we are measuring the energy consumed by the algorithm itself, and not the overhead of the language runtime or other background process. To address this, we designed a custom measurement harness that follows a strict protocol to isolate the algorithm execution. The harness uses a stdin/stout handshake design in which the program initializes once and then loops, executing the algorithm on each trigger without restarting the process.
 
-The measurement sequence is as follows:
+The measurement sequence is shown in the Listing~\ref{lst:measurement_sequence}. 
 \begin{lstlisting}[caption={Measurement sequence}, label={lst:measurement_sequence}, numbers=none]
     setup - not timed
     print "ready" - not timed
