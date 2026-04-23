@@ -196,6 +196,7 @@ def run_cell(language: str, algorithm:str, size: str):
     # Measured runs
     results = []
     for run_idx in range(1, PILOT_RUNS + 1):
+        print(f"    Run {run_idx}/{PILOT_RUNS}...", end="")
         joules, checksum = run_once(proc)
         results.append({
             "language":  language,
