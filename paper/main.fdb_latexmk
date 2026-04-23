@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber main"] 1776920313.5149 "main.bcf" "main.bbl" "main" 1776920324.97351 0
-  "main.bcf" 1776920324 108835 7779b68d495421b36f30da6714e50043 "pdflatex"
+["biber main"] 1776920313.5149 "main.bcf" "main.bbl" "main" 1776920499.92178 0
+  "main.bcf" 1776920499 108835 7779b68d495421b36f30da6714e50043 "pdflatex"
   "main.bib" 1776920040 11707 081598b96d034c6689366a996d184d0c ""
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1776920323.75456 "c:/Users/Stemadmin/Desktop/Anuj Khadka/carbon_footprint/paper/main.tex" "main.pdf" "main" 1776920324.9748 0
+["pdflatex"] 1776920498.7244 "c:/Users/Stemadmin/Desktop/Anuj Khadka/carbon_footprint/paper/main.tex" "main.pdf" "main" 1776920499.9234 0
   "c:/Users/Stemadmin/Desktop/Anuj Khadka/carbon_footprint/paper/main.tex" 1776750886 3872 f4a2b8257b8f813d9a4d53b2ecfbd1b4 ""
   "c:/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1775080624 2971 def0b6c1f0b107b3b936def894055589 ""
   "c:/texlive/2026/texmf-dist/fonts/map/fontname/texfonts.map" 1775082038 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -125,13 +125,13 @@
   "c:/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1775087885 5619402 045890036aad9b52b154ef5568e59d3a ""
   "c:/texlive/2026/texmf-var/web2c/pdftex/pdflatex.fmt" 1775088023 3648464 8ff1b7e831b3ace6bf3bab0e3eb9f10e ""
   "c:/texlive/2026/texmf.cnf" 1775087857 713 e69b156964470283e0530f5060668171 ""
-  "main.aux" 1776920324 5335 bc55236f2c1fe0afadcf0181a69c9ef6 "pdflatex"
+  "main.aux" 1776920499 5335 bc55236f2c1fe0afadcf0181a69c9ef6 "pdflatex"
   "main.bbl" 1776920315 26606 ea0bd36fc214b7bd9af3ae45077db61a "biber main"
-  "main.run.xml" 1776920324 2299 81988d3303a58f7ac525483192dfa2a1 "pdflatex"
+  "main.run.xml" 1776920499 2299 81988d3303a58f7ac525483192dfa2a1 "pdflatex"
   "main.tex" 1776750886 3872 f4a2b8257b8f813d9a4d53b2ecfbd1b4 ""
   "preamble.tex" 1776778223 2236 08ca204218be09ad2244557941274383 ""
   "sections/acknowledgement.tex" 1775242039 182 21c34078480e04d82286cdc451b17280 ""
-  "sections/background.tex" 1776920323 6162 e27ecf2735bcad356d539e760d97e7c0 ""
+  "sections/background.tex" 1776920498 6194 dd8d3b2984aa4716847dc5f495240a70 ""
   "sections/conclusion.tex" 1775092089 29 873d4349f888377749b821be1c2e589e ""
   "sections/discussion.tex" 1775092085 29 873d4349f888377749b821be1c2e589e ""
   "sections/introduction.tex" 1776918536 3985 5d062dadce82e5044be8d37c249c6190 ""
