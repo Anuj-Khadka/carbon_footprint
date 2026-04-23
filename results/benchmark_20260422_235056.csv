@@ -1,0 +1,2 @@
+language,algorithm,size,run,joules,kwh,carbon_intensity,gco2e,checksum
+rust,hash_table,mid,1,0.003452800202649087,9.59111167402524e-10,333.0,3.193840187450405e-07,649985000
