@@ -24,7 +24,16 @@ The flush() call on line 7 is critical. Without it, the newline sits in a kernel
     // C
     while (fgets(buf, sizeof(buf), stdin))  {run()}
 
-    
+    // Python
+    for line in sys.stdin: run()
+
+    // JavaScript 
+    rl.on('line', () => run())
+
+    // Java
+    while(br.readLine() != null) {run()}
+
+    //
 
 \end{lstlisting}
 
