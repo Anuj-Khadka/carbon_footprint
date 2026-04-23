@@ -200,9 +200,13 @@ def run_cell(language: str, algorithm:str, size: str):
     # Measured runs
     results = []
     for run_idx in range(1, PILOT_RUNS + 1):
+        joules, checksum = run_once(proc)
+
+
         total_joule += joules
         print(f"    Run {run_idx}/{PILOT_RUNS} ------------ {total_joule:.4f} J so far")
-        joules, checksum = run_once(proc)
+
+        
         results.append({
             "language":  language,
             "algorithm": algorithm,
