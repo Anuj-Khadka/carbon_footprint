@@ -9,16 +9,10 @@ import requests
 LHM_URL = "http://172.22.1.29:8085/data.json"
 
 
-def get_rapl_energy_joules() -> float:
+def get_cpu_package_watts() -> float:
     """
     Query LibreHardwareMonitor's REST API and return the current
-    CPU Package RAPL energy counter in Joules.
-
-    LHM exposes a tree of sensor nodes at /data.json.
-    We walk the tree looking for a sensor whose name contains
-    'CPU Package' and whose SensorType is 'Energy' (unit: J).
-
-    Returns the float value, or raises RuntimeError if not found.
+    CPU Package power draw in watts.
     """
     response = requests.get(LHM_URL)
 
@@ -26,39 +20,36 @@ def get_rapl_energy_joules() -> float:
     print(data)
 
     def search(node: dict) -> float | None:
-        # Check if this node is the RAPL energy sensor we want
-        name = node.get("Text", "")
-        sensor_type = node.get("SensorType", "")
+        sensor_id = node.get("SensorId", "")
         value_str = node.get("Value", "")
-
-        if "CPU Package" in name and sensor_type == "Power":
-            # Value comes back as e.g. "12.34 J" – strip the unit
+ 
+        if sensor_id == "/intelcpu/0/power/0":
             try:
-                return float(value_str.split()[0])
+                return float(value_str.split()[0])  # strip " W"
             except (ValueError, IndexError):
                 pass
-
-        # Recurse into children
+ 
         for child in node.get("Children", []):
             result = search(child)
             if result is not None:
                 return result
-
+ 
         return None
-
-    joules = search(data)
-    if joules is None:
+ 
+    watts = search(data)
+    if watts is None:
         raise RuntimeError(
-            "RAPL 'CPU Package' energy sensor not found in LHM response. "
+            "CPU Package power sensor not found in LHM response. "
+            "Make sure LibreHardwareMonitor is running."
         )
-    return joules
+    return watts
 
 
 # ── quick smoke-test ──────────────────────────────────────────────────────────
 if __name__ == "__main__":
     print("Testing LHM sensor reading...")
     try:
-        j = get_rapl_energy_joules()
-        print(f"  CPU Package RAPL energy: {j} J  ✓")
+        w = get_cpu_package_watts()
+        print(f"  CPU Package power: {w} W  ✓")
     except Exception as e:
         print(f"  ERROR: {e}")
