@@ -1,9 +1,14 @@
 """
 pilot_study.py  –  Carbon Footprint Benchmark  (build-up version)
 Step 1: LHM sensor reading
+Step 2: Program execution
+Step 3: Full pilot loop (50 runs per cell, 3 warm-ups discarded)
 """
 
-
+import csv
+import random
+from datetime import datetime
+from pathlib import Path
 import requests
 import time 
 import subprocess
@@ -11,7 +16,14 @@ import sys
 import os
 
 
-LHM_URL = "http://172.22.1.29:8085/data.json"
+LHM_URL        = "http://172.22.1.29:8085/data.json"
+BASE_DIR       = Path(r"C:\Users\Stemadmin\Desktop\Anuj Khadka\carbon_footprint\implementations")
+RESULTS_DIR    = Path(r"C:\Users\Stemadmin\Desktop\Anuj Khadka\carbon_footprint\results")
+
+ 
+WARM_UP_RUNS   = 5
+PILOT_RUNS     = 50
+INTER_RUN_SLEEP = 0.05   # seconds between iterations (within a cell)
 
 
 def get_cpu_package_watts() -> float:
