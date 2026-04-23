@@ -3,7 +3,10 @@ pilot_study.py  –  Carbon Footprint Benchmark  (build-up version)
 Step 1: LHM sensor reading
 """
 
+
 import requests
+import time 
+import subprocess
 
 
 LHM_URL = "http://172.22.1.29:8085/data.json"
