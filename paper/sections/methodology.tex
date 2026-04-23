@@ -46,17 +46,7 @@ C uses fgets rather than scanf because it reads exactly one line including the n
 
 \subsection{Output Verification}
 Before energy measurement, all 36 implementations are verified for correctness. The verification script compiles and runs each implementation at all three input sizes, compares the checksum printed to stdout against the reference checksum produced by the C implementation, and assigns each language-algortihm-size combination a PASS/FAIL status. 
-Table ~\ref{tab:c_run_verify} shows the verification results fot the C implemetation. The C times serves as a reference baseline against which all other languages are measured and normalized. They co
-
-\paragraph{Observation}
-\begin{verbatim}
-    - I can verify the thing now. 
-    - The output that I get from the 
-    baseline of C language can be 
-    used to verify the time complexity 
-    of the algorithms.
-    - 
-\end{verbatim}
+Table ~\ref{tab:c_run_verify} shows the verification results fot the C implemetation. The C times serves as a reference baseline against which all other languages are measured and normalized. They confirm that execition time scales with the expected time complexity of each program. 
 
 \begin{table}[h]
     \centering
@@ -66,44 +56,66 @@ Table ~\ref{tab:c_run_verify} shows the verification results fot the C implemeta
         \hline
         \textbf{Algorithm} & \textbf{Size} & \textbf{Output} & \textbf{Time} & \textbf{Status} \\
         \hline
-            summation               & small    & 5050             &  0.0437ms  & PASS \\
-            summation               & mid      & 50005000         &  0.0406ms  & PASS \\
-            summation               & large    & 500000500000     &  0.4715ms  & PASS \\
-            \texttt{binary\_search} & small    & 99               &  0.0448ms  & PASS \\
-            \texttt{binary\_search} & mid      & 9999             &  0.0392ms  & PASS \\
-            \texttt{binary\_search} & large    & 999999           &  0.0835ms  & PASS \\
-            \texttt{merge\_sort}    & small    & 100              &  0.0428ms  & PASS \\
-            \texttt{merge\_sort}    & mid      & 10000            &  0.2459ms  & PASS \\
-            \texttt{merge\_sort}    & large    & 1000000          & 24.7405ms  & PASS \\
-            bfs                     & small    & 100              &  0.0430ms  & PASS \\
-            bfs                     & mid      & 1000             &  0.3039ms  & PASS \\
-            bfs                     & large    & 5000             &  7.2774ms  & PASS \\
-            \texttt{hash\_table}    & small    & 64850            &  0.0433ms  & PASS \\
-            \texttt{hash\_table}    & mid      & 649985000        &  0.2467ms  & PASS \\
-            \texttt{hash\_table}    & large    & 64999850000      &  2.1579ms  & PASS \\
-            \texttt{matrix\_multiplication} & small    & 9175             &  0.0744ms  & PASS \\
-            \texttt{matrix\_multiplication} & mid      & 646700           &  2.5604ms  & PASS \\
-            \texttt{matrix\_multiplication} & large    & 10291750         & 47.1134ms  & PASS \\
+            \texttt{summation}          & small    & 5050             &  0.0437ms  & PASS \\
+            \texttt{summation}          & mid      & 50005000         &  0.0406ms  & PASS \\
+            \texttt{summation}          & large    & 500000500000     &  0.4715ms  & PASS \\
+            \texttt{binary\_search}     & small    & 99               &  0.0448ms  & PASS \\
+            \texttt{binary\_search}     & mid      & 9999             &  0.0392ms  & PASS \\
+            \texttt{binary\_search}     & large    & 999999           &  0.0835ms  & PASS \\
+            \texttt{merge\_sort}        & small    & 100              &  0.0428ms  & PASS \\
+            \texttt{merge\_sort}        & mid      & 10000            &  0.2459ms  & PASS \\
+            \texttt{merge\_sort}        & large    & 1000000          & 24.7405ms  & PASS \\
+            \texttt{bfs}                & small    & 100              &  0.0430ms  & PASS \\
+            \texttt{bfs}                & mid      & 1000             &  0.3039ms  & PASS \\
+            \texttt{bfs}                & large    & 5000             &  7.2774ms  & PASS \\
+            \texttt{hash\_table}        & small    & 64850            &  0.0433ms  & PASS \\
+            \texttt{hash\_table}        & mid      & 649985000        &  0.2467ms  & PASS \\
+            \texttt{hash\_table}        & large    & 64999850000      &  2.1579ms  & PASS \\
+            \texttt{matrix\_mul}        & small    & 9175             &  0.0744ms  & PASS \\
+            \texttt{matrix\_mul}        & mid      & 646700           &  2.5604ms  & PASS \\
+            \texttt{matrix\_mul}        & large    & 10291750         & 47.1134ms  & PASS \\
         \hline
     \end{tabular}
-    
-
-
-    
 \end{table}
 
+The execution times in Table~\ref{tab:c_run_verify} confirms the time complexity scaling. Merge sort grows from 0.0428ms to 24.740ms (a 576$\times$ increase) as input scales from small to large with consistent $O(n \log n)$ growth.
 
 
+\subsection{Input Sizes}
+Three input sizes are used for each algorithm to capture scaling behavior: small, mid, and large. The specific sizes are chosen to be large enough to produce measurable energy consumption while still completing within a reasonable time frame across all languages. The input sizes for each algorithm are as defined in Table~\ref{tab:input_sizes}.
 
 
+\begin{table}[h]
+    \centering
+    \caption{Input Sizes per Algorithm}\label{tab:input_sizes}
+    \small
+    \begin{tabular}{lllll}
+        \hline
+        \textbf{Algorithm} & \textbf{Small} & \textbf{Mid} & \textbf{Large}   \\
+        \hline
+            \texttt{summation}               & small    & 5050             &  0.0437ms \\
+            \texttt{binary\_search} & large    & 999999           &  0.0835ms \\
+            \texttt{merge\_sort}    & small    & 100              &  0.0428ms \\
+            \texttt{merge\_sort}    & mid      & 10000            &  0.2459ms \\
+            \texttt{merge\_sort}    & large    & 1000000          & 24.7405ms \\
+            \texttt{bfs}                     & small    & 100              &  0.0430ms \\
+            \texttt{bfs}                     & mid      & 1000             &  0.3039ms \\
+            \texttt{bfs}                     & large    & 5000             &  7.2774ms \\
+            \texttt{hash\_table}    & small    & 64850            &  0.0433ms \\
+            \texttt{hash\_table}    & mid      & 649985000        &  0.2467ms \\
+            \texttt{hash\_table}    & large    & 64999850000      &  2.1579ms \\
+            \texttt{matrix\_mul} & small    & 9175             &  0.0744ms    \\
+            \texttt{matrix\_mul} & mid      & 646700           &  2.5604ms    \\
+            \texttt{matrix\_mul} & large    & 10291750         & 47.1134ms    \\
+        \hline
+    \end{tabular}
+\end{table}
 
 
 
 baseline power draw - 40w 5s sample
 
 
-
-50reps each sample
 
 
 
