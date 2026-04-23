@@ -3,8 +3,7 @@ pilot_study.py  –  Carbon Footprint Benchmark  (build-up version)
 Step 1: LHM sensor reading
 """
 
-import urllib.request
-import json
+import requests
 
 
 LHM_URL = "http://172.22.1.29:8085/data.json"
@@ -21,8 +20,7 @@ def get_rapl_energy_joules() -> float:
 
     Returns the float value, or raises RuntimeError if not found.
     """
-    with urllib.request.urlopen(LHM_URL, timeout=5) as resp:
-        data = json.loads(resp.read().decode())
+    data = requests.get(LHM_URL, timeout=5).json()
 
     def search(node: dict) -> float | None:
         # Check if this node is the RAPL energy sensor we want
