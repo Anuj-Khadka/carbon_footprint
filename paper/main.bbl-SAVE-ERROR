@@ -366,9 +366,17 @@
       \field{year}{2020}
       \keyw{energy efficiency,green computing,reinforcement learning,deep learning,climate change}
     \endentry
-    \entry{elecritymap}{online}{}{}
+    \entry{librehardwaremonitor}{online}{}{}
       \field{sortinit}{9}
       \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{note}{\url{https://librehardwaremonitor.com/}}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+    \endentry
+    \entry{elecritymap}{online}{}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{note}{\url{https://app.electricitymaps.com/}}
       \field{urlmonth}{3}
       \field{urlyear}{2026}
