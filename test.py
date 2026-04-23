@@ -205,43 +205,6 @@ def main():
     else:
         print("All cells completed successfully.")
  
-
-if __name__ == "__main__":
-    exe = os.path.join(
-        os.path.dirname(os.path.abspath(__file__)),
-        "implementations",
-        "c",
-        "summation",
-        "summation_small.exe",
-    )
-
-    print(f"Launching: {exe}")
-
-    proc = subprocess.Popen(
-        exe,
-        stdin=subprocess.PIPE,
-        stdout=subprocess.PIPE,
-        stderr=subprocess.PIPE,
-        text=True
-    )
-
-    ready = proc.stdout.readline().strip()
-    if ready != "ready":
-        print("Algorithm did not signal READY. Exiting.")
-        proc.terminate()
-        sys.exit(1)
-
-    print(f"process ready.")
-
-    for i in range(5):
-        avg_watts, energy_joules, checksum = run_once(proc)
-        print(f"Run {i+1}: Avg Watts = {avg_watts:.7f}, Energy = {energy_joules:.7f} J, Checksum = {checksum}")
-
-    proc.stdin.close()
-    proc.wait()
-    print("All runs completed. Process terminated.")
-
-
-
+ 
 if __name__ == "__main__":
     main()
