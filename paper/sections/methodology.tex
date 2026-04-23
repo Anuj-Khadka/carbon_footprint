@@ -11,8 +11,8 @@ The main challenge in cross-language energy measurement is to ensure that we are
 
 The measurement sequence is as follows:
 \begin{figure}[h]
-    \centering
-    \begin{lstlisting}[style=measurement_sequence]
+\begin{lstlisting}[style=measurement_sequence]
+        \label{fig:measurement_sequence}\
         setup - not timed 
         print "ready" - not timed
         harness newline - start timer
@@ -20,10 +20,19 @@ The measurement sequence is as follows:
         print checksum - stop timer
     \end{lstlisting}
     \caption{Measurement Sequence}
-    \label{fig:measurement_sequence}\
 \end{figure}
 
 
+
+
+\begin{lstlisting}
+    \caption={Measurement Sequenc e}, label={lst:measurement_sequence}]
+    setup - not timed 
+    print "ready" - not timed
+    harness newline - start timer
+    run command - measurement
+    print checksum - stop timer
+\end{lstlisting}
 
 
 
