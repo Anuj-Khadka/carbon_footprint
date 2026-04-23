@@ -15,6 +15,8 @@ import time
 import subprocess
 
 
+total_joule = 0.0
+
 LHM_URL        = "http://172.22.1.29:8085/data.json"
 BASE_DIR       = Path(r"C:\Users\Stemadmin\Desktop\Anuj Khadka\carbon_footprint\implementations")
 RESULTS_DIR    = Path(r"C:\Users\Stemadmin\Desktop\Anuj Khadka\carbon_footprint\results")
@@ -166,6 +168,8 @@ def run_cell(language: str, algorithm:str, size: str):
        
     """
 
+    global total_joule
+
     cmd = COMMANDS[language](algorithm, size)
     print(f"  Launching: {' '.join(cmd)}")
  
@@ -196,7 +200,8 @@ def run_cell(language: str, algorithm:str, size: str):
     # Measured runs
     results = []
     for run_idx in range(1, PILOT_RUNS + 1):
-        print(f"    Run {run_idx}/{PILOT_RUNS}")
+        total_joule += joules
+        print(f"    Run {run_idx}/{PILOT_RUNS} ------------ {total_joule:.4f} J so far")
         joules, checksum = run_once(proc)
         results.append({
             "language":  language,

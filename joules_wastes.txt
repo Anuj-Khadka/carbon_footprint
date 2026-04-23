@@ -1,1 +1,2 @@
-apr 23 3:44 -  57013.5064 J
+apr 23 3:44 -  57013.5064 J   - power analysis
+apr 23 
