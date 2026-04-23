@@ -53,6 +53,17 @@ def run_once(proc: subprocess.Popen):
     Returns (energy_joules, checksum_str).
     """
 
+    w_before = get_cpu_package_watts()
+    t_before = time.perf_counter()
+
+    # Trigger the algorithm to run
+    proc.stdin.write("\n")
+    proc.stdin.flush()
+
+    
+
+
+
 
 if __name__ == "__main__":
     print("Testing LHM sensor reading...")
