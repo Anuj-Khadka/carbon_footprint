@@ -206,7 +206,8 @@ def run_cell(language: str, algorithm: str, size: str,
  
     # Measured runs
     results = []
-    for run_idx in range(1, MAIN_RUNS + 1):
+    for run_idx in range(1, MAIN_RUNS + 1):        
+        print(f"    Run {run_idx}/1...", end="")
         joules, checksum = run_once(proc)
         kwh    = joules / 3_600_000
         gco2e  = kwh * carbon_intensity
