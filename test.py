@@ -26,11 +26,19 @@ PILOT_RUNS     = 50
 INTER_RUN_SLEEP = 0.05   # seconds between iterations (within a cell)
 
 
+COMMANDS = {
+    "c":          lambda algo, size: [str(BASE_DIR / "c"          / algo / f"{algo}_{size}.exe")],
+    "rust":       lambda algo, size: [str(BASE_DIR / "rust"       / algo / "target" / "release" / f"{algo}_{size}.exe")],
+    "go":         lambda algo, size: [str(BASE_DIR / "go"         / algo / f"{algo}_{size}.exe")],
+    "java":       lambda algo, size: ["java", "-cp", str(BASE_DIR / "java" / algo), f"{algo}_{size}"],
+    "javascript": lambda algo, size: ["node", str(BASE_DIR / "javascript" / algo / f"{algo}_{size}.js")],
+    "python":     lambda algo, size: ["python", str(BASE_DIR / "python"   / algo / f"{algo}_{size}.py")],
+}
+
+
+######################### LHM ###############################
+
 def get_cpu_package_watts() -> float:
-    """
-    Query LibreHardwareMonitor's REST API and return the current
-    CPU Package power draw in watts.
-    """
     response = requests.get(LHM_URL)
 
     data = response.json() 
