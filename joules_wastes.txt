@@ -1,2 +1,4 @@
 apr 23 3:44 -  57013.5064 J   - power analysis
 apr 23 4:36 - 23556.2173 J - pilot study
+apr 24 12:30 - 37075.2921 J so far - pilot study.
+apr 24 1:32 -  86009.7107 J - power- analysis
