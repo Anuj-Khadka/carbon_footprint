@@ -53,7 +53,7 @@ C uses fgets rather than scanf because it reads exactly one line including the n
 
 \paragraph{Warm-up Runs -} Five runs per cell are discarded before measurement was recorded to allow the JIT compilers and garbage collectors in languages like Java and Go to warm up and reach a steady state. For C and Rust, warm-up primarily ensures that the instruction cache and branch predictor are in a warmed state consistent with repeated execution. 
 
-\paragraph{Cell Sleep -} A mandatory 5s 
+\paragraph{Cell Sleep -} A mandatory 5s sleep is inserted between cells to allow the processor's thermal management to return to stable baseline between cells. This reduces the rist that thermal throttling in one cell biases the initial temperature state of the next.
 
 
 
@@ -141,4 +141,4 @@ baseline power draw - 40w 5s sample
 
 
 
-
+
