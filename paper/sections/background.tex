@@ -23,7 +23,7 @@ To translate the energy measurements into carbon emissions, we apply the SCI fra
 
 The relationship between energy and carbon depends on how that energy is generated. Energy produced from hydroelectric or wind generation carries near-zero carbon intensity while the electricity from coal or natural gas has 800-1000 gCO2/kWh \cite{ipcc2014lifecycle}. The carbon intensity of an electricity grid represents the average emissions intensity of all generation sources dispatched at a given moment, weighted by their contribution to total supply. This intensity is measured in grams of CO2 equivalent per kilowatt-hour, gCO2/kWh. 
 
-We obtain real-time carbon intensity from the Electricity Map API \cite{electricitymap}, which provides grid-zone-level carbon intensity updates every hour. Our experiment used zone US-NY-NYIS (New York Independent System Operator), which had a carbon intensity of \verb|300-306| gCO2/kWh during our overnight experiment window (10pm - 6am). 
+We obtain real-time carbon intensity from the Electricity Map API \cite{electricitymap}, which provides grid-zone-level carbon intensity updates every 30 minutes. Our experiment used zone US-NY-NYIS (New York Independent System Operator), which had a carbon intensity of \verb|300-306| gCO2/kWh during our overnight experiment window (10pm - 6am). 
 The gCO2 metric is computer from RAPL PKG energy readings as follows. 
 \begin{equation}
   \text{gCO}_2\text{e} = \frac{E_{\text{J}}}{3{,}600{,}000} \times I_{\text{carbon intensity (gCO2/kWh)}}
