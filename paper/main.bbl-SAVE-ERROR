@@ -500,6 +500,85 @@
       \field{urlyear}{2026}
       \field{urldateera}{ce}
     \endentry
+    \entry{lannelongue2021}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=2cd9ac6f5378a86cd4ec311386992c9b}{%
+           family={Lannelongue},
+           familyi={L\bibinitperiod},
+           given={Loïc},
+           giveni={L\bibinitperiod}}}%
+        {{hash=56cce980f8a594b816b61b059ceb7688}{%
+           family={Grealey},
+           familyi={G\bibinitperiod},
+           given={Jason},
+           giveni={J\bibinitperiod}}}%
+        {{hash=ae06c1fe21497bfda08fcf626ad51404}{%
+           family={Inouye},
+           familyi={I\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{b9353a325e288672abf49838525ffa1b}
+      \strng{fullhash}{b9353a325e288672abf49838525ffa1b}
+      \strng{fullhashraw}{b9353a325e288672abf49838525ffa1b}
+      \strng{bibnamehash}{b9353a325e288672abf49838525ffa1b}
+      \strng{authorbibnamehash}{b9353a325e288672abf49838525ffa1b}
+      \strng{authornamehash}{b9353a325e288672abf49838525ffa1b}
+      \strng{authorfullhash}{b9353a325e288672abf49838525ffa1b}
+      \strng{authorfullhashraw}{b9353a325e288672abf49838525ffa1b}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Advanced Science}
+      \field{number}{12}
+      \field{title}{Green Algorithms: Quantifying the Carbon Footprint of Computation}
+      \field{volume}{8}
+      \field{year}{2021}
+      \field{pages}{2100707}
+      \range{pages}{1}
+      \verb{doi}
+      \verb https://doi.org/10.1002/advs.202100707
+      \endverb
+      \verb{eprint}
+      \verb https://advanced.onlinelibrary.wiley.com/doi/pdf/10.1002/advs.202100707
+      \endverb
+      \verb{urlraw}
+      \verb https://advanced.onlinelibrary.wiley.com/doi/abs/10.1002/advs.202100707
+      \endverb
+      \verb{url}
+      \verb https://advanced.onlinelibrary.wiley.com/doi/abs/10.1002/advs.202100707
+      \endverb
+      \keyw{climate change,computational research,green computing}
+    \endentry
+    \entry{grnsoftware2023}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=53a286a53b4d8045bebf4f6bcedb544a}{%
+           family={{Green Software Foundation}},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{53a286a53b4d8045bebf4f6bcedb544a}
+      \strng{fullhash}{53a286a53b4d8045bebf4f6bcedb544a}
+      \strng{fullhashraw}{53a286a53b4d8045bebf4f6bcedb544a}
+      \strng{bibnamehash}{53a286a53b4d8045bebf4f6bcedb544a}
+      \strng{authorbibnamehash}{53a286a53b4d8045bebf4f6bcedb544a}
+      \strng{authornamehash}{53a286a53b4d8045bebf4f6bcedb544a}
+      \strng{authorfullhash}{53a286a53b4d8045bebf4f6bcedb544a}
+      \strng{authorfullhashraw}{53a286a53b4d8045bebf4f6bcedb544a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Green Software Foundation}
+      \field{title}{Software Carbon Intensity ({SCI}) Specification}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://greensoftware.foundation/projects/software-carbon-intensity
+      \endverb
+      \verb{url}
+      \verb https://greensoftware.foundation/projects/software-carbon-intensity
+      \endverb
+    \endentry
     \entry{decisionmodels}{article}{}{}
       \name{author}{3}{}{%
         {{hash=2c0a5d913f7620127cb6cc3f11166c5e}{%
@@ -615,6 +694,7 @@
       \keyw{power modeling,RAPL validation,RAPL accuracy,RAPL,DRAM power}
     \endentry
   \enddatalist
+  \missing{electricitymap}
 \endrefsection
 \endinput
 
