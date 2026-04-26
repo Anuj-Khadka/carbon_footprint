@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber main"] 1777244452.15317 "main.bcf" "main.bbl" "main" 1777244600.08687 0
-  "main.bcf" 1777244599 109191 23d7673f7272f97fe6b494c67ab39025 "pdflatex"
+["biber main"] 1777244823.19096 "main.bcf" "main.bbl" "main" 1777244848.38306 0
+  "main.bcf" 1777244848 109191 23d7673f7272f97fe6b494c67ab39025 "pdflatex"
   "main.bib" 1777242812 15332 d3435c88b3784a449dc159f277713ada ""
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1777244598.72423 "c:/Users/Stemadmin/Desktop/Anuj Khadka/carbon_footprint/paper/main.tex" "main.pdf" "main" 1777244600.08805 0
+["pdflatex"] 1777244847.03844 "c:/Users/Stemadmin/Desktop/Anuj Khadka/carbon_footprint/paper/main.tex" "main.pdf" "main" 1777244848.38432 0
   "c:/Users/Stemadmin/Desktop/Anuj Khadka/carbon_footprint/paper/main.tex" 1777244458 4036 f925b4da02e2f21febc27b586d317e74 ""
   "c:/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1775080624 2971 def0b6c1f0b107b3b936def894055589 ""
   "c:/texlive/2026/texmf-dist/fonts/map/fontname/texfonts.map" 1775082038 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -133,16 +133,16 @@
   "c:/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1775087885 5619402 045890036aad9b52b154ef5568e59d3a ""
   "c:/texlive/2026/texmf-var/web2c/pdftex/pdflatex.fmt" 1775088023 3648464 8ff1b7e831b3ace6bf3bab0e3eb9f10e ""
   "c:/texlive/2026/texmf.cnf" 1775087857 713 e69b156964470283e0530f5060668171 ""
-  "main.aux" 1777244599 7334 a99a53b65f47c1781d5d22ba9dea5312 "pdflatex"
-  "main.bbl" 1777244454 35821 9f71bedc9163c17610d7ae47c81ecc01 "biber main"
-  "main.run.xml" 1777244599 2299 81988d3303a58f7ac525483192dfa2a1 "pdflatex"
+  "main.aux" 1777244848 7584 b07eb5130fec6d0aabc424c53936beb0 "pdflatex"
+  "main.bbl" 1777244825 35821 9f71bedc9163c17610d7ae47c81ecc01 "biber main"
+  "main.run.xml" 1777244848 2299 81988d3303a58f7ac525483192dfa2a1 "pdflatex"
   "main.tex" 1777244458 4036 f925b4da02e2f21febc27b586d317e74 ""
   "preamble.tex" 1776921543 2712 8cc26a8bc8fe66362a1f8f95319dec8e ""
   "sections/acknowledgement.tex" 1777244287 682 4d3a955d699c2e6dc3cc3ee09c730722 ""
   "sections/background.tex" 1777243196 9899 e15416cf8d22db28d8b2a8929c3eb58b ""
   "sections/conclusion.tex" 1775092089 29 873d4349f888377749b821be1c2e589e ""
   "sections/discussion.tex" 1776974197 2529 1c92043d4333e42bcb2112a506baec5b ""
-  "sections/future_work.tex" 1777244598 108 a7299df181c13559c0853c5a587460a7 ""
+  "sections/future_work.tex" 1777244847 927 598efdf3acdfcf61003fef34a7994a8b ""
   "sections/introduction.tex" 1776918536 3985 5d062dadce82e5044be8d37c249c6190 ""
   "sections/methodology.tex" 1776974129 7023 f8fdd0afd1a2193571fcfaeecd3c527d ""
   "sections/results.tex" 1775241246 29 873d4349f888377749b821be1c2e589e ""
