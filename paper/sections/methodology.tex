@@ -9,18 +9,18 @@ The Intel's RAPL interface exposes hardware energy counters directly to software
 \subsubsection{Implementation-specific design decisions}
 All 36 implementations (6 languages x 6 algorithms) were written from scratch following a shared pseudocode specification. The following principles were followed to ensure a fair comparison across languages:
 
-\paragraph{Algorithmic consistency -} All implementations strictly follow the same algorithmic logic and data structures as defined in the pseudocode specification. No language-specific optimizations or library functions that could alter the algorithm's behavior are used. Every algorithm is implemented from primitive operations only like loops, conditionals, integer arithmetic and array indexing.
+\paragraph{Algorithmic consistency -}All implementations strictly follow the same algorithmic logic and data structures as defined in the pseudocode specification. No language-specific optimizations or library functions that could alter the algorithm's behavior are used. Every algorithm is implemented from primitive operations only like loops, conditionals, integer arithmetic and array indexing.
 
-\paragraph{Reset isolation -} The measurement harness is designed to isolate the energy consumption of the algorithm execution from any language runtime overhead. This includes using a stdin/stdout handshake to trigger algorithm execution without restarting the process, and ensuring that any setup or teardown code is not included in the measurement window.
+\paragraph{Reset before each measurement -}Data structures that are mutated during  algorithm execution are reset to their initial state at the beginning of each algorithm invocation. Critically, this reset happens before the energy measurement window opens, so the reset cost is not included in the measured energy. This guarantees that every replicated run measures the same algorithmic work.
 
-\paragraph{Output verification -} Each implementation produces a checksum output that is verified against a reference implementation to ensure correctness. This ensures that all implementations are performing the same computations and producing the same results.
+\paragraph{Output verification -}Each implementation produces a checksum output that is verified against a reference implementation to ensure correctness. This ensures that all implementations are performing the same computations and producing the same results.
 
-\paragraph{Input size consistency -} The same input sizes are used for each algorithm across all languages to ensure that we are measuring comparable workloads. This allows us to analyze how energy consumption scales with input size for each algorithm and language.
+\paragraph{Input size consistency -}The same input sizes are used for each algorithm across all languages to ensure that we are measuring comparable workloads. This allows us to analyze how energy consumption scales with input size for each algorithm and language.
 
-\paragraph{Single checksum output -} Each implementation produces a single checksum output, and prints it to stdout after each algorithm execution. This is used for cross-language output verification and does not affect the measured energy as it occurs inside the measurement window but is identical and negligible across all languages.
+\paragraph{Single checksum output -}Each implementation produces a single checksum output, and prints it to stdout after each algorithm execution. This is used for cross-language output verification and does not affect the measured energy as it occurs inside the measurement window but is identical and negligible across all languages.\\
 
 
-
+\subsection{Stdin Measurement Protocol }
 
 The main challenge in cross-language energy measurement is to ensure that we are measuring the energy consumed by the algorithm itself, and not the overhead of the language runtime or other background process. To address this, we designed a custom measurement harness that follows a strict protocol to isolate the algorithm execution. The harness uses a stdin/stout handshake design in which the program initializes once and then loops, executing the algorithm on each trigger without restarting the process.
 
