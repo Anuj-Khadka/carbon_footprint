@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber main"] 1777246111.51836 "main.bcf" "main.bbl" "main" 1777246515.80499 0
-  "main.bcf" 1777246515 109191 23d7673f7272f97fe6b494c67ab39025 "pdflatex"
+["biber main"] 1777246111.51836 "main.bcf" "main.bbl" "main" 1777246567.12967 0
+  "main.bcf" 1777246566 109191 23d7673f7272f97fe6b494c67ab39025 "pdflatex"
   "main.bib" 1777242812 15332 d3435c88b3784a449dc159f277713ada ""
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1777246514.50258 "c:/Users/Stemadmin/Desktop/Anuj Khadka/carbon_footprint/paper/main.tex" "main.pdf" "main" 1777246515.80601 0
+["pdflatex"] 1777246565.82164 "c:/Users/Stemadmin/Desktop/Anuj Khadka/carbon_footprint/paper/main.tex" "main.pdf" "main" 1777246567.131 0
   "c:/Users/Stemadmin/Desktop/Anuj Khadka/carbon_footprint/paper/main.tex" 1777245200 4148 ad700e51829658ec3a3c47c6f14cb922 ""
   "c:/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1775080624 2971 def0b6c1f0b107b3b936def894055589 ""
   "c:/texlive/2026/texmf-dist/fonts/map/fontname/texfonts.map" 1775082038 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -133,13 +133,13 @@
   "c:/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1775087885 5619402 045890036aad9b52b154ef5568e59d3a ""
   "c:/texlive/2026/texmf-var/web2c/pdftex/pdflatex.fmt" 1775088023 3648464 8ff1b7e831b3ace6bf3bab0e3eb9f10e ""
   "c:/texlive/2026/texmf.cnf" 1775087857 713 e69b156964470283e0530f5060668171 ""
-  "main.aux" 1777246515 8038 da8f5b39bda9b7d7baa1ed176c293f20 "pdflatex"
+  "main.aux" 1777246566 8038 3962a31b78a36eed049220bdf9bd617d "pdflatex"
   "main.bbl" 1777246113 35821 9f71bedc9163c17610d7ae47c81ecc01 "biber main"
-  "main.run.xml" 1777246515 2299 81988d3303a58f7ac525483192dfa2a1 "pdflatex"
+  "main.run.xml" 1777246566 2299 81988d3303a58f7ac525483192dfa2a1 "pdflatex"
   "main.tex" 1777245200 4148 ad700e51829658ec3a3c47c6f14cb922 ""
   "preamble.tex" 1776921543 2712 8cc26a8bc8fe66362a1f8f95319dec8e ""
   "sections/acknowledgement.tex" 1777244287 682 4d3a955d699c2e6dc3cc3ee09c730722 ""
-  "sections/background.tex" 1777246514 9910 cd448c7d9bd017a9fd35bcc3b8350a51 ""
+  "sections/background.tex" 1777246564 10277 1081356c99ab3c5d489c276bf45f8d83 ""
   "sections/conclusion.tex" 1775092089 29 873d4349f888377749b821be1c2e589e ""
   "sections/discussion.tex" 1776974197 2529 1c92043d4333e42bcb2112a506baec5b ""
   "sections/future_work.tex" 1777245112 1592 3e6bbd219f0b1dece6d4b7c3bfa644d4 ""
