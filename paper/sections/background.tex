@@ -53,17 +53,17 @@ The programming languages chosen for this study are C, Python, Javascript, Java,
        
 \end{table}
 
-\textbf{C} provides direct hardware access with no runtime overhead and serves as the energy baseline for all normalized comparisons.
+\paragraph{C} provides direct hardware access with no runtime overhead and serves as the energy baseline for all normalized comparisons.
 
-\textbf{Rust} acheives memory safety without a garbage collector through a compile-time ownership and borrowing checking system. It delivers performance comparable to C while preventing common memory errors, which may lead to more efficient energy usage in certain workloads.
+\paragraph{Rust} acheives memory safety without a garbage collector through a compile-time ownership and borrowing checking system. It delivers performance comparable to C while preventing common memory errors, which may lead to more efficient energy usage in certain workloads.
 
-\textbf{Go} compiles to native machine code but includes a concurrent garbage collector that runs alongside the program, introducing periodic overhead that is captured within the RAPL measurement window.
+\paragraph{Go} compiles to native machine code but includes a concurrent garbage collector that runs alongside the program, introducing periodic overhead that is captured within the RAPL measurement window.
 
-\textbf{Java} executes on the Java Virtual Machine (JVM) and uses Just-In-Time (JIT) compilation to optimize code at runtime. The JVM's garbage collector can introduce additional overhead, and the performance can vary based on how well the JIT optimizes the code during execution.
+\paragraph{Java} executes on the Java Virtual Machine (JVM) and uses Just-In-Time (JIT) compilation to optimize code at runtime. The JVM's garbage collector can introduce additional overhead, and the performance can vary based on how well the JIT optimizes the code during execution.
 
-\textbf{JavaScript} uses a JIT compiler with dynamic typing and a garbage collector, which can lead to variable performance and energy consumption depending on the workload and how well the JIT optimizes the code.
+\paragraph{JavaScript} uses a JIT compiler with dynamic typing and a garbage collector, which can lead to variable performance and energy consumption depending on the workload and how well the JIT optimizes the code.
 
-\textbf{Python} is a bytecode-interpreted language in which every operation passes through a C-level interpreter dispatch loop. It has a global interpreter lock (GIL) that limits concurrent execution of threads, and its dynamic typing and high-level abstractions can lead to increased energy consumption compared to compiled languages.
+\paragraph{Python} is a bytecode-interpreted language in which every operation passes through a C-level interpreter dispatch loop. It has a global interpreter lock (GIL) that limits concurrent execution of threads, and its dynamic typing and high-level abstractions can lead to increased energy consumption compared to compiled languages.
 
 
 
