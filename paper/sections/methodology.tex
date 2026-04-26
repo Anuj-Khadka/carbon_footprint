@@ -56,7 +56,7 @@ C uses fgets rather than scanf because it reads exactly one line including the n
 \paragraph{Cell Sleep -} A mandatory 5s sleep is inserted between cells to allow the processor's thermal management to return to stable baseline between cells. This reduces the rist that thermal throttling in one cell biases the initial temperature state of the next.
 
 
-
+\paragraph{Experiment timing -} All 36 language-algorithm-size combinations are executed in a single overnight run from 10pm to 6am to minimize background process interference and to capture a consistent grid carbon intensity profile during the measurement window. Each cell is executed 100 times, resulting in a total of 12,000 measured runs (6 languages $\times$ 6 algorithms $\times$ 3 sizes $\times$ 100 runs). The order of execution is randomized within each algorithm-size block to mitigate any systematic bias from temporal factors.
 
 
 
