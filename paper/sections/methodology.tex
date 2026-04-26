@@ -9,13 +9,15 @@ The Intel's RAPL interface exposes hardware energy counters directly to software
 \subsubsection{Implementation-specific design decisions}
 All 36 implementations (6 languages x 6 algorithms) were written from scratch following a shared pseudocode specification. The following principles were followed to ensure a fair comparison across languages:
 
-\paragraph{Algorithmic consistency -} All implementations strictly follow the same algorithmic logic and data structures as defined in the pseudocode specification. No language-specific optimizations or library functions that could alter the algorithm's behavior are used. Every algorithm is implemented from primitive operations only 
+\paragraph{Algorithmic consistency -} All implementations strictly follow the same algorithmic logic and data structures as defined in the pseudocode specification. No language-specific optimizations or library functions that could alter the algorithm's behavior are used. Every algorithm is implemented from primitive operations only like loops, conditionals, integer arithmetic and array indexing.
 
 \paragraph{Measurement isolation -} The measurement harness is designed to isolate the energy consumption of the algorithm execution from any language runtime overhead. This includes using a stdin/stdout handshake to trigger algorithm execution without restarting the process, and ensuring that any setup or teardown code is not included in the measurement window.
 
 \paragraph{Output verification -} Each implementation produces a checksum output that is verified against a reference implementation to ensure correctness. This ensures that all implementations are performing the same computations and producing the same results.
 
-\paragraph{Input size consistency -} The same input sizes are used for each algorithm across all languages to ensure that we are measuring comparable workloads.
+\paragraph{Input size consistency -} The same input sizes are used for each algorithm across all languages to ensure that we are measuring comparable workloads. This allows us to analyze how energy consumption scales with input size for each algorithm and language.
+
+\paragraph{Single checksum output -} 
 
 
 
