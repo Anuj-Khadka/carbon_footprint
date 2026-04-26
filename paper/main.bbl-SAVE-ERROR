@@ -472,6 +472,34 @@
       \verb https://arxiv.org/abs/2311.07298
       \endverb
     \endentry
+    \entry{ipcc2014lifecycle}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=7228b3cdfe23fe3f4516b401aa5b0d2c}{%
+           family={Climate\bibnamedelimb Change\bibnamedelima (IPCC)},
+           familyi={C\bibinitperiod\bibinitdelim C\bibinitperiod\bibinitdelim (\bibinitperiod},
+           given={Intergovernmental\bibnamedelima Panel},
+           giveni={I\bibinitperiod\bibinitdelim P\bibinitperiod},
+           prefix={on},
+           prefixi={o\bibinitperiod}}}%
+      }
+      \strng{namehash}{7228b3cdfe23fe3f4516b401aa5b0d2c}
+      \strng{fullhash}{7228b3cdfe23fe3f4516b401aa5b0d2c}
+      \strng{fullhashraw}{7228b3cdfe23fe3f4516b401aa5b0d2c}
+      \strng{bibnamehash}{7228b3cdfe23fe3f4516b401aa5b0d2c}
+      \strng{authorbibnamehash}{7228b3cdfe23fe3f4516b401aa5b0d2c}
+      \strng{authornamehash}{7228b3cdfe23fe3f4516b401aa5b0d2c}
+      \strng{authorfullhash}{7228b3cdfe23fe3f4516b401aa5b0d2c}
+      \strng{authorfullhashraw}{7228b3cdfe23fe3f4516b401aa5b0d2c}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{\url{https://www.ipcc.ch/site/assets/uploads/2018/02/ipcc_wg3_ar5_annex-iii.pdf}}
+      \field{title}{Technology-specific Cost and Performance Parameters}
+      \field{urlmonth}{1}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+    \endentry
     \entry{decisionmodels}{article}{}{}
       \name{author}{3}{}{%
         {{hash=2c0a5d913f7620127cb6cc3f11166c5e}{%
