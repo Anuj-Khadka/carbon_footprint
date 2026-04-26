@@ -24,8 +24,11 @@ To translate the energy measurements into carbon emissions, we apply the SCI fra
 The relationship between energy and carbon depends on how that energy is generated. Energy produced from hydroelectric or wind generation carries near-zero carbon intensity while the electricity from coal or natural gas has 800-1000 gCO2/kWh \cite{ipcc2014lifecycle}. The carbon intensity of an electricity grid represents the average emissions intensity of all generation sources dispatched at a given moment, weighted by their contribution to total supply. This intensity is measured in grams of CO2 equivalent per kilowatt-hour, gCO2/kWh. To calculate the carbon emissions from the energy consumed by a program, we use the following formula:
 \begin{equation}
     \label{eq:carbon_formula}
-    E_{\text{carbon}} = E_{\text{energy}} \times I_{\text{carbon}}
+    E_{\text{carbon (gCO2)}} = E_{\text{energy(kWh)}} \times I_{\text{carbon intensity (gCO2/kWh)}}
 \end{equation}
+
+where I is the grid carbon intensity in gCO2/kWh. This methodology is consistent with the Green Algorithms framework \cite{} and the Software Carbon Intensity (SCI)
+
 
 
 
