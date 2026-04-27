@@ -1,0 +1,15 @@
+POWER ANALYSIS RESULTS
+=================================================================
+
+Pilot CSV            : C:\Users\Stemadmin\Desktop\Anuj Khadka\carbon_footprint\results\pilot_20260424_001142.csv
+N languages          : 6
+N comparisons (m)    : 15
+Alpha nominal        : 0.05
+Alpha corrected      : 0.003333
+Effect size (d)      : 0.5
+Power target         : 0.8
+Raw N from solver    : 116.2801
+Recommended N        : 117
+
+PAPER-READY SUMMARY
+=================================================================
