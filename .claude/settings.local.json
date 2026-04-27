@@ -5,7 +5,8 @@
       "Bash(rm -f main.aux main.bbl main.bcf main.blg main.log main.out main.run.xml main.pdf)",
       "Bash(\"C:/texlive/2026/bin/windows/latexmk.exe\" -pdf -synctex=1 -interaction=nonstopmode -file-line-error main.tex)",
       "Bash(.venv/Scripts/python test.py)",
-      "Bash(.venv/Scripts/python -c ' *)"
+      "Bash(.venv/Scripts/python -c ' *)",
+      "Bash(python -c ' *)"
     ]
   }
 }
