@@ -693,6 +693,65 @@
       \endverb
       \keyw{power modeling,RAPL validation,RAPL accuracy,RAPL,DRAM power}
     \endentry
+    \entry{Shechtman2013}{inbook}{}{}
+      \name{author}{1}{}{%
+        {{hash=521e3f95188809b8e920497ed9846b9e}{%
+           family={Shechtman},
+           familyi={S\bibinitperiod},
+           given={Orit},
+           giveni={O\bibinitperiod}}}%
+      }
+      \name{editor}{2}{}{%
+        {{hash=e280c6593573eb434033d1d8f753c18a}{%
+           family={Doi},
+           familyi={D\bibinitperiod},
+           given={Suhail\bibnamedelimb A.\bibnamedelimi R.},
+           giveni={S\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=84a0025263e9a6cf6c4a66b237fda8d0}{%
+           family={Williams},
+           familyi={W\bibinitperiod},
+           given={Gail\bibnamedelima M.},
+           giveni={G\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Berlin, Heidelberg}%
+      }
+      \list{publisher}{1}{%
+        {Springer Berlin Heidelberg}%
+      }
+      \strng{namehash}{521e3f95188809b8e920497ed9846b9e}
+      \strng{fullhash}{521e3f95188809b8e920497ed9846b9e}
+      \strng{fullhashraw}{521e3f95188809b8e920497ed9846b9e}
+      \strng{bibnamehash}{521e3f95188809b8e920497ed9846b9e}
+      \strng{authorbibnamehash}{521e3f95188809b8e920497ed9846b9e}
+      \strng{authornamehash}{521e3f95188809b8e920497ed9846b9e}
+      \strng{authorfullhash}{521e3f95188809b8e920497ed9846b9e}
+      \strng{authorfullhashraw}{521e3f95188809b8e920497ed9846b9e}
+      \strng{editorbibnamehash}{a6bea472ed6cf8a4c7c43c36b22d3f21}
+      \strng{editornamehash}{a6bea472ed6cf8a4c7c43c36b22d3f21}
+      \strng{editorfullhash}{a6bea472ed6cf8a4c7c43c36b22d3f21}
+      \strng{editorfullhashraw}{a6bea472ed6cf8a4c7c43c36b22d3f21}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This chapter focuses on the use of the coefficient of variation (CV) as an index of reliability or variability in the health sciences (medical and biological sciences) for the purpose of clinical research and clinical practice in the context of diagnostic tests, human performance tests, and biochemical laboratory assays. Before examining the use of the CV as an index of measurement reliability or variability, there is a need to define basic terms in measurement theory such as reliability, validity, and measurement error. A discussion and examples of use of the CV as a measure of reliability or variability are also provided.}
+      \field{booktitle}{Methods of Clinical Epidemiology}
+      \field{isbn}{978-3-642-37131-8}
+      \field{title}{The Coefficient of Variation as an Index of Measurement Reliability}
+      \field{year}{2013}
+      \field{pages}{39\bibrangedash 49}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1007/978-3-642-37131-8_4
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/978-3-642-37131-8_4
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/978-3-642-37131-8_4
+      \endverb
+    \endentry
   \enddatalist
   \missing{elecritymap}
 \endrefsection

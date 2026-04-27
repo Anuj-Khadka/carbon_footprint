@@ -151,7 +151,7 @@ Before the main experiment, a pilot study of 50 iterations per cell was conducte
     \label{eq:cv}
 \end{equation}
 Where $\sigma$ is the standard deviation of the energy measurements for a given cell, and $\mu$ is the mean energy measurement for that cell. The results revealed a wide and informative range. CV spanned from 4.4\% (Python matrix-multiplication, mid) to 122.7\% (JavaScript merge-sort, small), with an overall mean CV of 38.4\% and median of 43.0\%.
-The high CV values observed at small input sizes across all langauges are consistent with a known limitation of RAPL-based measurement. When an algorithm completes in microseconds, and OS scheduling event, cache miss, or background interrupt
+The high CV values observed at small input sizes across all langauges are consistent with a known limitation of RAPL-based measurement. When an algorithm completes in microseconds, and OS scheduling event, cache miss, or background interrupt becomes a large fraction of the total measured energy, inflating variance \cite{10.1145/2425248.2425252}. This is clearly visible in 
 
 
 baseline power draw - 40w 5s sample
