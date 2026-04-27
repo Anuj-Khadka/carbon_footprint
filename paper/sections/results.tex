@@ -1,2 +1,22 @@
 Before presenting results, we report the integrity of the collected data. The benchmark runner produced a CSV file containing 12,420 rows, exactly 115 runs for each of the 108 cells. All 108 cells returned a consistent checksum across all 115 runs, confirming that ever implementation produced identical output on every invocation. The carbon intensity column contained exactly two distinct values (300 and 306 gCO$_2$/kWh), consistent with the planned 30 minute refresh cadence and the expeceted stability of the overnight New York grid.
 
+\subsection{Overall Carbon Footprint by Language}
+Table X presents the mean  gCO$_2$e per measurement for each language, aggregated across all 18 algorithm-size combinations and all 115 replications (2,070 measurements per language). Languages are ordered from lowest to highest carbon footprint.
+
+\begin{table}[h]
+    \centering
+    \caption{Input Sizes per Algorithm}\label{tab:input_sizes}
+    \small
+    \begin{tabular}{lllll}
+        \hline
+        \textbf{Algorithm} & \textbf{Small} & \textbf{Mid} & \textbf{Large}   \\
+        \hline
+            \texttt{summation}          & 100       & 10,000    &  1,000,000    \\
+            \texttt{binary\_search}     & 100       & 10,000    &  1,000,000    \\
+            \texttt{merge\_sort}        & 100       & 10,000    &  1,000,000    \\
+            \texttt{bfs}                & 100       & 1,000     &  5,000        \\
+            \texttt{hash\_table}        & 100       & 10,000    &  100,000      \\
+            \texttt{matrix\_mul}        & 50        & 200       &  500          \\
+        \hline
+    \end{tabular}
+\end{table}
