@@ -40,3 +40,38 @@ The results reveal a clear three-tier structure. \textbf{C and Rust} form the fi
     \caption{Mean gCO$_2$e per measurement by language (linear scale).}
     \label{fig:overall_linear}
 \end{figure}
+
+
+
+\subsection{Statistical Analysis}
+\label{ssec:pairwise}
+
+Table~\ref{tab:welch} reports Welch's $t$-test results for all 15 pairwise language comparisons at the large input size across all six algorithms combined ($N = 690$ per language). The Bonferroni-corrected significance threshold is $\alpha' = 0.05/15 = 0.003\overline{3}$. Figure~\ref{fig:pvalue_heatmap} provides a visual overview of all 15 comparisons simultaneously.
+
+\begin{table}[h]
+    \centering
+    \caption{Welch's $t$-test results for all 15 pairwise language comparisons (large input size; Bonferroni $\alpha' = 0.0033$).}
+    \label{tab:welch}
+    \small
+    \begin{tabular}{lllll}
+        \hline
+        \textbf{Pair} & \textbf{$t$} & \textbf{$p$-value} & \textbf{Cohen's $d$} & \textbf{Sig.} \\
+        \hline
+        C vs Rust            & $-0.313$  & $0.754$   & $0.017$ & No  \\
+        C vs Java            & $-6.019$  & $<0.001$  & $0.324$ & Yes \\
+        C vs Go              & $-9.507$  & $<0.001$  & $0.512$ & Yes \\
+        C vs JavaScript      & $-13.884$ & $<0.001$  & $0.748$ & Yes \\
+        C vs Python          & $-14.534$ & $<0.001$  & $0.783$ & Yes \\
+        Rust vs Java         & $-5.897$  & $<0.001$  & $0.318$ & Yes \\
+        Rust vs Go           & $-9.431$  & $<0.001$  & $0.508$ & Yes \\
+        Rust vs JavaScript   & $-13.829$ & $<0.001$  & $0.745$ & Yes \\
+        Rust vs Python       & $-14.532$ & $<0.001$  & $0.783$ & Yes \\
+        Java vs Go           & $-5.246$  & $<0.001$  & $0.283$ & Yes \\
+        Java vs JavaScript   & $-9.957$  & $<0.001$  & $0.536$ & Yes \\
+        Java vs Python       & $-14.482$ & $<0.001$  & $0.780$ & Yes \\
+        Go vs JavaScript     & $-4.566$  & $<0.001$  & $0.246$ & Yes \\
+        Go vs Python         & $-14.399$ & $<0.001$  & $0.776$ & Yes \\
+        JavaScript vs Python & $-14.303$ & $<0.001$  & $0.771$ & Yes \\
+        \hline
+    \end{tabular}
+\end{table}
