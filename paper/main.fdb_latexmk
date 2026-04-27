@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber main"] 1777260962.01376 "main.bcf" "main.bbl" "main" 1777260965.19516 0
-  "main.bcf" 1777260965 109409 bd8f60319279a5f30c7bb0f8b1cf650e "pdflatex"
+["biber main"] 1777261053.48179 "main.bcf" "main.bbl" "main" 1777261059.62122 0
+  "main.bcf" 1777261059 109409 bd8f60319279a5f30c7bb0f8b1cf650e "pdflatex"
   "main.bib" 1777256272 18460 56302a04ac150395fb296809902b4c8d ""
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1777260963.81447 "c:/Users/Stemadmin/Desktop/Anuj Khadka/carbon_footprint/paper/main.tex" "main.pdf" "main" 1777260965.19683 0
+["pdflatex"] 1777261058.20777 "c:/Users/Stemadmin/Desktop/Anuj Khadka/carbon_footprint/paper/main.tex" "main.pdf" "main" 1777261059.6224 0
   "c:/Users/Stemadmin/Desktop/Anuj Khadka/carbon_footprint/paper/main.tex" 1777246847 4148 ad700e51829658ec3a3c47c6f14cb922 ""
   "c:/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1775080624 2971 def0b6c1f0b107b3b936def894055589 ""
   "c:/texlive/2026/texmf-dist/fonts/map/fontname/texfonts.map" 1775082038 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -137,9 +137,10 @@
   "c:/texlive/2026/texmf-var/web2c/pdftex/pdflatex.fmt" 1775088023 3648464 8ff1b7e831b3ace6bf3bab0e3eb9f10e ""
   "c:/texlive/2026/texmf.cnf" 1775087857 713 e69b156964470283e0530f5060668171 ""
   "figures/01_overall_mean_gco2e_log.png" 1777259677 41181 60eb6e0cd3e112d8bca9445e89fe62bb ""
-  "main.aux" 1777260965 9914 92b4b72766fb75e1870674d40eca6aad "pdflatex"
-  "main.bbl" 1777260963 43766 b47516f83dc86b895531b54878f1dffa "biber main"
-  "main.run.xml" 1777260965 2299 81988d3303a58f7ac525483192dfa2a1 "pdflatex"
+  "figures/02_overall_mean_gco2e_linear.png" 1777259677 42455 dbc0c67f5f70c9cde5973c8a19cd5538 ""
+  "main.aux" 1777261059 10162 8bef7f724d6e1b621ca0bb5878a67510 "pdflatex"
+  "main.bbl" 1777261055 43766 b47516f83dc86b895531b54878f1dffa "biber main"
+  "main.run.xml" 1777261059 2299 81988d3303a58f7ac525483192dfa2a1 "pdflatex"
   "main.tex" 1777246847 4148 ad700e51829658ec3a3c47c6f14cb922 ""
   "preamble.tex" 1777260722 2731 ba13a35e8e6d3bb3bf4bc1735c559ad1 ""
   "sections/acknowledgement.tex" 1777244287 682 4d3a955d699c2e6dc3cc3ee09c730722 ""
@@ -149,7 +150,7 @@
   "sections/future_work.tex" 1777245112 1592 3e6bbd219f0b1dece6d4b7c3bfa644d4 ""
   "sections/introduction.tex" 1777257438 4592 ecfd3a4b878cbf5a0421ea9e97e81188 ""
   "sections/methodology.tex" 1777256656 12751 4aeca63a38bed5c5f70412b67cf6220f ""
-  "sections/results.tex" 1777260959 2649 77e52bddfa216529d88a9258fb648e36 ""
+  "sections/results.tex" 1777261053 3228 15d6ee9145253711c13f6e2949d461f9 ""
   "sections/statistical_analysis.tex" 1776975046 131 d74c041c46019f30a1d7edbf12a1c3c5 ""
   (generated)
   "main.aux"
