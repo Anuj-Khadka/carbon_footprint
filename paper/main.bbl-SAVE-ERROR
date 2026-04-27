@@ -374,6 +374,14 @@
       \field{urlyear}{2026}
       \field{urldateera}{ce}
     \endentry
+    \entry{electricitymap}{online}{}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{note}{\url{https://app.electricitymaps.com/}}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+    \endentry
     \entry{8323579}{inproceedings}{}{}
       \name{author}{3}{}{%
         {{hash=1430e2bb5896c498829bb07066c7e0d4}{%
@@ -489,14 +497,6 @@
       \field{note}{\url{https://www.ipcc.ch/site/assets/uploads/2018/02/ipcc_wg3_ar5_annex-iii.pdf}}
       \field{title}{Technology-specific Cost and Performance Parameters}
       \field{urlmonth}{1}
-      \field{urlyear}{2026}
-      \field{urldateera}{ce}
-    \endentry
-    \entry{electricitymap}{online}{}{}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{note}{\url{https://app.electricitymaps.com/}}
-      \field{urlmonth}{3}
       \field{urlyear}{2026}
       \field{urldateera}{ce}
     \endentry
@@ -814,8 +814,41 @@
       \endverb
       \keyw{RAPL,operating systems,power consumption}
     \endentry
+    \entry{seabold2010}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{hash=3fdc2cece04a0845e037808aed662fe6}{%
+           family={Seabold},
+           familyi={S\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=1ee28e61bd25356e8aee3985f80eeb39}{%
+           family={Perktold},
+           familyi={P\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{b3f1ebbf5e0547965569f1305deeff03}
+      \strng{fullhash}{b3f1ebbf5e0547965569f1305deeff03}
+      \strng{fullhashraw}{b3f1ebbf5e0547965569f1305deeff03}
+      \strng{bibnamehash}{b3f1ebbf5e0547965569f1305deeff03}
+      \strng{authorbibnamehash}{b3f1ebbf5e0547965569f1305deeff03}
+      \strng{authornamehash}{b3f1ebbf5e0547965569f1305deeff03}
+      \strng{authorfullhash}{b3f1ebbf5e0547965569f1305deeff03}
+      \strng{authorfullhashraw}{b3f1ebbf5e0547965569f1305deeff03}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proc. 9th Python in Science Conference (SciPy)}
+      \field{title}{Statsmodels: Econometric and Statistical Modeling with {Python}}
+      \field{year}{2010}
+      \field{pages}{92\bibrangedash 96}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.25080/Majora-92bf1922-011
+      \endverb
+    \endentry
   \enddatalist
-  \missing{elecritymap}
 \endrefsection
 \endinput
 
