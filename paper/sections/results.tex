@@ -4,6 +4,7 @@ Before presenting results, we report the integrity of the collected data. The be
 
 \subsection{Overall Carbon Footprint by Language}
 Table \ref{tab:overall_gco2e} presents the mean  gCO$_2$e per measurement for each language, aggregated across all 18 algorithm-size combinations and all 115 replications (2,070 measurements per language). Languages are ordered from lowest to highest carbon footprint.
+Figure~\ref{fig:overall_log} visualizes these results on a logarithmic scale.
 
 \begin{table}[h]
     \centering
@@ -13,23 +14,19 @@ Table \ref{tab:overall_gco2e} presents the mean  gCO$_2$e per measurement for ea
         \hline
         \textbf{Language} & \textbf{Mean gCO2e (g)} & \textbf{Mean J} & \textbf{Ratio to C}   \\
         \hline
-            \texttt{C}              & 0.0000156778       & 10,000    &  1,000,000    \\
-            \texttt{Rust}           & 100       & 10,000    &  1,000,000    \\
-            \texttt{Java}           & 100       & 10,000    &  1,000,000    \\
-            \texttt{Go}             & 100       & 1,000     &  5,000        \\
-            \texttt{JavaScript}     & 100       & 10,000    &  100,000      \\
-            \texttt{Python}         & 50        & 200       &  500          \\
+            \texttt{C}              & 0.0000156       & 0.187 J   &  $1.0\times$    \\
+            \texttt{Rust}           & 0.0000158       & 0.189 J   &  $1.0\times$    \\
+            \texttt{Java}           & 0.0000274       & 0.329 J   &  $1.8\times$    \\
+            \texttt{Go}             & 0.0000476       & 0.563 J   &  $3.0\times$    \\
+            \texttt{JavaScript}     & 0.0000679       & 0.814 J   &  $4.3\times$    \\
+            \texttt{Python}         & 0.0033415       & 39.47 J   &  $213\times$          \\
         \hline
     \end{tabular}
 \end{table}
 
-
-
-  Language     Mean gCO2e (g)       Mean J       Ratio to C
-  -------------------------------------------------------
-  C            0.0000156778     0.1872 J    1.0x
-  Rust         0.0000158501     0.1888 J    1.0x
-  Java         0.0000274604     0.3292 J    1.8x
-  Go           0.0000476516     0.5625 J    3.0x
-  JavaScript   0.0000679577     0.8144 J    4.3x
-  Python       0.0033415999     39.4683 J    213.1x
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\columnwidth]{figures/01_overall_mean_gco2e_log.png}
+    \caption{Mean gCO$_2$e per measurement by language (log scale).}
+    \label{fig:overall_log}
+\end{figure}

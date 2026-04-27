@@ -236,6 +236,11 @@ INPUT ./sections/results.tex
 INPUT ./sections/results.tex
 INPUT ./sections/results.tex
 INPUT sections/results.tex
+INPUT ./figures/01_overall_mean_gco2e_log.png
+INPUT ./figures/01_overall_mean_gco2e_log.png
+INPUT ./figures/01_overall_mean_gco2e_log.png
+INPUT ./figures/01_overall_mean_gco2e_log.png
+INPUT ./figures/01_overall_mean_gco2e_log.png
 INPUT ./sections/discussion.tex
 INPUT ./sections/discussion.tex
 INPUT ./sections/discussion.tex
