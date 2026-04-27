@@ -4,6 +4,7 @@ Before presenting results, we report the integrity of the collected data. The be
 
 \subsection{Overall Carbon Footprint by Language}
 Table \ref{tab:overall_gco2e} presents the mean  gCO$_2$e per measurement for each language, aggregated across all 18 algorithm-size combinations and all 115 replications (2,070 measurements per language). Languages are ordered from lowest to highest carbon footprint.
+
 Figure~\ref{fig:overall_log} visualizes these results on a logarithmic scale.
 
 \begin{table}[h]
@@ -12,21 +13,23 @@ Figure~\ref{fig:overall_log} visualizes these results on a logarithmic scale.
     \small
     \begin{tabular}{lllll}
         \hline
-        \textbf{Language} & \textbf{Mean gCO2e (g)} & \textbf{Mean J} & \textbf{Ratio to C}   \\
+        \textbf{Language} & \textbf{Mean gCO2e(g)} & \textbf{Mean J} & \textbf{Ratio to C}   \\
         \hline
-            \texttt{C}              & 0.0000156       & 0.187 J   &  $1.0\times$    \\
-            \texttt{Rust}           & 0.0000158       & 0.189 J   &  $1.0\times$    \\
-            \texttt{Java}           & 0.0000274       & 0.329 J   &  $1.8\times$    \\
-            \texttt{Go}             & 0.0000476       & 0.563 J   &  $3.0\times$    \\
-            \texttt{JavaScript}     & 0.0000679       & 0.814 J   &  $4.3\times$    \\
-            \texttt{Python}         & 0.0033415       & 39.47 J   &  $213\times$          \\
+            \texttt{C}              & $1.57 \times 10^{-5}$       & 0.187 J   &  $1.0\times$    \\
+            \texttt{Rust}           & $1.59 \times 10^{-5}$       & 0.189 J   &  $1.0\times$    \\
+            \texttt{Java}           & $2.75 \times 10^{-5}$       & 0.329 J   &  $1.8\times$    \\
+            \texttt{Go}             & $4.77 \times 10^{-5}$       & 0.563 J   &  $3.0\times$    \\
+            \texttt{JavaScript}     & $6.80 \times 10^{-5}$       & 0.814 J   &  $4.3\times$    \\
+            \texttt{Python}         & $3.34 \times 10^{-3}$       & 39.47 J   &  $213\times$          \\
         \hline
     \end{tabular}
 \end{table}
 
-\begin{figure}[h]
+The results reveal a clear three 
+
+\begin{figure}[H]
     \centering
-    \includegraphics[width=\columnwidth]{figures/01_overall_mean_gco2e_log.png}
+    \includegraphics[width=\columnwidth]{01_overall_mean_gco2e_log.png}
     \caption{Mean gCO$_2$e per measurement by language (log scale).}
     \label{fig:overall_log}
 \end{figure}
