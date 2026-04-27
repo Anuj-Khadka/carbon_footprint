@@ -11,10 +11,10 @@ Table \ref{tab:overall_gco2e} presents the mean  gCO$_2$e per measurement for ea
     \small
     \begin{tabular}{lllll}
         \hline
-        \textbf{Algorithm} & \textbf{Small} & \textbf{Mid} & \textbf{Large}   \\
+        \textbf{Language} & \textbf{Mean gCO2e (g)} & \textbf{Mean J} & \textbf{Ratio to C}   \\
         \hline
-            \texttt{summation}          & 100       & 10,000    &  1,000,000    \\
-            \texttt{binary\_search}     & 100       & 10,000    &  1,000,000    \\
+            \texttt{C}          & 100       & 10,000    &  1,000,000    \\
+            \texttt{Rust}     & 100       & 10,000    &  1,000,000    \\
             \texttt{merge\_sort}        & 100       & 10,000    &  1,000,000    \\
             \texttt{bfs}                & 100       & 1,000     &  5,000        \\
             \texttt{hash\_table}        & 100       & 10,000    &  100,000      \\
@@ -22,3 +22,14 @@ Table \ref{tab:overall_gco2e} presents the mean  gCO$_2$e per measurement for ea
         \hline
     \end{tabular}
 \end{table}
+
+
+
+  Language     Mean gCO2e (g)       Mean J       Ratio to C
+  -------------------------------------------------------
+  C            0.0000156778     0.1872 J    1.0x
+  Rust         0.0000158501     0.1888 J    1.0x
+  Java         0.0000274604     0.3292 J    1.8x
+  Go           0.0000476516     0.5625 J    3.0x
+  JavaScript   0.0000679577     0.8144 J    4.3x
+  Python       0.0033415999     39.4683 J    213.1x
