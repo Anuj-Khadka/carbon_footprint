@@ -1,24 +1,13 @@
 # Fdb version 4
-<<<<<<< HEAD
-["biber main"] 1777261110.50226 "main.bcf" "main.bbl" "main" 1777261125.84378 0
-  "main.bcf" 1777261125 109409 bd8f60319279a5f30c7bb0f8b1cf650e "pdflatex"
-  "main.bib" 1777256272 18460 56302a04ac150395fb296809902b4c8d ""
-=======
-["biber main"] 1777269231.69556 "main.bcf" "main.bbl" "main" 1777403012.67762 0
-  "main.bcf" 1777403012 111303 afbf7daac902724b93c565bf00c8f5c3 "pdflatex"
-  "main.bib" 1777269224 29120 b0d3617606cc603d06b193d02209e368 ""
->>>>>>> 8d98e97 (Stash)
+["biber main"] 1777419614.18711 "main.bcf" "main.bbl" "main" 1777419620.18193 0
+  "main.bcf" 1777419619 111303 afbf7daac902724b93c565bf00c8f5c3 "pdflatex"
+  "main.bib" 1777419474 29120 b0d3617606cc603d06b193d02209e368 ""
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-<<<<<<< HEAD
-["pdflatex"] 1777261124.40161 "c:/Users/Stemadmin/Desktop/Anuj Khadka/carbon_footprint/paper/main.tex" "main.pdf" "main" 1777261125.84505 0
-  "c:/Users/Stemadmin/Desktop/Anuj Khadka/carbon_footprint/paper/main.tex" 1777246847 4148 ad700e51829658ec3a3c47c6f14cb922 ""
-=======
-["pdflatex"] 1777403010.45518 "c:/Users/Stemadmin/Desktop/Anuj Khadka/carbon_footprint/paper/main.tex" "main.pdf" "main" 1777403012.67975 0
-  "c:/Users/Stemadmin/Desktop/Anuj Khadka/carbon_footprint/paper/main.tex" 1777270184 5111 8b4835c77000323420cce9b06ee348f6 ""
->>>>>>> 8d98e97 (Stash)
+["pdflatex"] 1777419617.55949 "c:/Users/Stemadmin/Desktop/Anuj Khadka/carbon_footprint/paper/main.tex" "main.pdf" "main" 1777419620.18297 0
+  "c:/Users/Stemadmin/Desktop/Anuj Khadka/carbon_footprint/paper/main.tex" 1777419474 5214 8b4835c77000323420cce9b06ee348f6 ""
   "c:/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1775080624 2971 def0b6c1f0b107b3b936def894055589 ""
   "c:/texlive/2026/texmf-dist/fonts/map/fontname/texfonts.map" 1775082038 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2026/texmf-dist/fonts/tfm/jknappen/ec/ecbx0900.tfm" 1775081426 3584 1a7de6c99457381c64abc1a7c545505f ""
@@ -217,43 +206,26 @@
   "c:/texlive/2026/texmf.cnf" 1775087857 713 e69b156964470283e0530f5060668171 ""
   "figures/01_overall_mean_gco2e_log.png" 1777259677 41181 60eb6e0cd3e112d8bca9445e89fe62bb ""
   "figures/02_overall_mean_gco2e_linear.png" 1777259677 42455 dbc0c67f5f70c9cde5973c8a19cd5538 ""
-<<<<<<< HEAD
-  "main.aux" 1777261125 10631 d30bd590f429a851262b22a74e135d06 "pdflatex"
-  "main.bbl" 1777261112 43766 b47516f83dc86b895531b54878f1dffa "biber main"
-  "main.run.xml" 1777261125 2299 81988d3303a58f7ac525483192dfa2a1 "pdflatex"
-  "main.tex" 1777246847 4148 ad700e51829658ec3a3c47c6f14cb922 ""
-  "preamble.tex" 1777260722 2731 ba13a35e8e6d3bb3bf4bc1735c559ad1 ""
-  "sections/acknowledgement.tex" 1777244287 682 4d3a955d699c2e6dc3cc3ee09c730722 ""
-  "sections/background.tex" 1777246564 10277 1081356c99ab3c5d489c276bf45f8d83 ""
-  "sections/conclusion.tex" 1775092089 29 873d4349f888377749b821be1c2e589e ""
-  "sections/discussion.tex" 1776974197 2529 1c92043d4333e42bcb2112a506baec5b ""
-  "sections/future_work.tex" 1777245112 1592 3e6bbd219f0b1dece6d4b7c3bfa644d4 ""
-  "sections/introduction.tex" 1777257438 4592 ecfd3a4b878cbf5a0421ea9e97e81188 ""
-  "sections/methodology.tex" 1777256656 12751 4aeca63a38bed5c5f70412b67cf6220f ""
-  "sections/results.tex" 1777261122 5172 ec3f1010171a983481712aabe5c23918 ""
-  "sections/statistical_analysis.tex" 1776975046 131 d74c041c46019f30a1d7edbf12a1c3c5 ""
-=======
   "figures/03_pvalue_heatmap.png" 1777259677 60499 f7046bdfc793dfcbb4e8b522d6477bb8 ""
   "figures/04_per_algo_grouped_bar_no_python.png" 1777259678 57607 850e1d224e89b12651b6de2a6ae2e488 ""
   "figures/05_per_algo_grouped_bar_all.png" 1777259678 59027 91e3087a0c138c6894276bce99dc33c2 ""
   "figures/06_merge_sort_scaling.png" 1777259678 109454 175256104f9fb5a8f975614777f3fde4 ""
   "figures/07_scaling_ratio_heatmap.png" 1777259678 82426 6733cb894989ccd3d0ce56971e03f1cc ""
   "figures/08_boxplot_large.png" 1777259679 51836 8f000d2b665016d3000f28dffa280194 ""
-  "main.aux" 1777403012 17903 b71a1c6a6b67e8bfb147854004d85e94 "pdflatex"
-  "main.bbl" 1777269233 72967 e17aada111d6eb1124c6990bb9dc9869 "biber main"
-  "main.run.xml" 1777403012 2299 81988d3303a58f7ac525483192dfa2a1 "pdflatex"
-  "main.tex" 1777270184 5111 8b4835c77000323420cce9b06ee348f6 ""
-  "preamble.tex" 1777267140 2754 36e40cc31f618bf6242ba01f2b27185b ""
-  "sections/acknowledgement.tex" 1777266646 658 a877bd3e9fd1cf9d66cb6ae5978e340e ""
-  "sections/background.tex" 1777266333 13789 1c370957fd87460391881a15ea9370d5 ""
-  "sections/conclusion.tex" 1777266686 3849 7f3d9d83691f9bbb4337e3e6b8553fb9 ""
-  "sections/discussion.tex" 1777265304 10089 d6d5c3a884d9390aab28bea59dcb5298 ""
-  "sections/future_work.tex" 1777266706 1592 9382a34802af92cb598d01fdb23f7b7d ""
-  "sections/introduction.tex" 1777269568 4594 588b41cd7f97cdfc1f3eddaae5c9e64f ""
-  "sections/methodology.tex" 1777403009 16352 63e0333345809376297df4d1a5a1bfa9 ""
-  "sections/related_work.tex" 1777269229 1721 a11540eb0b13752f4978bc39fad9b41d ""
-  "sections/results.tex" 1777267522 13395 e3a6e065aa9a7059130e6e9ddf731287 ""
->>>>>>> 8d98e97 (Stash)
+  "main.aux" 1777419619 17903 b71a1c6a6b67e8bfb147854004d85e94 "pdflatex"
+  "main.bbl" 1777419617 72967 e17aada111d6eb1124c6990bb9dc9869 "biber main"
+  "main.run.xml" 1777419619 2299 81988d3303a58f7ac525483192dfa2a1 "pdflatex"
+  "main.tex" 1777419474 5214 8b4835c77000323420cce9b06ee348f6 ""
+  "preamble.tex" 1777419474 2850 36e40cc31f618bf6242ba01f2b27185b ""
+  "sections/acknowledgement.tex" 1777419474 658 a877bd3e9fd1cf9d66cb6ae5978e340e ""
+  "sections/background.tex" 1777419474 13789 1c370957fd87460391881a15ea9370d5 ""
+  "sections/conclusion.tex" 1777419474 3849 7f3d9d83691f9bbb4337e3e6b8553fb9 ""
+  "sections/discussion.tex" 1777419474 10089 d6d5c3a884d9390aab28bea59dcb5298 ""
+  "sections/future_work.tex" 1777419474 1592 9382a34802af92cb598d01fdb23f7b7d ""
+  "sections/introduction.tex" 1777419474 4594 588b41cd7f97cdfc1f3eddaae5c9e64f ""
+  "sections/methodology.tex" 1777419474 16352 63e0333345809376297df4d1a5a1bfa9 ""
+  "sections/related_work.tex" 1777419474 1721 a11540eb0b13752f4978bc39fad9b41d ""
+  "sections/results.tex" 1777419615 13397 f2f523fc82e820aabe20ff67b970c6b8 ""
   (generated)
   "main.aux"
   "main.bcf"

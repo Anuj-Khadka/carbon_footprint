@@ -350,8 +350,6 @@ INPUT ./figures/02_overall_mean_gco2e_linear.png
 INPUT ./figures/02_overall_mean_gco2e_linear.png
 INPUT ./figures/02_overall_mean_gco2e_linear.png
 INPUT ./figures/02_overall_mean_gco2e_linear.png
-<<<<<<< HEAD
-=======
 INPUT ./figures/03_pvalue_heatmap.png
 INPUT ./figures/03_pvalue_heatmap.png
 INPUT ./figures/03_pvalue_heatmap.png
@@ -378,7 +376,6 @@ INPUT ./figures/07_scaling_ratio_heatmap.png
 INPUT ./figures/07_scaling_ratio_heatmap.png
 INPUT ./figures/07_scaling_ratio_heatmap.png
 INPUT ./figures/07_scaling_ratio_heatmap.png
->>>>>>> 8d98e97 (Stash)
 INPUT ./sections/discussion.tex
 INPUT ./sections/discussion.tex
 INPUT ./sections/discussion.tex
