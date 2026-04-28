@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber main"] 1777419614.18711 "main.bcf" "main.bbl" "main" 1777419878.48592 0
-  "main.bcf" 1777419878 111303 afbf7daac902724b93c565bf00c8f5c3 "pdflatex"
+["biber main"] 1777419614.18711 "main.bcf" "main.bbl" "main" 1777419977.46431 0
+  "main.bcf" 1777419977 111303 afbf7daac902724b93c565bf00c8f5c3 "pdflatex"
   "main.bib" 1777419474 29120 b0d3617606cc603d06b193d02209e368 ""
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1777419876.31862 "c:/Users/Stemadmin/Desktop/Anuj Khadka/carbon_footprint/paper/main.tex" "main.pdf" "main" 1777419878.48692 0
+["pdflatex"] 1777419975.28839 "c:/Users/Stemadmin/Desktop/Anuj Khadka/carbon_footprint/paper/main.tex" "main.pdf" "main" 1777419977.46565 0
   "c:/Users/Stemadmin/Desktop/Anuj Khadka/carbon_footprint/paper/main.tex" 1777419474 5214 8b4835c77000323420cce9b06ee348f6 ""
   "c:/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1775080624 2971 def0b6c1f0b107b3b936def894055589 ""
   "c:/texlive/2026/texmf-dist/fonts/map/fontname/texfonts.map" 1775082038 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -212,13 +212,13 @@
   "figures/06_merge_sort_scaling.png" 1777259678 109454 175256104f9fb5a8f975614777f3fde4 ""
   "figures/07_scaling_ratio_heatmap.png" 1777259678 82426 6733cb894989ccd3d0ce56971e03f1cc ""
   "figures/08_boxplot_large.png" 1777259679 51836 8f000d2b665016d3000f28dffa280194 ""
-  "main.aux" 1777419878 17903 b71a1c6a6b67e8bfb147854004d85e94 "pdflatex"
+  "main.aux" 1777419977 17903 b71a1c6a6b67e8bfb147854004d85e94 "pdflatex"
   "main.bbl" 1777419617 72967 e17aada111d6eb1124c6990bb9dc9869 "biber main"
-  "main.run.xml" 1777419878 2299 81988d3303a58f7ac525483192dfa2a1 "pdflatex"
+  "main.run.xml" 1777419977 2299 81988d3303a58f7ac525483192dfa2a1 "pdflatex"
   "main.tex" 1777419474 5214 8b4835c77000323420cce9b06ee348f6 ""
   "preamble.tex" 1777419474 2850 36e40cc31f618bf6242ba01f2b27185b ""
   "sections/acknowledgement.tex" 1777419474 658 a877bd3e9fd1cf9d66cb6ae5978e340e ""
-  "sections/background.tex" 1777419854 13789 20264e5dd2930f95ab92b82437a48e7e ""
+  "sections/background.tex" 1777419975 13787 29a9ae94c740cf1d3e8f58f9bf788475 ""
   "sections/conclusion.tex" 1777419474 3849 7f3d9d83691f9bbb4337e3e6b8553fb9 ""
   "sections/discussion.tex" 1777419474 10089 d6d5c3a884d9390aab28bea59dcb5298 ""
   "sections/future_work.tex" 1777419474 1592 9382a34802af92cb598d01fdb23f7b7d ""
