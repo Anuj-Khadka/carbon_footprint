@@ -10,8 +10,7 @@ To quantify the energy consumed by a software program, we adopt the standard def
 
 where E is energy measured in Joules(J), Power is rate of energy consumption measured in Watts(W), and Time is the duration of execution measured in seconds(s)\cite{8323579}. In the context of software execution, the T refers to the wall time, the elapsed time from the first instruction of the measured code path to the last, including CPU computation, memory access, and all other processor activity during execution \cite{carter2024}. 
 
-\textbf{The energy consumed by a CPU package during the program execution can therefore be decomposed as the integral of instantaneos power draw over the execution window. Since power draw is not constant across languages or algorithms, a key finding of Pereira et al.~\cite{10.1145/3136014.3136031}, energy efficiency cannot be inferred from execution time alone. A faster program is not necessarily a more energy efficient one. This encourages us to direct hardware level energy measurement via RAPL. }
-
+The energy consumed by a CPU package during program execution can therefore be estimated as the average of the power readings taken immediately before and after the algorithm execution window, multiplied by the elapsed wall time. Since power draw is not constant across languages or algorithms, a key finding of Pereira et al.~\cite{10.1145/3136014.3136031}, energy efficiency cannot be inferred from execution time alone. A faster program is not necessarily a more energy-efficient one. This motivates direct hardware-level energy measurement via Intel RAPL, accessed through LibreHardwareMonitor.
 
 All experiments were conducted on a desktop with the following specifications: Windows 11 Enterprise 25H2 (Build 26200.8246) operating system, with 32.0 GB RAM, and an Intel Core \verb|i7-14700K| CPU @ 3.40 GHz.
 
@@ -19,18 +18,18 @@ All experiments were conducted on a desktop with the following specifications: W
 
 
 \subsection{Carbon Intensity}
-To translate the energy measurements into carbon emissions, we apply the SCI framework.
+To translate the energy measurements into carbon emissions, we apply the Software Carbon Intensity framework \cite{grnsoftware2023}.
 
-The relationship between energy and carbon depends on how that energy is generated. Energy produced from hydroelectric or wind generation carries near-zero carbon intensity while the electricity from coal or natural gas has 800-1000 gCO2/kWh \cite{ipcc2014lifecycle}. The carbon intensity of an electricity grid represents the average emissions intensity of all generation sources dispatched at a given moment, weighted by their contribution to total supply. This intensity is measured in grams of CO2 equivalent per kilowatt-hour, gCO2/kWh. 
+The relationship between energy and carbon depends on how that energy is generated. Energy produced from hydroelectric or wind generation carries near-zero carbon intensity while the electricity from coal or natural gas has 820~gCO$_2$/kWh (IPCC AR5 Annex III range: 740--910~gCO$_2$/kWh) \cite{ipcc2014lifecycle}. The carbon intensity of an electricity grid represents the average emissions intensity of all generation sources dispatched at a given moment, weighted by their contribution to total supply. This intensity is measured in grams of CO2 equivalent per kilowatt-hour (gCO$_2$/kWh). 
 
-We obtain real-time carbon intensity from the Electricity Map API \cite{electricitymap}, which provides grid-zone-level carbon intensity updates every 30 minutes. Our experiment used zone US-NY-NYIS (New York Independent System Operator), which had a carbon intensity of \verb|300-306| gCO2/kWh during our overnight experiment window (10pm - 6am). 
-The gCO2 metric is computer from RAPL PKG energy readings as follows. 
+We obtain real-time carbon intensity from the Electricity Map API \cite{electricitymap}, which provides grid-zone-level carbon intensity updates every 30 minutes. Our experiment used zone US-NY-NYIS (New York Independent System Operator), which had a carbon intensity of 300~gCO$_2$/kWh and 306~gCO$_2$/kWh during our overnight experiment window (10pm - 6am). 
+The gCO$_2$e metric is computed directly from the energy measurement in a single step:
 \begin{equation}
   \text{gCO}_2\text{e} = \frac{E_{\text{J}}}{3{,}600{,}000} \times I_{\text{carbon intensity (gCO2/kWh)}}
   \label{eq:gco2e}
 \end{equation}
 
-where I is the grid carbon intensity in gCO2/kWh. This methodology is consistent with the Green Algorithms framework \cite{lannelongue2021} and the Software Carbon Intensity (SCI) specification \cite{grnsoftware2023}
+where $E_{\text{J}}$ is energy in joules and $I$ is the grid carbon intensity in gCO$_2$/kWh. This methodology is consistent with the Green Algorithms framework \cite{lannelongue2021} and the SCI specification \cite{grnsoftware2023}.
 
 
 
@@ -62,13 +61,13 @@ GCC was installed via WinLibs (MingGW-w64 distribution for Windows). Rust was in
 
 \paragraph{Rust} acheives memory safety without a garbage collector through a compile-time ownership and borrowing checking system. It delivers performance comparable to C while preventing common memory errors, which may lead to more efficient energy usage in certain workloads.
 
-\paragraph{Go} compiles to native machine code but includes a concurrent garbage collector that runs alongside the program, introducing periodic overhead that is captured within the RAPL measurement window.
+\paragraph{Go} compiles to native machine code but includes a concurrent garbage collector that runs alongside the program, introducing periodic overhead that is captured within the RAPL measurement window. \cite{gogc}
 
-\paragraph{Java} executes on the Java Virtual Machine (JVM) and uses Just-In-Time (JIT) compilation to optimize code at runtime. The JVM's garbage collector can introduce additional overhead, and the performance can vary based on how well the JIT optimizes the code during execution.
+\paragraph{Java} executes on the Java Virtual Machine (JVM) and uses Just-In-Time (JIT) compilation to optimize code at runtime \cite{barrett2017warmup}. The JVM's garbage collector can introduce additional overhead, and the performance can vary based on how well the JIT optimizes the code during execution.
 
 \paragraph{JavaScript} uses a JIT compiler with dynamic typing and a garbage collector, which can lead to variable performance and energy consumption depending on the workload and how well the JIT optimizes the code.
 
-\paragraph{Python} is a bytecode-interpreted language in which every operation passes through a C-level interpreter dispatch loop. It has a global interpreter lock (GIL) that limits concurrent execution of threads, and its dynamic typing and high-level abstractions can lead to increased energy consumption compared to compiled languages.
+\paragraph{Python} is a bytecode-interpreted language in which every operation passes through a C-level interpreter dispatch loop. It has a Global Interpreter Lock (GIL)~\cite{gil2026energy} that limits concurrent execution of threads, and its dynamic typing and high-level abstractions can lead to increased energy consumption compared to compiled languages. CPython 3.12 is most energy efficient version. \cite{inbook}
 
 
 
@@ -100,20 +99,151 @@ The pseudocode for each algorithm, as implemented indentically across all langua
 \paragraph{Summation -}
     This algorithm performs a single sequential sum over an array of integers. It is a simple CPU-bound with no branching and minimal memory access, making it a baseliune workload that reflects the idle runtime cost of the language. 
 
+\begin{lstlisting}[caption={Summation pseudocode}, label={lst:summation}, numbers=none]
+setup():
+    for i = 0 to N-1:
+        arr[i] = i + 1
+ 
+summation():
+    sum = 0
+    for i = 0 to N-1:
+        sum = sum + arr[i]
+    return sum
+\end{lstlisting}
+
+
 \paragraph{Binary Search -}
     This algorithm halves the search interval over a sorted array. Its time complexity is logarithmic, and it involves branching based on comparisons, which means very few operations are performed at any input size. So, the observed energy difference between languages may be more influenced by the runtime efficiency and overhead than the algorithmic complexity.
+
+\begin{lstlisting}[caption={Binary Search pseudocode}, label={lst:binary_search}, numbers=none]
+setup():
+    for i = 0 to N-1:
+        arr[i] = i * 2          // sorted even numbers: 0, 2, 4, ...
+ 
+binary_search():
+    target = (N - 1) * 2       // last element
+    lo = 0;  hi = N - 1
+    while lo <= hi:
+        mid = lo + (hi - lo) / 2
+        if arr[mid] == target:  return mid
+        if arr[mid] < target:   lo = mid + 1
+        else:                   hi = mid - 1
+    return -1
+\end{lstlisting}
+
 
 \paragraph{Breadth-First Search -}
     This algorithm traverses a graph level by level from a source node. It is memory-bound. The primary cost is queue operations and random memory access patterns that can lead to cache misses. The energy consumption may be more sensitive to how efficiently the language runtime manages memory and data structures.
 
+
+
+\begin{lstlisting}[caption={Breadth-First Search pseudocode}, label={lst:bfs}, numbers=none]
+setup():
+    // chain: 0-1-2-...-(N-1)
+    for i = 0 to N-2:
+        adj[i][i+1] = adj[i+1][i] = true
+    // cross edges every 10 vertices
+    for i = 0 to N-1 step 10:
+        j = (i * 7 + 3) mod N
+        adj[i][j] = adj[j][i] = true
+ 
+bfs():
+    clear visited;  head = tail = count = 0
+    visited[0] = true;  queue[tail++] = 0
+    while head < tail:
+        cur = queue[head++];  count++
+        for nb = 0 to N-1:
+            if adj[cur][nb] and not visited[nb]:
+                visited[nb] = true
+                queue[tail++] = nb
+    return count
+\end{lstlisting}
+
+
+
 \paragraph{Merge Sort -}
     This algorithm recursively divides the array into halves and merges them back in sorted order. Now, just to make sure that we don't get any RecursionError in Python, we will increase the recursion limit for merge sort. 
 
+\begin{lstlisting}[caption={Merge Sort pseudocode}, label={lst:merge_sort}, numbers=none]
+reset():
+    for i = 0 to N-1:
+        arr[i] = N - i          // reverse-sorted input
+ 
+merge(left, mid, right):
+    copy arr[left..right] to temp
+    i = left;  j = mid+1;  k = left
+    while i <= mid and j <= right:
+        if temp[i] <= temp[j]: arr[k++] = temp[i++]
+        else:                  arr[k++] = temp[j++]
+    copy remaining temp to arr
+ 
+merge_sort_impl(left, right):
+    if left >= right: return
+    mid = left + (right - left) / 2
+    merge_sort_impl(left, mid)
+    merge_sort_impl(mid+1, right)
+    merge(left, mid, right)
+ 
+merge_sort():
+    reset()
+    merge_sort_impl(0, N-1)
+    return arr[N-1]
+\end{lstlisting}
+ 
+
+
+
 \paragraph{Hash Table -}
-    This algorithm use open addressing with linear probing. Each operation is O(1) on average, but can be O(n) in the worst case if all keys collide. The energy consumption may be influenced by how well the language runtime optimizes for hash table operations and memory management.
-    the "\& 0xFFFFFFFFFFFFFFFF"  is used to ensure that the hash result is always a 64bit integer, which is important for consistency across different platforms and languages. This way, we can compare the hash results from C and Python without worrying about differences in integer sizes or overflow behavior.
+    This algorithm implements insertion and lookup using open addressing with linear probing and a hand-written integer hash function. Operations are $O(1)$ on average but involve branching on collision, making it a realistic proxy for dictionary-heavy workloads.
+
+
+\begin{lstlisting}[caption={Hash Table pseudocode (open addressing, linear probing)},
+                   label={lst:hash_table}, numbers=none]
+hash(key):
+    return (key * 2654435761) mod TABLE_SIZE
+ 
+insert(key, val):
+    i = hash(key)
+    while occupied[i]:
+        if keys[i] == key: vals[i] = val; return
+        i = (i + 1) mod TABLE_SIZE
+    keys[i] = key;  vals[i] = val;  occupied[i] = true
+ 
+lookup(key):
+    i = hash(key)
+    while occupied[i]:
+        if keys[i] == key: return vals[i]
+        i = (i + 1) mod TABLE_SIZE
+    return -1
+ 
+hash_table():
+    clear occupied;  insert all (i*7+3, i*13+5) for i=0..N-1
+    checksum = 0
+    for i = 0 to N-1:
+        checksum += lookup(i * 7 + 3)
+    return checksum
+\end{lstlisting}
+
+
 
 \paragraph{Matrix Multiplication -}
     This algorithm uses the naive triple loop method to multiply two square matrices. It is a dense arithmetic workload with cubic time complexity, which means the number of operations grows rapidly with input size. At n=500 (our large input), it performs 125 million multiplications and additions, which is a significant computational load that can highlight differences in how languages handle CPU-bound tasks and memory access patterns.
 
 
+\begin{lstlisting}[caption={Matrix Multiplication pseudocode}, label={lst:matrix_mul}, numbers=none]
+setup():
+    for i = 0 to N-1:
+        for j = 0 to N-1:
+            a[i][j] = i + j
+            b[i][j] = i - j
+ 
+matrix_mul():
+    clear c to all zeros
+    for i = 0 to N-1:
+        for j = 0 to N-1:
+            acc = 0
+            for k = 0 to N-1:
+                acc += a[i][k] * b[k][j]
+            c[i][j] = acc
+    return c[N/2][N/2]
+\end{lstlisting}

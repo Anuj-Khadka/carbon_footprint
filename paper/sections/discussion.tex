@@ -1,7 +1,92 @@
-% !TEX root = ../main.tex
 
-interesting observation. 
-I has a youtube video playing and it was boosting my joules. once I stopped it, it went to baout 300 from 500/600.
+\subsection{RQ1: Does Programming Language Choice Measurably Affect Carbon Footprint?}
+
+
+The answer is an unambiguous yes. Under controlled conditions, identical hardware, identical algorithms, identical input data, and a measurement protocol that excludes process startup costs, we observed 14 of 15 pairwise language comparisons that are statistically distinguishable in carbon emissions at the Bonferroni-corrected threshold of $\alpha' = 0.0033$. The effect sizes for most pairs are in the medium-to-large range ($d = 0.246$ to $d = 0.783$), confirming that the observed differences are not only statistically real but practically meaningful.
+
+The overall ratio between the most and least efficient languages is $213\times$, Python producing 213 times the carbon emissions of C for identical algorithmic work. To put this in concrete terms, the mean energy per C measurement is 0.187~J, while the mean energy per Python measurement is 39.47~J. If a service performs one million algorithm executions per day, an equivalent Python implementation would consume approximately 211 times more energy than its C counterpart every single day. Over a year, at the NY grid carbon intensity of $\sim$303~gCO$_2$/kWh, the additional carbon cost of choosing Python over C for that workload would be approximately:
+\begin{equation*}
+    \frac{(39.47 - 0.187) \times 10^6}{3{,}600{,}000} \times 303 \times 365 \approx 1{,}170 \text{ kg CO}_2\text{e per year}
+\end{equation*}
+
+This is not a negligible quantity. These findings directly answer the research question: language paradigm is a statistically significant and practically large driver of software carbon emissions.
+
+
+\subsection{The Four-Tier Language Hierarchy}
+ 
+The results support a coherent four-tier model of language carbon efficiency for compute-intensive workloads: \\
+ 
+\textbf{T1: Carbon-optimal (C, Rust):} Both languages compile directly to native machine code with no runtime overhead beyond what the program explicitly requests. Their mean gCO$_2$e values ($1.57$ and $1.59 \times 10^{-5}$~g) are statistically indistinguishable. For compute-intensive workloads where energy efficiency is a hard requirement, Tier 1 languages are the appropriate choice. \\
+ 
+\textbf{T2: Moderate overhead (Java):} At $1.8\times$ C, Java's overhead is modest and likely acceptable for the vast majority of applications. Java's JVM with JIT compilation allows compute-intensive loops to approach native performance after warm-up, which our 5 warm-up run protocol allowed. The $1.8\times$ ratio reflects the residual cost of garbage collection and JVM infrastructure that cannot be eliminated even after JIT optimization. \\
+ 
+\textbf{T3: Higher overhead (Go, JavaScript):} At $3.0\times$ and $4.3\times$ C respectively, these languages carry meaningful overhead. Go's concurrent garbage collector runs background goroutines even in single-threaded programs, introducing overhead that is particularly visible in memory-intensive workloads like BFS. JavaScript's V8 engine uses a tiered JIT pipeline similar to HotSpot, but its dynamic typing requires runtime type inference that adds overhead even in optimized code. For I/O-bound services where computation is not the bottleneck, the absolute energy cost of this overhead may be small; for compute-intensive workloads at scale, the $3\times$--$4\times$ gap is environmentally significant. \\
+
+\textbf{T4: High overhead (Python):} At $213\times$ C, Python's overhead is in a category of its own. The CPython interpreter executes bytecode through a C-level dispatch loop, where every integer operation, every function call, and every loop iteration passes through type inference, reference counting, and dynamic dispatch \cite{10.1145/2617548.2617552}. This overhead is not fixed. It compounds with algorithmic complexity, as evidenced by the Python-to-C ratio ranging from $1.5\times$ on binary search to $255.6\times$ on matrix multiplication. \\
+
+
+
+
+\subsection{Why Python's Overhead Varies by Algorithm}
+ 
+The variation in Python's overhead across algorithms is one of the most informative findings of this study. Binary search at large input produces a Python-to-C ratio of only $1.5\times$, nearly equivalent to compiled languages. This is because binary search performs $O(\log n)$ operations: at $n = 1{,}000{,}000$, only about 20 comparisons are needed. At this scale, the measurement is dominated by per-call overhead (process communication, RAPL polling latency) that is roughly equal across all languages, not by the algorithm's inner loop. The interpreter overhead has almost no opportunity to compound.
+ 
+Matrix multiplication at large input produces a ratio of $255.6\times$. This algorithm performs approximately $2n^3$ multiply-accumulate operations, at $n = 500$, that is 250 million operations in a tight triple-nested loop. Every one of those operations passes through Python's bytecode dispatcher. The interpreter overhead compounds with every iteration, producing the extreme ratio.
+ 
+This pattern has an important practical implication: Python's carbon cost relative to compiled languages is not constant. For algorithms that perform very few operations per invocation (logarithmic or near-constant complexity), Python may be a perfectly acceptable choice from an energy perspective. For algorithms with high operation counts in tight loops (polynomial or higher complexity), the carbon cost of Python grows proportionally with the input size and algorithmic work.
+ 
+
+
+
+
+
+\subsection{Implications for Sustainable Software Engineering}
+ 
+These findings have concrete implications for practitioners making language selection decisions for compute-intensive software.
+ 
+For high-throughput compute services like machine learning inference pipelines, numerical simulation, data processing at scale, etc., our data suggests that language choice is a decision with material environmental consequences. A service processing 100 million requests per day in Python, where each request involves the equivalent of a matrix multiplication at our large input size, would produce approximately $100\times$ more carbon than an equivalent Rust or C implementation. At the scale of large cloud deployments, this represents a measurable contribution to the operator's carbon footprint.
+ 
+For the majority of software, however, the picture is more nuanced. Most production services are I/O-bound: the bottleneck is network latency, database queries, or external API calls, not CPU computation. For such services, the algorithm execution time is a small fraction of total wall time, and the language-level energy overhead is correspondingly reduced. A Python web server spending 95\% of its time waiting for database responses and 5\% executing Python code would have an effective language overhead far smaller than $213\times$.
+ 
+The practical recommendation is not that all software should be rewritten in C or Rust, but that compute-intensive hot paths within software systems deserve explicit language-level consideration as part of a broader energy and sustainability analysis. Python remains the most productive language for rapid prototyping, data science, and scientific computing, and its ecosystem (NumPy, SciPy, PyTorch) provides access to highly optimized C and Fortran extensions that eliminate the interpreter overhead for many numeric workloads. The critical insight is that \textit{Python code calling optimized library functions} and \textit{Python code performing computation in pure Python loops} have very different energy profiles, and developers should know which one they are writing.
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 % [10/108] python / matrix_multiplication / large

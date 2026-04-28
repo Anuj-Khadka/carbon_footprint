@@ -94,6 +94,36 @@ Conclusion:
 With the decision model, software engineers can more rapidly evaluate and select programming language ecosystems. Having the knowledge in the decision model readily available supports software engineers in making more efficient and effective decisions that meet their requirements and priorities. Furthermore, such reusable knowledge can be employed by other researchers to develop new concepts and solutions for future challenges.}
 }
 
+@INPROCEEDINGS{11334459,
+  author={Kempen, Nicolas van and Kwon, Hyuk-Je and Nguyen, Dung Tuan and Berger, Emery D.},
+  booktitle={2025 40th IEEE/ACM International Conference on Automated Software Engineering (ASE)}, 
+  title={It’s Not Easy Being Green: On the Energy Efficiency of Programming Languages}, 
+  year={2025},
+  volume={},
+  number={},
+  pages={1553-1565},
+  keywords={Industries;Computer languages;Energy consumption;Memory management;Focusing;Libraries;Parallel algorithms;Optimization;Software engineering;Python;programming languages;performance;sustainability},
+  doi={10.1109/ASE63991.2025.00131}}
+
+
+@inproceedings{strubell-etal-2019-energy,
+    title = "Energy and Policy Considerations for Deep Learning in {NLP}",
+    author = "Strubell, Emma  and
+      Ganesh, Ananya  and
+      McCallum, Andrew",
+    editor = "Korhonen, Anna  and
+      Traum, David  and
+      M{\`a}rquez, Llu{\'i}s",
+    booktitle = "Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics",
+    month = jul,
+    year = "2019",
+    address = "Florence, Italy",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/P19-1355/",
+    doi = "10.18653/v1/P19-1355",
+    pages = "3645--3650",
+    abstract = "Recent progress in hardware and methodology for training neural networks has ushered in a new generation of large networks trained on abundant data. These models have obtained notable gains in accuracy across many NLP tasks. However, these accuracy improvements depend on the availability of exceptionally large computational resources that necessitate similarly substantial energy consumption. As a result these models are costly to train and develop, both financially, due to the cost of hardware and electricity or cloud compute time, and environmentally, due to the carbon footprint required to fuel modern tensor processing hardware. In this paper we bring this issue to the attention of NLP researchers by quantifying the approximate financial and environmental costs of training a variety of recently successful neural network models for NLP. Based on these findings, we propose actionable recommendations to reduce costs and improve equity in NLP research and practice."
+}
 
 @article{ict_stat,
 title = {The real climate and transformative impact of ICT: A critique of estimates, trends, and regulations},
@@ -128,6 +158,20 @@ numpages = {12},
 keywords = {Programming Languages, Language Benchmarking, Green Software, Energy Efficiency},
 location = {Vancouver, BC, Canada},
 series = {SLE 2017}
+}
+
+@article{PEREIRA2021102609,
+title = {Ranking programming languages by energy efficiency},
+journal = {Science of Computer Programming},
+volume = {205},
+pages = {102609},
+year = {2021},
+issn = {0167-6423},
+doi = {https://doi.org/10.1016/j.scico.2021.102609},
+url = {https://www.sciencedirect.com/science/article/pii/S0167642321000022},
+author = {Rui Pereira and Marco Couto and Francisco Ribeiro and Rui Rua and Jácome Cunha and João Paulo Fernandes and João Saraiva},
+keywords = {Energy efficiency, Programming languages, Language benchmarking, Green software},
+abstract = {This paper compares a large set of programming languages regarding their efficiency, including from an energetic point-of-view. Indeed, we seek to establish and analyze different rankings for programming languages based on their energy efficiency. The goal of being able to rank programming languages based on their energy efficiency is both recent, and certainly deserves further studies. We have taken rigorous and strict solutions to 10 well defined programming problems, expressed in (up to) 27 programming languages, from the well known Computer Language Benchmark Game repository. This repository aims to compare programming languages based on a strict set of implementation rules and configurations for each benchmarking problem. We have also built a framework to automatically, and systematically, run, measure and compare the energy, time, and memory efficiency of such solutions. Ultimately, it is based on such comparisons that we propose a series of efficiency rankings, based on single and multiple criteria. Our results show interesting findings, such as how slower/faster languages can consume less/more energy, and how memory usage influences energy consumption. We also present a simple way to use our results to provide software engineers and practitioners support in deciding which language to use when energy efficiency is a concern. In addition, we further validate our results and rankings against implementations from a chrestomathy program repository, Rosetta Code., by reproducing our methodology and benchmarking system. This allows us to understand how the results and conclusions from our rigorously and well defined benchmarked programs compare to those based on more representative and real-world implementations. Indeed our results show that the rankings do not change apart from one programming language.}
 }
 
 @article{10.5555/3455716.3455964,
@@ -239,19 +283,95 @@ keywords = {RAPL, operating systems, power consumption}
   doi       = {10.25080/Majora-92bf1922-011}
 }
 
+@inproceedings{10.1145/2617548.2617552,
+author = {Barany, Gerg\"{o}},
+title = {Python Interpreter Performance Deconstructed},
+year = {2014},
+isbn = {9781450329163},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/2617548.2617552},
+doi = {10.1145/2617548.2617552},
+abstract = {The Python programming language is known for performing poorly on many tasks. While to some extent this is to be expected from a dynamic language, it is not clear how much each dynamic feature contributes to the costs of interpreting Python. In this study we attempt to quantify the costs of language features such as dynamic typing, reference counting for memory management, boxing of numbers, and late binding of function calls.We use an experimental compilation framework for Python that can make use of type annotations provided by the user to specialize the program as well as elide unnecessary reference counting operations and function lookups. The compiled programs run within the Python interpreter and use its internal API to implement language semantics. By separately enabling and disabling compiler optimizations, we can thus measure how much each language feature contributes to total execution time in the interpreter.We find that a boxed representation of numbers as heap objects is the single most costly language feature on numeric codes, accounting for up to 43\% of total execution time in our benchmark set. On symbolic object-oriented code, late binding of function and method calls costs up to 30\%. Redundant reference counting, dynamic type checks, and Python's elaborate function calling convention have comparatively smaller costs.},
+booktitle = {Proceedings of the Workshop on Dynamic Languages and Applications},
+pages = {1–9},
+numpages = {9},
+keywords = {unboxing, reference counting, interpreters, dynamic programming languages, Python},
+location = {Edinburgh, United Kingdom},
+series = {Dyla'14}
+}
 
 
+@article{gil2026energy,
+  author  = {N. Lopes and others},
+  title   = {Unlocking {Python}'s Cores: Hardware Usage and Energy Implications of Removing the {GIL}},
+  journal = {arXiv preprint arXiv:2603.04782},
+  year    = {2026},
+  url     = {https://arxiv.org/html/2603.04782}
+}
 
 
+@article{barrett2017warmup,
+  author  = {B. Barrett and C. F. Bolz-Tereick and R. Killick and S. Mount and L. Tratt},
+  title   = {Virtual Machine Warmup Blows Hot and Cold},
+  journal = {Proc. ACM Program. Lang.},
+  volume  = {1},
+  number  = {OOPSLA},
+  year    = {2017},
+  doi     = {10.1145/3133876}
+}
+
+@inbook{inbook,
+author = {Pfeiffer, Helge},
+year = {2024},
+month = {09},
+pages = {194-209},
+title = {On the Energy Consumption of CPython},
+isbn = {978-3-031-70244-0},
+doi = {10.1007/978-3-031-70245-7_14}
+}
 
 
+@article{a967ba42-d0b9-3e65-976f-80cc6086b406,
+ ISSN = {00063444},
+ URL = {http://www.jstor.org/stable/2332510},
+ author = {B. L. Welch},
+ journal = {Biometrika},
+ number = {1/2},
+ pages = {28--35},
+ publisher = {[Oxford University Press, Biometrika Trust]},
+ title = {The Generalization of `Student's' Problem when Several Different Population Variances are Involved},
+ urldate = {2026-04-27},
+ volume = {34},
+ year = {1947}
+}
 
 
+@article{c3fa9fa7-dd2a-35f2-84a0-d5c07e68dd08,
+ ISSN = {01621459, 1537274X},
+ URL = {http://www.jstor.org/stable/2282330},
+ abstract = {Methods for constructing simultaneous confidence intervals for all possible linear contrasts among several means of normally distributed variables have been given by Scheffé and Tukey. In this paper the possibility is considered of picking in advance a number (say m) of linear contrasts among k means, and then estimating these m linear contrasts by confidence intervals based on a Student t statistic, in such a way that the overall confidence level for the m intervals is greater than or equal to a preassigned value. It is found that for some values of k, and for m not too large, intervals obtained in this way are shorter than those using the F distribution or the Studentized range. When this is so, the experimenter may be willing to select the linear combinations in advance which he wishes to estimate in order to have m shorter intervals instead of an infinite number of longer intervals.},
+ author = {Olive Jean Dunn},
+ journal = {Journal of the American Statistical Association},
+ number = {293},
+ pages = {52--64},
+ publisher = {[American Statistical Association, Taylor & Francis, Ltd.]},
+ title = {Multiple Comparisons Among Means},
+ urldate = {2026-04-27},
+ volume = {56},
+ year = {1961}
+}
 
-
-
-
-
+@article{ruxton2006,
+author = {Ruxton, Graeme},
+year = {2006},
+month = {04},
+pages = {},
+title = {The Unequal Variance T-Test is an Underused Alternative to Student's T-Test and the Mann-Whitney U Test},
+volume = {17},
+journal = {Behavioral Ecology},
+doi = {10.1093/beheco/ark016}
+}
 
 
 
@@ -351,6 +471,15 @@ keywords = {RAPL, operating systems, power consumption}
 
 
 
+@book{cohen1988,
+  author    = {J. Cohen},
+  title     = {Statistical Power Analysis for the Behavioral Sciences},
+  edition   = {2nd},
+  publisher = {Lawrence Erlbaum Associates},
+  address   = {Hillsdale, NJ},
+  year      = {1988}
+}
+
 
 
 
@@ -380,4 +509,28 @@ keywords = {RAPL, operating systems, power consumption}
   year         = {2023},
   howpublished = {Green Software Foundation},
   url          = {https://greensoftware.foundation/projects/software-carbon-intensity}
+}
+
+@misc{gogc,
+  author       = {{The Go Team}},
+  title        = {A Guide to the {Go} Garbage Collector},
+  howpublished = {Go Documentation},
+  year         = {2022},
+  url          = {https://go.dev/doc/gc-guide}
+}
+
+@misc{google2025rustAndroid,
+  author       = {{Google Security Blog}},
+  title        = {Rust in {Android}: Move Fast and Fix Things},
+  howpublished = {Google Online Security Blog},
+  year         = {2025},
+  url          = {https://security.googleblog.com/2025/11/rust-in-android-move-fast-fix-things.html}
+}
+ 
+@misc{linux2026rust,
+  author       = {{The Linux Foundation}},
+  title        = {Rust Support in the {Linux} Kernel},
+  howpublished = {Linux Kernel Documentation},
+  year         = {2026},
+  url          = {https://docs.kernel.org/rust/index.html}
 }

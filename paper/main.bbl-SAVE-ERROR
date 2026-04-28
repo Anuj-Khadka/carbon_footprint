@@ -472,6 +472,34 @@
       \verb https://arxiv.org/abs/2311.07298
       \endverb
     \endentry
+    \entry{grnsoftware2023}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=53a286a53b4d8045bebf4f6bcedb544a}{%
+           family={{Green Software Foundation}},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{53a286a53b4d8045bebf4f6bcedb544a}
+      \strng{fullhash}{53a286a53b4d8045bebf4f6bcedb544a}
+      \strng{fullhashraw}{53a286a53b4d8045bebf4f6bcedb544a}
+      \strng{bibnamehash}{53a286a53b4d8045bebf4f6bcedb544a}
+      \strng{authorbibnamehash}{53a286a53b4d8045bebf4f6bcedb544a}
+      \strng{authornamehash}{53a286a53b4d8045bebf4f6bcedb544a}
+      \strng{authorfullhash}{53a286a53b4d8045bebf4f6bcedb544a}
+      \strng{authorfullhashraw}{53a286a53b4d8045bebf4f6bcedb544a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Green Software Foundation}
+      \field{title}{Software Carbon Intensity ({SCI}) Specification}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://greensoftware.foundation/projects/software-carbon-intensity
+      \endverb
+      \verb{url}
+      \verb https://greensoftware.foundation/projects/software-carbon-intensity
+      \endverb
+    \endentry
     \entry{ipcc2014lifecycle}{online}{}{}
       \name{author}{1}{}{%
         {{hash=7228b3cdfe23fe3f4516b401aa5b0d2c}{%
@@ -551,34 +579,6 @@
       \endverb
       \keyw{climate change,computational research,green computing}
     \endentry
-    \entry{grnsoftware2023}{misc}{}{}
-      \name{author}{1}{}{%
-        {{hash=53a286a53b4d8045bebf4f6bcedb544a}{%
-           family={{Green Software Foundation}},
-           familyi={G\bibinitperiod}}}%
-      }
-      \strng{namehash}{53a286a53b4d8045bebf4f6bcedb544a}
-      \strng{fullhash}{53a286a53b4d8045bebf4f6bcedb544a}
-      \strng{fullhashraw}{53a286a53b4d8045bebf4f6bcedb544a}
-      \strng{bibnamehash}{53a286a53b4d8045bebf4f6bcedb544a}
-      \strng{authorbibnamehash}{53a286a53b4d8045bebf4f6bcedb544a}
-      \strng{authornamehash}{53a286a53b4d8045bebf4f6bcedb544a}
-      \strng{authorfullhash}{53a286a53b4d8045bebf4f6bcedb544a}
-      \strng{authorfullhashraw}{53a286a53b4d8045bebf4f6bcedb544a}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{Green Software Foundation}
-      \field{title}{Software Carbon Intensity ({SCI}) Specification}
-      \field{year}{2023}
-      \verb{urlraw}
-      \verb https://greensoftware.foundation/projects/software-carbon-intensity
-      \endverb
-      \verb{url}
-      \verb https://greensoftware.foundation/projects/software-carbon-intensity
-      \endverb
-    \endentry
     \entry{decisionmodels}{article}{}{}
       \name{author}{3}{}{%
         {{hash=2c0a5d913f7620127cb6cc3f11166c5e}{%
@@ -628,6 +628,145 @@
       \endverb
       \keyw{Programming language ecosystem selection,Decision model,Industry case study,Software production,Multi-criteria decision-making,Decision support system}
     \endentry
+    \entry{gogc}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=73842fd8bfad0519e5eff75125bea0c3}{%
+           family={{The Go Team}},
+           familyi={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{73842fd8bfad0519e5eff75125bea0c3}
+      \strng{fullhash}{73842fd8bfad0519e5eff75125bea0c3}
+      \strng{fullhashraw}{73842fd8bfad0519e5eff75125bea0c3}
+      \strng{bibnamehash}{73842fd8bfad0519e5eff75125bea0c3}
+      \strng{authorbibnamehash}{73842fd8bfad0519e5eff75125bea0c3}
+      \strng{authornamehash}{73842fd8bfad0519e5eff75125bea0c3}
+      \strng{authorfullhash}{73842fd8bfad0519e5eff75125bea0c3}
+      \strng{authorfullhashraw}{73842fd8bfad0519e5eff75125bea0c3}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Go Documentation}
+      \field{title}{A Guide to the {Go} Garbage Collector}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://go.dev/doc/gc-guide
+      \endverb
+      \verb{url}
+      \verb https://go.dev/doc/gc-guide
+      \endverb
+    \endentry
+    \entry{barrett2017warmup}{article}{}{}
+      \name{author}{5}{}{%
+        {{hash=eda8d4d81a9ae4bfe5153fd51168ce69}{%
+           family={Barrett},
+           familyi={B\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod}}}%
+        {{hash=62e3fe3699a90197bdc6b2490990f742}{%
+           family={Bolz-Tereick},
+           familyi={B\bibinithyphendelim T\bibinitperiod},
+           given={C.\bibnamedelimi F.},
+           giveni={C\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=de6b31bed493e50be8d1c3b5ba8ff7f4}{%
+           family={Killick},
+           familyi={K\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=8b0bb78fe26f243764c067f7ad88f931}{%
+           family={Mount},
+           familyi={M\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=45c56d4f6b49cc0915c1c4525f7af753}{%
+           family={Tratt},
+           familyi={T\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{3a21f96a86a91ee99d6f7a48f6caf1bc}
+      \strng{fullhash}{d914d96c280cea9af601fd1fefe7f08f}
+      \strng{fullhashraw}{d914d96c280cea9af601fd1fefe7f08f}
+      \strng{bibnamehash}{d914d96c280cea9af601fd1fefe7f08f}
+      \strng{authorbibnamehash}{d914d96c280cea9af601fd1fefe7f08f}
+      \strng{authornamehash}{3a21f96a86a91ee99d6f7a48f6caf1bc}
+      \strng{authorfullhash}{d914d96c280cea9af601fd1fefe7f08f}
+      \strng{authorfullhashraw}{d914d96c280cea9af601fd1fefe7f08f}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Proc. ACM Program. Lang.}
+      \field{number}{OOPSLA}
+      \field{title}{Virtual Machine Warmup Blows Hot and Cold}
+      \field{volume}{1}
+      \field{year}{2017}
+      \verb{doi}
+      \verb 10.1145/3133876
+      \endverb
+    \endentry
+    \entry{gil2026energy}{article}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=5125b111aa1088ed6f9ea344f9036e87}{%
+           family={Lopes},
+           familyi={L\bibinitperiod},
+           given={N.},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{d92cdab2ffa29ab8e64c09c4be5a1db9}
+      \strng{fullhash}{d92cdab2ffa29ab8e64c09c4be5a1db9}
+      \strng{fullhashraw}{d92cdab2ffa29ab8e64c09c4be5a1db9}
+      \strng{bibnamehash}{d92cdab2ffa29ab8e64c09c4be5a1db9}
+      \strng{authorbibnamehash}{d92cdab2ffa29ab8e64c09c4be5a1db9}
+      \strng{authornamehash}{d92cdab2ffa29ab8e64c09c4be5a1db9}
+      \strng{authorfullhash}{d92cdab2ffa29ab8e64c09c4be5a1db9}
+      \strng{authorfullhashraw}{d92cdab2ffa29ab8e64c09c4be5a1db9}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint arXiv:2603.04782}
+      \field{title}{Unlocking {Python}'s Cores: Hardware Usage and Energy Implications of Removing the {GIL}}
+      \field{year}{2026}
+      \verb{urlraw}
+      \verb https://arxiv.org/html/2603.04782
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/html/2603.04782
+      \endverb
+    \endentry
+    \entry{inbook}{inbook}{}{}
+      \name{author}{1}{}{%
+        {{hash=298361bf8fb97e9483abae95fe7c9aff}{%
+           family={Pfeiffer},
+           familyi={P\bibinitperiod},
+           given={Helge},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{298361bf8fb97e9483abae95fe7c9aff}
+      \strng{fullhash}{298361bf8fb97e9483abae95fe7c9aff}
+      \strng{fullhashraw}{298361bf8fb97e9483abae95fe7c9aff}
+      \strng{bibnamehash}{298361bf8fb97e9483abae95fe7c9aff}
+      \strng{authorbibnamehash}{298361bf8fb97e9483abae95fe7c9aff}
+      \strng{authornamehash}{298361bf8fb97e9483abae95fe7c9aff}
+      \strng{authorfullhash}{298361bf8fb97e9483abae95fe7c9aff}
+      \strng{authorfullhashraw}{298361bf8fb97e9483abae95fe7c9aff}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-3-031-70244-0}
+      \field{month}{09}
+      \field{title}{On the Energy Consumption of CPython}
+      \field{year}{2024}
+      \field{pages}{194\bibrangedash 209}
+      \range{pages}{16}
+      \verb{doi}
+      \verb 10.1007/978-3-031-70245-7_14
+      \endverb
+    \endentry
     \entry{10.1145/3177754}{article}{}{}
       \name{author}{5}{}{%
         {{hash=dfd96e728afd75fdc67528becf604698}{%
@@ -670,8 +809,8 @@
       \strng{authornamehash}{af6b3fcc3c9065344f4ebb87e0b2a45e}
       \strng{authorfullhash}{eb8d543e84ba2f8417b0a4f0c8a6ef1d}
       \strng{authorfullhashraw}{eb8d543e84ba2f8417b0a4f0c8a6ef1d}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{To improve energy efficiency and comply with the power budgets, it is important to be able to measure the power consumption of cloud computing servers. Intel’s Running Average Power Limit (RAPL) interface is a powerful tool for this purpose. RAPL provides power limiting features and accurate energy readings for CPUs and DRAM, which are easily accessible through different interfaces on large distributed computing systems. Since its introduction, RAPL has been used extensively in power measurement and modeling. However, the advantages and disadvantages of RAPL have not been well investigated yet. To fill this gap, we conduct a series of experiments to disclose the underlying strengths and weaknesses of the RAPL interface by using both customized microbenchmarks and three well-known application level benchmarks: Stream, Stress-ng, and ParFullCMS. Moreover, to make the analysis as realistic as possible, we leverage two production-level power measurement datasets from the Taito, a supercomputing cluster of the Finnish Center of Scientific Computing and also replicate our experiments on Amazon EC2. Our results illustrate different aspects of RAPL and document the findings through comprehensive analysis. Our observations reveal that RAPL readings are highly correlated with plug power, promisingly accurate enough, and have negligible performance overhead. Experimental results suggest RAPL can be a very useful tool to measure and monitor the energy consumption of servers without deploying any complex power meters. We also show that there are still some open issues, such as driver support, non-atomicity of register updates, and unpredictable timings that might weaken the usability of RAPL in certain scenarios. For such scenarios, we pinpoint solutions and workarounds.}
@@ -846,6 +985,137 @@
       \range{pages}{5}
       \verb{doi}
       \verb 10.25080/Majora-92bf1922-011
+      \endverb
+    \endentry
+    \entry{cohen1988}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=90e1b93429e0013509f5a2e1f6d38806}{%
+           family={Cohen},
+           familyi={C\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Hillsdale, NJ}%
+      }
+      \list{publisher}{1}{%
+        {Lawrence Erlbaum Associates}%
+      }
+      \strng{namehash}{90e1b93429e0013509f5a2e1f6d38806}
+      \strng{fullhash}{90e1b93429e0013509f5a2e1f6d38806}
+      \strng{fullhashraw}{90e1b93429e0013509f5a2e1f6d38806}
+      \strng{bibnamehash}{90e1b93429e0013509f5a2e1f6d38806}
+      \strng{authorbibnamehash}{90e1b93429e0013509f5a2e1f6d38806}
+      \strng{authornamehash}{90e1b93429e0013509f5a2e1f6d38806}
+      \strng{authorfullhash}{90e1b93429e0013509f5a2e1f6d38806}
+      \strng{authorfullhashraw}{90e1b93429e0013509f5a2e1f6d38806}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{2nd}
+      \field{title}{Statistical Power Analysis for the Behavioral Sciences}
+      \field{year}{1988}
+    \endentry
+    \entry{10.1145/2617548.2617552}{inproceedings}{}{}
+      \name{author}{1}{}{%
+        {{hash=f14317bfa21c807301c1f1fd2e90e122}{%
+           family={Barany},
+           familyi={B\bibinitperiod},
+           given={Gergö},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Edinburgh, United Kingdom}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{f14317bfa21c807301c1f1fd2e90e122}
+      \strng{fullhash}{f14317bfa21c807301c1f1fd2e90e122}
+      \strng{fullhashraw}{f14317bfa21c807301c1f1fd2e90e122}
+      \strng{bibnamehash}{f14317bfa21c807301c1f1fd2e90e122}
+      \strng{authorbibnamehash}{f14317bfa21c807301c1f1fd2e90e122}
+      \strng{authornamehash}{f14317bfa21c807301c1f1fd2e90e122}
+      \strng{authorfullhash}{f14317bfa21c807301c1f1fd2e90e122}
+      \strng{authorfullhashraw}{f14317bfa21c807301c1f1fd2e90e122}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The Python programming language is known for performing poorly on many tasks. While to some extent this is to be expected from a dynamic language, it is not clear how much each dynamic feature contributes to the costs of interpreting Python. In this study we attempt to quantify the costs of language features such as dynamic typing, reference counting for memory management, boxing of numbers, and late binding of function calls.We use an experimental compilation framework for Python that can make use of type annotations provided by the user to specialize the program as well as elide unnecessary reference counting operations and function lookups. The compiled programs run within the Python interpreter and use its internal API to implement language semantics. By separately enabling and disabling compiler optimizations, we can thus measure how much each language feature contributes to total execution time in the interpreter.We find that a boxed representation of numbers as heap objects is the single most costly language feature on numeric codes, accounting for up to 43\% of total execution time in our benchmark set. On symbolic object-oriented code, late binding of function and method calls costs up to 30\%. Redundant reference counting, dynamic type checks, and Python's elaborate function calling convention have comparatively smaller costs.}
+      \field{booktitle}{Proceedings of the Workshop on Dynamic Languages and Applications}
+      \field{isbn}{9781450329163}
+      \field{series}{Dyla'14}
+      \field{title}{Python Interpreter Performance Deconstructed}
+      \field{year}{2014}
+      \field{pages}{1\bibrangedash 9}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1145/2617548.2617552
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/2617548.2617552
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/2617548.2617552
+      \endverb
+      \keyw{unboxing,reference counting,interpreters,dynamic programming languages,Python}
+    \endentry
+    \entry{google2025rustAndroid}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=c06eb9134aeb01d746095b76189c277b}{%
+           family={{Google Security Blog}},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{c06eb9134aeb01d746095b76189c277b}
+      \strng{fullhash}{c06eb9134aeb01d746095b76189c277b}
+      \strng{fullhashraw}{c06eb9134aeb01d746095b76189c277b}
+      \strng{bibnamehash}{c06eb9134aeb01d746095b76189c277b}
+      \strng{authorbibnamehash}{c06eb9134aeb01d746095b76189c277b}
+      \strng{authornamehash}{c06eb9134aeb01d746095b76189c277b}
+      \strng{authorfullhash}{c06eb9134aeb01d746095b76189c277b}
+      \strng{authorfullhashraw}{c06eb9134aeb01d746095b76189c277b}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Google Online Security Blog}
+      \field{title}{Rust in {Android}: Move Fast and Fix Things}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://security.googleblog.com/2025/11/rust-in-android-move-fast-fix-things.html
+      \endverb
+      \verb{url}
+      \verb https://security.googleblog.com/2025/11/rust-in-android-move-fast-fix-things.html
+      \endverb
+    \endentry
+    \entry{linux2026rust}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=be71d0542f6d52e76ec4aa72b14f620c}{%
+           family={{The Linux Foundation}},
+           familyi={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{be71d0542f6d52e76ec4aa72b14f620c}
+      \strng{fullhash}{be71d0542f6d52e76ec4aa72b14f620c}
+      \strng{fullhashraw}{be71d0542f6d52e76ec4aa72b14f620c}
+      \strng{bibnamehash}{be71d0542f6d52e76ec4aa72b14f620c}
+      \strng{authorbibnamehash}{be71d0542f6d52e76ec4aa72b14f620c}
+      \strng{authornamehash}{be71d0542f6d52e76ec4aa72b14f620c}
+      \strng{authorfullhash}{be71d0542f6d52e76ec4aa72b14f620c}
+      \strng{authorfullhashraw}{be71d0542f6d52e76ec4aa72b14f620c}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Linux Kernel Documentation}
+      \field{title}{Rust Support in the {Linux} Kernel}
+      \field{year}{2026}
+      \verb{urlraw}
+      \verb https://docs.kernel.org/rust/index.html
+      \endverb
+      \verb{url}
+      \verb https://docs.kernel.org/rust/index.html
       \endverb
     \endentry
   \enddatalist

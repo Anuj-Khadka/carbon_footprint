@@ -1,9 +1,8 @@
-
-This section describes the experimental setup, the measurement protocol used to isolate algorithm energy consumption, the implementation constraints across all six languages, the input sizes used for each algorithm, and idk.
+This section describes the experimental setup, the measurement protocol used to isolate algorithm energy consumption, the implementation constraints across all six languages, the input sizes used for each algorithm.
 
 \subsection{Experimental Setup}
 All 12,420 experiments were conducted on a single dedicated machine to eliminate any inter-machine power variability. 
-The Intel's RAPL interface exposes hardware energy counters directly to software, enabling fine-grained CPU package energy measurement without externam instruments 
+The Intel's RAPL interface exposes hardware energy counters directly to software, enabling fine-grained CPU package energy measurement without external instruments 
 \cite{10.1145/3177754}. 
 
 \subsubsection{Implementation-specific design decisions}
@@ -68,23 +67,27 @@ C uses fgets rather than scanf because it reads exactly one line including the n
 
 \paragraph{Warm-up Runs -} Five runs per cell are discarded before measurement was recorded to allow the JIT compilers and garbage collectors in languages like Java and Go to warm up and reach a steady state. For C and Rust, warm-up primarily ensures that the instruction cache and branch predictor are in a warmed state consistent with repeated execution. 
 
-\paragraph{Cell Sleep -} A mandatory 5s sleep is inserted between cells to allow the processor's thermal management to return to stable baseline between cells. This reduces the rist that thermal throttling in one cell biases the initial temperature state of the next.
+\paragraph{Cell Sleep -} A mandatory 5s sleep is inserted between cells to allow the processor's thermal management to return to stable baseline between cells. This reduces the risk that thermal throttling in one cell biases the initial temperature state of the next.
 
 
 \paragraph{Experiment timing -} All 36 language-algorithm-size combinations are executed in a single overnight run from 10pm to 6am to minimize background system load and to capture a consistent grid carbon intensity profile during the measurement window. 
 
-\paragraph{Carbon Intensity Refresh -} The Electricity Maps API queried once at experiment start and then refreshed every 30 minutes. Two carbon intensity values were returned during the experiment window i.e. 300 gCO2/kWh and 306 gCO2/kWh, representing a 2\% spread in the carbon intensity during the experiment window. 
+\paragraph{Carbon Intensity Refresh -} The Electricity Maps API queried once at experiment start and then refreshed every 30 minutes. Two carbon intensity values were returned during the experiment window i.e. 300 gCO$_2$/kWh and 306 gCO$_2$/kWh, representing a 2\% spread in the carbon intensity during the experiment window. 
 
 
 
 
-
+\begin{tcolorbox}[colback=gray!8, colframe=gray!40, 
+                  title=\textbf{A Note on Background Interference}]
+During development, an unplanned observation illustrated just how sensitive power-based energy measurement can be. While running early pilot iterations of Python matrix multiplication, energy  readings came in at 529--626~J per run, far above the expected  range. The cause turned out to be a YouTube video playing in the background on the same machine. Once the video was closed, readings dropped immediately to a stable 330--390~J. The CPU package power sensor captures everything the processor is doing, not just the algorithm being measured. This single observation shaped the entire experimental protocol: all measurements in the 
+final study were collected overnight with no background applications running.
+\end{tcolorbox}
 
 
 
 \subsection{Output Verification}
-Before energy measurement, all 36 implementations are verified for correctness. The verification script compiles and runs each implementation at all three input sizes, compares the checksum printed to stdout against the reference checksum produced by the C implementation, and assigns each language-algortihm-size combination a PASS/FAIL status. 
-Table ~\ref{tab:c_run_verify} shows the verification results fot the C implemetation. The C times serves as a reference baseline against which all other languages are measured and normalized. They confirm that execition time scales with the expected time complexity of each program. 
+Before energy measurement, all 36 implementations are verified for correctness. The verification script compiles and runs each implementation at all three input sizes, compares the checksum printed to stdout against the reference checksum produced by the C implementation, and assigns each language-algorithm-size combination a PASS/FAIL status. 
+Table ~\ref{tab:c_run_verify} shows the verification results fot the C implemetation. The C times serves as a reference baseline against which all other languages are measured and normalized. They confirm that execution time scales with the expected time complexity of each program. 
 
 \begin{table}[h]
     \centering
@@ -145,18 +148,46 @@ Three input sizes are used for each algorithm to capture scaling behavior: small
 
 
 \subsection{Pilot Study and Sample Size Determination}
-Before the main experiment, a pilot study of 50 iterations per cell was conducted to esitmate per-cell variance and determine the required sample size \cite{Shechtman2013}. Per-cell coefficients of variation can be calculated with the following formula:
+Before the main experiment, a pilot study of 50 iterations per cell was conducted to estimate per-cell variance and determine the required sample size \cite{Shechtman2013}. Per-cell coefficients of variation can be calculated with the following formula:
 \begin{equation}
     CV = \frac{\sigma}{\mu} \times 100\%
     \label{eq:cv}
 \end{equation}
 Where $\sigma$ is the standard deviation of the energy measurements for a given cell, and $\mu$ is the mean energy measurement for that cell. The results revealed a wide and informative range. CV spanned from 4.4\% (Python matrix-multiplication, mid) to 122.7\% (JavaScript merge-sort, small), with an overall mean CV of 38.4\% and median of 43.0\%.
-The high CV values observed at small input sizes across all langauges are consistent with a known limitation of RAPL-based measurement. When an algorithm completes in microseconds, and OS scheduling event, cache miss, or background interrupt becomes a large fraction of the total measured energy, inflating variance \cite{10.1145/2425248.2425252}. This is clearly visible in our pilot data. The noisiest cells are uniformly those with short runtimes, while the most stable cells (Python matrix-multiplication, mid: CV=4.4\%, large: CV =6.9\% and Java merge-sort, large: CV=5.9\%) are those where the algorithm's own energy consumption is large enought to dominate the background noise, This pattern directly motivates the focus on large input size results in the main statistical analysis, where RAPL measurements are most reliable. 
+The high CV values observed at small input sizes across all languages are consistent with a known limitation of RAPL-based measurement. When an algorithm completes in microseconds, and OS scheduling event, cache miss, or background interrupt becomes a large fraction of the total measured energy, inflating variance \cite{10.1145/2425248.2425252}. This is clearly visible in our pilot data. The noisiest cells are uniformly those with short runtimes, while the most stable cells (Python matrix-multiplication, mid: CV=4.4\%, large: CV =6.9\% and Java merge-sort, large: CV=5.9\%) are those where the algorithm's own energy consumption is large enough to dominate the background noise, This pattern directly motivates the focus on large input size results in the main statistical analysis, where RAPL measurements are most reliable. 
 
 A formal power analysis was then conducted using the \texttt{TTestIndPower} solver from the Python \texttt{statsmodels} library \cite{seabold2010} to determine the minimum sample size $N$ per cell required to detect a medium effect size (Cohen's $d = 0.5$) with 80\% power at the Bonferroni-corrected significance level of $\alpha' = 0.05/15 = 0.003\overline{3}$, using a two-sided Welch's $t$-test. The solver returned a raw $N$ of 116.28, which rounds up to a recommended minimum of $N = 117$. The main experiment used $N = 115$ per cell, 2 runs below the recommended minimum, a 1.7\% shortfall. Given the large effect sizes observed between paradigmatically different languages (particularly Python versus compiled languages), this marginal reduction in statistical power is negligible in practice and does not affect any of the study's conclusions. All 108 cells were replicated exactly 115 times, yielding 12,420 total measurements.
 
-baseline power draw - 40w 5s sample
 
 
+\subsection{Statistical Analysis}
 
+All pairwise language comparisons are evaluated using \textbf{Welch's $t$-test} \cite{a967ba42-d0b9-3e65-976f-80cc6086b406} (also known as the unequal-variance $t$-test) rather than Student's $t$-test. Welch's test does not assume equal variance between the two groups being compared, making it more reliable when sample variances differ \cite{ruxton2006}. This is an important choice for this study: the six languages have substantially different variance in their gCO$_2$e distributions. Python's standard deviation is orders of magnitude larger than C's, making the equal-variance assumption of Student's $t$-test inappropriate.
 
+With 6 languages, the total number of unique pairwise comparisons is $\binom{6}{2} = 15$. Running each comparison at a conventional significance level of $\alpha = 0.05$ would produce an unacceptably high family-wise false positive rate \cite{c3fa9fa7-dd2a-35f2-84a0-d5c07e68dd08}:
+ 
+\begin{equation}
+    P(\text{at least one false positive}) = 1 - (1 - 0.05)^{15} \approx 54\%
+    \label{eq:fwer}
+\end{equation}
+ 
+To control this, the \textbf{Bonferroni correction}~\cite{c3fa9fa7-dd2a-35f2-84a0-d5c07e68dd08} is applied, dividing the nominal $\alpha$ by the number of simultaneous tests:
+ 
+\begin{equation}
+    \alpha' = \frac{\alpha}{m} = \frac{0.05}{15} = 0.003\overline{3}
+    \label{eq:bonferroni}
+\end{equation}
+ 
+A pairwise comparison is declared statistically significant only if its $p$-value falls below $\alpha' = 0.0033$. This guarantees that the probability of any false positive across all 15 tests is controlled at 5\%.
+ 
+Effect size is reported as \textbf{Cohen's $d$} \cite{cohen1988} for each significant pair, computed as the difference in group means divided by the pooled standard deviation:
+ 
+\begin{equation}
+    d = \frac{\bar{x}_A - \bar{x}_B}{s_{\text{pooled}}}, \qquad
+    s_{\text{pooled}} = \sqrt{\frac{s_A^2 + s_B^2}{2}}
+    \label{eq:cohend}
+\end{equation}
+ 
+By convention \cite{cohen1988}, $|d| < 0.2$ is negligible, $0.2 \leq |d| < 0.5$ is small, $0.5 \leq |d| < 0.8$ is medium, and $|d| \geq 0.8$ is large. Reporting effect size alongside $p$-values ensures that statistically significant differences are also practically meaningful, not merely artifacts of a large sample size \cite{cohen1988}.
+ 
+All statistical tests are conducted on the large input size subset of the data, where energy measurements are most reliable and least affected by RAPL sensor noise at short durations \cite{10.1145/2425248.2425252}. At $N = 115$ measurements per cell, the Central Limit Theorem guarantees that the sampling distribution of the cell mean is approximately normal, satisfying the distributional assumption of the $t$-test without requiring explicit normality testing.

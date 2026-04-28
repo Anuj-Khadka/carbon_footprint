@@ -48,9 +48,11 @@
 % }]
 
 \begin{abstract}
-  This project investigates how programming language choice affects the carbon footprint produced during a program execution. Although software is often seen as intangible, every program consumes energy, ultimately contributing to carbon emissions. As the digital system continues to grow, understanding the environmental impact of software has become increasingly important. This experiment studies how identical algorithms behave when implemented in different programming languages running on the same hardware. By measuring and estimating the carbon emissions, the project tends to explore whether programming language designs play an important role in software sustainability, or if it is mostly driven by heavy algorithms. This research combines the aspects of computer science and environmental science to better understand the hidden environmental cost of everyday computational tasks and encourage more sustainable and responsible software development practices.\\
+Programming language choice is a foundational software design decision that is rarely evaluated for its environmental consequences. This paper presents a controlled empirical study measuring the carbon footprint of six programming languages (C, Rust, Go, Java, JavaScript, and Python) across six algorithms and three input sizes on a single Intel Core i7-14700K machine. Energy is estimated using Intel RAPL accessed through LibreHardwareMonitor, and converted to grams of CO$_2$ equivalent (gCO$_2$e) using real-time grid carbon intensity from the Electricity Maps API (zone US-NY-NYIS). Each of 108 experimental cells (6 languages $\times$ 6 algorithms $\times$ 3 input sizes) was replicated 115 times, yielding 12,420 total measurements. A stdin handshake protocol excludes process startup cost from the measurement window, isolating algorithm execution energy. Statistical analysis applies Welch's $t$-tests with Bonferroni correction ($\alpha' = 0.0033$) across all 15 pairwise language comparisons.
+ 
+The results show that 14 of 15 language pairs are statistically distinguishable in carbon emissions. The sole exception is C versus Rust ($t = -0.313$, $p = 0.754$, $d = 0.017$), confirming carbon equivalence between the two languages despite Rust's additional memory safety guarantees. The language landscape divides into four tiers: C and Rust at the efficient end ($1.0\times$), Java at modest overhead ($1.8\times$), Go and JavaScript at moderate overhead ($3.0\times$--$4.3\times$), and Python at $213\times$ the carbon footprint of C. Python's overhead is not uniform, it ranges from $1.5\times$ on binary search to $255.6\times$ on matrix multiplication, confirming that interpreter dispatch overhead compounds with algorithmic complexity. These findings establish that programming language choice is a statistically significant and practically large driver of software carbon emissions, with direct implications for sustainable software engineering practice\\
 
-  \noindent\textbf{Keywords:} carbon footprint, software sustainability, energy consumption, carbon intensity, programming languages, algorithms
+\noindent\textbf{Keywords:} carbon footprint, software sustainability, energy consumption, carbon intensity, programming languages, algorithms, RAPL
 
 \end{abstract}
 
@@ -59,6 +61,9 @@
 \section{Introduction}
 \input{sections/introduction}
 
+% done
+\section{Related Work}
+\input{sections/related_work}
 
 
 % done 
@@ -66,28 +71,19 @@
 \input{sections/background}
 
 
-% not done 
+% done 
 \section{Methodology}
 \input{sections/methodology}
 
 
-
-% not done
-\section{Statistical Analysis}
-\input{sections/statistical_analysis}
-
-
-
-% not done 
+% done 
 \section{Results}
 \input{sections/results}
 
 
-
-% not done 
+% done 
 \section{Discussion}
 \input{sections/discussion}
-
 
 
 % done 
@@ -95,8 +91,7 @@
 \input{sections/future_work}
 
 
-
-% not done 
+% done 
 \section{Conclusion}
 \input{sections/conclusion}
 

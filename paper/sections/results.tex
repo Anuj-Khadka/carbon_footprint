@@ -1,4 +1,4 @@
-Before presenting results, we report the integrity of the collected data. The benchmark runner produced a CSV file containing 12,420 rows, exactly 115 runs for each of the 108 cells. All 108 cells returned a consistent checksum across all 115 runs, confirming that ever implementation produced identical output on every invocation. The carbon intensity column contained exactly two distinct values (300 and 306 gCO$_2$/kWh), consistent with the planned 30 minute refresh cadence and the expeceted stability of the overnight New York grid. The total energy recorded across all 12,420 runs was \textbf{86,009.7~J}, producing a tatal estimated carbon footprint of \textbf{7.28~gCO$_2$e} for the entire experiment.
+Before presenting results, we report the integrity of the collected data. The benchmark runner produced a CSV file containing 12,420 rows, exactly 115 runs for each of the 108 cells. All 108 cells returned a consistent checksum across all 115 runs, confirming that every implementation produced identical output on every invocation. The carbon intensity column contained exactly two distinct values (300 and 306 gCO$_2$/kWh), consistent with the planned 30 minute refresh cadence and the expected stability of the overnight New York grid. The total energy recorded across all 12,420 runs was \textbf{86,009.7~J}, producing a total estimated carbon footprint of \textbf{7.28~gCO$_2$e} for the entire experiment.
 
 
 
@@ -25,16 +25,16 @@ Figure~\ref{fig:overall_log} visualizes these results on a logarithmic scale.
     \end{tabular}
 \end{table}
 
-The results reveal a clear three-tier structure. \textbf{C and Rust} form the first tier, both reporting a mean gCO$_2$e of approximately $1.6 \times 10^{-5}$~g and mean energy below 0.19~J per measurement. \textbf{Java} forms a second tier at $1.8\times$ the footprint of C. \textbf{Go and JavaScript} form a third tier at $3.0\times$ and $4.3\times$ respectively. \textbf{Python} stands entirely apart at $213\times$ the carbon footprint of C --- more than $49\times$ higher than Java and $31\times$ higher than JavaScript. Figure~\ref{fig:overall_linear} uses a linear scale to illustrate this: Python's mean energy (39.47~J) is so dominant that all other languages are rendered nearly invisible by comparison.
+The results reveal a clear four-tier structure. \textbf{C and Rust} form the first tier, both reporting a mean gCO$_2$e of approximately $1.6 \times 10^{-5}$~g and mean energy below 0.19~J per measurement. \textbf{Java} forms a second tier at $1.8\times$ the footprint of C. \textbf{Go and JavaScript} form a third tier at $3.0\times$ and $4.3\times$ respectively. \textbf{Python} stands entirely apart at $213\times$ the carbon footprint of C --- more than $49\times$ higher than Java and $31\times$ higher than JavaScript. Figure~\ref{fig:overall_linear} uses a linear scale to illustrate this: Python's mean energy (39.47~J) is so dominant that all other languages are rendered nearly invisible by comparison.
 
-\begin{figure}[H]
+\begin{figure}[tbp]
     \centering
     \includegraphics[width=\columnwidth]{01_overall_mean_gco2e_log.png}
     \caption{Mean gCO$_2$e per measurement by language (log scale).}
     \label{fig:overall_log}
 \end{figure}
 
-\begin{figure}[H]
+\begin{figure}[tbp]
     \centering
     \includegraphics[width=\columnwidth]{02_overall_mean_gco2e_linear.png}
     \caption{Mean gCO$_2$e per measurement by language (linear scale).}
@@ -74,4 +74,119 @@ Table~\ref{tab:welch} reports Welch's $t$-test results for all 15 pairwise langu
         JavaScript vs Python & $-14.303$ & $<0.001$  & $0.771$ & Yes \\
         \hline
     \end{tabular}
+<<<<<<< HEAD
 \end{table}
+=======
+\end{table}
+
+\begin{figure}[tbp]
+    \centering
+    \includegraphics[width=\columnwidth]{03_pvalue_heatmap.png}
+    \caption{P-value heatmap for pairwise language comparisons (large input size).}
+    \label{fig:pvalue_heatmap}
+\end{figure}
+
+\textbf{14 of 15 pairs are significant} at $\alpha' = 0.0033$. The sole non-significant result is C versus Rust ($t = -0.313$, $p = 0.754$, $d = 0.017$). A $p$-value of 0.754 is far from borderline --- it indicates that the observed difference between C and Rust is entirely consistent with random sampling variation. The effect size $d = 0.017$ is negligible by Cohen's convention \cite{cohen1988}, confirming no practically meaningful difference exists. In the p-value heatmap (Figure~\ref{fig:pvalue_heatmap}), the entire matrix is deep red (significant) except for the single green cell at the C--Rust intersection, making the result visually unambiguous.
+ 
+The $t$-statistics for pairs involving Python are consistently large in magnitude, ranging from $-14.534$ (C vs Python) to $-14.303$ (JavaScript vs Python), with corresponding Cohen's $d$ values clustering around $0.78$ --- the large range by convention. This reflects an overwhelming separation between Python's gCO$_2$e distribution and all others, as clearly shown in the box plot (Figure~\ref{fig:boxplot}), where Python's interquartile range does not overlap with any other language.
+
+\begin{figure}[tbp]
+    \centering
+    \includegraphics[width=\columnwidth]{08_boxplot_large.png}
+    \caption{Box plot for pairwise language comparisons (large input size).}
+    \label{fig:boxplot}
+\end{figure}
+
+ 
+\subsection{Per-Algorithm Carbon Footprint}
+
+
+Table~\ref{tab:peralgo} disaggregates mean gCO$_2$e by language and algorithm at large input size. Figure~\ref{fig:per_algo_no_python} visualizes the five non-Python languages on a log scale; Figure~\ref{fig:per_algo_all} includes Python.
+ 
+\begin{table*}[h]
+    \centering
+    \caption{Mean gCO$_2$e (g) at large input size by language and algorithm.}
+    \label{tab:peralgo}
+    \small
+    \begin{tabular}{lllllll}
+        \hline
+        \textbf{Lang} & \textbf{Sum} & \textbf{BinS} & \textbf{Sort} & \textbf{BFS} & \textbf{Hash} & \textbf{MatMul} \\
+        \hline
+        C          & $1.6\times10^{-6}$ & $2.3\times10^{-7}$ & $5.2\times10^{-5}$ & $2.2\times10^{-5}$ & $3.7\times10^{-6}$ & $1.9\times10^{-4}$ \\
+        Rust       & $1.4\times10^{-6}$ & $2.9\times10^{-7}$ & $7.7\times10^{-5}$ & $2.0\times10^{-5}$ & $3.7\times10^{-6}$ & $1.7\times10^{-4}$ \\
+        Java       & $2.0\times10^{-6}$ & $6.8\times10^{-7}$ & $7.8\times10^{-5}$ & $1.7\times10^{-5}$ & $3.7\times10^{-6}$ & $3.7\times10^{-4}$ \\
+        Go         & $2.3\times10^{-6}$ & $3.4\times10^{-7}$ & $8.8\times10^{-5}$ & $5.0\times10^{-5}$ & $4.1\times10^{-6}$ & $6.5\times10^{-4}$ \\
+        JavaScript & $3.3\times10^{-6}$ & $6.7\times10^{-7}$ & $2.6\times10^{-4}$ & $8.4\times10^{-5}$ & $4.2\times10^{-5}$ & $7.9\times10^{-4}$ \\
+        Python     & $9.0\times10^{-5}$ & $3.4\times10^{-7}$ & $7.0\times10^{-3}$ & $2.9\times10^{-3}$ & $1.4\times10^{-4}$ & $4.8\times10^{-2}$ \\
+        \hline
+    \end{tabular}
+\end{table*}
+ 
+\begin{figure}[tbp]
+    \centering
+    \includegraphics[width=\columnwidth]{04_per_algo_grouped_bar_no_python.png}
+    \caption{Mean gCO$_2$e per measurement by language and algorithm (log scale; Python excluded).}
+    \label{fig:per_algo_no_python}
+\end{figure}
+
+\begin{figure}[tbp]
+    \centering
+    \includegraphics[width=\columnwidth]{05_per_algo_grouped_bar_all.png}
+    \caption{Mean gCO$_2$e per measurement by language and algorithm (log scale; all languages).}
+    \label{fig:per_algo_all}
+\end{figure}
+
+
+
+\textbf{Python's carbon footprint is consistently and dramatically higher than all other languages across all algorithms.} The Python-to-C ratio at large input size ranges from $1.5\times$ for binary search to $255.6\times$ for matrix multiplication, with summation ($59.9\times$), hash table ($38.7\times$), BFS ($132.3\times$), and merge sort ($135.8\times$) falling between these extremes. Binary search is the outlier because its $O(\log n)$ complexity means very few operations are performed at any input size, so the measurement is dominated by per-call overhead that is comparable across all languages. Matrix multiplication is the opposite: its tight triple-nested loop performs millions of arithmetic operations, compounding Python's interpreter dispatch overhead with every single multiply-accumulate.
+
+
+\textbf{C and Rust are consistently the most carbon-efficient languages across all algorithms.} For hash table operations at large size, both languages report identical mean gCO$_2$e ($3.7 \times 10^{-6}$~g). For merge sort, C ($5.2 \times 10^{-5}$~g) is lower than Rust ($7.7 \times 10^{-5}$~g) by about 33\%. For matrix multiplication, Rust ($1.7 \times 10^{-4}$~g) is marginally lower than C ($1.9 \times 10^{-4}$~g). Neither language consistently outperforms the other, and the aggregate non-significance ($p = 0.754$) reflects this algorithm-by-algorithm balance.
+
+\textbf{Java outperforms Go on BFS despite Go being natively compiled.} Java's BFS mean gCO$_2$e ($1.7 \times 10^{-5}$~g) is lower than both C's ($2.2 \times 10^{-5}$~g) and Go's ($5.0 \times 10^{-5}$~g). This is consistent with JIT compilation aggressively optimizing the BFS inner loop after the 5 warm-up runs. Go's concurrent garbage collector introduces background overhead that is particularly visible in graph-traversal workloads with dense and irregular memory access patterns.
+
+
+
+
+\subsection{Input Size Scaling}
+ 
+Figure~\ref{fig:scaling} shows how mean gCO$_2$e scales from small to large input for merge sort. Table~\ref{tab:scaling} provides the exact values, and Figure~\ref{fig:scaling_heatmap} extends the analysis to all six algorithms via a large/small scaling ratio heatmap.
+ 
+\begin{table}[h]
+    \centering
+    \caption{Mean gCO$_2$e for merge sort by language and input size, with large/small scaling ratio.}
+    \label{tab:scaling}
+    \small
+    \begin{tabular}{lllll}
+        \hline
+        \textbf{Language} & \textbf{Small} & \textbf{Mid} & \textbf{Large} & \textbf{L/S} \\
+        \hline
+        C          & $2.7\times10^{-7}$ & $8.2\times10^{-7}$ & $5.2\times10^{-5}$ & $192\times$      \\
+        Rust       & $3.1\times10^{-7}$ & $8.9\times10^{-7}$ & $7.7\times10^{-5}$ & $252\times$      \\
+        Java       & $6.4\times10^{-7}$ & $1.3\times10^{-6}$ & $7.8\times10^{-5}$ & $123\times$      \\
+        Go         & $3.6\times10^{-7}$ & $1.7\times10^{-6}$ & $8.8\times10^{-5}$ & $249\times$      \\
+        JavaScript & $7.4\times10^{-7}$ & $2.6\times10^{-6}$ & $2.6\times10^{-4}$ & $355\times$      \\
+        Python     & $5.7\times10^{-7}$ & $3.2\times10^{-5}$ & $7.0\times10^{-3}$ & $12{,}364\times$ \\
+        \hline
+    \end{tabular}
+\end{table}
+ 
+Compiled languages scale at rates broadly consistent with $O(n \log n)$ growth, with large/small ratios between $123\times$ and $355\times$. Python's ratio of $12{,}364\times$ is dramatically higher. At the small input size, Python's merge sort gCO$_2$e ($5.7 \times 10^{-7}$~g) is close to C's ($2.7 \times 10^{-7}$~g) because both are near the measurement noise floor at that duration. At mid and large sizes, Python's interpreter overhead compounds rapidly with the algorithm's workload. The scaling ratio heatmap (Figure~\ref{fig:scaling_heatmap}) reveals that binary search shows near-$1\times$ ratios for all languages, as expected from its $O(\log n)$ complexity, while merge sort, BFS, and matrix multiplication expose Python's compounding overhead most severely.
+ 
+
+
+\begin{figure}[tbp]
+    \centering
+    \includegraphics[width=\columnwidth]{figures/06_merge_sort_scaling.png}
+    \caption{Mean gCO$_2$e for merge sort by language and input size, with large/small scaling ratio.}
+    \label{fig:scaling}
+\end{figure}
+
+
+\begin{figure}[tbp]
+    \centering
+    \includegraphics[width=\columnwidth]{figures/07_scaling_ratio_heatmap.png}
+    \caption{Large/small gCO$_2$e scaling ratio by language and algorithm (log scale).}
+    \label{fig:scaling_heatmap}
+\end{figure}
+>>>>>>> 8d98e97 (Stash)
