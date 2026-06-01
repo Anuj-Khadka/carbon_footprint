@@ -56,17 +56,13 @@ $RECYCLE.BIN/
 
 # Hardware monitor snapshots
 *.ohl
-
-
+# Local scratch files
 /claude.md
 /pilot_study.py
 /power_analysis.py
 /rough_test_harness.py
 /workflow.py
 
-
-# add .claude and .vscode
+# Editor and tooling config
 .claude/
 .vscode/
-.claude
-.vscode
