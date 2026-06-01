@@ -60,6 +60,8 @@ $RECYCLE.BIN/
 /claude.md
 /pilot_study.py
 /power_analysis.py
+/04_power_analysis.py
+/_debug_script.py
 /rough_test_harness.py
 /workflow.py
 
