@@ -259,6 +259,7 @@
       \strng{authornamehash}{8766df7b8c845b5221b1d134295d970c}
       \strng{authorfullhash}{9636bd7f21f5641a06c0e3e238f9da45}
       \strng{authorfullhashraw}{9636bd7f21f5641a06c0e3e238f9da45}
+      \field{extraname}{1}
       \field{sortinit}{5}
       \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
@@ -382,6 +383,401 @@
       \field{urlyear}{2026}
       \field{urldateera}{ce}
     \endentry
+    \entry{PEREIRA2021102609}{article}{}{}
+      \name{author}{7}{}{%
+        {{hash=9026f3b05f12685366186b37a76ab2f3}{%
+           family={Pereira},
+           familyi={P\bibinitperiod},
+           given={Rui},
+           giveni={R\bibinitperiod}}}%
+        {{hash=80cfb4d3c3387da146e1065d598d3348}{%
+           family={Couto},
+           familyi={C\bibinitperiod},
+           given={Marco},
+           giveni={M\bibinitperiod}}}%
+        {{hash=96db25ba8f44b351f684fec84f929330}{%
+           family={Ribeiro},
+           familyi={R\bibinitperiod},
+           given={Francisco},
+           giveni={F\bibinitperiod}}}%
+        {{hash=0d4d33b8a24aad3be2e315b27f164368}{%
+           family={Rua},
+           familyi={R\bibinitperiod},
+           given={Rui},
+           giveni={R\bibinitperiod}}}%
+        {{hash=e56f75a786e7477b6d47697702900967}{%
+           family={Cunha},
+           familyi={C\bibinitperiod},
+           given={Jácome},
+           giveni={J\bibinitperiod}}}%
+        {{hash=31abc07b903b8d308ce26b70a7a44af1}{%
+           family={Fernandes},
+           familyi={F\bibinitperiod},
+           given={João\bibnamedelima Paulo},
+           giveni={J\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=a772b5aa30aa09c26654983ee7fe0af7}{%
+           family={Saraiva},
+           familyi={S\bibinitperiod},
+           given={João},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{8766df7b8c845b5221b1d134295d970c}
+      \strng{fullhash}{9636bd7f21f5641a06c0e3e238f9da45}
+      \strng{fullhashraw}{9636bd7f21f5641a06c0e3e238f9da45}
+      \strng{bibnamehash}{9636bd7f21f5641a06c0e3e238f9da45}
+      \strng{authorbibnamehash}{9636bd7f21f5641a06c0e3e238f9da45}
+      \strng{authornamehash}{8766df7b8c845b5221b1d134295d970c}
+      \strng{authorfullhash}{9636bd7f21f5641a06c0e3e238f9da45}
+      \strng{authorfullhashraw}{9636bd7f21f5641a06c0e3e238f9da45}
+      \field{extraname}{2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This paper compares a large set of programming languages regarding their efficiency, including from an energetic point-of-view. Indeed, we seek to establish and analyze different rankings for programming languages based on their energy efficiency. The goal of being able to rank programming languages based on their energy efficiency is both recent, and certainly deserves further studies. We have taken rigorous and strict solutions to 10 well defined programming problems, expressed in (up to) 27 programming languages, from the well known Computer Language Benchmark Game repository. This repository aims to compare programming languages based on a strict set of implementation rules and configurations for each benchmarking problem. We have also built a framework to automatically, and systematically, run, measure and compare the energy, time, and memory efficiency of such solutions. Ultimately, it is based on such comparisons that we propose a series of efficiency rankings, based on single and multiple criteria. Our results show interesting findings, such as how slower/faster languages can consume less/more energy, and how memory usage influences energy consumption. We also present a simple way to use our results to provide software engineers and practitioners support in deciding which language to use when energy efficiency is a concern. In addition, we further validate our results and rankings against implementations from a chrestomathy program repository, Rosetta Code., by reproducing our methodology and benchmarking system. This allows us to understand how the results and conclusions from our rigorously and well defined benchmarked programs compare to those based on more representative and real-world implementations. Indeed our results show that the rankings do not change apart from one programming language.}
+      \field{issn}{0167-6423}
+      \field{journaltitle}{Science of Computer Programming}
+      \field{title}{Ranking programming languages by energy efficiency}
+      \field{volume}{205}
+      \field{year}{2021}
+      \field{pages}{102609}
+      \range{pages}{1}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.scico.2021.102609
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0167642321000022
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0167642321000022
+      \endverb
+      \keyw{Energy efficiency,Programming languages,Language benchmarking,Green software}
+    \endentry
+    \entry{11334459}{inproceedings}{}{}
+      \name{author}{4}{}{%
+        {{hash=5b7942fab69142194635ff574e561d36}{%
+           family={Kempen},
+           familyi={K\bibinitperiod},
+           given={Nicolas\bibnamedelima van},
+           giveni={N\bibinitperiod\bibinitdelim v\bibinitperiod}}}%
+        {{hash=869d2fc999a4bd60bbbbdad4bc661dc2}{%
+           family={Kwon},
+           familyi={K\bibinitperiod},
+           given={Hyuk-Je},
+           giveni={H\bibinithyphendelim J\bibinitperiod}}}%
+        {{hash=ef85c02292d5fb8377be8a48985103af}{%
+           family={Nguyen},
+           familyi={N\bibinitperiod},
+           given={Dung\bibnamedelima Tuan},
+           giveni={D\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=6ad677bc0ccea25ae32ea445c9e85cca}{%
+           family={Berger},
+           familyi={B\bibinitperiod},
+           given={Emery\bibnamedelima D.},
+           giveni={E\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \strng{namehash}{769f459d444a4355c6533102f3630c13}
+      \strng{fullhash}{fb23653b8f375b24beae6072db200b8e}
+      \strng{fullhashraw}{fb23653b8f375b24beae6072db200b8e}
+      \strng{bibnamehash}{fb23653b8f375b24beae6072db200b8e}
+      \strng{authorbibnamehash}{fb23653b8f375b24beae6072db200b8e}
+      \strng{authornamehash}{769f459d444a4355c6533102f3630c13}
+      \strng{authorfullhash}{fb23653b8f375b24beae6072db200b8e}
+      \strng{authorfullhashraw}{fb23653b8f375b24beae6072db200b8e}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2025 40th IEEE/ACM International Conference on Automated Software Engineering (ASE)}
+      \field{title}{It’s Not Easy Being Green: On the Energy Efficiency of Programming Languages}
+      \field{year}{2025}
+      \field{pages}{1553\bibrangedash 1565}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1109/ASE63991.2025.00131
+      \endverb
+      \keyw{Industries;Computer languages;Energy consumption;Memory management;Focusing;Libraries;Parallel algorithms;Optimization;Software engineering;Python;programming languages;performance;sustainability}
+    \endentry
+    \entry{lannelongue2021}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=2cd9ac6f5378a86cd4ec311386992c9b}{%
+           family={Lannelongue},
+           familyi={L\bibinitperiod},
+           given={Loïc},
+           giveni={L\bibinitperiod}}}%
+        {{hash=56cce980f8a594b816b61b059ceb7688}{%
+           family={Grealey},
+           familyi={G\bibinitperiod},
+           given={Jason},
+           giveni={J\bibinitperiod}}}%
+        {{hash=ae06c1fe21497bfda08fcf626ad51404}{%
+           family={Inouye},
+           familyi={I\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{b9353a325e288672abf49838525ffa1b}
+      \strng{fullhash}{b9353a325e288672abf49838525ffa1b}
+      \strng{fullhashraw}{b9353a325e288672abf49838525ffa1b}
+      \strng{bibnamehash}{b9353a325e288672abf49838525ffa1b}
+      \strng{authorbibnamehash}{b9353a325e288672abf49838525ffa1b}
+      \strng{authornamehash}{b9353a325e288672abf49838525ffa1b}
+      \strng{authorfullhash}{b9353a325e288672abf49838525ffa1b}
+      \strng{authorfullhashraw}{b9353a325e288672abf49838525ffa1b}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Advanced Science}
+      \field{number}{12}
+      \field{title}{Green Algorithms: Quantifying the Carbon Footprint of Computation}
+      \field{volume}{8}
+      \field{year}{2021}
+      \field{pages}{2100707}
+      \range{pages}{1}
+      \verb{doi}
+      \verb https://doi.org/10.1002/advs.202100707
+      \endverb
+      \verb{eprint}
+      \verb https://advanced.onlinelibrary.wiley.com/doi/pdf/10.1002/advs.202100707
+      \endverb
+      \verb{urlraw}
+      \verb https://advanced.onlinelibrary.wiley.com/doi/abs/10.1002/advs.202100707
+      \endverb
+      \verb{url}
+      \verb https://advanced.onlinelibrary.wiley.com/doi/abs/10.1002/advs.202100707
+      \endverb
+      \keyw{climate change,computational research,green computing}
+    \endentry
+    \entry{grnsoftware2023}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=53a286a53b4d8045bebf4f6bcedb544a}{%
+           family={{Green Software Foundation}},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{53a286a53b4d8045bebf4f6bcedb544a}
+      \strng{fullhash}{53a286a53b4d8045bebf4f6bcedb544a}
+      \strng{fullhashraw}{53a286a53b4d8045bebf4f6bcedb544a}
+      \strng{bibnamehash}{53a286a53b4d8045bebf4f6bcedb544a}
+      \strng{authorbibnamehash}{53a286a53b4d8045bebf4f6bcedb544a}
+      \strng{authornamehash}{53a286a53b4d8045bebf4f6bcedb544a}
+      \strng{authorfullhash}{53a286a53b4d8045bebf4f6bcedb544a}
+      \strng{authorfullhashraw}{53a286a53b4d8045bebf4f6bcedb544a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Green Software Foundation}
+      \field{title}{Software Carbon Intensity ({SCI}) Specification}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://greensoftware.foundation/projects/software-carbon-intensity
+      \endverb
+      \verb{url}
+      \verb https://greensoftware.foundation/projects/software-carbon-intensity
+      \endverb
+    \endentry
+    \entry{strubell-etal-2019-energy}{inproceedings}{}{}
+      \name{author}{3}{}{%
+        {{hash=d3bf550429e9ba5e3e93b995e9b40d85}{%
+           family={Strubell},
+           familyi={S\bibinitperiod},
+           given={Emma},
+           giveni={E\bibinitperiod}}}%
+        {{hash=f6ed9182b4527a73a06c24556f54acef}{%
+           family={Ganesh},
+           familyi={G\bibinitperiod},
+           given={Ananya},
+           giveni={A\bibinitperiod}}}%
+        {{hash=17d73a3a5be48993791cbe4db8855331}{%
+           family={McCallum},
+           familyi={M\bibinitperiod},
+           given={Andrew},
+           giveni={A\bibinitperiod}}}%
+      }
+      \name{editor}{3}{}{%
+        {{hash=088f1cd997c8227387a06e1cb2dc1538}{%
+           family={Korhonen},
+           familyi={K\bibinitperiod},
+           given={Anna},
+           giveni={A\bibinitperiod}}}%
+        {{hash=852889328d57da2df5bccea3165205d0}{%
+           family={Traum},
+           familyi={T\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=98a908240c23e42cd08857cd67e53cff}{%
+           family={Màrquez},
+           familyi={M\bibinitperiod},
+           given={Lluís},
+           giveni={L\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Florence, Italy}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computational Linguistics}%
+      }
+      \strng{namehash}{885b3b62ebd4bca1bb8cde91020e4c6f}
+      \strng{fullhash}{885b3b62ebd4bca1bb8cde91020e4c6f}
+      \strng{fullhashraw}{885b3b62ebd4bca1bb8cde91020e4c6f}
+      \strng{bibnamehash}{885b3b62ebd4bca1bb8cde91020e4c6f}
+      \strng{authorbibnamehash}{885b3b62ebd4bca1bb8cde91020e4c6f}
+      \strng{authornamehash}{885b3b62ebd4bca1bb8cde91020e4c6f}
+      \strng{authorfullhash}{885b3b62ebd4bca1bb8cde91020e4c6f}
+      \strng{authorfullhashraw}{885b3b62ebd4bca1bb8cde91020e4c6f}
+      \strng{editorbibnamehash}{5d0d019d65674f287aa73e6f7f5b6291}
+      \strng{editornamehash}{5d0d019d65674f287aa73e6f7f5b6291}
+      \strng{editorfullhash}{5d0d019d65674f287aa73e6f7f5b6291}
+      \strng{editorfullhashraw}{5d0d019d65674f287aa73e6f7f5b6291}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Recent progress in hardware and methodology for training neural networks has ushered in a new generation of large networks trained on abundant data. These models have obtained notable gains in accuracy across many NLP tasks. However, these accuracy improvements depend on the availability of exceptionally large computational resources that necessitate similarly substantial energy consumption. As a result these models are costly to train and develop, both financially, due to the cost of hardware and electricity or cloud compute time, and environmentally, due to the carbon footprint required to fuel modern tensor processing hardware. In this paper we bring this issue to the attention of NLP researchers by quantifying the approximate financial and environmental costs of training a variety of recently successful neural network models for NLP. Based on these findings, we propose actionable recommendations to reduce costs and improve equity in NLP research and practice.}
+      \field{booktitle}{Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics}
+      \field{month}{7}
+      \field{title}{Energy and Policy Considerations for Deep Learning in {NLP}}
+      \field{year}{2019}
+      \field{pages}{3645\bibrangedash 3650}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.18653/v1/P19-1355
+      \endverb
+      \verb{urlraw}
+      \verb https://aclanthology.org/P19-1355/
+      \endverb
+      \verb{url}
+      \verb https://aclanthology.org/P19-1355/
+      \endverb
+    \endentry
+    \entry{10.1145/3177754}{article}{}{}
+      \name{author}{5}{}{%
+        {{hash=dfd96e728afd75fdc67528becf604698}{%
+           family={Khan},
+           familyi={K\bibinitperiod},
+           given={Kashif\bibnamedelima Nizam},
+           giveni={K\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+        {{hash=c7df419d12b179b28aa84519f349bebd}{%
+           family={Hirki},
+           familyi={H\bibinitperiod},
+           given={Mikael},
+           giveni={M\bibinitperiod}}}%
+        {{hash=fec3f3e113fd26542eb66b4fea6055ad}{%
+           family={Niemi},
+           familyi={N\bibinitperiod},
+           given={Tapio},
+           giveni={T\bibinitperiod}}}%
+        {{hash=2864a1913a743aff3fb290f702057dc6}{%
+           family={Nurminen},
+           familyi={N\bibinitperiod},
+           given={Jukka\bibnamedelima K.},
+           giveni={J\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=04c0da3bb30ae2f61a845a5ed608170f}{%
+           family={Ou},
+           familyi={O\bibinitperiod},
+           given={Zhonghong},
+           giveni={Z\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York, NY, USA}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{af6b3fcc3c9065344f4ebb87e0b2a45e}
+      \strng{fullhash}{eb8d543e84ba2f8417b0a4f0c8a6ef1d}
+      \strng{fullhashraw}{eb8d543e84ba2f8417b0a4f0c8a6ef1d}
+      \strng{bibnamehash}{eb8d543e84ba2f8417b0a4f0c8a6ef1d}
+      \strng{authorbibnamehash}{eb8d543e84ba2f8417b0a4f0c8a6ef1d}
+      \strng{authornamehash}{af6b3fcc3c9065344f4ebb87e0b2a45e}
+      \strng{authorfullhash}{eb8d543e84ba2f8417b0a4f0c8a6ef1d}
+      \strng{authorfullhashraw}{eb8d543e84ba2f8417b0a4f0c8a6ef1d}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{To improve energy efficiency and comply with the power budgets, it is important to be able to measure the power consumption of cloud computing servers. Intel’s Running Average Power Limit (RAPL) interface is a powerful tool for this purpose. RAPL provides power limiting features and accurate energy readings for CPUs and DRAM, which are easily accessible through different interfaces on large distributed computing systems. Since its introduction, RAPL has been used extensively in power measurement and modeling. However, the advantages and disadvantages of RAPL have not been well investigated yet. To fill this gap, we conduct a series of experiments to disclose the underlying strengths and weaknesses of the RAPL interface by using both customized microbenchmarks and three well-known application level benchmarks: Stream, Stress-ng, and ParFullCMS. Moreover, to make the analysis as realistic as possible, we leverage two production-level power measurement datasets from the Taito, a supercomputing cluster of the Finnish Center of Scientific Computing and also replicate our experiments on Amazon EC2. Our results illustrate different aspects of RAPL and document the findings through comprehensive analysis. Our observations reveal that RAPL readings are highly correlated with plug power, promisingly accurate enough, and have negligible performance overhead. Experimental results suggest RAPL can be a very useful tool to measure and monitor the energy consumption of servers without deploying any complex power meters. We also show that there are still some open issues, such as driver support, non-atomicity of register updates, and unpredictable timings that might weaken the usability of RAPL in certain scenarios. For such scenarios, we pinpoint solutions and workarounds.}
+      \field{issn}{2376-3639}
+      \field{journaltitle}{ACM Trans. Model. Perform. Eval. Comput. Syst.}
+      \field{month}{3}
+      \field{number}{2}
+      \field{title}{RAPL in Action: Experiences in Using RAPL for Power Measurements}
+      \field{volume}{3}
+      \field{year}{2018}
+      \verb{doi}
+      \verb 10.1145/3177754
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/3177754
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/3177754
+      \endverb
+      \keyw{power modeling,RAPL validation,RAPL accuracy,RAPL,DRAM power}
+    \endentry
+    \entry{10.1145/2425248.2425252}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=301e6c1b54b6a10c76744a2f16155693}{%
+           family={Hähnel},
+           familyi={H\bibinitperiod},
+           given={Marcus},
+           giveni={M\bibinitperiod}}}%
+        {{hash=4bcbc8c7c3297e014efea9e667c00508}{%
+           family={Döbel},
+           familyi={D\bibinitperiod},
+           given={Björn},
+           giveni={B\bibinitperiod}}}%
+        {{hash=d6105d2bc31779b88c2b64ee4c001a7b}{%
+           family={Völp},
+           familyi={V\bibinitperiod},
+           given={Marcus},
+           giveni={M\bibinitperiod}}}%
+        {{hash=50d9327dbdc8bba245a39326e52b8400}{%
+           family={Härtig},
+           familyi={H\bibinitperiod},
+           given={Hermann},
+           giveni={H\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York, NY, USA}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{18f09213b5f7fccc0f9f1acfb9d27e6a}
+      \strng{fullhash}{0da4eb6a3c503cbb8caaed4604f7e0db}
+      \strng{fullhashraw}{0da4eb6a3c503cbb8caaed4604f7e0db}
+      \strng{bibnamehash}{0da4eb6a3c503cbb8caaed4604f7e0db}
+      \strng{authorbibnamehash}{0da4eb6a3c503cbb8caaed4604f7e0db}
+      \strng{authornamehash}{18f09213b5f7fccc0f9f1acfb9d27e6a}
+      \strng{authorfullhash}{0da4eb6a3c503cbb8caaed4604f7e0db}
+      \strng{authorfullhashraw}{0da4eb6a3c503cbb8caaed4604f7e0db}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Measuring the energy consumption of software components is a major building block for generating models that allow for energy-aware scheduling, accounting and budgeting. Current measurement techniques focus on coarse-grained measurements of application or system events. However, fine grain adjustments in particular in the operating-system kernel and in application-level servers require power profiles at the level of a single software function. Until recently, this appeared to be impossible due to the lacking fine grain resolution and high costs of measurement equipment. In this paper we report on our experience in using the Running Average Power Limit (RAPL) energy sensors available in recent Intel CPUs for measuring energy consumption of short code paths. We investigate the granularity at which RAPL measurements can be performed and discuss practical obstacles that occur when performing these measurements on complex modern CPUs. Furthermore, we demonstrate how to use the RAPL infrastructure to characterize the energy costs for decoding video slices.}
+      \field{issn}{0163-5999}
+      \field{journaltitle}{SIGMETRICS Perform. Eval. Rev.}
+      \field{month}{1}
+      \field{number}{3}
+      \field{title}{Measuring energy consumption for short code paths using RAPL}
+      \field{volume}{40}
+      \field{year}{2012}
+      \field{pages}{13\bibrangedash 17}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.1145/2425248.2425252
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/2425248.2425252
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/2425248.2425252
+      \endverb
+      \keyw{RAPL,operating systems,power consumption}
+    \endentry
     \entry{8323579}{inproceedings}{}{}
       \name{author}{3}{}{%
         {{hash=1430e2bb5896c498829bb07066c7e0d4}{%
@@ -458,8 +854,8 @@
       \strng{authornamehash}{1ffae2bd318c50b68ac03781920da31a}
       \strng{authorfullhash}{cbfb2422aaf255e1db9b4af543165285}
       \strng{authorfullhashraw}{cbfb2422aaf255e1db9b4af543165285}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{note}{arXiv:2311.07298v2}
@@ -470,34 +866,6 @@
       \endverb
       \verb{url}
       \verb https://arxiv.org/abs/2311.07298
-      \endverb
-    \endentry
-    \entry{grnsoftware2023}{misc}{}{}
-      \name{author}{1}{}{%
-        {{hash=53a286a53b4d8045bebf4f6bcedb544a}{%
-           family={{Green Software Foundation}},
-           familyi={G\bibinitperiod}}}%
-      }
-      \strng{namehash}{53a286a53b4d8045bebf4f6bcedb544a}
-      \strng{fullhash}{53a286a53b4d8045bebf4f6bcedb544a}
-      \strng{fullhashraw}{53a286a53b4d8045bebf4f6bcedb544a}
-      \strng{bibnamehash}{53a286a53b4d8045bebf4f6bcedb544a}
-      \strng{authorbibnamehash}{53a286a53b4d8045bebf4f6bcedb544a}
-      \strng{authornamehash}{53a286a53b4d8045bebf4f6bcedb544a}
-      \strng{authorfullhash}{53a286a53b4d8045bebf4f6bcedb544a}
-      \strng{authorfullhashraw}{53a286a53b4d8045bebf4f6bcedb544a}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{Green Software Foundation}
-      \field{title}{Software Carbon Intensity ({SCI}) Specification}
-      \field{year}{2023}
-      \verb{urlraw}
-      \verb https://greensoftware.foundation/projects/software-carbon-intensity
-      \endverb
-      \verb{url}
-      \verb https://greensoftware.foundation/projects/software-carbon-intensity
       \endverb
     \endentry
     \entry{ipcc2014lifecycle}{online}{}{}
@@ -518,8 +886,8 @@
       \strng{authornamehash}{7228b3cdfe23fe3f4516b401aa5b0d2c}
       \strng{authorfullhash}{7228b3cdfe23fe3f4516b401aa5b0d2c}
       \strng{authorfullhashraw}{7228b3cdfe23fe3f4516b401aa5b0d2c}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{note}{\url{https://www.ipcc.ch/site/assets/uploads/2018/02/ipcc_wg3_ar5_annex-iii.pdf}}
@@ -527,57 +895,6 @@
       \field{urlmonth}{1}
       \field{urlyear}{2026}
       \field{urldateera}{ce}
-    \endentry
-    \entry{lannelongue2021}{article}{}{}
-      \name{author}{3}{}{%
-        {{hash=2cd9ac6f5378a86cd4ec311386992c9b}{%
-           family={Lannelongue},
-           familyi={L\bibinitperiod},
-           given={Loïc},
-           giveni={L\bibinitperiod}}}%
-        {{hash=56cce980f8a594b816b61b059ceb7688}{%
-           family={Grealey},
-           familyi={G\bibinitperiod},
-           given={Jason},
-           giveni={J\bibinitperiod}}}%
-        {{hash=ae06c1fe21497bfda08fcf626ad51404}{%
-           family={Inouye},
-           familyi={I\bibinitperiod},
-           given={Michael},
-           giveni={M\bibinitperiod}}}%
-      }
-      \strng{namehash}{b9353a325e288672abf49838525ffa1b}
-      \strng{fullhash}{b9353a325e288672abf49838525ffa1b}
-      \strng{fullhashraw}{b9353a325e288672abf49838525ffa1b}
-      \strng{bibnamehash}{b9353a325e288672abf49838525ffa1b}
-      \strng{authorbibnamehash}{b9353a325e288672abf49838525ffa1b}
-      \strng{authornamehash}{b9353a325e288672abf49838525ffa1b}
-      \strng{authorfullhash}{b9353a325e288672abf49838525ffa1b}
-      \strng{authorfullhashraw}{b9353a325e288672abf49838525ffa1b}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Advanced Science}
-      \field{number}{12}
-      \field{title}{Green Algorithms: Quantifying the Carbon Footprint of Computation}
-      \field{volume}{8}
-      \field{year}{2021}
-      \field{pages}{2100707}
-      \range{pages}{1}
-      \verb{doi}
-      \verb https://doi.org/10.1002/advs.202100707
-      \endverb
-      \verb{eprint}
-      \verb https://advanced.onlinelibrary.wiley.com/doi/pdf/10.1002/advs.202100707
-      \endverb
-      \verb{urlraw}
-      \verb https://advanced.onlinelibrary.wiley.com/doi/abs/10.1002/advs.202100707
-      \endverb
-      \verb{url}
-      \verb https://advanced.onlinelibrary.wiley.com/doi/abs/10.1002/advs.202100707
-      \endverb
-      \keyw{climate change,computational research,green computing}
     \endentry
     \entry{decisionmodels}{article}{}{}
       \name{author}{3}{}{%
@@ -605,8 +922,8 @@
       \strng{authornamehash}{15f32d88deefed83d2d4464c9c340a0d}
       \strng{authorfullhash}{15f32d88deefed83d2d4464c9c340a0d}
       \strng{authorfullhashraw}{15f32d88deefed83d2d4464c9c340a0d}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Context: Software development is a continuous decision-making process that mainly relies on the software engineer’s experience and intuition. One of the essential decisions in the early stages of the process is selecting the best fitting programming language ecosystem based on the project requirements. A significant number of criteria, such as developer availability and consistent documentation, in addition to the number of available options in the market, lead to a challenging decision-making process. As the selection of programming language ecosystems depends on the application to be developed and its environment, a decision model is required to analyze the selection problem using systematic identification and evaluation of potential alternatives for a development project. Method: Recently, we introduced a framework to build decision models for technology selection problems in software production. Furthermore, we designed and implemented a decision support system that uses such decision models to support software engineers with their decision-making problems. This study presents a decision model based on the framework for the programming language ecosystem selection problem. Results: The decision model has been evaluated through seven real-world case studies at seven software development companies. The case study participants declared that the approach provides significantly more insight into the programming language ecosystem selection process and decreases the decision-making process’s time and cost. Conclusion: With the decision model, software engineers can more rapidly evaluate and select programming language ecosystems. Having the knowledge in the decision model readily available supports software engineers in making more efficient and effective decisions that meet their requirements and priorities. Furthermore, such reusable knowledge can be employed by other researchers to develop new concepts and solutions for future challenges.}
@@ -723,8 +1040,8 @@
       \strng{authornamehash}{d92cdab2ffa29ab8e64c09c4be5a1db9}
       \strng{authorfullhash}{d92cdab2ffa29ab8e64c09c4be5a1db9}
       \strng{authorfullhashraw}{d92cdab2ffa29ab8e64c09c4be5a1db9}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{arXiv preprint arXiv:2603.04782}
@@ -753,8 +1070,8 @@
       \strng{authornamehash}{298361bf8fb97e9483abae95fe7c9aff}
       \strng{authorfullhash}{298361bf8fb97e9483abae95fe7c9aff}
       \strng{authorfullhashraw}{298361bf8fb97e9483abae95fe7c9aff}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{978-3-031-70244-0}
@@ -766,71 +1083,6 @@
       \verb{doi}
       \verb 10.1007/978-3-031-70245-7_14
       \endverb
-    \endentry
-    \entry{10.1145/3177754}{article}{}{}
-      \name{author}{5}{}{%
-        {{hash=dfd96e728afd75fdc67528becf604698}{%
-           family={Khan},
-           familyi={K\bibinitperiod},
-           given={Kashif\bibnamedelima Nizam},
-           giveni={K\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
-        {{hash=c7df419d12b179b28aa84519f349bebd}{%
-           family={Hirki},
-           familyi={H\bibinitperiod},
-           given={Mikael},
-           giveni={M\bibinitperiod}}}%
-        {{hash=fec3f3e113fd26542eb66b4fea6055ad}{%
-           family={Niemi},
-           familyi={N\bibinitperiod},
-           given={Tapio},
-           giveni={T\bibinitperiod}}}%
-        {{hash=2864a1913a743aff3fb290f702057dc6}{%
-           family={Nurminen},
-           familyi={N\bibinitperiod},
-           given={Jukka\bibnamedelima K.},
-           giveni={J\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
-        {{hash=04c0da3bb30ae2f61a845a5ed608170f}{%
-           family={Ou},
-           familyi={O\bibinitperiod},
-           given={Zhonghong},
-           giveni={Z\bibinitperiod}}}%
-      }
-      \list{location}{1}{%
-        {New York, NY, USA}%
-      }
-      \list{publisher}{1}{%
-        {Association for Computing Machinery}%
-      }
-      \strng{namehash}{af6b3fcc3c9065344f4ebb87e0b2a45e}
-      \strng{fullhash}{eb8d543e84ba2f8417b0a4f0c8a6ef1d}
-      \strng{fullhashraw}{eb8d543e84ba2f8417b0a4f0c8a6ef1d}
-      \strng{bibnamehash}{eb8d543e84ba2f8417b0a4f0c8a6ef1d}
-      \strng{authorbibnamehash}{eb8d543e84ba2f8417b0a4f0c8a6ef1d}
-      \strng{authornamehash}{af6b3fcc3c9065344f4ebb87e0b2a45e}
-      \strng{authorfullhash}{eb8d543e84ba2f8417b0a4f0c8a6ef1d}
-      \strng{authorfullhashraw}{eb8d543e84ba2f8417b0a4f0c8a6ef1d}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{To improve energy efficiency and comply with the power budgets, it is important to be able to measure the power consumption of cloud computing servers. Intel’s Running Average Power Limit (RAPL) interface is a powerful tool for this purpose. RAPL provides power limiting features and accurate energy readings for CPUs and DRAM, which are easily accessible through different interfaces on large distributed computing systems. Since its introduction, RAPL has been used extensively in power measurement and modeling. However, the advantages and disadvantages of RAPL have not been well investigated yet. To fill this gap, we conduct a series of experiments to disclose the underlying strengths and weaknesses of the RAPL interface by using both customized microbenchmarks and three well-known application level benchmarks: Stream, Stress-ng, and ParFullCMS. Moreover, to make the analysis as realistic as possible, we leverage two production-level power measurement datasets from the Taito, a supercomputing cluster of the Finnish Center of Scientific Computing and also replicate our experiments on Amazon EC2. Our results illustrate different aspects of RAPL and document the findings through comprehensive analysis. Our observations reveal that RAPL readings are highly correlated with plug power, promisingly accurate enough, and have negligible performance overhead. Experimental results suggest RAPL can be a very useful tool to measure and monitor the energy consumption of servers without deploying any complex power meters. We also show that there are still some open issues, such as driver support, non-atomicity of register updates, and unpredictable timings that might weaken the usability of RAPL in certain scenarios. For such scenarios, we pinpoint solutions and workarounds.}
-      \field{issn}{2376-3639}
-      \field{journaltitle}{ACM Trans. Model. Perform. Eval. Comput. Syst.}
-      \field{month}{3}
-      \field{number}{2}
-      \field{title}{RAPL in Action: Experiences in Using RAPL for Power Measurements}
-      \field{volume}{3}
-      \field{year}{2018}
-      \verb{doi}
-      \verb 10.1145/3177754
-      \endverb
-      \verb{urlraw}
-      \verb https://doi.org/10.1145/3177754
-      \endverb
-      \verb{url}
-      \verb https://doi.org/10.1145/3177754
-      \endverb
-      \keyw{power modeling,RAPL validation,RAPL accuracy,RAPL,DRAM power}
     \endentry
     \entry{Shechtman2013}{inbook}{}{}
       \name{author}{1}{}{%
@@ -870,8 +1122,8 @@
       \strng{editornamehash}{a6bea472ed6cf8a4c7c43c36b22d3f21}
       \strng{editorfullhash}{a6bea472ed6cf8a4c7c43c36b22d3f21}
       \strng{editorfullhashraw}{a6bea472ed6cf8a4c7c43c36b22d3f21}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{This chapter focuses on the use of the coefficient of variation (CV) as an index of reliability or variability in the health sciences (medical and biological sciences) for the purpose of clinical research and clinical practice in the context of diagnostic tests, human performance tests, and biochemical laboratory assays. Before examining the use of the CV as an index of measurement reliability or variability, there is a need to define basic terms in measurement theory such as reliability, validity, and measurement error. A discussion and examples of use of the CV as a measure of reliability or variability are also provided.}
@@ -890,68 +1142,6 @@
       \verb{url}
       \verb https://doi.org/10.1007/978-3-642-37131-8_4
       \endverb
-    \endentry
-    \entry{10.1145/2425248.2425252}{article}{}{}
-      \name{author}{4}{}{%
-        {{hash=301e6c1b54b6a10c76744a2f16155693}{%
-           family={Hähnel},
-           familyi={H\bibinitperiod},
-           given={Marcus},
-           giveni={M\bibinitperiod}}}%
-        {{hash=4bcbc8c7c3297e014efea9e667c00508}{%
-           family={Döbel},
-           familyi={D\bibinitperiod},
-           given={Björn},
-           giveni={B\bibinitperiod}}}%
-        {{hash=d6105d2bc31779b88c2b64ee4c001a7b}{%
-           family={Völp},
-           familyi={V\bibinitperiod},
-           given={Marcus},
-           giveni={M\bibinitperiod}}}%
-        {{hash=50d9327dbdc8bba245a39326e52b8400}{%
-           family={Härtig},
-           familyi={H\bibinitperiod},
-           given={Hermann},
-           giveni={H\bibinitperiod}}}%
-      }
-      \list{location}{1}{%
-        {New York, NY, USA}%
-      }
-      \list{publisher}{1}{%
-        {Association for Computing Machinery}%
-      }
-      \strng{namehash}{18f09213b5f7fccc0f9f1acfb9d27e6a}
-      \strng{fullhash}{0da4eb6a3c503cbb8caaed4604f7e0db}
-      \strng{fullhashraw}{0da4eb6a3c503cbb8caaed4604f7e0db}
-      \strng{bibnamehash}{0da4eb6a3c503cbb8caaed4604f7e0db}
-      \strng{authorbibnamehash}{0da4eb6a3c503cbb8caaed4604f7e0db}
-      \strng{authornamehash}{18f09213b5f7fccc0f9f1acfb9d27e6a}
-      \strng{authorfullhash}{0da4eb6a3c503cbb8caaed4604f7e0db}
-      \strng{authorfullhashraw}{0da4eb6a3c503cbb8caaed4604f7e0db}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{Measuring the energy consumption of software components is a major building block for generating models that allow for energy-aware scheduling, accounting and budgeting. Current measurement techniques focus on coarse-grained measurements of application or system events. However, fine grain adjustments in particular in the operating-system kernel and in application-level servers require power profiles at the level of a single software function. Until recently, this appeared to be impossible due to the lacking fine grain resolution and high costs of measurement equipment. In this paper we report on our experience in using the Running Average Power Limit (RAPL) energy sensors available in recent Intel CPUs for measuring energy consumption of short code paths. We investigate the granularity at which RAPL measurements can be performed and discuss practical obstacles that occur when performing these measurements on complex modern CPUs. Furthermore, we demonstrate how to use the RAPL infrastructure to characterize the energy costs for decoding video slices.}
-      \field{issn}{0163-5999}
-      \field{journaltitle}{SIGMETRICS Perform. Eval. Rev.}
-      \field{month}{1}
-      \field{number}{3}
-      \field{title}{Measuring energy consumption for short code paths using RAPL}
-      \field{volume}{40}
-      \field{year}{2012}
-      \field{pages}{13\bibrangedash 17}
-      \range{pages}{5}
-      \verb{doi}
-      \verb 10.1145/2425248.2425252
-      \endverb
-      \verb{urlraw}
-      \verb https://doi.org/10.1145/2425248.2425252
-      \endverb
-      \verb{url}
-      \verb https://doi.org/10.1145/2425248.2425252
-      \endverb
-      \keyw{RAPL,operating systems,power consumption}
     \endentry
     \entry{seabold2010}{inproceedings}{}{}
       \name{author}{2}{}{%
@@ -974,8 +1164,8 @@
       \strng{authornamehash}{b3f1ebbf5e0547965569f1305deeff03}
       \strng{authorfullhash}{b3f1ebbf5e0547965569f1305deeff03}
       \strng{authorfullhashraw}{b3f1ebbf5e0547965569f1305deeff03}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Proc. 9th Python in Science Conference (SciPy)}
@@ -985,6 +1175,120 @@
       \range{pages}{5}
       \verb{doi}
       \verb 10.25080/Majora-92bf1922-011
+      \endverb
+    \endentry
+    \entry{a967ba42-d0b9-3e65-976f-80cc6086b406}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=582fa361b6ad3433c6560bd94f446ca5}{%
+           family={Welch},
+           familyi={W\bibinitperiod},
+           given={B.\bibnamedelimi L.},
+           giveni={B\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {[Oxford University Press, Biometrika Trust]}%
+      }
+      \strng{namehash}{582fa361b6ad3433c6560bd94f446ca5}
+      \strng{fullhash}{582fa361b6ad3433c6560bd94f446ca5}
+      \strng{fullhashraw}{582fa361b6ad3433c6560bd94f446ca5}
+      \strng{bibnamehash}{582fa361b6ad3433c6560bd94f446ca5}
+      \strng{authorbibnamehash}{582fa361b6ad3433c6560bd94f446ca5}
+      \strng{authornamehash}{582fa361b6ad3433c6560bd94f446ca5}
+      \strng{authorfullhash}{582fa361b6ad3433c6560bd94f446ca5}
+      \strng{authorfullhashraw}{582fa361b6ad3433c6560bd94f446ca5}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{00063444}
+      \field{journaltitle}{Biometrika}
+      \field{number}{1/2}
+      \field{title}{The Generalization of `Student's' Problem when Several Different Population Variances are Involved}
+      \field{urlday}{27}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{volume}{34}
+      \field{year}{1947}
+      \field{urldateera}{ce}
+      \field{pages}{28\bibrangedash 35}
+      \range{pages}{8}
+      \verb{urlraw}
+      \verb http://www.jstor.org/stable/2332510
+      \endverb
+      \verb{url}
+      \verb http://www.jstor.org/stable/2332510
+      \endverb
+    \endentry
+    \entry{ruxton2006}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=6334bae937095dbcaea6178f6ef09269}{%
+           family={Ruxton},
+           familyi={R\bibinitperiod},
+           given={Graeme},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{6334bae937095dbcaea6178f6ef09269}
+      \strng{fullhash}{6334bae937095dbcaea6178f6ef09269}
+      \strng{fullhashraw}{6334bae937095dbcaea6178f6ef09269}
+      \strng{bibnamehash}{6334bae937095dbcaea6178f6ef09269}
+      \strng{authorbibnamehash}{6334bae937095dbcaea6178f6ef09269}
+      \strng{authornamehash}{6334bae937095dbcaea6178f6ef09269}
+      \strng{authorfullhash}{6334bae937095dbcaea6178f6ef09269}
+      \strng{authorfullhashraw}{6334bae937095dbcaea6178f6ef09269}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Behavioral Ecology}
+      \field{month}{04}
+      \field{title}{The Unequal Variance T-Test is an Underused Alternative to Student's T-Test and the Mann-Whitney U Test}
+      \field{volume}{17}
+      \field{year}{2006}
+      \verb{doi}
+      \verb 10.1093/beheco/ark016
+      \endverb
+    \endentry
+    \entry{c3fa9fa7-dd2a-35f2-84a0-d5c07e68dd08}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=0b0af97d4f9c67ace0f8c55bd08f9072}{%
+           family={Dunn},
+           familyi={D\bibinitperiod},
+           given={Olive\bibnamedelima Jean},
+           giveni={O\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {[American Statistical Association, Taylor & Francis, Ltd.]}%
+      }
+      \strng{namehash}{0b0af97d4f9c67ace0f8c55bd08f9072}
+      \strng{fullhash}{0b0af97d4f9c67ace0f8c55bd08f9072}
+      \strng{fullhashraw}{0b0af97d4f9c67ace0f8c55bd08f9072}
+      \strng{bibnamehash}{0b0af97d4f9c67ace0f8c55bd08f9072}
+      \strng{authorbibnamehash}{0b0af97d4f9c67ace0f8c55bd08f9072}
+      \strng{authornamehash}{0b0af97d4f9c67ace0f8c55bd08f9072}
+      \strng{authorfullhash}{0b0af97d4f9c67ace0f8c55bd08f9072}
+      \strng{authorfullhashraw}{0b0af97d4f9c67ace0f8c55bd08f9072}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Methods for constructing simultaneous confidence intervals for all possible linear contrasts among several means of normally distributed variables have been given by Scheffé and Tukey. In this paper the possibility is considered of picking in advance a number (say m) of linear contrasts among k means, and then estimating these m linear contrasts by confidence intervals based on a Student t statistic, in such a way that the overall confidence level for the m intervals is greater than or equal to a preassigned value. It is found that for some values of k, and for m not too large, intervals obtained in this way are shorter than those using the F distribution or the Studentized range. When this is so, the experimenter may be willing to select the linear combinations in advance which he wishes to estimate in order to have m shorter intervals instead of an infinite number of longer intervals.}
+      \field{issn}{01621459, 1537274X}
+      \field{journaltitle}{Journal of the American Statistical Association}
+      \field{number}{293}
+      \field{title}{Multiple Comparisons Among Means}
+      \field{urlday}{27}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{volume}{56}
+      \field{year}{1961}
+      \field{urldateera}{ce}
+      \field{pages}{52\bibrangedash 64}
+      \range{pages}{13}
+      \verb{urlraw}
+      \verb http://www.jstor.org/stable/2282330
+      \endverb
+      \verb{url}
+      \verb http://www.jstor.org/stable/2282330
       \endverb
     \endentry
     \entry{cohen1988}{book}{}{}
@@ -1009,8 +1313,8 @@
       \strng{authornamehash}{90e1b93429e0013509f5a2e1f6d38806}
       \strng{authorfullhash}{90e1b93429e0013509f5a2e1f6d38806}
       \strng{authorfullhashraw}{90e1b93429e0013509f5a2e1f6d38806}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{2nd}
@@ -1039,8 +1343,8 @@
       \strng{authornamehash}{f14317bfa21c807301c1f1fd2e90e122}
       \strng{authorfullhash}{f14317bfa21c807301c1f1fd2e90e122}
       \strng{authorfullhashraw}{f14317bfa21c807301c1f1fd2e90e122}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{The Python programming language is known for performing poorly on many tasks. While to some extent this is to be expected from a dynamic language, it is not clear how much each dynamic feature contributes to the costs of interpreting Python. In this study we attempt to quantify the costs of language features such as dynamic typing, reference counting for memory management, boxing of numbers, and late binding of function calls.We use an experimental compilation framework for Python that can make use of type annotations provided by the user to specialize the program as well as elide unnecessary reference counting operations and function lookups. The compiled programs run within the Python interpreter and use its internal API to implement language semantics. By separately enabling and disabling compiler optimizations, we can thus measure how much each language feature contributes to total execution time in the interpreter.We find that a boxed representation of numbers as heap objects is the single most costly language feature on numeric codes, accounting for up to 43\% of total execution time in our benchmark set. On symbolic object-oriented code, late binding of function and method calls costs up to 30\%. Redundant reference counting, dynamic type checks, and Python's elaborate function calling convention have comparatively smaller costs.}
@@ -1076,8 +1380,8 @@
       \strng{authornamehash}{c06eb9134aeb01d746095b76189c277b}
       \strng{authorfullhash}{c06eb9134aeb01d746095b76189c277b}
       \strng{authorfullhashraw}{c06eb9134aeb01d746095b76189c277b}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{Google Online Security Blog}
@@ -1104,8 +1408,8 @@
       \strng{authornamehash}{be71d0542f6d52e76ec4aa72b14f620c}
       \strng{authorfullhash}{be71d0542f6d52e76ec4aa72b14f620c}
       \strng{authorfullhashraw}{be71d0542f6d52e76ec4aa72b14f620c}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{Linux Kernel Documentation}
