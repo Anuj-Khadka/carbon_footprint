@@ -136,6 +136,38 @@
       \endverb
       \keyw{ICT,carbon footprint,trends,AI,big data,data science,IoT,blockchain,policy,regulations}
     \endentry
+    \entry{worldbank_itu}{online}{}{}
+      \name{author}{2}{}{%
+        {{hash=eb963c1731cf870b94450df5798926ce}{%
+           family={Bank},
+           familyi={B\bibinitperiod},
+           given={World},
+           giveni={W\bibinitperiod}}}%
+        {{hash=5c3541b083d376fcf7bf52bd401a8ab9}{%
+           family={Union},
+           familyi={U\bibinitperiod},
+           given={International\bibnamedelima Telecommunication},
+           giveni={I\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+      }
+      \strng{namehash}{922bb2736e59c9e1002c4066a1188be1}
+      \strng{fullhash}{922bb2736e59c9e1002c4066a1188be1}
+      \strng{fullhashraw}{922bb2736e59c9e1002c4066a1188be1}
+      \strng{bibnamehash}{922bb2736e59c9e1002c4066a1188be1}
+      \strng{authorbibnamehash}{922bb2736e59c9e1002c4066a1188be1}
+      \strng{authornamehash}{922bb2736e59c9e1002c4066a1188be1}
+      \strng{authorfullhash}{922bb2736e59c9e1002c4066a1188be1}
+      \strng{authorfullhashraw}{922bb2736e59c9e1002c4066a1188be1}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{\url{https://openknowledge.worldbank.org/entities/publication/a8feecdd-5f79-412a-834f-6f45903e18a5}}
+      \field{title}{Measuring the Emissions and Energy Footprint of the ICT Sector: Implications for Climate Action}
+      \field{urlmonth}{1}
+      \field{urlyear}{2026}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+    \endentry
     \entry{iea_energy_consumption}{online}{}{}
       \name{author}{1}{}{%
         {{hash=18fdbec513c87989c7580f31bb7f03ab}{%
@@ -150,8 +182,8 @@
       \strng{authornamehash}{18fdbec513c87989c7580f31bb7f03ab}
       \strng{authorfullhash}{18fdbec513c87989c7580f31bb7f03ab}
       \strng{authorfullhashraw}{18fdbec513c87989c7580f31bb7f03ab}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{note}{\url{https://www.iea.org/reports/energy-and-ai}}
@@ -196,8 +228,8 @@
       \strng{authornamehash}{6bf4e7bfb6687766914748c756d98ea2}
       \strng{authorfullhash}{945efed2e485d54521243e9a7acb67c7}
       \strng{authorfullhashraw}{945efed2e485d54521243e9a7acb67c7}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{note}{\url{https://datacenters.lbl.gov/sites/default/files/Masanet_et_al_Science_2020.full_.pdf}}
@@ -260,8 +292,8 @@
       \strng{authorfullhash}{9636bd7f21f5641a06c0e3e238f9da45}
       \strng{authorfullhashraw}{9636bd7f21f5641a06c0e3e238f9da45}
       \field{extraname}{1}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{This paper presents a study of the runtime, memory usage and energy consumption of twenty seven well-known software languages. We monitor the performance of such languages using ten different programming problems, expressed in each of the languages. Our results show interesting findings, such as, slower/faster languages consuming less/more energy, and how memory usage influences energy consumption. Finally, we show how to use our results to provide software engineers support to decide which language to use when energy efficiency is a concern.}
@@ -299,8 +331,8 @@
       \strng{authornamehash}{a9f18dceffd122e28fdd8e914e1bf1bc}
       \strng{authorfullhash}{a9f18dceffd122e28fdd8e914e1bf1bc}
       \strng{authorfullhashraw}{a9f18dceffd122e28fdd8e914e1bf1bc}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{note}{\url{http://benchmarksgame.alioth.debian.org/}}
@@ -353,8 +385,8 @@
       \strng{authornamehash}{cd6d7b6a5792cd65837937431682a57e}
       \strng{authorfullhash}{11166f65d88f76d9e22d1b6f4a5125b9}
       \strng{authorfullhashraw}{11166f65d88f76d9e22d1b6f4a5125b9}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Accurate reporting of energy and carbon usage is essential for understanding the potential climate impacts of machine learning research. We introduce a framework that makes this easier by providing a simple interface for tracking realtime energy consumption and carbon emissions, as well as generating standardized online appendices. Utilizing this framework, we create a leaderboard for energy efficient reinforcement learning algorithms to incentivize responsible research in this area as an example for other areas of machine learning. Finally, based on case studies using our framework, we propose strategies for mitigation of carbon emissions and reduction of energy consumption. By making accounting easier, we hope to further the sustainable development of machine learning experiments and spur more research into energy efficient algorithms.}
@@ -368,8 +400,8 @@
       \keyw{energy efficiency,green computing,reinforcement learning,deep learning,climate change}
     \endentry
     \entry{librehardwaremonitor}{online}{}{}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{note}{\url{https://librehardwaremonitor.com/}}
       \field{urlmonth}{3}
       \field{urlyear}{2026}
@@ -804,8 +836,8 @@
       \strng{authornamehash}{6bc48535406cc35f8a909b4e520ec9ee}
       \strng{authorfullhash}{6bc48535406cc35f8a909b4e520ec9ee}
       \strng{authorfullhashraw}{6bc48535406cc35f8a909b4e520ec9ee}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{2017 Eighth International Green and Sustainable Computing Conference (IGSC)}
@@ -1009,8 +1041,8 @@
       \strng{authornamehash}{3a21f96a86a91ee99d6f7a48f6caf1bc}
       \strng{authorfullhash}{d914d96c280cea9af601fd1fefe7f08f}
       \strng{authorfullhashraw}{d914d96c280cea9af601fd1fefe7f08f}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Proc. ACM Program. Lang.}
