@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber main"] 1780873896.45786 "main.bcf" "main.bbl" "main" 1780874012.16106 0
-  "main.bcf" 1780874011 111520 0a9f56616e1849f9a14545f360fb5d67 "pdflatex"
+["biber main"] 1780873896.45786 "main.bcf" "main.bbl" "main" 1780877513.4558 0
+  "main.bcf" 1780877513 111520 0a9f56616e1849f9a14545f360fb5d67 "pdflatex"
   "main.bib" 1780443303 31886 766daa9c6250e201aa589781600b189f ""
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1780874010.02577 "c:/Users/Stemadmin/Desktop/Anuj Khadka/carbon_footprint/paper/main.tex" "main.pdf" "main" 1780874012.16207 0
+["pdflatex"] 1780877511.30191 "c:/Users/Stemadmin/Desktop/Anuj Khadka/carbon_footprint/paper/main.tex" "main.pdf" "main" 1780877513.45685 0
   "c:/Users/Stemadmin/Desktop/Anuj Khadka/carbon_footprint/paper/main.tex" 1780873899 5295 ccec0d2602986035546e7ea0dbe98271 ""
   "c:/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1775080624 2971 def0b6c1f0b107b3b936def894055589 ""
   "c:/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1775080624 2900 1537cc8184ad1792082cd229ecc269f4 ""
@@ -214,9 +214,9 @@
   "figures/06_merge_sort_scaling.png" 1777259678 109454 175256104f9fb5a8f975614777f3fde4 ""
   "figures/07_scaling_ratio_heatmap.png" 1777259678 82426 6733cb894989ccd3d0ce56971e03f1cc ""
   "figures/08_boxplot_large.png" 1777259679 51836 8f000d2b665016d3000f28dffa280194 ""
-  "main.aux" 1780874011 18410 2c08863ad0e411d002afebcd57a70c15 "pdflatex"
+  "main.aux" 1780877513 18511 4d440b9631d309aa6467d241de14758a "pdflatex"
   "main.bbl" 1780873898 79235 053eaae84b41c4cda93e35a5dbf604a2 "biber main"
-  "main.run.xml" 1780874011 2299 81988d3303a58f7ac525483192dfa2a1 "pdflatex"
+  "main.run.xml" 1780877513 2299 81988d3303a58f7ac525483192dfa2a1 "pdflatex"
   "main.tex" 1780873899 5295 ccec0d2602986035546e7ea0dbe98271 ""
   "preamble.tex" 1777419474 2850 36e40cc31f618bf6242ba01f2b27185b ""
   "sections/acknowledgement.tex" 1780350730 741 d6df3c44c945fe8e9cbedbff3a1562ed ""
@@ -228,7 +228,7 @@
   "sections/methodology.tex" 1777419474 16352 63e0333345809376297df4d1a5a1bfa9 ""
   "sections/related_work.tex" 1777419474 1721 a11540eb0b13752f4978bc39fad9b41d ""
   "sections/results.tex" 1777419615 13397 f2f523fc82e820aabe20ff67b970c6b8 ""
-  "sections/threats_to_validity.tex" 1780874009 146 7ea508f5008f2e3f0087d307c947b09a ""
+  "sections/threats_to_validity.tex" 1780877511 282 64ab5d577005d191d9177e0d25f3a85f ""
   (generated)
   "main.aux"
   "main.bcf"
