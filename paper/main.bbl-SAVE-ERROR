@@ -1468,6 +1468,63 @@
       \endverb
       \keyw{unboxing,reference counting,interpreters,dynamic programming languages,Python}
     \endentry
+    \entry{datacenter_consumption_2024}{unknown}{}{}
+      \name{author}{7}{}{%
+        {{hash=c7cb00b8e5748da5e80489d2c7f514a5}{%
+           family={Guidi},
+           familyi={G\bibinitperiod},
+           given={Gianluca},
+           giveni={G\bibinitperiod}}}%
+        {{hash=f3c8643c576bade6dbc125562e719399}{%
+           family={Dominici},
+           familyi={D\bibinitperiod},
+           given={Francesca},
+           giveni={F\bibinitperiod}}}%
+        {{hash=7333bd861053ff4eb1d4b67ae61a5c67}{%
+           family={Gilmour},
+           familyi={G\bibinitperiod},
+           given={Jonathan},
+           giveni={J\bibinitperiod}}}%
+        {{hash=a21e438da7f3d985cb8a021dce7c8b8a}{%
+           family={Butler},
+           familyi={B\bibinitperiod},
+           given={Kevin},
+           giveni={K\bibinitperiod}}}%
+        {{hash=aef6d7a6fea4bfb3f10c32c0e78c4fd0}{%
+           family={Bell},
+           familyi={B\bibinitperiod},
+           given={Eric},
+           giveni={E\bibinitperiod}}}%
+        {{hash=85d6d4e766e7ace9255f49d44eaedf65}{%
+           family={Delaney},
+           familyi={D\bibinitperiod},
+           given={Scott},
+           giveni={S\bibinitperiod}}}%
+        {{hash=fd439839612993b3da34504dfe17b5aa}{%
+           family={Bargagli\bibnamedelima Stoffi},
+           familyi={B\bibinitperiod\bibinitdelim S\bibinitperiod},
+           given={Falco},
+           giveni={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{29eefbd4f680b1f18e71e4e167679209}
+      \strng{fullhash}{b333cd89af88b6420f8cfb73592a0334}
+      \strng{fullhashraw}{b333cd89af88b6420f8cfb73592a0334}
+      \strng{bibnamehash}{b333cd89af88b6420f8cfb73592a0334}
+      \strng{authorbibnamehash}{b333cd89af88b6420f8cfb73592a0334}
+      \strng{authornamehash}{29eefbd4f680b1f18e71e4e167679209}
+      \strng{authorfullhash}{b333cd89af88b6420f8cfb73592a0334}
+      \strng{authorfullhashraw}{b333cd89af88b6420f8cfb73592a0334}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{11}
+      \field{title}{Environmental Burden of United States Data Centers in the Artificial Intelligence Era}
+      \field{year}{2024}
+      \verb{doi}
+      \verb 10.48550/arXiv.2411.09786
+      \endverb
+    \endentry
     \entry{google2025rustAndroid}{misc}{}{}
       \name{author}{1}{}{%
         {{hash=c06eb9134aeb01d746095b76189c277b}{%
