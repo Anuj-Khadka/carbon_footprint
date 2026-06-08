@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber main"] 1780887204.18027 "main.bcf" "main.bbl" "main" 1780887310.27393 0
+["biber main"] 1780887204.18027 "main.bcf" "main.bbl" "main" 1780887317.27095 0
   "main.bcf" 0 -1 0 "pdflatex"
   "main.bib" 1780887204 32490 89cb7d68fc4e5e5039e712b5bb3b7dc5 ""
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1780887308.25458 "c:/Users/Stemadmin/Desktop/Anuj Khadka/carbon_footprint/paper/main.tex" "main.pdf" "main" 1780887310.26357 2
+["pdflatex"] 1780887315.352 "c:/Users/Stemadmin/Desktop/Anuj Khadka/carbon_footprint/paper/main.tex" "main.pdf" "main" 1780887317.27131 2
   "c:/Users/Stemadmin/Desktop/Anuj Khadka/carbon_footprint/paper/main.tex" 1780873899 5295 ccec0d2602986035546e7ea0dbe98271 ""
   "c:/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1775080624 2971 def0b6c1f0b107b3b936def894055589 ""
   "c:/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1775080624 2900 1537cc8184ad1792082cd229ecc269f4 ""
@@ -214,7 +214,7 @@
   "figures/06_merge_sort_scaling.png" 1777259678 109454 175256104f9fb5a8f975614777f3fde4 ""
   "figures/07_scaling_ratio_heatmap.png" 1777259678 82426 6733cb894989ccd3d0ce56971e03f1cc ""
   "figures/08_boxplot_large.png" 1777259679 51836 8f000d2b665016d3000f28dffa280194 ""
-  "main.aux" 1780887310 14391 3a6898d272d6364ec464b429dc14b4fe "pdflatex"
+  "main.aux" 1780887317 14391 3a6898d272d6364ec464b429dc14b4fe "pdflatex"
   "main.bbl" 0 -1 0 "biber main"
   "main.run.xml" 1780887146 2299 81988d3303a58f7ac525483192dfa2a1 ""
   "main.tex" 1780873899 5295 ccec0d2602986035546e7ea0dbe98271 ""
@@ -222,7 +222,7 @@
   "sections/acknowledgement.tex" 1780350730 741 d6df3c44c945fe8e9cbedbff3a1562ed ""
   "sections/background.tex" 1777420257 13787 581bd3da38442c768dee35e0048bde1b ""
   "sections/conclusion.tex" 1777420262 3849 7f3d9d83691f9bbb4337e3e6b8553fb9 ""
-  "sections/discussion.tex" 1780887307 11309 d30e02db03ffbf4db66f6c3abdd0cbf2 ""
+  "sections/discussion.tex" 1780887316 11311 62d218ba289c542139d731c3ee861119 ""
   "sections/future_work.tex" 1777419474 1592 9382a34802af92cb598d01fdb23f7b7d ""
   "sections/introduction.tex" 1780873508 5674 9e2689776190cc11c0e39abf39e8c84e ""
   "sections/methodology.tex" 1777419474 16352 63e0333345809376297df4d1a5a1bfa9 ""
