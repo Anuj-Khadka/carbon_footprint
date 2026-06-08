@@ -239,6 +239,76 @@
       \field{year}{2020}
       \field{urldateera}{ce}
     \endentry
+    \entry{10.1007/978-3-031-53227-6_31}{inproceedings}{}{}
+      \name{author}{3}{}{%
+        {{hash=fe788d8aa91b07ad3dc171a526587f4b}{%
+           family={Sipilä},
+           familyi={S\bibinitperiod},
+           given={Antti},
+           giveni={A\bibinitperiod}}}%
+        {{hash=367da033cbeb28550d5df422dc684885}{%
+           family={Partanen},
+           familyi={P\bibinitperiod},
+           given={Laura},
+           giveni={L\bibinitperiod}}}%
+        {{hash=397750e56c3e9e17cc2aa80a2767a6ee}{%
+           family={Porras},
+           familyi={P\bibinitperiod},
+           given={Jari},
+           giveni={J\bibinitperiod}}}%
+      }
+      \name{editor}{4}{}{%
+        {{hash=7fb1bfbf600953e558e97555300041e9}{%
+           family={Hyrynsalmi},
+           familyi={H\bibinitperiod},
+           given={Sami},
+           giveni={S\bibinitperiod}}}%
+        {{hash=ce27e94467d0457370844e86b072ffef}{%
+           family={Münch},
+           familyi={M\bibinitperiod},
+           given={Jürgen},
+           giveni={J\bibinitperiod}}}%
+        {{hash=56f2fa6e53ea50eb85d259d0008158f4}{%
+           family={Smolander},
+           familyi={S\bibinitperiod},
+           given={Kari},
+           giveni={K\bibinitperiod}}}%
+        {{hash=4372b46d709249659b3db22bcffbb564}{%
+           family={Melegati},
+           familyi={M\bibinitperiod},
+           given={Jorge},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Cham}%
+      }
+      \list{publisher}{1}{%
+        {Springer Nature Switzerland}%
+      }
+      \strng{namehash}{34262e44e624a189b81895895364ee70}
+      \strng{fullhash}{34262e44e624a189b81895895364ee70}
+      \strng{fullhashraw}{34262e44e624a189b81895895364ee70}
+      \strng{bibnamehash}{34262e44e624a189b81895895364ee70}
+      \strng{authorbibnamehash}{34262e44e624a189b81895895364ee70}
+      \strng{authornamehash}{34262e44e624a189b81895895364ee70}
+      \strng{authorfullhash}{34262e44e624a189b81895895364ee70}
+      \strng{authorfullhashraw}{34262e44e624a189b81895895364ee70}
+      \strng{editorbibnamehash}{dfffee955bd68dddce615261428632c2}
+      \strng{editornamehash}{9c4b68279ad5de336d57731e4367e483}
+      \strng{editorfullhash}{dfffee955bd68dddce615261428632c2}
+      \strng{editorfullhashraw}{dfffee955bd68dddce615261428632c2}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Through non-financial reporting, such as CSRD, carbon footprint calculations are becoming mandatory in the software industry. The golden standard for reporting CO2 emissions is based on the Greenhouse Gas (GHG) Protocol and its scopes 1, 2, and 3. However, as a producer of purely digital products, the software industry differs from traditional industries in its carbon footprint. The software industry value chain relies heavily on an infrastructure that can contribute most of its emissions. It has been recognized that there is a need for an industry-customized carbon emissions model that considers the software industry's peculiarities. The primary goal of this study is to define the main sources of climate impacts in the software industry and propose a model of the GHG Protocol adaptation to software companies. This research has been done in our Green ICT project and is based on interviews done in that project. The data for this research was collected from five software companies with different demographics and business models. The interviews, with a total amount of 14, were conducted between November 2022 and March 2023 during a service design process of an automated tool that facilitates green transition in software companies. The analysis of the interviews was supplemented with the results from four multi-stakeholder workshops conducted during the service design process, as well as with the analysis of a series of webinars around the topic. As a result of the study, the Software Company Scopes model for the primary sources of greenhouse gas emissions in the software company and its value chain was created, and the GHG Protocol was tailored to the needs of the software industry. Thus, considering its industry-specific peculiarities, we may conclude that the GHG Protocol can be applied to the software industry.}
+      \field{booktitle}{Software Business}
+      \field{isbn}{978-3-031-53227-6}
+      \field{title}{Carbon Footprint Calculations for a Software Company -- Adapting GHG Protocol Scopes 1, 2 and 3 to the Software Industry}
+      \field{year}{2024}
+      \field{pages}{442\bibrangedash 455}
+      \range{pages}{14}
+    \endentry
     \entry{10.1145/3136014.3136031}{inproceedings}{}{}
       \name{author}{7}{}{%
         {{hash=9026f3b05f12685366186b37a76ab2f3}{%
@@ -292,8 +362,8 @@
       \strng{authorfullhash}{9636bd7f21f5641a06c0e3e238f9da45}
       \strng{authorfullhashraw}{9636bd7f21f5641a06c0e3e238f9da45}
       \field{extraname}{1}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{This paper presents a study of the runtime, memory usage and energy consumption of twenty seven well-known software languages. We monitor the performance of such languages using ten different programming problems, expressed in each of the languages. Our results show interesting findings, such as, slower/faster languages consuming less/more energy, and how memory usage influences energy consumption. Finally, we show how to use our results to provide software engineers support to decide which language to use when energy efficiency is a concern.}
@@ -331,8 +401,8 @@
       \strng{authornamehash}{a9f18dceffd122e28fdd8e914e1bf1bc}
       \strng{authorfullhash}{a9f18dceffd122e28fdd8e914e1bf1bc}
       \strng{authorfullhashraw}{a9f18dceffd122e28fdd8e914e1bf1bc}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{note}{\url{http://benchmarksgame.alioth.debian.org/}}
@@ -385,8 +455,8 @@
       \strng{authornamehash}{cd6d7b6a5792cd65837937431682a57e}
       \strng{authorfullhash}{11166f65d88f76d9e22d1b6f4a5125b9}
       \strng{authorfullhashraw}{11166f65d88f76d9e22d1b6f4a5125b9}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Accurate reporting of energy and carbon usage is essential for understanding the potential climate impacts of machine learning research. We introduce a framework that makes this easier by providing a simple interface for tracking realtime energy consumption and carbon emissions, as well as generating standardized online appendices. Utilizing this framework, we create a leaderboard for energy efficient reinforcement learning algorithms to incentivize responsible research in this area as an example for other areas of machine learning. Finally, based on case studies using our framework, we propose strategies for mitigation of carbon emissions and reduction of energy consumption. By making accounting easier, we hope to further the sustainable development of machine learning experiments and spur more research into energy efficient algorithms.}
@@ -725,8 +795,8 @@
       \strng{authornamehash}{af6b3fcc3c9065344f4ebb87e0b2a45e}
       \strng{authorfullhash}{eb8d543e84ba2f8417b0a4f0c8a6ef1d}
       \strng{authorfullhashraw}{eb8d543e84ba2f8417b0a4f0c8a6ef1d}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{To improve energy efficiency and comply with the power budgets, it is important to be able to measure the power consumption of cloud computing servers. Intel’s Running Average Power Limit (RAPL) interface is a powerful tool for this purpose. RAPL provides power limiting features and accurate energy readings for CPUs and DRAM, which are easily accessible through different interfaces on large distributed computing systems. Since its introduction, RAPL has been used extensively in power measurement and modeling. However, the advantages and disadvantages of RAPL have not been well investigated yet. To fill this gap, we conduct a series of experiments to disclose the underlying strengths and weaknesses of the RAPL interface by using both customized microbenchmarks and three well-known application level benchmarks: Stream, Stress-ng, and ParFullCMS. Moreover, to make the analysis as realistic as possible, we leverage two production-level power measurement datasets from the Taito, a supercomputing cluster of the Finnish Center of Scientific Computing and also replicate our experiments on Amazon EC2. Our results illustrate different aspects of RAPL and document the findings through comprehensive analysis. Our observations reveal that RAPL readings are highly correlated with plug power, promisingly accurate enough, and have negligible performance overhead. Experimental results suggest RAPL can be a very useful tool to measure and monitor the energy consumption of servers without deploying any complex power meters. We also show that there are still some open issues, such as driver support, non-atomicity of register updates, and unpredictable timings that might weaken the usability of RAPL in certain scenarios. For such scenarios, we pinpoint solutions and workarounds.}
@@ -785,8 +855,8 @@
       \strng{authornamehash}{18f09213b5f7fccc0f9f1acfb9d27e6a}
       \strng{authorfullhash}{0da4eb6a3c503cbb8caaed4604f7e0db}
       \strng{authorfullhashraw}{0da4eb6a3c503cbb8caaed4604f7e0db}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Measuring the energy consumption of software components is a major building block for generating models that allow for energy-aware scheduling, accounting and budgeting. Current measurement techniques focus on coarse-grained measurements of application or system events. However, fine grain adjustments in particular in the operating-system kernel and in application-level servers require power profiles at the level of a single software function. Until recently, this appeared to be impossible due to the lacking fine grain resolution and high costs of measurement equipment. In this paper we report on our experience in using the Running Average Power Limit (RAPL) energy sensors available in recent Intel CPUs for measuring energy consumption of short code paths. We investigate the granularity at which RAPL measurements can be performed and discuss practical obstacles that occur when performing these measurements on complex modern CPUs. Furthermore, we demonstrate how to use the RAPL infrastructure to characterize the energy costs for decoding video slices.}
@@ -954,8 +1024,8 @@
       \strng{authornamehash}{15f32d88deefed83d2d4464c9c340a0d}
       \strng{authorfullhash}{15f32d88deefed83d2d4464c9c340a0d}
       \strng{authorfullhashraw}{15f32d88deefed83d2d4464c9c340a0d}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Context: Software development is a continuous decision-making process that mainly relies on the software engineer’s experience and intuition. One of the essential decisions in the early stages of the process is selecting the best fitting programming language ecosystem based on the project requirements. A significant number of criteria, such as developer availability and consistent documentation, in addition to the number of available options in the market, lead to a challenging decision-making process. As the selection of programming language ecosystems depends on the application to be developed and its environment, a decision model is required to analyze the selection problem using systematic identification and evaluation of potential alternatives for a development project. Method: Recently, we introduced a framework to build decision models for technology selection problems in software production. Furthermore, we designed and implemented a decision support system that uses such decision models to support software engineers with their decision-making problems. This study presents a decision model based on the framework for the programming language ecosystem selection problem. Results: The decision model has been evaluated through seven real-world case studies at seven software development companies. The case study participants declared that the approach provides significantly more insight into the programming language ecosystem selection process and decreases the decision-making process’s time and cost. Conclusion: With the decision model, software engineers can more rapidly evaluate and select programming language ecosystems. Having the knowledge in the decision model readily available supports software engineers in making more efficient and effective decisions that meet their requirements and priorities. Furthermore, such reusable knowledge can be employed by other researchers to develop new concepts and solutions for future challenges.}
@@ -991,8 +1061,8 @@
       \strng{authornamehash}{73842fd8bfad0519e5eff75125bea0c3}
       \strng{authorfullhash}{73842fd8bfad0519e5eff75125bea0c3}
       \strng{authorfullhashraw}{73842fd8bfad0519e5eff75125bea0c3}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{Go Documentation}
@@ -1267,8 +1337,8 @@
       \strng{authornamehash}{6334bae937095dbcaea6178f6ef09269}
       \strng{authorfullhash}{6334bae937095dbcaea6178f6ef09269}
       \strng{authorfullhashraw}{6334bae937095dbcaea6178f6ef09269}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Behavioral Ecology}
@@ -1299,8 +1369,8 @@
       \strng{authornamehash}{0b0af97d4f9c67ace0f8c55bd08f9072}
       \strng{authorfullhash}{0b0af97d4f9c67ace0f8c55bd08f9072}
       \strng{authorfullhashraw}{0b0af97d4f9c67ace0f8c55bd08f9072}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Methods for constructing simultaneous confidence intervals for all possible linear contrasts among several means of normally distributed variables have been given by Scheffé and Tukey. In this paper the possibility is considered of picking in advance a number (say m) of linear contrasts among k means, and then estimating these m linear contrasts by confidence intervals based on a Student t statistic, in such a way that the overall confidence level for the m intervals is greater than or equal to a preassigned value. It is found that for some values of k, and for m not too large, intervals obtained in this way are shorter than those using the F distribution or the Studentized range. When this is so, the experimenter may be willing to select the linear combinations in advance which he wishes to estimate in order to have m shorter intervals instead of an infinite number of longer intervals.}
@@ -1412,8 +1482,8 @@
       \strng{authornamehash}{c06eb9134aeb01d746095b76189c277b}
       \strng{authorfullhash}{c06eb9134aeb01d746095b76189c277b}
       \strng{authorfullhashraw}{c06eb9134aeb01d746095b76189c277b}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{Google Online Security Blog}
@@ -1440,8 +1510,8 @@
       \strng{authornamehash}{be71d0542f6d52e76ec4aa72b14f620c}
       \strng{authorfullhash}{be71d0542f6d52e76ec4aa72b14f620c}
       \strng{authorfullhashraw}{be71d0542f6d52e76ec4aa72b14f620c}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{Linux Kernel Documentation}

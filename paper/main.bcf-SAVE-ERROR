@@ -2379,3 +2379,8 @@
     <bcf:citekey order="4" intorder="1">worldbank_itu</bcf:citekey>
     <bcf:citekey order="5" intorder="1">iea_energy_consumption</bcf:citekey>
     <bcf:citekey order="5" intorder="2">masanet_energy_consumption</bcf:citekey>
+    <bcf:citekey order="6" intorder="1">10.1007/978-3-031-53227-6_31</bcf:citekey>
+    <bcf:citekey order="7" intorder="1">ict_stat</bcf:citekey>
+    <bcf:citekey order="8" intorder="1">10.1145/3136014.3136031</bcf:citekey>
+    <bcf:citekey order="9" intorder="1">clbg</bcf:citekey>
+    <bcf:citekey order="10" intorder="1">10.1145/3136014.3136031</bcf:citekey>
