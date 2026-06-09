@@ -988,6 +988,7 @@
       \strng{authornamehash}{7228b3cdfe23fe3f4516b401aa5b0d2c}
       \strng{authorfullhash}{7228b3cdfe23fe3f4516b401aa5b0d2c}
       \strng{authorfullhashraw}{7228b3cdfe23fe3f4516b401aa5b0d2c}
+      \field{extraname}{1}
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
@@ -1468,6 +1469,35 @@
       \endverb
       \keyw{unboxing,reference counting,interpreters,dynamic programming languages,Python}
     \endentry
+    \entry{ipccch9adaptation_vulnerability}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=7228b3cdfe23fe3f4516b401aa5b0d2c}{%
+           family={Climate\bibnamedelimb Change\bibnamedelima (IPCC)},
+           familyi={C\bibinitperiod\bibinitdelim C\bibinitperiod\bibinitdelim (\bibinitperiod},
+           given={Intergovernmental\bibnamedelima Panel},
+           giveni={I\bibinitperiod\bibinitdelim P\bibinitperiod},
+           prefix={on},
+           prefixi={o\bibinitperiod}}}%
+      }
+      \strng{namehash}{7228b3cdfe23fe3f4516b401aa5b0d2c}
+      \strng{fullhash}{7228b3cdfe23fe3f4516b401aa5b0d2c}
+      \strng{fullhashraw}{7228b3cdfe23fe3f4516b401aa5b0d2c}
+      \strng{bibnamehash}{7228b3cdfe23fe3f4516b401aa5b0d2c}
+      \strng{authorbibnamehash}{7228b3cdfe23fe3f4516b401aa5b0d2c}
+      \strng{authornamehash}{7228b3cdfe23fe3f4516b401aa5b0d2c}
+      \strng{authorfullhash}{7228b3cdfe23fe3f4516b401aa5b0d2c}
+      \strng{authorfullhashraw}{7228b3cdfe23fe3f4516b401aa5b0d2c}
+      \field{extraname}{2}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{\url{https://www.ipcc.ch/report/ar6/wg2/downloads/report/IPCC_AR6_WGII_Chapter09.pdf}}
+      \field{title}{Climate Change 2022: Impacts, Adaptation and Vulnerability}
+      \field{urlmonth}{1}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+    \endentry
     \entry{datacenter_consumption_2024}{unknown}{}{}
       \name{author}{7}{}{%
         {{hash=c7cb00b8e5748da5e80489d2c7f514a5}{%
@@ -1514,8 +1544,8 @@
       \strng{authornamehash}{29eefbd4f680b1f18e71e4e167679209}
       \strng{authorfullhash}{b333cd89af88b6420f8cfb73592a0334}
       \strng{authorfullhashraw}{b333cd89af88b6420f8cfb73592a0334}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{11}
@@ -1524,6 +1554,33 @@
       \verb{doi}
       \verb 10.48550/arXiv.2411.09786
       \endverb
+    \endentry
+    \entry{datacenter_water_use}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=af3cadeda91b7d45c862539745b2d377}{%
+           family={Lakhanpal},
+           familyi={L\bibinitperiod},
+           given={Dr.\bibnamedelimi Vikram},
+           giveni={D\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+      }
+      \strng{namehash}{af3cadeda91b7d45c862539745b2d377}
+      \strng{fullhash}{af3cadeda91b7d45c862539745b2d377}
+      \strng{fullhashraw}{af3cadeda91b7d45c862539745b2d377}
+      \strng{bibnamehash}{af3cadeda91b7d45c862539745b2d377}
+      \strng{authorbibnamehash}{af3cadeda91b7d45c862539745b2d377}
+      \strng{authornamehash}{af3cadeda91b7d45c862539745b2d377}
+      \strng{authorfullhash}{af3cadeda91b7d45c862539745b2d377}
+      \strng{authorfullhashraw}{af3cadeda91b7d45c862539745b2d377}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{\url{https://mostpolicyinitiative.org/science-note/data-center-water-use/}}
+      \field{title}{Data Center Water Use}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{urldateera}{ce}
     \endentry
     \entry{google2025rustAndroid}{misc}{}{}
       \name{author}{1}{}{%
