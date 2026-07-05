@@ -1498,6 +1498,130 @@
       \field{urlyear}{2026}
       \field{urldateera}{ce}
     \endentry
+    \entry{evidence_of_higher_cost}{article}{}{}
+      \name{author}{20}{}{%
+        {{hash=25737fee32599f978a8933651b3148eb}{%
+           family={Rennert},
+           familyi={R\bibinitperiod},
+           given={Kevin},
+           giveni={K\bibinitperiod}}}%
+        {{hash=55a2f07f2323e6fe78d400499a10a508}{%
+           family={Errickson},
+           familyi={E\bibinitperiod},
+           given={Frank},
+           giveni={F\bibinitperiod}}}%
+        {{hash=4dab78c03044ed9f443df797540d0928}{%
+           family={Prest},
+           familyi={P\bibinitperiod},
+           given={Brian},
+           giveni={B\bibinitperiod}}}%
+        {{hash=62e4870c353ecca82ab8794cc93134e3}{%
+           family={Rennels},
+           familyi={R\bibinitperiod},
+           given={Lisa},
+           giveni={L\bibinitperiod}}}%
+        {{hash=6bbc7e4f8cd45e20db7ebfe1ea6651ca}{%
+           family={Newell},
+           familyi={N\bibinitperiod},
+           given={Richard},
+           giveni={R\bibinitperiod}}}%
+        {{hash=ae359947b9af2c4b6cc55cd7e65d507d}{%
+           family={Pizer},
+           familyi={P\bibinitperiod},
+           given={Billy},
+           giveni={B\bibinitperiod}}}%
+        {{hash=888a8b459865a47615c99609fc8cfe61}{%
+           family={Kingdon},
+           familyi={K\bibinitperiod},
+           given={Cora},
+           giveni={C\bibinitperiod}}}%
+        {{hash=6848c2bd2bd6cff0daa4aa10329ef16b}{%
+           family={Wingenroth},
+           familyi={W\bibinitperiod},
+           given={Jordan},
+           giveni={J\bibinitperiod}}}%
+        {{hash=38186c2aa48f6680d429b3515b091073}{%
+           family={Cooke},
+           familyi={C\bibinitperiod},
+           given={Roger},
+           giveni={R\bibinitperiod}}}%
+        {{hash=16c685bd30bd5d1f78bfb5945634fcf0}{%
+           family={Parthum},
+           familyi={P\bibinitperiod},
+           given={Bryan},
+           giveni={B\bibinitperiod}}}%
+        {{hash=5dae92275f3afda5b0b3da88efb93844}{%
+           family={Smith},
+           familyi={S\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=640fd6ef0f5062c2431f1aa3f2c75559}{%
+           family={Cromar},
+           familyi={C\bibinitperiod},
+           given={Kevin},
+           giveni={K\bibinitperiod}}}%
+        {{hash=bd47a5b4fdd7fad70a623e4e3b986185}{%
+           family={Diaz},
+           familyi={D\bibinitperiod},
+           given={Delavane},
+           giveni={D\bibinitperiod}}}%
+        {{hash=2dc264a3f5859c4bd5c6eac1d4154db2}{%
+           family={Moore},
+           familyi={M\bibinitperiod},
+           given={Frances},
+           giveni={F\bibinitperiod}}}%
+        {{hash=1ab9b65be04ce773e865770c1219c8ba}{%
+           family={Müller},
+           familyi={M\bibinitperiod},
+           given={Ulrich},
+           giveni={U\bibinitperiod}}}%
+        {{hash=3e811004fc7aa2a1b0a05ada61ccdcfa}{%
+           family={Plevin},
+           familyi={P\bibinitperiod},
+           given={Richard},
+           giveni={R\bibinitperiod}}}%
+        {{hash=0c29657fcc3a4149a1db0c997e33f8d9}{%
+           family={Raftery},
+           familyi={R\bibinitperiod},
+           given={Adrian},
+           giveni={A\bibinitperiod}}}%
+        {{hash=e50535aa8a9058ff536c19b655201ad9}{%
+           family={Ševčíková},
+           familyi={Š\bibinitperiod},
+           given={Hana},
+           giveni={H\bibinitperiod}}}%
+        {{hash=66ba52be4009756789d9036bd01ba5fe}{%
+           family={Sheets},
+           familyi={S\bibinitperiod},
+           given={Hannah},
+           giveni={H\bibinitperiod}}}%
+        {{hash=3959cd35c56f75f9ca3183129ece6096}{%
+           family={Anthoff},
+           familyi={A\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{de946d65871454f759354a334e971dfa}
+      \strng{fullhash}{d4bdca57bc337ee796eced951d43c563}
+      \strng{fullhashraw}{d4bdca57bc337ee796eced951d43c563}
+      \strng{bibnamehash}{d4bdca57bc337ee796eced951d43c563}
+      \strng{authorbibnamehash}{d4bdca57bc337ee796eced951d43c563}
+      \strng{authornamehash}{de946d65871454f759354a334e971dfa}
+      \strng{authorfullhash}{d4bdca57bc337ee796eced951d43c563}
+      \strng{authorfullhashraw}{d4bdca57bc337ee796eced951d43c563}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nature}
+      \field{month}{09}
+      \field{title}{Comprehensive Evidence Implies a Higher Social Cost of CO2}
+      \field{volume}{610}
+      \field{year}{2022}
+      \verb{doi}
+      \verb 10.1038/s41586-022-05224-9
+      \endverb
+    \endentry
     \entry{datacenter_consumption_2024}{unknown}{}{}
       \name{author}{7}{}{%
         {{hash=c7cb00b8e5748da5e80489d2c7f514a5}{%
@@ -1577,6 +1701,33 @@
       \field{labeltitlesource}{title}
       \field{note}{\url{https://mostpolicyinitiative.org/science-note/data-center-water-use/}}
       \field{title}{Data Center Water Use}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{urldateera}{ce}
+    \endentry
+    \entry{nwf_datacenter_water_use}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=93a7bf969b09a62b7f4a3f8cca037432}{%
+           family={Higa},
+           familyi={H\bibinitperiod},
+           given={April},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{93a7bf969b09a62b7f4a3f8cca037432}
+      \strng{fullhash}{93a7bf969b09a62b7f4a3f8cca037432}
+      \strng{fullhashraw}{93a7bf969b09a62b7f4a3f8cca037432}
+      \strng{bibnamehash}{93a7bf969b09a62b7f4a3f8cca037432}
+      \strng{authorbibnamehash}{93a7bf969b09a62b7f4a3f8cca037432}
+      \strng{authornamehash}{93a7bf969b09a62b7f4a3f8cca037432}
+      \strng{authorfullhash}{93a7bf969b09a62b7f4a3f8cca037432}
+      \strng{authorfullhashraw}{93a7bf969b09a62b7f4a3f8cca037432}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{\url{https://blog.nwf.org/2026/05/data-centers-water-and-the-strain-on-local-resources/}}
+      \field{title}{Data Centers, Water, and the Strain on Local Resources}
       \field{urlmonth}{5}
       \field{urlyear}{2026}
       \field{year}{2026}
