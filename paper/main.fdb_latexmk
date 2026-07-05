@@ -1,13 +1,13 @@
 # Fdb version 4
-["biber main"] 1780890802.05175 "main.bcf" "main.bbl" "main" 1783294487.32803 0
-  "main.bcf" 1783294487 111918 c692b5937919d61ea50c1604622d3574 "pdflatex"
+["biber main"] 1780890802.05175 "main.bcf" "main.bbl" "main" 1783294730.65812 0
+  "main.bcf" 1783294730 111918 c692b5937919d61ea50c1604622d3574 "pdflatex"
   "main.bib" 1780890573 33430 90db4423ee0428218c71769b51707ecf ""
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1783294485.11788 "c:/Users/Stemadmin/Desktop/Anuj Khadka/carbon_footprint/paper/main.tex" "main.pdf" "main" 1783294487.32915 0
-  "c:/Users/Stemadmin/Desktop/Anuj Khadka/carbon_footprint/paper/main.tex" 1783294480 5299 9f7382260bcdc5122f7805d9b1aa5b33 ""
+["pdflatex"] 1783294728.43514 "c:/Users/Stemadmin/Desktop/Anuj Khadka/carbon_footprint/paper/main.tex" "main.pdf" "main" 1783294730.65922 0
+  "c:/Users/Stemadmin/Desktop/Anuj Khadka/carbon_footprint/paper/main.tex" 1783294728 5299 9f7382260bcdc5122f7805d9b1aa5b33 ""
   "c:/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1775080624 2971 def0b6c1f0b107b3b936def894055589 ""
   "c:/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1775080624 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "c:/texlive/2026/texmf-dist/fonts/map/fontname/texfonts.map" 1775082038 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -214,10 +214,10 @@
   "figures/06_merge_sort_scaling.png" 1777259678 109454 175256104f9fb5a8f975614777f3fde4 ""
   "figures/07_scaling_ratio_heatmap.png" 1777259678 82426 6733cb894989ccd3d0ce56971e03f1cc ""
   "figures/08_boxplot_large.png" 1777259679 51836 8f000d2b665016d3000f28dffa280194 ""
-  "main.aux" 1783294487 19250 d049908c34f5cb82015936075d8e0722 "pdflatex"
+  "main.aux" 1783294730 19250 d049908c34f5cb82015936075d8e0722 "pdflatex"
   "main.bbl" 1780890803 89189 2e9c2c77ef08414dd5c7e6aaa69470c0 "biber main"
-  "main.run.xml" 1783294487 2299 81988d3303a58f7ac525483192dfa2a1 "pdflatex"
-  "main.tex" 1783294480 5299 9f7382260bcdc5122f7805d9b1aa5b33 ""
+  "main.run.xml" 1783294730 2299 81988d3303a58f7ac525483192dfa2a1 "pdflatex"
+  "main.tex" 1783294728 5299 9f7382260bcdc5122f7805d9b1aa5b33 ""
   "preamble.tex" 1777419474 2850 36e40cc31f618bf6242ba01f2b27185b ""
   "sections/acknowledgement.tex" 1780350730 741 d6df3c44c945fe8e9cbedbff3a1562ed ""
   "sections/background.tex" 1777420257 13787 581bd3da38442c768dee35e0048bde1b ""
