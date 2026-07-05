@@ -384,11 +384,6 @@ INPUT ./sections/discussion.tex
 INPUT ./sections/discussion.tex
 INPUT sections/discussion.tex
 INPUT c:/texlive/2026/texmf-dist/fonts/tfm/jknappen/ec/ecti1000.tfm
-INPUT ./sections/threats_to_validity.tex
-INPUT ./sections/threats_to_validity.tex
-INPUT ./sections/threats_to_validity.tex
-INPUT ./sections/threats_to_validity.tex
-INPUT sections/threats_to_validity.tex
 INPUT ./sections/future_work.tex
 INPUT ./sections/future_work.tex
 INPUT ./sections/future_work.tex
