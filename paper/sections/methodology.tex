@@ -87,7 +87,7 @@ final study were collected overnight with no background applications running.
 
 \subsection{Output Verification}
 Before energy measurement, all 36 implementations are verified for correctness. The verification script compiles and runs each implementation at all three input sizes, compares the checksum printed to stdout against the reference checksum produced by the C implementation, and assigns each language-algorithm-size combination a PASS/FAIL status. 
-Table ~\ref{tab:c_run_verify} shows the verification results fot the C implemetation. The C times serves as a reference baseline against which all other languages are measured and normalized. They confirm that execution time scales with the expected time complexity of each program. 
+Table ~\ref{tab:c_run_verify} shows the verification results for the C implemetation. The C times serves as a reference baseline against which all other languages are measured and normalized. They confirm that execution time scales with the expected time complexity of each program. 
 
 \begin{table}[h]
     \centering
