@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber main"] 1783298209.8029 "main.bcf" "main.bbl" "main" 1783298961.19655 0
-  "main.bcf" 1783298960 112223 21c581339eef923274791d70c91e4ac1 "pdflatex"
-  "main.bib" 1783297834 36718 8dd4d4c37bce1cce5df14fc50a733989 ""
+["biber main"] 1783299044.86531 "main.bcf" "main.bbl" "main" 1783299051.2715 0
+  "main.bcf" 1783299051 112223 21c581339eef923274791d70c91e4ac1 "pdflatex"
+  "main.bib" 1783299044 36718 66195c80652342dceded215233dccccd ""
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1783298958.92445 "c:/Users/Stemadmin/Desktop/Anuj Khadka/carbon_footprint/paper/main.tex" "main.pdf" "main" 1783298961.19797 0
+["pdflatex"] 1783299049.04565 "c:/Users/Stemadmin/Desktop/Anuj Khadka/carbon_footprint/paper/main.tex" "main.pdf" "main" 1783299051.27261 0
   "c:/Users/Stemadmin/Desktop/Anuj Khadka/carbon_footprint/paper/main.tex" 1783294728 5299 9f7382260bcdc5122f7805d9b1aa5b33 ""
   "c:/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1775080624 2971 def0b6c1f0b107b3b936def894055589 ""
   "c:/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1775080624 2900 1537cc8184ad1792082cd229ecc269f4 ""
@@ -214,9 +214,9 @@
   "figures/06_merge_sort_scaling.png" 1777259678 109454 175256104f9fb5a8f975614777f3fde4 ""
   "figures/07_scaling_ratio_heatmap.png" 1777259678 82426 6733cb894989ccd3d0ce56971e03f1cc ""
   "figures/08_boxplot_large.png" 1777259679 51836 8f000d2b665016d3000f28dffa280194 ""
-  "main.aux" 1783298960 19837 ebbc9eab840c827412fc7eda580c8b56 "pdflatex"
-  "main.bbl" 1783298211 95704 9ec6deb1eec0ff8abcf3389e7623a6a5 "biber main"
-  "main.run.xml" 1783298960 2299 81988d3303a58f7ac525483192dfa2a1 "pdflatex"
+  "main.aux" 1783299051 19837 b5bbc6493cd565443aa6eb8036b14802 "pdflatex"
+  "main.bbl" 1783299046 95703 15ed2f6b635b3ee6d70391126a25f327 "biber main"
+  "main.run.xml" 1783299051 2299 81988d3303a58f7ac525483192dfa2a1 "pdflatex"
   "main.tex" 1783294728 5299 9f7382260bcdc5122f7805d9b1aa5b33 ""
   "preamble.tex" 1777419474 2850 36e40cc31f618bf6242ba01f2b27185b ""
   "sections/acknowledgement.tex" 1780350730 741 d6df3c44c945fe8e9cbedbff3a1562ed ""

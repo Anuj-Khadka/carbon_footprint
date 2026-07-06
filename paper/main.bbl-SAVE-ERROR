@@ -1776,6 +1776,31 @@
       \endverb
       \keyw{Freshwater habitat,Artificial intelligence,Data centers,Cryptocurrency mining,Biodiversity,Hydropower,Cooling water,Climate change,Thermoelectric,Non-powered dams}
     \endentry
+    \entry{unitar_ewaste_monitor}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=b8cc99384b6de8f80ffe364ce48e9dbf}{%
+           family={UNITAR},
+           familyi={U\bibinitperiod}}}%
+      }
+      \strng{namehash}{b8cc99384b6de8f80ffe364ce48e9dbf}
+      \strng{fullhash}{b8cc99384b6de8f80ffe364ce48e9dbf}
+      \strng{fullhashraw}{b8cc99384b6de8f80ffe364ce48e9dbf}
+      \strng{bibnamehash}{b8cc99384b6de8f80ffe364ce48e9dbf}
+      \strng{authorbibnamehash}{b8cc99384b6de8f80ffe364ce48e9dbf}
+      \strng{authornamehash}{b8cc99384b6de8f80ffe364ce48e9dbf}
+      \strng{authorfullhash}{b8cc99384b6de8f80ffe364ce48e9dbf}
+      \strng{authorfullhashraw}{b8cc99384b6de8f80ffe364ce48e9dbf}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{\url{https://ewastemonitor.info/wp-content/uploads/2024/12/GEM_2024_EN_11_NOV-web.pdf}}
+      \field{title}{THE GLOBAL E-WASTE MONITOR 2024}
+      \field{urlmonth}{6}
+      \field{urlyear}{2026}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+    \endentry
     \entry{google2025rustAndroid}{misc}{}{}
       \name{author}{1}{}{%
         {{hash=c06eb9134aeb01d746095b76189c277b}{%
@@ -1818,8 +1843,8 @@
       \strng{authornamehash}{be71d0542f6d52e76ec4aa72b14f620c}
       \strng{authorfullhash}{be71d0542f6d52e76ec4aa72b14f620c}
       \strng{authorfullhashraw}{be71d0542f6d52e76ec4aa72b14f620c}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{Linux Kernel Documentation}
