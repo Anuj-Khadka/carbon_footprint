@@ -1733,6 +1733,49 @@
       \field{year}{2026}
       \field{urldateera}{ce}
     \endentry
+    \entry{JAGER2026100585}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=addff3ba912aeee20a13fc450d823e4b}{%
+           family={Jager},
+           familyi={J\bibinitperiod},
+           given={Henriette},
+           giveni={H\bibinitperiod}}}%
+        {{hash=e7fb94f910f2924651b63299e30cddd4}{%
+           family={Yoon},
+           familyi={Y\bibinitperiod},
+           given={Hyun\bibnamedelima Seok},
+           giveni={H\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \strng{namehash}{8ae3d0821573d57c749da87944ac7cc0}
+      \strng{fullhash}{8ae3d0821573d57c749da87944ac7cc0}
+      \strng{fullhashraw}{8ae3d0821573d57c749da87944ac7cc0}
+      \strng{bibnamehash}{8ae3d0821573d57c749da87944ac7cc0}
+      \strng{authorbibnamehash}{8ae3d0821573d57c749da87944ac7cc0}
+      \strng{authornamehash}{8ae3d0821573d57c749da87944ac7cc0}
+      \strng{authorfullhash}{8ae3d0821573d57c749da87944ac7cc0}
+      \strng{authorfullhashraw}{8ae3d0821573d57c749da87944ac7cc0}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This study lays the foundation for future research to quantify data center (DC) impacts on freshwater biodiversity in the US. The proliferation of DCs is increasing energy and water stress in the US. Although past research has quantified the water and carbon dimensions of sustainability associated with DCs, the potential threats to aquatic biodiversity from DCs in the US have yet to be examined. We present a risk-assessment framework for understanding potential stresses on aquatic biota, including direct effects of water cooling and indirect effects mediated by electricity from two sources: thermoelectric and hydroelectric power. For DCs using thermoelectric power, we conducted a screening-level analysis to identify areas of overlap between areas with a high DC water-scarcity footprint and aquatic biodiversity. As subbasins draining to the Atlantic Ocean and the Great Lakes support higher fish and mussel diversity, DCs could potentially expose more species to the impacts of water scarcity. Similarly, subbasins draining to the Atlantic support high human population densities (water demand) and fish richness. To reduce climate impacts and water stress, some DCs are turning to hydropower. However, this option also has the potential to increase risk to aquatic biota. Higher demand for hydropower from DCs in summer is likely to worsen the effects of climate warming on aquatic ecosystems. In addition, night-time generation to meet 24/7 DC demand could increase entrainment of small fish and larvae. Finally, if non-powered dams are relicensed to support DCs, economic justifications for dam removal will be weakened with adverse consequences for diadromous fishes, mussels, and other aquatic biota. In addition to highlighting broad geographic patterns, we use case studies to illustrate examples of DCs sourcing (or proposing to source) electricity from thermoelectric, existing hydropower plants, and the addition of turbines to non-powered dams. We conclude with a brief discussion of mitigation options for the DC industry that might improve sustainability from the perspective of freshwater biota.}
+      \field{issn}{2772-7351}
+      \field{journaltitle}{Water Biology and Security}
+      \field{title}{Data centers: an emerging threat to freshwater biodiversity in the United States}
+      \field{year}{2026}
+      \field{pages}{100585}
+      \range{pages}{1}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.watbs.2026.100585
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S2772735126000399
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S2772735126000399
+      \endverb
+      \keyw{Freshwater habitat,Artificial intelligence,Data centers,Cryptocurrency mining,Biodiversity,Hydropower,Cooling water,Climate change,Thermoelectric,Non-powered dams}
+    \endentry
     \entry{google2025rustAndroid}{misc}{}{}
       \name{author}{1}{}{%
         {{hash=c06eb9134aeb01d746095b76189c277b}{%
