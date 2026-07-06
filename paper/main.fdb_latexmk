@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber main"] 1783299085.12841 "main.bcf" "main.bbl" "main" 1783300742.2632 0
-  "main.bcf" 1783300742 112223 21c581339eef923274791d70c91e4ac1 "pdflatex"
+["biber main"] 1783300798.95915 "main.bcf" "main.bbl" "main" 1783300830.86233 0
+  "main.bcf" 0 -1 0 "pdflatex"
   "main.bib" 1783299044 36718 66195c80652342dceded215233dccccd ""
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1783300740.00334 "c:/Users/Stemadmin/Desktop/Anuj Khadka/carbon_footprint/paper/main.tex" "main.pdf" "main" 1783300742.26438 0
+["pdflatex"] 1783300829.62414 "c:/Users/Stemadmin/Desktop/Anuj Khadka/carbon_footprint/paper/main.tex" "main.pdf" "main" 1783300830.85185 2
   "c:/Users/Stemadmin/Desktop/Anuj Khadka/carbon_footprint/paper/main.tex" 1783294728 5299 9f7382260bcdc5122f7805d9b1aa5b33 ""
   "c:/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1775080624 2971 def0b6c1f0b107b3b936def894055589 ""
   "c:/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1775080624 2900 1537cc8184ad1792082cd229ecc269f4 ""
@@ -214,14 +214,14 @@
   "figures/06_merge_sort_scaling.png" 1777259678 109454 175256104f9fb5a8f975614777f3fde4 ""
   "figures/07_scaling_ratio_heatmap.png" 1777259678 82426 6733cb894989ccd3d0ce56971e03f1cc ""
   "figures/08_boxplot_large.png" 1777259679 51836 8f000d2b665016d3000f28dffa280194 ""
-  "main.aux" 1783300742 19837 b5bbc6493cd565443aa6eb8036b14802 "pdflatex"
-  "main.bbl" 1783299087 95703 15ed2f6b635b3ee6d70391126a25f327 "biber main"
-  "main.run.xml" 1783300742 2299 81988d3303a58f7ac525483192dfa2a1 "pdflatex"
+  "main.aux" 1783300830 916 36df96e6dcfd789adb94411dd995add3 "pdflatex"
+  "main.bbl" 0 -1 0 "biber main"
+  "main.run.xml" 1783300829 2299 81988d3303a58f7ac525483192dfa2a1 ""
   "main.tex" 1783294728 5299 9f7382260bcdc5122f7805d9b1aa5b33 ""
   "preamble.tex" 1777419474 2850 36e40cc31f618bf6242ba01f2b27185b ""
   "sections/acknowledgement.tex" 1780350730 741 d6df3c44c945fe8e9cbedbff3a1562ed ""
   "sections/background.tex" 1783300028 13794 66b0fb59ef7d66b0a32711398481e926 ""
-  "sections/conclusion.tex" 1783300739 4163 1631ef7eb98fb63e07b0f659a797d8f8 ""
+  "sections/conclusion.tex" 1783300829 4237 9f8cd708508821948de348eee9b687a0 ""
   "sections/discussion.tex" 1783299904 14876 f7a1589a16707b125894d0411a2e26d1 ""
   "sections/future_work.tex" 1777419474 1592 9382a34802af92cb598d01fdb23f7b7d ""
   "sections/introduction.tex" 1780873508 5674 9e2689776190cc11c0e39abf39e8c84e ""
@@ -233,5 +233,4 @@
   "main.bcf"
   "main.log"
   "main.pdf"
-  "main.run.xml"
   (rewritten before read)
